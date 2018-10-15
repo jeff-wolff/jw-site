@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
         <div>
          {posts.map(({ node: post }) => {
            const title = get(post, 'frontmatter.title') || post.fields.slug
-           const windowTitle = "WORK - "+post.frontmatter.date;
+           const windowTitle = post.frontmatter.title+" - "+post.excerpt;
            return (
             <Window 
                 key={post.id} id={post.id} 
@@ -39,10 +39,7 @@ class BlogIndex extends React.Component {
                 minHeight={261}
                 lockAspect
                 className="work-window"
-            >
-               <h3>
-                    {post.frontmatter.title}
-                </h3>                   
+            >                
                 <Button tiny to={post.fields.slug} className="button">View Work</Button>
             </Window>
              // <div key={post.fields.slug}>
@@ -79,7 +76,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 75)
           id
           fields {
             slug

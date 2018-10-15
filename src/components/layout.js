@@ -11,8 +11,6 @@ import '../utils/ie11-polyfill.js'
 import Header from './Header/header.js'
 import Footer from './Footer/footer.js'
 
-// import { rhythm, scale } from '../utils/typography'
-
 injectGlobal`
   :root {
     --bg: #111;
@@ -85,6 +83,9 @@ class Template extends React.Component {
     if (location.pathname === rootPath) {
       innerHeader = (
         <Header />
+      )
+      footer = (
+        <Footer />
       )
     } else {
       header = (

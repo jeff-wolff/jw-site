@@ -82,12 +82,12 @@ class Window extends React.Component {
           }}
           style={{
             backgroundColor: this.state.bgColor,
-            border: '2px solid rgb('+this.state.borderColor+')',
+            borderColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
           bounds='.wrapper'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 48}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 56}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}
@@ -141,7 +141,6 @@ class Window extends React.Component {
       >
           <div className="window-title"
               style={{
-                  borderBottom: '2px solid rgba('+this.state.borderColor+',1)',
                   color: 'rgb('+this.state.titleColor+')'
               }}
           >
@@ -168,9 +167,6 @@ class Window extends React.Component {
           </div>
           <div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>
           <div className="window-content"
-            style={{
-                borderBottom: '2px solid rgba('+this.state.borderColor+',1)'
-            }}
           >
             {this.props.children}
           </div>

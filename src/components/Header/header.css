@@ -46,6 +46,8 @@
 }
 .header > .logo:hover {
     background: none;
+    font-weight: normal;
+    font-family: 'IBM Plex Mono';
     font-style: normal;
     letter-spacing: 0;
 }

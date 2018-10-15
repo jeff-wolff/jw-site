@@ -1,3 +1,11 @@
+.work-window.react-draggable {
+    border: 3px solid;
+}
+@media (min-width: 768px) {
+    .work-window.react-draggable {
+        border: 6px solid;
+    }
+}
 .react-draggable {
     background-color: #111;
 }

@@ -25,7 +25,7 @@ class HomeInfo extends React.Component {
             <div className="home-container centered-container">
               <div className={classNames('home-lockup', this.state.hover ? 'hover' : '')} onClick={this.handleClick}>
                 <h1 className="home-logo">Jeff Wolff</h1>
-                <p>For me, the purpose of web design is simple: get the message across – beautifully and in a way that makes it impossible to ignore.</p>
+                <p>User Interface Engineer + Web Developer</p>
               </div>
               {/*<div className="home-btn-tray"><Button small to="/work/" className="home-btn">Work</Button><Button small to="/posts/" className="home-btn">Posts</Button></div>*/}
             </div>
