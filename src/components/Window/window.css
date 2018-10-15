@@ -1,0 +1,163 @@
+.react-draggable {
+    background-color: #111;
+}
+.react-draggable {
+    transition:  all 250ms ease;
+}
+.react-draggable:after {
+    z-index: -1;
+    transition:  opacity 250ms ease;
+    content: " ";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, .62);
+}
+.react-draggable.dragging:after,
+.react-draggable.react-draggable-resizing:after {
+    opacity: 1;
+}
+.react-draggable-dragging,
+.react-draggable-resizing {
+    transition:  none;
+}
+.react-draggable > .window-title {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    font-weight: bold;
+    line-height: 44px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: move;
+    user-select: none;
+
+}
+.react-draggable.collapsed > .window-title {
+    border-bottom: none !important;
+}
+.react-draggable > .window-title > .content {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding-right: 35px;
+}
+
+
+
+.react-draggable > .window-content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  flex-start;
+}
+@media (min-width: 768px) {
+    .work-window.react-draggable > .window-content {
+        align-items: center;
+    }
+    .post-window.react-draggable > .window-content {
+        
+    }
+}
+.react-draggable.no-resize > .window-content {
+    height: calc(100% - 46px);
+}
+.react-draggable.collapsed > .window-content {
+    opacity: 0;
+}
+
+.window-content > .post-title {
+    /* color:  #fff; */
+}
+
+
+.react-draggable a.window-link:hover,
+.react-draggable a.window-link:active {
+    background: none;
+}
+
+.window-resizer-icon {
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: opacity 250ms ease;
+    position: absolute;
+    font-size: 17px;
+    line-height: 21px;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    text-align: right;
+    /* text-align: left;
+    padding: 0 0 1px 8px;
+    transform:  scaleX(-1); */
+}
+.react-draggable.collapsed .window-resizer-icon {
+    opacity: 0;
+}
+
+.react-draggable > .window-content h1,
+.react-draggable > .window-content h2,
+.react-draggable > .window-content h3,
+.react-draggable > .window-content h4,
+.react-draggable > .window-content h5,
+.react-draggable > .window-content h6 {
+    margin: 0 0 .5em;
+}
+
+/* Collapse */
+.window-collapse {
+    z-index: 2;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.window-collapse > .icon {
+    display: block;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.window-collapse > .icon:after {
+    font-size: 24px;
+    line-height: 16px;
+    content: '—';
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.window-collapse > input[type=checkbox] {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.window-collapse > input[type=checkbox]:checked + .icon:after {
+    content: '+';
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: normal;
+}
+/* Custom Social Media Windows (Twitter, Linkedin, Lastfm) */
+
+.window-twitter > .window-content,
+.window-linkedin > .window-content {
+    padding: 1px;
+    opacity: 0.75;
+}
+
