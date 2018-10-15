@@ -3,7 +3,7 @@ import styled, {injectGlobal} from 'styled-components'
 import { Link } from 'gatsby'
 import classNames from 'classnames';
 
-// import '../fonts/fonts.css'
+import '../fonts/_fonts.css';
 // import './layout.css'
 
 import '../utils/ie11-polyfill.js'
@@ -21,58 +21,6 @@ injectGlobal`
     --secondary-faded: #333;
     --window: 255,255,255;
   }
-  @font-face {
-    font-family: 'IBM Plex Mono';
-    src: url('../fonts/IBMPlexMono-Regular.woff2') format('woff2'),
-      url('../fonts/IBMPlexMono-Regular.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Mono';
-    font-style: italic;
-    src: url('../fonts/IBMPlexMono-Italic.woff2') format('woff2'),
-      url('../fonts/IBMPlexMono-Italic.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Mono';
-    font-weight: bold;
-    src: url('../fonts/IBMPlexMono-Bold.woff2') format('woff2'),
-      url('../fonts/IBMPlexMono-Bold.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Mono';
-    font-weight: bold;
-    font-style: italic;
-    src: url('../fonts/IBMPlexMono-BoldItalic.woff2') format('woff2'),
-      url('../fonts/IBMPlexMono-BoldItalic.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Serif';
-    font-weight: normal;
-    src: url('../fonts/IBMPlexSerif-Medium.woff2') format('woff2'),
-      url('../fonts/IBMPlexSerif-Medium.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Serif';
-    font-weight: normal;
-    font-style: italic;
-    src: url('../fonts/IBMPlexSerif-MediumItalic.woff2') format('woff2'),
-      url('../fonts/IBMPlexSerif-MediumItalic.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'IBM Plex Serif';
-    font-weight: bold;
-    src: url('../fonts/IBMPlexSerif-Bold.woff2') format('woff2'),
-      url('../fonts/IBMPlexSerif-Bold.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'IBM Plex Serif';
-    font-weight: bold;
-    font-style: italic;
-    src: url('../fonts/IBMPlexSerif-BoldItalic.woff2') format('woff2'),
-      url('../fonts/IBMPlexSerif-BoldItalic.woff') format('woff');
-  }
-
   p {
     color: rgba(255,255,255,.68);
   }
