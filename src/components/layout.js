@@ -5,6 +5,7 @@ import classNames from 'classnames';
 
 // import '../fonts/_fonts.css';
 // import './layout.css'
+import * as fonts from '../fonts/fonts.js'
 
 import '../utils/ie11-polyfill.js'
 
@@ -12,6 +13,10 @@ import Header from './Header/header.js'
 import Footer from './Footer/footer.js'
 
 injectGlobal`
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('${fonts.IBMPlexMono}') format('woff');
+}
   :root {
     --bg: #111;
     --bg-faded: #222;
@@ -21,7 +26,7 @@ injectGlobal`
     --secondary-faded: #333;
     --window: 255,255,255;
   }
-  
+
   p {
     color: rgba(255,255,255,.68);
   }
