@@ -3,7 +3,7 @@ import styled, {injectGlobal} from 'styled-components'
 import { Link } from 'gatsby'
 import classNames from 'classnames';
 
-import '../fonts/_fonts.css';
+// import '../fonts/_fonts.css';
 // import './layout.css'
 
 import '../utils/ie11-polyfill.js'
@@ -21,6 +21,7 @@ injectGlobal`
     --secondary-faded: #333;
     --window: 255,255,255;
   }
+  
   p {
     color: rgba(255,255,255,.68);
   }
