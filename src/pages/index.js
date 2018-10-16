@@ -21,7 +21,7 @@ class Index extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}>
+          title={siteTitle + ' | ' + siteDescription}>
         <body className="no-scrollbar" />
         </Helmet>
         <HomeInfo />
@@ -32,28 +32,28 @@ class Index extends React.Component {
 
 export default Index
 
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 75)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "DD MMMM, YYYY")
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt(pruneLength: 75)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`

@@ -387,7 +387,7 @@ injectGlobal`
 
   /* Centered Container */
   .centered-container {
-      position: sticky;
+      position: absolute;
       top: 50%;
       left: 0;
       width: 100%;
