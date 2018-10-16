@@ -128,14 +128,14 @@ injectGlobal`
   }
 
 
-  body.no-footer.react-draggable-transparent-selection {
+  body.no-footer {
       position: fixed;
       overflow-y: hidden;
       
   }
-  .no-footer::-webkit-scrollbar { width: 0 !important }
-  .no-footer { -ms-overflow-style: none;  }
-  .no-footer { overflow: -moz-scrollbars-none; }
+  body.no-scrollbar::-webkit-scrollbar { width: 0 !important }
+  body.no-scrollbar { -ms-overflow-style: none;  }
+  body.no-scrollbar { overflow: -moz-scrollbars-none; }
 
 
   img {

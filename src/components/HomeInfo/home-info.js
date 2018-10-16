@@ -27,7 +27,7 @@ class HomeInfo extends React.Component {
                 <h1 className="home-logo">Jeff Wolff</h1>
                 <p>Interface Designer & Web Developer</p>
               </div>
-              <div className="home-btn-tray"><Button small to="/work/" className="home-btn">Work</Button></div>
+              <div className="home-btn-tray"><Button to="/work/" className="home-btn">Work &rarr;</Button></div>
             </div>
         );
     }
