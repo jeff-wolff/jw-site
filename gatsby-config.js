@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'Jeff Wolff',
+    author: 'Jeff Wolff',
+    description: 'UI Engineer & Web Developer from San Diego',
+    siteUrl: 'http://jeffwolff.net',
   },
   pathPrefix: '/',
   plugins: [
@@ -44,6 +44,7 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
