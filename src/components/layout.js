@@ -13,10 +13,30 @@ import Header from './Header/header.js'
 import Footer from './Footer/footer.js'
 
 injectGlobal`
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('${fonts.IBMPlexMono}') format('woff');
-}
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('${fonts.IBMPlexMonoWoff2}') format('woff2'),
+      url('${fonts.IBMPlexMono}') format('woff');
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: italic;
+    src: url('${fonts.IBMPlexMonoItalicWoff2}') format('woff2'),
+      url('${fonts.IBMPlexMonoItalic}') format('woff');
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-weight: bold;
+    src: url('${fonts.IBMPlexMonoBoldWoff2}') format('woff2'),
+      url('${fonts.IBMPlexMonoBold}') format('woff');
+  }
+  @font-face {
+    font-family: 'IBM Plex Mono';
+    font-weight: bold;
+    font-style: italic;
+    src: url('${fonts.IBMPlexMonoBoldItalicWoff2}') format('woff2'),
+      url('${fonts.IBMPlexMonoBoldItalic}') format('woff');
+  }
   :root {
     --bg: #111;
     --bg-faded: #222;
@@ -173,7 +193,6 @@ injectGlobal`
       color: rgba(255,255,255,1);
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
-      font-family: 'IBM Plex Serif';
   }
   h3,h4,h5,h6 {
       color: rgba(255,255,255,.96);
