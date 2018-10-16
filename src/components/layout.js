@@ -72,10 +72,6 @@ injectGlobal`
       position: relative;
       top: 1px;
   }
-  .wrapper {
-    // background-color: #111;
-    // background-color: var(--bg);
-  }
   .gatsby-wrap {
     background: #111;
     background: var(--bg);
@@ -296,9 +292,10 @@ injectGlobal`
 
 
   .wrapper {
+      min-height: 100vh;
       max-width: 1920px;
       overflow-x: hidden;
-      margin-bottom: 500px;
+      margin-bottom: 42vh;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
@@ -311,19 +308,18 @@ injectGlobal`
   .no-footer .wrapper {
       max-width: none;
       margin-top: 0;
-      /* margin-bottom: 0; */
       width: 100vw;
       height: calc(100vh - 52px);
       height: 100vh;
   }
   .container {
-      padding-left: 6.25vw;
-      padding-right: 6.25vw;
+      padding-left: 4.8%;
+      padding-right: 4.8%;
   }
   @media (min-width: 1152px) {
       .container {
-          padding-left: 8.24vw;
-          padding-right: 8.24vw;
+          padding-left: 8.5%;
+          padding-right: 8.5%;
       }
   }
 
@@ -389,23 +385,9 @@ injectGlobal`
       }
   }
 
-
-  footer {
-      position: fixed;
-      z-index: -200;
-      bottom: 0;
-      width: 100%;
-      background-color: #fff;
-      color: #111;
-      height: 500px;
-  }
-  footer .navigation > a {
-      color: #111;
-  }
-
   /* Centered Container */
   .centered-container {
-      position: fixed;
+      position: sticky;
       top: 50%;
       left: 0;
       width: 100%;

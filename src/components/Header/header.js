@@ -17,7 +17,7 @@ const Header = () => (
       <span>Je</span>ff<span> Wol</span>ff
     </Link>
     <div className="navigation">
-      <Link to="/">Work</Link>
+      <Link to="/work/">Work</Link>
     </div>
   </div>
 )

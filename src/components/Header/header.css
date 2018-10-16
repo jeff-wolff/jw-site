@@ -7,11 +7,11 @@
     width: 100%;
     top: 0;
     z-index: 99;
-    padding: 10px 6.25vw 9px;
+    padding: 10px 4.8% 9px;
 }
 @media (min-width: 1152px) {
     .header {
-        padding: 40px 6.25vw 10px;
+        padding: 40px 8.5% 10px;
     }
 }
 .no-footer .header {

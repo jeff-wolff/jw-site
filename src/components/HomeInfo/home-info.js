@@ -25,9 +25,9 @@ class HomeInfo extends React.Component {
             <div className="home-container centered-container">
               <div className={classNames('home-lockup', this.state.hover ? 'hover' : '')} onClick={this.handleClick}>
                 <h1 className="home-logo">Jeff Wolff</h1>
-                <p>User Interface Engineer + Web Developer</p>
+                <p>Interface Designer & Web Developer</p>
               </div>
-              {/*<div className="home-btn-tray"><Button small to="/work/" className="home-btn">Work</Button><Button small to="/posts/" className="home-btn">Posts</Button></div>*/}
+              <div className="home-btn-tray"><Button small to="/work/" className="home-btn">Work</Button></div>
             </div>
         );
     }
