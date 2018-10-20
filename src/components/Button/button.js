@@ -22,6 +22,11 @@ const Button = styled(({small, tiny, ...props}) => <Link {...props} />
         font-size: ${ props => ( props.tiny ? '15px' : props.small ? '17px' : '24px' ) };
         padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem' ) };
     `}
+    // padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1rem 2.5rem' : '2rem 6rem 2rem 0' ) };
+    // ${media.medium`
+    //     font-size: ${ props => ( props.tiny ? '15px' : props.small ? '17px' : '24px' ) };
+    //     padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem 2rem 0' ) };
+    // `}
     &:before, &:after {
         transition: all 0.125s ease-in-out;
         content: ' ';
@@ -47,7 +52,7 @@ const Button = styled(({small, tiny, ...props}) => <Link {...props} />
         background: var(--bg);
         color: #000;
         color: var(--secondary);
-        transform: translate3d(${ props => ( props.tiny ? '-5px, -5px, 0' : props.small ? '-7px, -7px, 0' : '-12px, -12px, 0' ) });
+        transform: translate3d(${ props => ( props.tiny ? '6px, -6px, 0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
         padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1rem 2.5rem' : '2rem 6rem' ) };
         ${media.medium`
             padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem' ) };
@@ -58,8 +63,10 @@ const Button = styled(({small, tiny, ...props}) => <Link {...props} />
         background: var(--primary);
     }
     &:hover:after {
-        transform: translate3d(${ props => ( props.tiny ? '5px, 5px, 0' : props.small ? '7px, 7px, 0' : '12px, 12px, 0' ) });
+        transform: translate3d(${ props => ( props.tiny ? '-6px, 6px, 0' : props.small ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
         opacity: .4;
+        border: 2px solid #ff0;
+        border: 2px solid var(--primary);
     }
     &:active {
         transform: translate3d(0,0,0);

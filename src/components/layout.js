@@ -46,32 +46,6 @@ injectGlobal`
     --secondary-faded: #333;
     --window: 255,255,255;
   }
-
-  p {
-    color: rgba(255,255,255,.68);
-  }
-  a {
-      color: #ff0;
-      color:  var(--primary);
-      text-decoration: none;
-      box-shadow:  0 .1em 0 #ff0;
-      box-shadow:  0 .1em 0 var(--primary);
-      transition: all 125ms ease;
-      outline: 0 solid rgba(0,0,0,0);
-  }
-  a:hover {
-      padding: .12em 0 0;
-      background: rgba(255, 255, 0, 0.87);
-      background: var(--primary-faded);
-      color: #333;
-      color:  var(--secondary-faded);
-      box-shadow: none;
-      text-decoration: none;
-  }
-  a:active {
-      position: relative;
-      top: 1px;
-  }
   .gatsby-wrap {
     background: #111;
     background: var(--bg);
@@ -98,32 +72,21 @@ injectGlobal`
   }
 
   body {
-      color: rgba(255,255,255,.84);
       margin: 0;
+      color: rgba(255,255,255,.88);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.666667;
       overscroll-behavior-y: contain;
   }
-
-  @media (min-width: 768px) {
+  @media (min-width: 320px) {
       body {
-          font-size: 18px;
-          line-height: 1.8;
+        font-size: calc(14px + 15 * ((100vw - 320px) / 1120));
       }
   }
-
-  @media (min-width: 1152px) {
-      body {
-          font-size: 22px;
-          line-height: 2;
-      }
-  }
-
   @media (min-width: 1440px) {
       body {
-          font-size: 26px;
-          line-height: 2.1;
+          font-size: 29px;
       }
   }
 
@@ -137,6 +100,28 @@ injectGlobal`
   body.no-scrollbar { -ms-overflow-style: none;  }
   body.no-scrollbar { overflow: -moz-scrollbars-none; }
 
+  a {
+      color: #ff0;
+      color:  var(--primary);
+      text-decoration: none;
+      box-shadow:  0 .1em 0 #ff0;
+      box-shadow:  0 .1em 0 var(--primary);
+      transition: all 125ms ease;
+      outline: 0 solid rgba(0,0,0,0);
+  }
+  a:hover {
+      padding: .12em 0 0;
+      background: rgba(255, 255, 0, 0.87);
+      background: var(--primary-faded);
+      color: #333;
+      color:  var(--secondary-faded);
+      box-shadow: none;
+      text-decoration: none;
+  }
+  a:active {
+      position: relative;
+      top: 1px;
+  }
 
   img {
       width: 100%;
@@ -166,22 +151,14 @@ injectGlobal`
   h1,h2,h3,h4,h5,h6,p {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
+      font-weight: normal;
       margin: 0 0 2em;
   }
-  @media (min-width: 768px) {
-   /*    h1,h2,h3,h4,h5,h6,p {
-          font-size: 1r;
-      } */
-  }
-  @media (min-width: 768px) {
-      /* h1,h2,h3,h4,h5,h6 {
-          font-size: 14px;
-      } */
-  }
-  @media (min-width: 1440px) {
-      /* h1,h2,h3,h4,h5,h6 {
-          font-size: 15px;
-      } */
+  h1,h2,h3,h4,h5,h6 {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+      letter-spacing: 0.024em;
   }
 
 
@@ -201,7 +178,6 @@ injectGlobal`
   h1 {
       font-size: 1.71428571em;
       line-height: 1.06667;
-      letter-spacing: 0.012em;
   }
   @media (min-width: 375px) {
       h1 {
@@ -305,12 +281,18 @@ injectGlobal`
           margin-top: 0;
       }
   }
+  .no-scrollbar .wrapper {
+      max-width: none;
+      min-height: calc(100vh - 75px);
+      display: flex;
+  }
+  @media (min-width: 1152px) {
+       min-height: calc(100vh - 104px);
+  }
   .no-footer .wrapper {
       max-width: none;
       margin-top: 0;
       width: 100vw;
-      height: calc(100vh - 52px);
-      height: 100vh;
   }
   .container {
       padding-left: 4.8%;
@@ -396,36 +378,42 @@ injectGlobal`
   .centered-title {
       position: fixed;
       top: 50%;
-      left: 50%;
+      left: 0;
       display: inline-block;
-      transform: translate3d(-50%,-50%,0);
+      transform: translateY(-50%);
       margin: 0;
+      padding-left: 4.8%;
   }
+  @media (min-width: 1152px) {
+      .centered-title {
+          padding-left: 8.5%;
+      }
+  }
+
   h1.centered-title {
       transition:  all 200ms ease;
       user-select: none;
-      font-size: 60px;
-      letter-spacing: -.03em;
+      font-size: 80px;
       color: rgba(0, 0, 0, .24);
   }
   @media (min-width: 375px) {
       h1.centered-title {
-          font-size: 72px;
+          font-size: 92px;
       }
   }
   @media (min-width: 768px) {
       h1.centered-title {
-          font-size: 100px;
+          font-size: 120px;
       }
   }
   @media (min-width: 1024px) {
       h1.centered-title {
-          font-size: 140px;
+          font-size: 160px;
       }
   }
   @media (min-width: 1440px) {
       h1.centered-title {
-          font-size: 190px; 
+          font-size: 200px; 
       }
   }
   h1.centered-title:hover {
@@ -469,7 +457,7 @@ injectGlobal`
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const rootPath = `${__PATH_PREFIX__}/work/`
     let header
     let footer
     let innerHeader

@@ -22,12 +22,14 @@ class HomeInfo extends React.Component {
 
     render() {
         return (
-            <div className="home-container centered-container">
+            <div className="home-container">
               <div className={classNames('home-lockup', this.state.hover ? 'hover' : '')} onClick={this.handleClick}>
                 <h1 className="home-logo">Jeff Wolff</h1>
                 <p>User Interface Designer & Web Developer</p>
               </div>
-              <div className="home-btn-tray"><Button to="/work/" className="home-btn">Work &rarr;</Button></div>
+              <div className="home-btn-tray">
+                <Button to="/work/" small>↳ Work</Button>
+              </div>
             </div>
         );
     }
