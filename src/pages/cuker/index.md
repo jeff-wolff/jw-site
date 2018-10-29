@@ -1,5 +1,4 @@
 ---
-path: "/cuker/"
 date: "2018-10-14T03:30:00"
 title: "Cuker Agency"
 ---

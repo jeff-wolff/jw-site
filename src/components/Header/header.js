@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Button from '../Button/button.js'
 import styled from 'styled-components'
 
 import './header.css'
@@ -17,7 +18,7 @@ const Header = () => (
       <span>Je</span>ff<span> Wol</span>ff
     </Link>
     <div className="navigation">
-      <Link to="/work/">Work</Link>
+      <Button to="/work/" small>Work</Button>
     </div>
   </div>
 )

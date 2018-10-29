@@ -1,6 +1,5 @@
 ---
-path: "/gomacro/"
-date: "2018-05-28T03:30:00"
+date: "2017-05-28T03:30:00"
 title: "GoMacro"
 ---
 

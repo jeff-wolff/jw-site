@@ -26,7 +26,7 @@ class PostIndex extends React.Component {
         <body className="no-footer" />
         </Helmet>
         <div>
-        <div>
+        <div className="container">
             <h1 className="centered-title preload">Work</h1>
         </div>
          {posts.map(({ node: post }) => {
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           excerpt(pruneLength: 75)

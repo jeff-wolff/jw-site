@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Button from '../components/Button/button.js'
 import HomeInfo from '../components/HomeInfo/home-info.js';
 import Window from '../components/Window/window.js';
 
@@ -14,7 +13,6 @@ class Index extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <Layout location={this.props.location}>
@@ -24,6 +22,7 @@ class Index extends React.Component {
           title={siteTitle + ' | ' + siteDescription}>
         <body className="no-scrollbar" />
         </Helmet>
+        <h1 className="home-logo">Jeff Wolff</h1>
         <HomeInfo />
       </Layout>
     )
@@ -31,29 +30,3 @@ class Index extends React.Component {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt(pruneLength: 75)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-          }
-        }
-      }
-    }
-  }
-`

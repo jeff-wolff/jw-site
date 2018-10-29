@@ -16,17 +16,14 @@ const Button = styled(({small, tiny, ...props}) => <Link {...props} />
     background-color: #111;
     background-color: var(--bg);
     line-height: 1.33333;
-    font-size: ${ props => ( props.tiny ? '13px' : props.small ? '15px' : '24px' ) }; 
-    padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1rem 2.5rem' : '2rem 6rem' ) };
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: ${ props => ( props.tiny ? '12px' : props.small ? '15px' : '18px' ) }; 
+    padding: ${ props => ( props.tiny ? '.75em 1.25em .5em' : props.small ? '.5em 2.5em' : '1.3em 3em 1.1em' ) };
     ${media.medium`
-        font-size: ${ props => ( props.tiny ? '15px' : props.small ? '17px' : '24px' ) };
-        padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem' ) };
+        font-size: ${ props => ( props.tiny ? '13px' : props.small ? '17px' : '24px' ) };
+        padding: ${ props => ( props.tiny ? '.72em 1.5em .5em' : props.small ? '.62em 3.5em .4em' : '1.3em 3em 1.1em' ) };
     `}
-    // padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1rem 2.5rem' : '2rem 6rem 2rem 0' ) };
-    // ${media.medium`
-    //     font-size: ${ props => ( props.tiny ? '15px' : props.small ? '17px' : '24px' ) };
-    //     padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem 2rem 0' ) };
-    // `}
     &:before, &:after {
         transition: all 0.125s ease-in-out;
         content: ' ';
@@ -53,9 +50,9 @@ const Button = styled(({small, tiny, ...props}) => <Link {...props} />
         color: #000;
         color: var(--secondary);
         transform: translate3d(${ props => ( props.tiny ? '6px, -6px, 0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
-        padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1rem 2.5rem' : '2rem 6rem' ) };
+        padding: ${ props => ( props.tiny ? '.75em 1.5em .5em' : props.small ? '.5em 2.5em' : '1.3em 3em 1.1em' ) };
         ${media.medium`
-            padding: ${ props => ( props.tiny ? '.5rem 1.5rem' : props.small ? '1.25rem 3.5em' : '2rem 8rem' ) };
+            padding: ${ props => ( props.tiny ? '.72em 1.5em .5em' : props.small ? '.62em 3.5em .4em' : '1.3em 3em 1.1em' ) };
         `}
     }
     &:hover:before {
