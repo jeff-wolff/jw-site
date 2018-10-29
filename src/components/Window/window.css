@@ -2,14 +2,14 @@
 
 .react-draggable {
     transition: all 250ms ease;
-    border: 3px solid;
+    border: 6px solid;
     background-color: #111;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .react-draggable {
         border: 6px solid;
     }
-}
+} */
 .react-draggable:after {
     z-index: -1;
     transition:  opacity 250ms ease;
@@ -32,17 +32,15 @@
 }
 .react-draggable > .window-title {
     width: 100%;
-    height: 44px;
+    height: 48px;
     font-size: 14px;
-    line-height: 44px;
+    line-height: 48px;
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
     z-index: -1;
 }
-.react-draggable.collapsed > .window-title {
-    border-bottom: none !important;
-}
+
 .react-draggable > .window-title > .content {
     text-overflow: ellipsis;
     overflow-x: hidden;
@@ -119,8 +117,8 @@
 .window-collapse {
     z-index: 2;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     top: 0;
     right: 0;
     text-align: center;
@@ -156,6 +154,8 @@
     line-height: 32px;
     font-weight: normal;
 }
+
+
 /* Custom Social Media Windows (Twitter, Linkedin, Lastfm) */
 
 .window-twitter > .window-content,

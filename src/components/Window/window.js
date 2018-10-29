@@ -153,25 +153,25 @@ class Window extends React.Component {
           >
             <div className="content">
               {this.props.title}  - <small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small>
-            </div>
-            <label 
-              htmlFor={this.props.id}
-              className="window-collapse"
-              style={{
-                // borderLeft: '2px solid rgba('+this.state.borderColor+',1)',
-                // backgroundColor: this.state.bgColor,
-                color: this.state.borderColor
-              }}
-              >
-              <input 
-                type="checkbox"
-                id={this.props.id}
-                onChange={this.toggleCollapse}
-                checked={this.state.isCollapsed ? "checked" : ""}
-               />
-              <span className="icon"></span>
-            </label>
+            </div>            
           </div>
+          <label 
+            htmlFor={this.props.id}
+            className="window-collapse"
+            style={{
+              borderLeft: '2px solid rgba('+this.state.borderColor+',1)',
+              // backgroundColor: this.state.bgColor,
+              color: this.state.borderColor
+            }}
+            >
+            <input 
+              type="checkbox"
+              id={this.props.id}
+              onChange={this.toggleCollapse}
+              checked={this.state.isCollapsed ? "checked" : ""}
+             />
+            <span className="icon"></span>
+          </label>
           <div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>
           <div className="window-content"
           >
