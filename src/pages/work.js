@@ -25,7 +25,6 @@ class PostIndex extends React.Component {
           title={metatitle}>
         <body className="no-footer" />
         </Helmet>
-        <div>
         <div className="container">
             <h1 className="centered-title preload">Work</h1>
         </div>
@@ -60,7 +59,6 @@ class PostIndex extends React.Component {
              // </div>
            )
          })}
-        </div>
       </Layout>
     )
   }

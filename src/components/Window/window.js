@@ -8,7 +8,7 @@ import './window.css'
 const windowGlobal = typeof window !== 'undefined' && window;
 
 var globalZIndex = 1;
-var count = 0;
+var count = 80;
 var positions = [];
 
 class Window extends React.Component {
@@ -36,12 +36,9 @@ class Window extends React.Component {
   }
 
   collision() {
-      // var x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width))),
-      //     y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
-      // var x = Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width)),
-      //     y = Math.floor(Math.random() * Math.floor(document.body.scrollHeight - this.state.height)) + this.state.height;
-       var x = Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width)),
-          y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight*2 - this.state.height - 200)));
+      var x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width))),
+          y = Math.floor(Math.random() + Math.floor(count+=120));
+          // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
 
       positions.push({
         width: this.state.width,
@@ -93,7 +90,7 @@ class Window extends React.Component {
           }}
           bounds='.wrapper'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 56}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 50}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}

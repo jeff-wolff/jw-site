@@ -22,8 +22,10 @@ class Index extends React.Component {
           title={siteTitle + ' | ' + siteDescription}>
         <body className="no-scrollbar" />
         </Helmet>
-        <h1 className="home-logo">Jeff Wolff</h1>
         <HomeInfo />
+        <div className="container">
+          <h1 className="home-logo">Jeff Wolff</h1>
+        </div>
       </Layout>
     )
   }

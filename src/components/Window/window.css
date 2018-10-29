@@ -2,14 +2,10 @@
 
 .react-draggable {
     transition: all 250ms ease;
-    border: 6px solid;
+    border: 2px solid;
     background-color: #111;
 }
-/* @media (min-width: 768px) {
-    .react-draggable {
-        border: 6px solid;
-    }
-} */
+
 .react-draggable:after {
     z-index: -1;
     transition:  opacity 250ms ease;
