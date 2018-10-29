@@ -20,7 +20,6 @@ class Index extends React.Component {
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle + ' | ' + siteDescription}>
-        <body className="no-scrollbar" />
         </Helmet>
         <HomeInfo />
         <div className="container">

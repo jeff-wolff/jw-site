@@ -65,6 +65,7 @@ class Window extends React.Component {
   }
 
   render() {
+    count = 120;
     return(
       <Rnd  
           className={
