@@ -4,8 +4,9 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
-import HomeInfo from '../components/HomeInfo/home-info.js';
-import Window from '../components/Window/window.js';
+import HomeInfo from '../components/HomeInfo/home-info.js'
+import Window from '../components/Window/window.js'
+import Media from 'react-media'
 
 class PostIndex extends React.Component {
   render() {
@@ -32,18 +33,35 @@ class PostIndex extends React.Component {
            const title = get(post, 'frontmatter.title') || post.fields.slug
            const windowTitle = post.frontmatter.title+" - "+post.excerpt;
            return (
-            <Window 
-                key={post.id} id={post.id} 
-                title={windowTitle}
-                width={320}
-                height={261}
-                minWidth={320}
-                minHeight={261}
-                lockAspect
-                className="work-window"
-            >                
-                <Button tiny to={post.fields.slug} className="button">View Work</Button>
-            </Window>
+            <Media query="(min-width: 768px)" key={post.id}>
+              {matches =>
+                matches ? (
+                  <Window 
+                    title={windowTitle}
+                    width={484}
+                    height={310}
+                    minWidth={222}
+                    minHeight={135}
+                    lockAspect
+                    className="work-window"
+                    >
+                      <Button tiny to={post.fields.slug} className="button">View Work</Button>
+                  </Window>
+                ) : (
+                  <Window 
+                    title={windowTitle}
+                    width={242}
+                    height={155}
+                    minWidth={222}
+                    minHeight={135}
+                    lockAspect
+                    className="work-window"
+                    >
+                      <Button tiny to={post.fields.slug} className="button">View Work</Button>
+                  </Window>
+                )
+              }
+            </Media>
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{

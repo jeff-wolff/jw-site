@@ -259,6 +259,7 @@ injectGlobal`
       margin-bottom: 0;
       width: 100%;
       height: 150vh;
+      overflow: auto;
   }
   .container {
       padding-left: 4.8%;

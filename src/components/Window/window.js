@@ -33,6 +33,7 @@ class Window extends React.Component {
 
     this.collision = this.collision.bind(this);
     this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.handlePreventTouchmoveWhenPanning = this.handlePreventTouchmoveWhenPanning.bind(this);
   }
 
   collision() {
@@ -60,12 +61,28 @@ class Window extends React.Component {
     this.setState({ isCollapsed: !currentState });
   }
 
+  handlePreventTouchmoveWhenPanning(event) {
+   if (this.state.dragging || this.state.resizing) {
+     event.preventDefault();
+   }
+  };
+
   componentDidMount() {
     this.collision();
+    window.document.body.addEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+       passive: false
+     });
+  }
+
+  componentWillUnmount () {
+   window.document.body.removeEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+     passive: false
+   });
   }
 
   render() {
     count = 120;
+
     return(
       <Rnd  
           className={
@@ -89,9 +106,9 @@ class Window extends React.Component {
             borderColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
-          bounds='.wrapper'
+          bounds='parent'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 50}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 38}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}

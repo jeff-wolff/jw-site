@@ -4,6 +4,7 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+import Button from '../components/Button/button.js'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class BlogPostTemplate extends React.Component {
         />
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
+          <Button to="#">www.sunbeltrentals.com ↗</Button>
          <p
            style={{
              // ...scale(-1 / 5),
