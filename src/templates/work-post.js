@@ -6,7 +6,7 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 
-class BlogPostTemplate extends React.Component {
+class WorkPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -23,9 +23,7 @@ class BlogPostTemplate extends React.Component {
         />
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
-          <br /><br />
-          <a href={`https://${post.frontmatter.url}`}>external</a>
-          <Button to="" inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
+          <Button external href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
          <p
            style={{
              // ...scale(-1 / 5),
@@ -75,10 +73,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default WorkPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query WorkPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

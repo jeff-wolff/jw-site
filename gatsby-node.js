@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const workPost = path.resolve('./src/templates/work-post.js')
     resolve(
       graphql(
         `
@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
+        // Create work posts pages.
         const posts = result.data.allMarkdownRemark.edges;
 
         _.each(posts, (post, index) => {
@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: workPost,
             context: {
               slug: post.node.fields.slug,
               previous,
