@@ -21,6 +21,7 @@
 .react-draggable.dragging:after,
 .react-draggable.react-draggable-resizing:after {
     opacity: 1;
+    z-index: 99;
 }
 .react-draggable-dragging,
 .react-draggable-resizing {

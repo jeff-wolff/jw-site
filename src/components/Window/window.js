@@ -142,10 +142,10 @@ class Window extends React.Component {
           enableResizing={{ bottomRight: this.state.enableResize }}
           onDrag={(e, d) => { 
             this.setState({ x: d.x, y: d.y })
+            this.setState({ dragging: true })
           }}
           onDragStart={(e, d) => { 
             globalZIndex = globalZIndex+1;
-            this.setState({ dragging: true })
           }}
           onDragStop={(e, d) => { 
             this.setState({ dragging: false })
