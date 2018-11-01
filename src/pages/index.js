@@ -7,8 +7,10 @@ import HomeInfo from '../components/HomeInfo/home-info.js';
 import Window from '../components/Window/window.js';
 
 class Index extends React.Component {
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteTagline = get(this, 'props.data.site.siteMetadata.tagline')
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
@@ -19,7 +21,7 @@ class Index extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle + ' | ' + siteDescription}>
+          title={siteTitle + ' - ' + siteTagline}>
         </Helmet>
         <HomeInfo />
         <div className="container">
@@ -31,3 +33,14 @@ class Index extends React.Component {
 }
 
 export default Index
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+        tagline
+      }
+    }
+  }
+`

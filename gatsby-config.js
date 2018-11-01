@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Jeff Wolff',
     author: 'Jeff Wolff',
-    description: 'UI Designer & Web Developer from San Diego',
+    tagline: 'UI Designer & Web Developer',
+    description: 'San Diego based guy who makes websites.',
     siteUrl: 'http://jeffwolff.net',
   },
   pathPrefix: '/',

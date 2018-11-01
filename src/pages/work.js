@@ -16,14 +16,14 @@ class PostIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    const metatitle = "WORK - "+siteTitle;
 
     return (
       <Layout location={this.props.location}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={metatitle}>
+          title={`Work - ${siteTitle}`}
+          >
         <body className="no-footer" />
         </Helmet>
         <div className="container">

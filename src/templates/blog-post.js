@@ -12,18 +12,20 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
+    const siteURL = post.frontmatter.url
 
     return (
       <Layout location={this.props.location}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
+          title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
-          <Button inlineicon="right" to="#">www.sunbeltrentals.com <span>↗</span></Button><br /><br />
-          <Button to="#">www.sunbeltrentals.com</Button>
+          <br /><br />
+          <a href={`https://${post.frontmatter.url}`}>external</a>
+          <Button to="" inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
          <p
            style={{
              // ...scale(-1 / 5),
@@ -90,6 +92,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        url
       }
     }
   }
