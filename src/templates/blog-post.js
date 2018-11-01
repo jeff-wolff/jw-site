@@ -22,7 +22,8 @@ class BlogPostTemplate extends React.Component {
         />
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
-          <Button to="#">www.sunbeltrentals.com ↗</Button>
+          <Button inlineicon="right" to="#">www.sunbeltrentals.com <span>↗</span></Button><br /><br />
+          <Button to="#">www.sunbeltrentals.com</Button>
          <p
            style={{
              // ...scale(-1 / 5),
@@ -52,17 +53,17 @@ class BlogPostTemplate extends React.Component {
            <li>
              {
                previous &&
-               <Link to={previous.fields.slug} rel="prev">
-                 ← {previous.frontmatter.title}
-               </Link>
+               <Button tiny inlineicon="left" to={previous.fields.slug} rel="prev">
+                 <span>←</span> {previous.frontmatter.title}
+               </Button>
              }
            </li>
            <li>
              {
                next &&
-               <Link to={next.fields.slug} rel="next">
-                 {next.frontmatter.title} →
-               </Link>
+               <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
+                 {next.frontmatter.title} <span>→</span>
+               </Button>
              }
            </li>
          </ul>

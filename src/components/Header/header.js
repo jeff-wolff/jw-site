@@ -18,7 +18,7 @@ const Header = () => (
       <span>Je</span>ff<span> Wol</span>ff
     </Link>
     <div className="navigation">
-      <Button to="/work/" small>Work</Button>
+      <Button to="/work/" small inlineicon="right">Work <span>&rarr;</span></Button>
     </div>
   </div>
 )
