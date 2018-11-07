@@ -294,21 +294,21 @@ injectGlobal`
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/work/`
+    const workPath = `${__PATH_PREFIX__}/work/`
     let header
     let footer
     let innerHeader
 
-    if (location.pathname === rootPath) {
+    if (location.pathname === workPath) {
       innerHeader = (
-        <Header />
+        <Header isWorkPage={true} />
       )
       footer = (
         <Footer />
       )
     } else {
       header = (
-        <Header />
+        <Header  />
       )
       footer = (
         <Footer />
