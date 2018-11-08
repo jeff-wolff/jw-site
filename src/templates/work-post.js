@@ -24,6 +24,7 @@ class WorkPostTemplate extends React.Component {
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
           <Button external href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
+
          <p
            style={{
              // ...scale(-1 / 5),
@@ -32,7 +33,7 @@ class WorkPostTemplate extends React.Component {
              // marginTop: rhythm(-1),
            }}
          >
-           {post.frontmatter.date}
+          Launched on: {post.frontmatter.date}
          </p>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
          <hr

@@ -1,5 +1,5 @@
 ---
-date: "2014-07-10T03:30:00"
+date: "2015-11-10T00:00:00"
 title: "Rip Curl"
 url: "www.ripcurl.com"
 ---

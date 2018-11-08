@@ -1,5 +1,5 @@
 ---
-date: "2015-02-02T03:30:00"
+date: "2016-02-26T00:00:00"
 title: "Vans History"
 url: "www.vans.com/history"
 ---
