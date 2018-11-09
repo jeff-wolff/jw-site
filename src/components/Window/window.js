@@ -8,7 +8,7 @@ import './window.css'
 const windowGlobal = typeof window !== 'undefined' && window;
 
 var globalZIndex = 1;
-var count = 80;
+var count = 0;
 var positions = [];
 
 class Window extends React.Component {
@@ -38,7 +38,7 @@ class Window extends React.Component {
 
   collision() {
       var x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width))),
-          y = Math.floor(Math.random() + Math.floor(count+=120));
+          y = Math.floor(Math.random() + Math.floor(count+=75));
           // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
 
       positions.push({

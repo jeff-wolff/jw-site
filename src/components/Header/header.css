@@ -54,7 +54,7 @@
     font-size: inherit;
 }
 
-@media (max-width: 375px) {
+@media (min-width: 1152px) {
     .header > .logo,
     .header > .logo:hover > span {
         font-size: 24px;

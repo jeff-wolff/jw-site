@@ -50,10 +50,6 @@ injectGlobal`
     background: #111;
     background: var(--bg);
   }
-  .blog-post-container a {
-    color: var(--bg);
-    box-shadow:  0 .1em 0 var(--bg);
-  }
   html {
       box-sizing: border-box;
   }
@@ -258,7 +254,7 @@ injectGlobal`
       margin-top: 0;
       margin-bottom: 0;
       width: 100%;
-      height: 150vh;
+      height: 100vh;
       overflow: auto;
   }
   .container {
@@ -272,16 +268,24 @@ injectGlobal`
       }
   }
 
-  h1.centered-title {
+  .centered-title {
       transition:  all 200ms ease;
       user-select: none;
-      color: rgba(0, 0, 0, .24);
+      color: rgba(255, 255, 255, .25);
+      position: fixed;
+      top: 100px;
+      margin: 0;
   }
-  h1.centered-title:hover {
+  @media (min-width: 1152px) {
+    .centered-title {
+      top: 160px;
+    }
+  }
+  .centered-title:hover {
       text-shadow: 3px 4px 0.1rem rgba(0,0,0,.35);
       color: rgba(255,255, 255, .92);
   }
-  h1.centered-title.preload {
+  .centered-title.preload {
       z-index: 2;
       color: #fff;
       text-shadow: 3px 4px 1rem rgba(0,0,0,.35);
