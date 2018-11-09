@@ -109,7 +109,6 @@ injectGlobal`
       position: relative;
       top: 1px;
   }
-
   img {
       width: 100%;
       height: auto;
@@ -129,58 +128,56 @@ injectGlobal`
   li > * {
       font-size: 1em;
   }
-
-
   a > strong {
       color:  inherit;
   }
-
-  h1,h2,h3,h4,h5,h6,p {
+  p {
+    letter-spacing: 0.075em;
+  }
+  h1,.h1,h2,h3,h4,h5,h6,p {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       font-weight: normal;
       margin: 0 0 2em;
   }
-  h1,h2,h3,h4,h5,h6 {
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: -0.025em;
-      letter-spacing: 0.024em;
-  }
-
-
-  h1,h2 {
+  h1,.h1,h2 {
       color: rgba(255,255,255,1);
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
   }
+      
   h3,h4,h5,h6 {
       color: rgba(255,255,255,.96);
       margin-top: 2rem;
       margin-bottom: .5rem;
   }
-
-
-
-  h1 {
+  h1,.h1 {
       font-size: 41px;
       line-height: 1;
-      letter-spacing: .1em;
+      font-weight: bold;
+      letter-spacing: .15em;
+      text-transform: uppercase;
   }
   @media (min-width: 320px) {
-      h1 {
+      h1,.h1 {
         font-size: calc(41px + 63 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
-      h1 {
+      h1,.h1 {
           font-size: 104px;
       }
+  }
+  
+  h2,h3,h4,h5,h6 {
+      font-family: 'IBM Plex Mono';
+      font-size: 1.14285714em;
+      line-height: 1.2;
+      letter-spacing: .075em;
   }
 
   h2 {
       font-size: 1.28571429em;
-      line-height: 1.25;
   }
   @media (min-width: 375px) {
       h2 {
@@ -198,11 +195,7 @@ injectGlobal`
       }
   }
 
-  h3,h4,h5,h6 {
-      font-family: 'IBM Plex Mono';
-      font-size: 1.14285714em;
-      line-height: 1.25;
-  }
+
   @media (min-width: 375px) {
       h3 {
           font-size: 1.28571429em;
@@ -215,7 +208,7 @@ injectGlobal`
   }
   @media (min-width: 1440px) {
       h3 {
-          font-size: 1em;
+          font-size: 33px;
       }
   }
 
@@ -227,11 +220,22 @@ injectGlobal`
   figure {
       margin: 0;
   }
-  figcaption, small {
-      font-size:  10px;
+  figcaption {
+    text-transform: uppercase;
   }
-
-
+  figcaption, small {
+      font-size:  12px;
+  }
+  @media (min-width: 1152px) {
+      figcaption, small {
+        font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
+      }
+  }
+  @media (min-width: 1440px) {
+      figcaption, small {
+        font-size: 16px;
+      }
+  }
   .wrapper {
       min-height: 100vh;
       max-width: 1920px;

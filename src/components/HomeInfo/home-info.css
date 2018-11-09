@@ -13,5 +13,5 @@
     margin: 0;
     position: absolute;
     bottom: 4.8%;
-    width: 575px;
+    max-width: 675px;
 }
