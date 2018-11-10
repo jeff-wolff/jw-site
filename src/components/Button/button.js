@@ -46,7 +46,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         padding-right: ${ props => (props.inlineicon == "right" ? '3em' : '')};
         padding-left: ${ props => (props.inlineicon == "left" ? '3em' : '')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.tiny ? '5px, -5px, 0' : props.small ? '6px, -6px, 0' : '6px, -6px, 0' ) });
+            transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '6px, -6px, 0' : '6px, -6px, 0' ) });
         }
         ${media.medium`
             padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 2em' ) };
@@ -55,7 +55,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         `}
         ${media.large`
             @media (-moz-touch-enabled: 0), (hover: hover) {
-                transform: translate3d(${ props => ( props.tiny ? '6px, -6px, 0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
+                transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
             }
             padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 2em' ) };
             padding-right: ${ props => (props.inlineicon == "right" ? '5em' : '')};
@@ -94,9 +94,9 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         border: 2px solid var(--primary);
         border-width: ${ props => ( props.tiny ? '1px' : '2px')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.tiny ? '-5px, 5px, 0' : props.small ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
+            transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
             ${media.large`
-                transform: translate3d(${ props => ( props.tiny ? '-6px, 6px, 0' : props.small ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
+                transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
             `}
         }
     }

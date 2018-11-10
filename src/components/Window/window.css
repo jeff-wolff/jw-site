@@ -2,8 +2,9 @@
 
 .react-draggable {
     transition: all 250ms ease;
-    border: 2px solid;
+    border: 4px solid;
     background-color: #111;
+    overflow: hidden;
 }
 
 .react-draggable:after {
@@ -17,11 +18,12 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 0 2rem rgba(255, 255, 255, .62);
+    box-shadow: 0 0 2rem red;
 }
 .react-draggable.dragging:after,
 .react-draggable.react-draggable-resizing:after {
     opacity: 1;
-    z-index: 99;
+    /* z-index: 99; */
 }
 .react-draggable-dragging,
 .react-draggable-resizing {
@@ -31,11 +33,16 @@
     width: 100%;
     height: 36px;
     line-height: 36px;
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
     z-index: -1;
+}
+@media (min-width: 1152px) {
+    .react-draggable > .window-title {
+        font-size: 13px;
+    }
 }
 
 .react-draggable > .window-title > .content {
@@ -48,34 +55,33 @@
 
 
 .react-draggable > .window-content {
+    transition:  opacity 250ms ease;
     position: relative;
-    overflow: hidden;
     width: 100%;
     height: calc(100% - 36px);
-    padding: 0 10%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-@media (min-width: 768px) {
-    .work-window.react-draggable > .window-content {
-    }
-    .post-window.react-draggable > .window-content {
-        
-    }
+.react-draggable > .window-content > video {
+    transition:  opacity 250ms ease;
+    position: absolute;
+    width: 100%;
+    opacity: .26;
 }
-.react-draggable.no-resize > .window-content {
-    height: calc(100% - 46px);
+.react-draggable > .window-content:hover > .window-button,
+.react-draggable > .window-content:hover > video {
+    opacity: 1;
 }
 .react-draggable.collapsed > .window-content {
     opacity: 0;
 }
 
-.window-content > .post-title {
-    /* color:  #fff; */
+.react-draggable > .window-content > .window-button {
+   transition: opacity 250ms ease;
+   opacity: 0;
 }
-
 
 .react-draggable a.window-link:hover,
 .react-draggable a.window-link:active {

@@ -27,8 +27,8 @@ class Window extends React.Component {
       enableResize: this.props.enableResize === undefined || this.props.enableResize == true ? true : false,
       isCollapsed: this.props.isCollapsed ? this.props.isCollapsed : false,
       bgColor: this.props.bgColor ? this.props.bgColor : "var(--bg)",
-      titleColor: this.props.titleColor ? this.props.titleColor : "var(--window)",
-      borderColor: this.props.borderColor ? this.props.borderColor : "var(--window)"
+      titleColor: this.props.titleColor ? this.props.titleColor : "var(--window-title)",
+      borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)"
     }
 
     this.collision = this.collision.bind(this);
@@ -108,7 +108,7 @@ class Window extends React.Component {
           }}
           bounds='parent'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 38}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 44}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}
@@ -127,8 +127,8 @@ class Window extends React.Component {
             bottom: {'display':'none'},
             bottomLeft: {'display':'none'},
             bottomRight: {
-              'width':'26px',
-              'height':'26px',
+              'width':'32px',
+              'height':'32px',
               'bottom':'0px',
               'right':'0px',
               'color': this.state.borderColor
@@ -142,10 +142,10 @@ class Window extends React.Component {
           enableResizing={{ bottomRight: this.state.enableResize }}
           onDrag={(e, d) => { 
             this.setState({ x: d.x, y: d.y })
-            this.setState({ dragging: true })
           }}
           onDragStart={(e, d) => { 
             globalZIndex = globalZIndex+1;
+            this.setState({ dragging: true })
           }}
           onDragStop={(e, d) => { 
             this.setState({ dragging: false })
@@ -163,20 +163,20 @@ class Window extends React.Component {
           <div className="window-title"
               style={{
                   color: 'rgb('+this.state.titleColor+')',
-                  borderBottom: '2px solid rgba('+this.state.borderColor+',1)'
+                  backgroundColor: 'rgb('+this.state.borderColor+')'
               }}
           >
             <div className="content">
-              {this.props.title}  - <small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small>
-            </div>            
+              <small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small> - {this.props.title}
+            </div>
           </div>
           <label 
             htmlFor={this.props.id}
             className="window-collapse"
             style={{
-              borderLeft: '2px solid rgba('+this.state.borderColor+',1)',
+              // borderLeft: '2px solid rgba('+this.state.borderColor+',1)',
               // backgroundColor: this.state.bgColor,
-              color: this.state.borderColor
+              color: 'rgb('+this.state.titleColor+')'
             }}
             >
             <input 
@@ -187,7 +187,7 @@ class Window extends React.Component {
              />
             <span className="icon"></span>
           </label>
-          <div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>
+          {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
           <div className="window-content"
           >
             {this.props.children}

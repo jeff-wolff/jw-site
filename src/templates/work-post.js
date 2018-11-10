@@ -13,7 +13,14 @@ class WorkPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
     const siteURL = post.frontmatter.url
-
+    let coverVideo;
+    if (post.frontmatter.featuredVideo != null) {
+     coverVideo = <video autoPlay muted loop>
+             <source src={post.frontmatter.featuredVideo.publicURL} type="video/mp4" />
+           </video>;
+    } else {
+     coverVideo = "";
+    }
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -34,6 +41,7 @@ class WorkPostTemplate extends React.Component {
            }}
          >
           Launched on: {post.frontmatter.date}
+          {coverVideo}
          </p>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
          <hr
@@ -92,6 +100,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         url
+        featuredVideo {
+          publicURL
+        }
       }
     }
   }

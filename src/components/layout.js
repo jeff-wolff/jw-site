@@ -44,7 +44,8 @@ injectGlobal`
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
     --secondary-faded: #333;
-    --window: 255,255,255;
+    --window-border: 190,190,190;
+    --window-title: 0,0,0;
   }
   .gatsby-wrap {
     background: #111;
