@@ -29,6 +29,12 @@
 .react-draggable-resizing {
     transition:  none;
 }
+
+.react-draggable:hover .window-content .window-button,
+.react-draggable:hover .window-content video {
+    opacity: 1;
+}
+
 .react-draggable > .window-title {
     width: 100%;
     height: 36px;
@@ -44,15 +50,12 @@
         font-size: 13px;
     }
 }
-
 .react-draggable > .window-title > .content {
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
     padding-right: 35px;
 }
-
-
 
 .react-draggable > .window-content {
     transition:  opacity 250ms ease;
@@ -71,10 +74,7 @@
     opacity: .26;
     z-index: -1;
 }
-.react-draggable > .window-content:hover > .window-button,
-.react-draggable > .window-content:hover > video {
-    opacity: 1;
-}
+
 .react-draggable.collapsed > .window-content {
     opacity: 0;
 }
