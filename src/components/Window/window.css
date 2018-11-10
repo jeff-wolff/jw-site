@@ -29,7 +29,8 @@
 .react-draggable-resizing {
     transition:  none;
 }
-
+.react-draggable.dragging .window-content .window-button,
+.react-draggable.dragging .window-content video,
 .react-draggable:hover .window-content .window-button,
 .react-draggable:hover .window-content video {
     opacity: 1;
