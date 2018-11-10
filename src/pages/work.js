@@ -55,8 +55,8 @@ class PostIndex extends React.Component {
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
                     >
-                      {coverVideo}
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                      {coverVideo}
                   </Window>
                 ) : (
                   <Window 
@@ -69,8 +69,8 @@ class PostIndex extends React.Component {
                     lockAspectExtraHeight={44}
                     className="work-window"
                     >
-                      {coverVideo}
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                      {coverVideo}
                   </Window>
                 )
               }

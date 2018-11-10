@@ -69,6 +69,7 @@
     position: absolute;
     width: 100%;
     opacity: .26;
+    z-index: -1;
 }
 .react-draggable > .window-content:hover > .window-button,
 .react-draggable > .window-content:hover > video {
@@ -81,6 +82,9 @@
 .react-draggable > .window-content > .window-button {
    transition: opacity 250ms ease;
    opacity: 0;
+}
+.react-draggable > .window-content > .window-button:hover + video {
+    opacity: .26;
 }
 
 .react-draggable a.window-link:hover,
