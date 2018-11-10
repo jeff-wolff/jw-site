@@ -61,12 +61,12 @@ class PostIndex extends React.Component {
                 ) : (
                   <Window 
                     title={windowTitle}
-                    width={242}
-                    height={155}
-                    minWidth={222}
-                    minHeight={135}
-                    lockAspect
-                    lockAspectExtraHeight={44}
+                    width={267}
+                    height={188}
+                    minWidth={180}
+                    minHeight={139}
+                    lockAspect={1.77777778}
+                    lockAspectRatioExtraHeight={38}
                     className="work-window"
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
