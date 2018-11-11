@@ -47,23 +47,20 @@ injectGlobal`
     --window-border: 190,190,190;
     --window-title: 0,0,0;
   }
-  .gatsby-wrap {
-    background: #111;
-    background: var(--bg);
-  }
   html {
       box-sizing: border-box;
   }
   *, *:after, *:before {
       box-sizing: inherit;
   }
-
   body {
       margin: 0;
       color: rgba(255,255,255,.88);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.789474;
+      background-color: #111;
+      background-color: var(--bg);
   }
   @media (min-width: 320px) {
       body {
@@ -244,6 +241,8 @@ injectGlobal`
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
+      background-color: #111;
+      background-color: var(--bg);
   }
   @supports (position: sticky) {
       .wrapper {
@@ -295,7 +294,12 @@ injectGlobal`
       color: #fff;
       text-shadow: 3px 4px 1rem rgba(0,0,0,.35);
   }
-
+  .work-post-container h1 {
+    margin: 0;
+  }
+  video {
+    max-width: 100%;
+  }
 `;
 
 
@@ -324,12 +328,10 @@ class Template extends React.Component {
       )
     }
     return (
-      <div className="gatsby-wrap">
+      <div>
         {header}
-        <div className="wrapper">
         {innerHeader}
-        {children}
-        </div>
+        <div className="wrapper">{children}</div>
         {footer}
       </div>
     )
