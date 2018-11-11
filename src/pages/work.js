@@ -8,7 +8,7 @@ import HomeInfo from '../components/HomeInfo/home-info.js'
 import Window from '../components/Window/window.js'
 import Media from 'react-media'
 
-class PostIndex extends React.Component {
+class WorkIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -31,33 +31,33 @@ class PostIndex extends React.Component {
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = post.frontmatter.title+" - "+post.excerpt;
-            let coverVideo;
+            let coverVideoURL;
             if (post.frontmatter.featuredVideo != null) {
-              coverVideo = <video autoPlay muted loop>
-                      <source src={post.frontmatter.featuredVideo.publicURL} type="video/mp4" />
-                    </video>;
+              coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             } else {
-              coverVideo = "";
+              coverVideoURL = "";
             }
            return (
             <Media query="(min-width: 768px)" key={post.id}>
               {matches =>
                 matches ? (
-                  <Window 
-                    title={windowTitle}
-                    width={640}
-                    height={398}
-                    minWidth={359}
-                    minHeight={240}
-                    maxWidth={1280}
-                    maxHeight={758}
-                    lockAspect={1.77777778}
-                    lockAspectRatioExtraHeight={38}
-                    className="work-window"
-                    >
-                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                      {coverVideo}
-                  </Window>
+                    <Window 
+                      title={windowTitle}
+                      width={640}
+                      height={398}
+                      minWidth={359}
+                      minHeight={240}
+                      maxWidth={1280}
+                      maxHeight={758}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={38}
+                      className="work-window"
+                      >
+                        <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                        <video autoPlay muted loop playsInline>
+                          <source src={coverVideoURL} type="video/mp4" />
+                        </video>
+                    </Window>
                 ) : (
                   <Window 
                     title={windowTitle}
@@ -70,7 +70,9 @@ class PostIndex extends React.Component {
                     className="work-window"
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                      {coverVideo}
+                      <video autoPlay muted loop playsInline>
+                        <source src={coverVideoURL} type="video/mp4" />
+                      </video>
                   </Window>
                 )
               }
@@ -95,7 +97,7 @@ class PostIndex extends React.Component {
   }
 }
 
-export default PostIndex
+export default WorkIndex
 
 export const pageQuery = graphql`
   query {
