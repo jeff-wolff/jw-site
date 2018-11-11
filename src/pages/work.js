@@ -38,7 +38,7 @@ class WorkIndex extends React.Component {
               coverVideoURL = "";
             }
            return (
-            <Media query="(min-width: 768px)" key={post.id}>
+            <Media query="(min-width: 1280px)" key={post.id}>
               {matches =>
                 matches ? (
                     <Window 

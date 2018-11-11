@@ -13,7 +13,7 @@ class Header extends React.Component {
       navigation = "";
     } else {
       navigation = <div className="navigation">
-                     <Button to="/work/" small inlineicon="right">Work <span>&rarr;</span></Button>
+                     <Button to="/work/" tiny inlineicon="right">Work <span>&rarr;</span></Button>
                    </div>;
     }
     return (

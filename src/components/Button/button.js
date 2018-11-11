@@ -78,9 +78,9 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     &:after {
         opacity: 1;
         z-index: -2;
-        border: 2px solid #ff0;
-        border: 2px solid var(--primary);
-        border-width: ${ props => ( props.tiny ? '1px' : '2px')};
+        border: 4px solid #ff0;
+        border: 4px solid var(--primary);
+        border-width: ${ props => ( props.tiny ? '1px' : '4px')};
         transform: translate3d(0,0,0);
     }
     
@@ -90,9 +90,9 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     }
     &:hover:after {
         opacity: .4;
-        border: 2px solid #ff0;
-        border: 2px solid var(--primary);
-        border-width: ${ props => ( props.tiny ? '1px' : '2px')};
+        border: 4px solid #ff0;
+        border: 4px solid var(--primary);
+        border-width: ${ props => ( props.tiny ? '1px' : '4px')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
             transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
             ${media.large`

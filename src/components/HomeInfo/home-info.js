@@ -12,7 +12,8 @@ class HomeInfo extends React.Component {
     render() {
         return (
             <div className="home-container container">
-                <p>User Interface Designer & Web Developer</p>
+                <p>I create websites that expand multiple devices, engage the audience, and are easy-to-use.</p>
+                <p>I'm a Website Developer based in San Diego, CA</p>
             </div>
         );
     }

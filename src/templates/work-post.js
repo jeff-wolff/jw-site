@@ -31,7 +31,7 @@ class WorkPostTemplate extends React.Component {
         {coverVideo}
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
-          <Button external href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
+          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
 
          <p
            style={{

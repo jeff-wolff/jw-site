@@ -6,7 +6,42 @@ footer {
     background-color: #fff;
     color: #111;
     height: 42vh;
+    min-height: 540px;
 }
 footer .navigation > a {
     color: #111;
+}
+footer a[class^="button"] {
+    width: 100%;
+    margin: 1em 0;
+    font-size: 24px;
+    background-color: transparent;
+    color: var(--bg);
+    
+}
+footer a[class^="button"]:after,
+footer a[class^="button"]:hover:after {
+    border-width: 2px;
+}
+@media (min-width: 1152px) {
+    footer a[class^="button"] {
+        width: calc(50% - 40px);
+        margin: 1em 20px;
+        font-size: 36px;
+    }
+    footer a[class^="button"]:after,
+    footer a[class^="button"]:hover:after {
+        border-width: 3px;
+    }
+}
+footer a[class^="button"]:hover {
+    background-color: var(--bg);
+    color: var(--primary);
+}
+footer a[class^="button"]:after,
+footer a[class^="button"]:hover:after {
+    border-color: var(--bg);
+}
+footer a[class^="button"]:hover:before {
+    background-color: var(--bg);
 }

@@ -236,7 +236,7 @@ injectGlobal`
   }
   .wrapper {
       min-height: 120vh;
-      margin-bottom: 42vh;
+      margin-bottom: 540px;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
@@ -331,8 +331,10 @@ class Template extends React.Component {
     return (
       <div>
         {header}
+        <div className="wrapper">
         {innerHeader}
-        <div className="wrapper">{children}</div>
+        {children}
+        </div>
         {footer}
       </div>
     )
