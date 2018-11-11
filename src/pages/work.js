@@ -78,7 +78,6 @@ class WorkIndex extends React.Component {
                   ) : (
                     <Media query="(max-width: 740px)" render={() => 
                       <Window 
-                        key={"mobile-"+post.id}
                         title={windowTitle}
                         width={267}
                         height={188}
