@@ -146,6 +146,10 @@ class Window extends React.Component {
           onDragStart={(e, d) => { 
             globalZIndex = globalZIndex+1;
             this.setState({ dragging: true })
+            if (this.refs.coverVid) {
+              this.refs.coverVid.autoplay = true;
+              this.refs.coverVid.play();
+            } 
           }}
           onDragStop={(e, d) => { 
             this.setState({ dragging: false })
@@ -170,14 +174,13 @@ class Window extends React.Component {
               this.refs.coverVid.pause();
             } 
           }}
-          onTouchStart={() => { 
-            console.log('start');
+          onPointerEnter={() => { 
             if (this.refs.coverVid) {
               this.refs.coverVid.autoplay = true;
               this.refs.coverVid.play();
             } 
           }}
-          onTouchEnd={() => { 
+          onPointerLeave={() => { 
             if (this.refs.coverVid) {
               this.refs.coverVid.pause();
             } 
