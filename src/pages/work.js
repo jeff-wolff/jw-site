@@ -29,11 +29,9 @@ class WorkIndex extends React.Component {
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = post.frontmatter.title+" - "+post.excerpt;
-            let coverVideoURL;
+            let coverVideoURL = "";
             if (post.frontmatter.featuredVideo != null) {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
-            } else {
-              coverVideoURL = "";
             }
            return (
             <Media query="(min-width: 1152px)" key={post.id}>
@@ -50,11 +48,10 @@ class WorkIndex extends React.Component {
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={38}
                       className="work-window"
+                      coverVideo={coverVideoURL ? coverVideoURL : ""}
                       >
                         <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                        <video autoPlay muted loop playsInline>
-                          <source src={coverVideoURL} type="video/mp4" />
-                        </video>
+                        
                     </Window>
                 ) : (
                   <Window 
@@ -66,11 +63,10 @@ class WorkIndex extends React.Component {
                     lockAspect={1.77777778}
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
+                    coverVideo={coverVideoURL ? coverVideoURL : ""}
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                      <video autoPlay muted loop playsInline>
-                        <source src={coverVideoURL} type="video/mp4" />
-                      </video>
+                     
                   </Window>
                 )
               }

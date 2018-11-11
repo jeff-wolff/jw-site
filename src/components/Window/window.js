@@ -28,7 +28,8 @@ class Window extends React.Component {
       isCollapsed: this.props.isCollapsed ? this.props.isCollapsed : false,
       bgColor: this.props.bgColor ? this.props.bgColor : "var(--bg)",
       titleColor: this.props.titleColor ? this.props.titleColor : "var(--window-title)",
-      borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)"
+      borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)",
+      coverVideoURL: this.props.coverVideo ? this.props.coverVideo : ""
     }
 
     this.collision = this.collision.bind(this);
@@ -82,7 +83,6 @@ class Window extends React.Component {
 
   render() {
     count = 120;
-
     return(
       <Rnd  
           className={
@@ -159,6 +159,17 @@ class Window extends React.Component {
           }}
           onResizeStart={() => { this.setState({ resizing: true }) }}
           onResizeStop={() => { this.setState({ resizing: false }) }}
+          onMouseEnter={() => { 
+            if (this.refs.coverVid) {
+              this.refs.coverVid.autoplay = true;
+              this.refs.coverVid.play();
+            } 
+          }}
+          onMouseLeave={() => { 
+            if (this.refs.coverVid) {
+              this.refs.coverVid.pause();
+            } 
+          }}
       >
           <div className="window-title"
               style={{
@@ -191,6 +202,9 @@ class Window extends React.Component {
           <div className="window-content"
           >
             {this.props.children}
+            {this.state.coverVideoURL ? <video muted loop playsInline preload="none" ref="coverVid">
+              <source src={this.state.coverVideoURL} type="video/mp4" />
+            </video> : ""}
           </div>
       </Rnd>
     )
