@@ -235,8 +235,7 @@ injectGlobal`
       }
   }
   .wrapper {
-      min-height: 100vh;
-      max-width: 1920px;
+      min-height: 120vh;
       margin-bottom: 42vh;
       margin-top: 114px;
       margin-left: auto;
@@ -258,7 +257,7 @@ injectGlobal`
       margin-top: 0;
       margin-bottom: 0;
       width: 100%;
-      height: 200vh;
+      height: 150vh;
       overflow: auto;
   }
   .container {
