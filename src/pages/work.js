@@ -36,62 +36,66 @@ class WorkIndex extends React.Component {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             }
            return (
-            <React.Fragment key={post.id}>
-              <Media query="(min-width: 1440px)" render={() => 
-                  <Window 
-                    key={"desktop-"+post.id}
-                    title={windowTitle}
-                    width={640}
-                    height={398}
-                    minWidth={359}
-                    minHeight={240}
-                    maxWidth={1280}
-                    maxHeight={758}
-                    lockAspect={1.77777778}
-                    lockAspectRatioExtraHeight={38}
-                    className="work-window"
-                    coverVideo={coverVideoURL}
-                    
-                    >
-                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                  </Window>
+              <Media query="(min-width: 741px)" key={post.id}>
+                {matches =>
+                  matches ? (
+                    <Media query="(min-width: 1440px)">
+                      {matches =>
+                        matches ? (
+                          <Window 
+                            title={windowTitle}
+                            width={640}
+                            height={398}
+                            minWidth={359}
+                            minHeight={240}
+                            maxWidth={1280}
+                            maxHeight={758}
+                            lockAspect={1.77777778}
+                            lockAspectRatioExtraHeight={38}
+                            className="work-window"
+                            coverVideo={coverVideoURL}
+                            
+                            >
+                              <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                          </Window>
+                        ) : (
+                          <Window 
+                            title={windowTitle}
+                            width={425}
+                            height={277}
+                            minWidth={224}
+                            minHeight={164}
+                            lockAspect={1.77777778}
+                            lockAspectRatioExtraHeight={38}
+                            className="work-window"
+                            coverVideo={coverVideoURL}
+                            >
+                              <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                          </Window>
+                        )
+                      }
+                    </Media>
+                  ) : (
+                    <Media query="(max-width: 740px)" render={() => 
+                      <Window 
+                        key={"mobile-"+post.id}
+                        title={windowTitle}
+                        width={267}
+                        height={188}
+                        minWidth={180}
+                        minHeight={139}
+                        lockAspect={1.77777778}
+                        lockAspectRatioExtraHeight={38}
+                        className="work-window"
+                        coverVideo={coverVideoURL}
+                        >
+                          <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                      </Window>
+                    }
+                    />
+                  )
                 }
-                />
-                <Media query="(min-width: 741px) and (max-width: 1339px)" render={() => 
-                  <Window 
-                    key={"tablet-"+post.id}
-                    title={windowTitle}
-                    width={425}
-                    height={277}
-                    minWidth={224}
-                    minHeight={164}
-                    lockAspect={1.77777778}
-                    lockAspectRatioExtraHeight={38}
-                    className="work-window"
-                    coverVideo={coverVideoURL}
-                    >
-                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                  </Window>
-                }
-                />
-                <Media query="(max-width: 740px)" render={() => 
-                  <Window 
-                    key={"mobile-"+post.id}
-                    title={windowTitle}
-                    width={267}
-                    height={188}
-                    minWidth={180}
-                    minHeight={139}
-                    lockAspect={1.77777778}
-                    lockAspectRatioExtraHeight={38}
-                    className="work-window"
-                    coverVideo={coverVideoURL}
-                    >
-                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                  </Window>
-                }
-                />
-              </React.Fragment>
+              </Media>
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{
