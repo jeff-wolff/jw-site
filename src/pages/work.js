@@ -25,7 +25,9 @@ class WorkIndex extends React.Component {
           >
         <body className="wrapper-large" />
         </Helmet>
-        <h1 className="centered-title preload">Work</h1>
+        <div className="container">
+            <h1 className="centered-title preload">Work</h1>
+        </div>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = post.frontmatter.title+" - "+post.excerpt;
@@ -34,26 +36,42 @@ class WorkIndex extends React.Component {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             }
            return (
-            <Media query="(min-width: 1152px)" key={post.id}>
-              {matches =>
-                matches ? (
-                    <Window 
-                      title={windowTitle}
-                      width={640}
-                      height={398}
-                      minWidth={359}
-                      minHeight={240}
-                      maxWidth={1280}
-                      maxHeight={758}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={38}
-                      className="work-window"
-                      coverVideo={coverVideoURL ? coverVideoURL : ""}
-                      >
-                        <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                        
-                    </Window>
-                ) : (
+            <React.Fragment key={post.id}>
+              <Media query="(min-width: 1440px)" render={() => 
+                  <Window 
+                    title={windowTitle}
+                    width={640}
+                    height={398}
+                    minWidth={359}
+                    minHeight={240}
+                    maxWidth={1280}
+                    maxHeight={758}
+                    lockAspect={1.77777778}
+                    lockAspectRatioExtraHeight={38}
+                    className="work-window"
+                    coverVideo={coverVideoURL ? coverVideoURL : ""}
+                    >
+                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                  </Window>
+                }
+                />
+                <Media query="(min-width: 741px) and (max-width: 1339px)" render={() => 
+                  <Window 
+                    title={windowTitle}
+                    width={425}
+                    height={277}
+                    minWidth={224}
+                    minHeight={164}
+                    lockAspect={1.77777778}
+                    lockAspectRatioExtraHeight={38}
+                    className="work-window"
+                    coverVideo={coverVideoURL ? coverVideoURL : ""}
+                    >
+                      <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                  </Window>
+                }
+                />
+                <Media query="(max-width: 740px)" render={() => 
                   <Window 
                     title={windowTitle}
                     width={267}
@@ -66,11 +84,10 @@ class WorkIndex extends React.Component {
                     coverVideo={coverVideoURL ? coverVideoURL : ""}
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                     
                   </Window>
-                )
-              }
-            </Media>
+                }
+                />
+              </React.Fragment>
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{

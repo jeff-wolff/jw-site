@@ -27,12 +27,8 @@
 .react-draggable-resizing {
     transition:  none;
 }
-.react-draggable.dragging .window-content .window-button,
-.react-draggable.dragging .window-content video,
-.react-draggable:hover .window-content .window-button,
-.react-draggable:hover .window-content video {
-    opacity: 1;
-}
+
+
 
 .react-draggable > .window-title {
     width: 100%;
@@ -71,8 +67,14 @@
     width: 100%;
     transform-origin: top left;
     transform:  scale(1);
-    opacity: .26;
+    opacity: .24;
     z-index: -1;
+    filter: grayscale(80%);
+    mix-blend-mode: screen;
+}
+.react-draggable.dragging .window-content video,
+.react-draggable:hover .window-content video {
+    opacity: .87;
 }
 
 .react-draggable.collapsed > .window-content {
@@ -86,8 +88,12 @@
    transition: opacity 250ms ease;
    opacity: 0;
 }
+.react-draggable.dragging > .window-content .window-button,
+.react-draggable:hover > .window-content .window-button{
+    opacity: 1;
+}
 .react-draggable > .window-content > .window-button:hover + video {
-    opacity: .26;
+    opacity: 0.44;
 }
 
 .react-draggable a.window-link:hover,

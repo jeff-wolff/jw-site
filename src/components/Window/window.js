@@ -106,7 +106,7 @@ class Window extends React.Component {
             borderColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
-          bounds='parent'
+          bounds='body'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
           minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 44}
           maxWidth={this.props.maxWidth}
@@ -148,7 +148,16 @@ class Window extends React.Component {
             this.setState({ dragging: true })
             if (this.refs.coverVid) {
               this.refs.coverVid.autoplay = true;
-              this.refs.coverVid.play();
+              let playPromise = this.refs.coverVid.play();
+             
+              if (playPromise !== undefined) {
+                playPromise.then(_ => {
+
+                })
+                .catch(error => {
+                  // Auto-play was prevented
+                });
+              }
             } 
           }}
           onDragStop={(e, d) => { 
@@ -165,22 +174,18 @@ class Window extends React.Component {
           onResizeStop={() => { this.setState({ resizing: false }) }}
           onMouseEnter={() => { 
             if (this.refs.coverVid) {
-              this.refs.coverVid.autoplay = true;
-              this.refs.coverVid.play();
+              let playPromise = this.refs.coverVid.play();
+              if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                  this.refs.coverVid.autoplay = true;
+                })
+                .catch(error => {
+                  // Auto-play was prevented
+                });
+              }
             } 
           }}
           onMouseLeave={() => { 
-            if (this.refs.coverVid) {
-              this.refs.coverVid.pause();
-            } 
-          }}
-          onPointerEnter={() => { 
-            if (this.refs.coverVid) {
-              this.refs.coverVid.autoplay = true;
-              this.refs.coverVid.play();
-            } 
-          }}
-          onPointerLeave={() => { 
             if (this.refs.coverVid) {
               this.refs.coverVid.pause();
             } 
