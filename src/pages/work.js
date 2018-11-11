@@ -36,7 +36,7 @@ class WorkIndex extends React.Component {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             }
            return (
-            <React.Fragment key={post.id}>
+            <React.Fragment key={"window-"+post.id}>
               <Media query="(min-width: 1440px)" render={() => 
                   <Window 
                     title={windowTitle}
@@ -49,7 +49,8 @@ class WorkIndex extends React.Component {
                     lockAspect={1.77777778}
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
-                    coverVideo={coverVideoURL ? coverVideoURL : ""}
+                    coverVideo={coverVideoURL}
+                    
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
                   </Window>
@@ -65,7 +66,7 @@ class WorkIndex extends React.Component {
                     lockAspect={1.77777778}
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
-                    coverVideo={coverVideoURL ? coverVideoURL : ""}
+                    coverVideo={coverVideoURL}
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
                   </Window>
@@ -81,7 +82,7 @@ class WorkIndex extends React.Component {
                     lockAspect={1.77777778}
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
-                    coverVideo={coverVideoURL ? coverVideoURL : ""}
+                    coverVideo={coverVideoURL}
                     >
                       <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
                   </Window>
