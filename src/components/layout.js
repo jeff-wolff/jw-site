@@ -136,7 +136,7 @@ injectGlobal`
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       font-weight: normal;
-      margin: 0 0 2em;
+      margin: 0;
   }
   h1,.h1,h2 {
       color: rgba(255,255,255,1);
@@ -235,8 +235,9 @@ injectGlobal`
       }
   }
   .wrapper {
-      min-height: 120vh;
-      margin-bottom: 540px;
+      min-height: 500px;
+      height: 120vh;
+      margin-bottom: 320px;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
@@ -260,13 +261,18 @@ injectGlobal`
       overflow: auto;
   }
   body.wrapper-large .wrapper {
-      height: 150vh;
+      height: 300vh;
+  }
+  @media (min-height: 640px) {
+    body.wrapper-large .wrapper {
+        height: 150vh;
+    }
   }
   .container {
       padding-left: 4.8%;
       padding-right: 4.8%;
   }
-  @media (min-width: 1152px) {
+  @media (min-width: 1440px) {
       .container {
           padding-left: 8.5%;
           padding-right: 8.5%;
@@ -277,14 +283,21 @@ injectGlobal`
       transition:  all 200ms ease;
       user-select: none;
       color: rgba(255, 255, 255, .25);
-      position: fixed;
+      position: sticky;
       top: 100px;
+      padding-left: 4.8%;
+      padding-right: 4.8%;
       margin: 0;
+      text-align: center;
   }
   @media (min-width: 1152px) {
     .centered-title {
       top: 160px;
     }
+  }
+  @media (min-width: 1440px) {
+    padding-left: 8.5%;
+    padding-right: 4.8%;
   }
   .centered-title:hover {
       text-shadow: 3px 4px 0.1rem rgba(0,0,0,.35);
@@ -314,25 +327,21 @@ class Template extends React.Component {
     let innerHeader
 
     if (location.pathname === workPath) {
-      innerHeader = (
+      header = (
         <Header isWorkPage={true} />
-      )
-      footer = (
-        <Footer />
       )
     } else {
       header = (
         <Header  />
       )
-      footer = (
-        <Footer />
-      )
     }
+    footer = (
+      <Footer />
+    )
     return (
       <div>
-        {header}
         <div className="wrapper">
-        {innerHeader}
+        {header}
         {children}
         </div>
         {footer}

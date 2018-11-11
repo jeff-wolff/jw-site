@@ -7,13 +7,13 @@
     width: 100%;
     top: 0;
     z-index: 99;
-    padding: 10px 4.8% 9px;
+    padding: 20px 4.8% 19px;
 }
 .header {
   /* background-color: #111;
   background-color: var(--bg); */
 }
-@media (min-width: 1152px) {
+@media (min-width: 1440px) {
     .header {
         padding: 40px 8.5% 10px;
     }

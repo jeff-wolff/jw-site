@@ -25,9 +25,7 @@ class WorkIndex extends React.Component {
           >
         <body className="wrapper-large" />
         </Helmet>
-        <div className="container">
-            <h1 className="centered-title preload">Work</h1>
-        </div>
+        <h1 className="centered-title preload">Work</h1>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = post.frontmatter.title+" - "+post.excerpt;
@@ -38,7 +36,7 @@ class WorkIndex extends React.Component {
               coverVideoURL = "";
             }
            return (
-            <Media query="(min-width: 1280px)" key={post.id}>
+            <Media query="(min-width: 1152px)" key={post.id}>
               {matches =>
                 matches ? (
                     <Window 
