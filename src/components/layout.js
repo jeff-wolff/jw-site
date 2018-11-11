@@ -248,17 +248,19 @@ injectGlobal`
           margin-top: 0;
       }
   }
-  .no-scrollbar .wrapper {
+  body.no-scrollbar .wrapper {
       max-width: none;
       min-height: calc(100vh - 75px);
   }
-  .no-footer .wrapper {
+  body.no-footer .wrapper {
       max-width: none;
       margin-top: 0;
       margin-bottom: 0;
       width: 100%;
-      height: 150vh;
       overflow: auto;
+  }
+  body.wrapper-large .wrapper {
+      height: 150vh;
   }
   .container {
       padding-left: 4.8%;

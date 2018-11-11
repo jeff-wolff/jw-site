@@ -23,7 +23,7 @@ class WorkIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Work - ${siteTitle}`}
           >
-        <body className="no-footer" />
+        <body className="wrapper-large" />
         </Helmet>
         <div className="container">
             <h1 className="centered-title preload">Work</h1>
