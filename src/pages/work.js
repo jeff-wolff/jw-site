@@ -36,9 +36,10 @@ class WorkIndex extends React.Component {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             }
            return (
-            <React.Fragment key={"window-"+post.id}>
+            <React.Fragment key={post.id}>
               <Media query="(min-width: 1440px)" render={() => 
                   <Window 
+                    key={"desktop-"+post.id}
                     title={windowTitle}
                     width={640}
                     height={398}
@@ -58,6 +59,7 @@ class WorkIndex extends React.Component {
                 />
                 <Media query="(min-width: 741px) and (max-width: 1339px)" render={() => 
                   <Window 
+                    key={"tablet-"+post.id}
                     title={windowTitle}
                     width={425}
                     height={277}
@@ -74,6 +76,7 @@ class WorkIndex extends React.Component {
                 />
                 <Media query="(max-width: 740px)" render={() => 
                   <Window 
+                    key={"mobile-"+post.id}
                     title={windowTitle}
                     width={267}
                     height={188}
