@@ -170,13 +170,14 @@ class Window extends React.Component {
               this.refs.coverVid.pause();
             } 
           }}
-          onTouchEnter={() => { 
+          onTouchStart={() => { 
+            console.log('start');
             if (this.refs.coverVid) {
               this.refs.coverVid.autoplay = true;
               this.refs.coverVid.play();
             } 
           }}
-          onTouchLeave={() => { 
+          onTouchEnd={() => { 
             if (this.refs.coverVid) {
               this.refs.coverVid.pause();
             } 
