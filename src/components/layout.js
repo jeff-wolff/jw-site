@@ -235,8 +235,7 @@ injectGlobal`
       }
   }
   .wrapper {
-      min-height: 500px;
-      height: 120vh;
+      min-height: 120vh;
       margin-bottom: 320px;
       margin-top: 114px;
       margin-left: auto;
@@ -261,9 +260,19 @@ injectGlobal`
       overflow: auto;
   }
   body.wrapper-large .wrapper {
-      height: 300vh;
+      height: 290vh;
   }
-  @media (min-height: 640px) {
+  @media (min-height: 360px) {
+    body.wrapper-large .wrapper {
+        height: 260vh;
+    }
+  }
+  @media (min-height: 500px) {
+    body.wrapper-large .wrapper {
+        height: 190vh;
+    }
+  }
+  @media (min-height: 741px) {
     body.wrapper-large .wrapper {
         height: 150vh;
     }

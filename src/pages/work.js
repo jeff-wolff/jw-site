@@ -25,9 +25,7 @@ class WorkIndex extends React.Component {
           >
         <body className="wrapper-large" />
         </Helmet>
-        <div className="container">
-            <h1 className="centered-title preload">Work</h1>
-        </div>
+        <h1 className="centered-title preload">Work</h1>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = post.frontmatter.title+" - "+post.excerpt;
@@ -54,7 +52,6 @@ class WorkIndex extends React.Component {
                             lockAspectRatioExtraHeight={38}
                             className="work-window"
                             coverVideo={coverVideoURL}
-                            
                             >
                               <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
                           </Window>
@@ -76,22 +73,19 @@ class WorkIndex extends React.Component {
                       }
                     </Media>
                   ) : (
-                    <Media query="(max-width: 740px)" render={() => 
-                      <Window 
-                        title={windowTitle}
-                        width={267}
-                        height={188}
-                        minWidth={180}
-                        minHeight={139}
-                        lockAspect={1.77777778}
-                        lockAspectRatioExtraHeight={38}
-                        className="work-window"
-                        coverVideo={coverVideoURL}
-                        >
-                          <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
-                      </Window>
-                    }
-                    />
+                    <Window 
+                      title={windowTitle}
+                      width={267}
+                      height={188}
+                      minWidth={180}
+                      minHeight={139}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={38}
+                      className="work-window"
+                      coverVideo={coverVideoURL}
+                      >
+                        <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                    </Window>
                   )
                 }
               </Media>
