@@ -223,7 +223,7 @@ class Window extends React.Component {
           >
             {this.props.children}
             {this.state.coverVideoURL ? <div className="window-video">
-              <video muted loop playsInline preload="none" ref="coverVid">
+              <video muted loop playsInline preload="metadata" ref="coverVid">
                 <source src={this.state.coverVideoURL} type="video/mp4" />
               </video>
             </div> : ""}
