@@ -55,7 +55,7 @@ injectGlobal`
   }
   body {
       margin: 0;
-      color: rgba(255,255,255,.88);
+      color: rgba(255,255,255,.9);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.789474;
