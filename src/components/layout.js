@@ -332,10 +332,7 @@ injectGlobal`
   }
   @media (min-width: 1152px) {
     .work-post-title.centered-title {
-      display: inline-block;
       top: 380px;
-      left: 50%;
-      transform: translateX(-50%);
       padding: 0;
     }
   }
