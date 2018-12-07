@@ -152,18 +152,16 @@ injectGlobal`
   h1,.h1 {
       font-size: 41px;
       line-height: 1;
-      font-weight: bold;
-      letter-spacing: .15em;
-      text-transform: uppercase;
+      letter-spacing: .025em;
   }
   @media (min-width: 320px) {
       h1,.h1 {
-        font-size: calc(41px + 63 * ((100vw - 320px) / 1120));
+        font-size: calc(41px + 119 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
       h1,.h1 {
-          font-size: 104px;
+          font-size: 160px;
       }
   }
   
@@ -171,7 +169,7 @@ injectGlobal`
       font-family: 'IBM Plex Mono';
       font-size: 1.14285714em;
       line-height: 1.2;
-      letter-spacing: .075em;
+      letter-spacing: .025em;
   }
 
   h2 {
@@ -237,7 +235,7 @@ injectGlobal`
   .wrapper {
       transition: 100ms ease background-color;
       min-height: 124vh;
-      margin-bottom: 50vh;
+      margin-bottom: 280px;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
@@ -320,10 +318,6 @@ injectGlobal`
       top: 160px;
     }
   }
-  @media (min-width: 1440px) {
-    padding-left: 8.5%;
-    padding-right: 4.8%;
-  }
   .centered-title:hover {
       text-shadow: 3px 4px 0.1rem rgba(0,0,0,.35);
       color: rgba(255,255, 255, .92);
@@ -333,9 +327,44 @@ injectGlobal`
       color: #fff;
       text-shadow: 3px 4px 1rem rgba(0,0,0,.35);
   }
-  .work-post-container h1 {
+  .work-post-title.centered-title {
+    top: 280px;
+  }
+  @media (min-width: 1152px) {
+    .work-post-title.centered-title {
+      display: inline-block;
+      top: 380px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+    }
+  }
+  .work-post-title h1 {
+    display: inline;
+  }
+  .work-post-website-btn {
+    position: sticky;
+    top: calc(100vh - 70px - 1rem);
+    width: calc(100% - 2rem);
+    max-width: 320px;
+    float: right;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+  }
+  @media (min-width: 1152px) {
+    .work-post-website-btn {
+      top: calc(100vh - 88px - 2rem);
+      max-width: 480px;
+      width: calc(100% - 4rem);
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .work-post-container {
     margin-top: 120vh;
   }
+
   video {
     max-width: 100%;
   }

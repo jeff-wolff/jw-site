@@ -64,8 +64,9 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         z-index: -1;
     }
     &:after {
-        opacity: 1;
         z-index: -2;
+        background-color: #111;
+        background-color: var(--bg);
         border: 2px solid #ff0;
         border: 2px solid var(--primary);
         // border-width: ${ props => ( props.tiny ? '1px' : '4px')};
@@ -77,7 +78,6 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         background: var(--primary);
     }
     &:hover:after {
-        opacity: .4;
         border: 2px solid #ff0;
         border: 2px solid var(--primary);
         // border-width: ${ props => ( props.tiny ? '1px' : '4px')};

@@ -3,10 +3,10 @@ footer {
     z-index: -200;
     bottom: 0;
     width: 100%;
-    background-color: rgba(255,255,255,.66);
+    background-color: #fff;
     color: #111;
     color: var(--bg);
-    height: 50vh;
+    height: 280px;
 }
 footer .container {
     display: flex;
@@ -45,6 +45,7 @@ footer a[class^="button"] {
 footer a[class^="button"]:after,
 footer a[class^="button"]:hover:after {
     /* border-width: 2px; */
+    background: transparent;
 }
 @media (min-width: 1152px) {
     footer a[class^="button"] {

@@ -29,9 +29,13 @@ class WorkPostTemplate extends React.Component {
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
         {coverVideo}
+       <div className="work-post-title centered-title preload">
+         <h1>{post.frontmatter.title}</h1>
+       </div>
+       <div className="work-post-website-btn">
+         <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+       </div>
        <div className="work-post-container container">
-          <h1>{post.frontmatter.title}</h1>
-          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#129125;</span></Button>
 
          <p
            style={{
@@ -58,7 +62,7 @@ class WorkPostTemplate extends React.Component {
              {
                previous &&
                <Button tiny inlineicon="left" to={previous.fields.slug} rel="prev">
-                 <span>←</span> {previous.frontmatter.title}
+                 <span>&larr;</span> {previous.frontmatter.title}
                </Button>
              }
            </li>
@@ -66,7 +70,7 @@ class WorkPostTemplate extends React.Component {
              {
                next &&
                <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
-                 {next.frontmatter.title} <span>→</span>
+                 {next.frontmatter.title} <span>&rarr;</span>
                </Button>
              }
            </li>
