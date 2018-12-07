@@ -129,8 +129,8 @@ class Window extends React.Component {
             bottomRight: {
               'width':'32px',
               'height':'32px',
-              'bottom':'0px',
-              'right':'0px',
+              'bottom':'-4px',
+              'right':'-4px',
               'color': this.state.borderColor
             },
             left: {'display':'none'},
