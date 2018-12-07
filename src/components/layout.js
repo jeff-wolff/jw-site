@@ -39,7 +39,7 @@ injectGlobal`
   }
   :root {
     --bg: #111;
-    --bg-faded: #222;
+    --bg-faded: rgba(17, 17, 17, 0.8);
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
@@ -235,13 +235,18 @@ injectGlobal`
       }
   }
   .wrapper {
-      min-height: 120vh;
-      margin-bottom: 320px;
+      transition: 100ms ease background-color;
+      min-height: 124vh;
+      margin-bottom: 50vh;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
       background-color: #111;
       background-color: var(--bg);
+  }
+  .wrapper.faded {
+     background-color: rgba(17, 17, 17, 0.8);
+     background-color: var(--bg-faded); 
   }
   @supports (position: sticky) {
       .wrapper {
@@ -288,6 +293,17 @@ injectGlobal`
       }
   }
 
+  .vid-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    mix-blend-mode: exclusion;
+  }
+
   .centered-title {
       transition:  all 200ms ease;
       user-select: none;
@@ -318,7 +334,7 @@ injectGlobal`
       text-shadow: 3px 4px 1rem rgba(0,0,0,.35);
   }
   .work-post-container h1 {
-    margin: 0;
+    margin-top: 120vh;
   }
   video {
     max-width: 100%;

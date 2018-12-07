@@ -198,7 +198,8 @@ class Window extends React.Component {
               }}
           >
             <div className="content">
-              <small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small> - {this.props.title}
+              {/*<small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small> - */}
+              {this.props.title}
             </div>
           </div>
           <label 
@@ -223,7 +224,7 @@ class Window extends React.Component {
           >
             {this.props.children}
             {this.state.coverVideoURL ? <div className="window-video">
-              <video muted loop playsInline preload="metadata" ref="coverVid">
+              <video muted loop playsInline ref="coverVid">
                 <source src={this.state.coverVideoURL} type="video/mp4" />
               </video>
             </div> : ""}

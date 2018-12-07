@@ -15,7 +15,7 @@ class WorkPostTemplate extends React.Component {
     const siteURL = post.frontmatter.url
     let coverVideo;
     if (post.frontmatter.featuredVideo != null) {
-     coverVideo = <video autoPlay muted loop playsInline style={{ position: 'absolute', top: '0', left: '0', width: '100%', opacity: '0.25' }}>
+     coverVideo = <video autoPlay muted loop playsInline className="vid-wrap">
              <source src={post.frontmatter.featuredVideo.publicURL} type="video/mp4" />
            </video>;
     } else {
@@ -31,7 +31,7 @@ class WorkPostTemplate extends React.Component {
         {coverVideo}
        <div className="work-post-container container">
           <h1>{post.frontmatter.title}</h1>
-          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>↗</span></Button>
+          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#129125;</span></Button>
 
          <p
            style={{
@@ -52,13 +52,7 @@ class WorkPostTemplate extends React.Component {
          />
          
          <ul
-           style={{
-             display: 'flex',
-             flexWrap: 'wrap',
-             justifyContent: 'space-between',
-             listStyle: 'none',
-             padding: 0,
-           }}
+
          >
            <li>
              {

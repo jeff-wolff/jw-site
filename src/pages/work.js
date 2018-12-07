@@ -28,7 +28,7 @@ class WorkIndex extends React.Component {
         <h1 className="centered-title preload">Work</h1>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
-            const windowTitle = post.frontmatter.title+" - "+post.excerpt;
+            const windowTitle = "https://"+post.frontmatter.url;
             let coverVideoURL = "";
             if (post.frontmatter.featuredVideo != null) {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
@@ -53,7 +53,8 @@ class WorkIndex extends React.Component {
                             className="work-window"
                             coverVideo={coverVideoURL}
                             >
-                              <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                              <h2>{post.frontmatter.title}</h2>
+                              <Button tiny to={post.fields.slug} className="window-button" inlineicon="right">View Work <span>&#129125;</span></Button>
                           </Window>
                         ) : (
                           <Window 
@@ -67,7 +68,8 @@ class WorkIndex extends React.Component {
                             className="work-window"
                             coverVideo={coverVideoURL}
                             >
-                              <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                              <h2>{post.frontmatter.title}</h2>
+                              <Button tiny to={post.fields.slug} className="window-button" inlineicon="right">View Work <span>&#129125;</span></Button>
                           </Window>
                         )
                       }
@@ -84,7 +86,8 @@ class WorkIndex extends React.Component {
                       className="work-window"
                       coverVideo={coverVideoURL}
                       >
-                        <Button tiny to={post.fields.slug} className="window-button">View Work</Button>
+                        <h2>{post.frontmatter.title}</h2>
+                        <Button tiny to={post.fields.slug} className="window-button" inlineicon="right">View Work <span>&#129125;</span></Button>
                     </Window>
                   )
                 }
@@ -122,7 +125,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
-          excerpt(pruneLength: 75)
+          excerpt(pruneLength: 50)
           id
           fields {
             slug
@@ -130,6 +133,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            url
             featuredVideo {
               publicURL
             }
