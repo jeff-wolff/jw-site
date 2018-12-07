@@ -293,6 +293,7 @@ injectGlobal`
   }
 
   .vid-wrap {
+    opacity: .4;
     position: absolute;
     top: 0;
     left: 0;
