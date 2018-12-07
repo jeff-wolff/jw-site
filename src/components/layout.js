@@ -142,6 +142,7 @@ injectGlobal`
       color: rgba(255,255,255,1);
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
+      font-weight: bold;
   }
       
   h3,h4,h5,h6 {
