@@ -64,6 +64,11 @@
     user-select: none;
     padding: 24px 36px;
 }
+@media (min-width: 1152px) {
+    .react-draggable > .window-content {
+        padding: 36px;
+    }
+}
 .react-draggable > .window-content > .window-video {
     transition:  all 250ms ease;
     position: absolute;
