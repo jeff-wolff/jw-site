@@ -138,7 +138,7 @@ injectGlobal`
       font-weight: normal;
       margin: 0;
   }
-  h1,.h1,h2 {
+  h1,h2 {
       color: rgba(255,255,255,1);
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
@@ -334,7 +334,7 @@ injectGlobal`
   @media (min-width: 1152px) {
     .work-post-title.centered-title {
       top: 380px;
-      padding: 0;
+      padding: 0 8.5%;
     }
   }
   .work-post-title h1 {
