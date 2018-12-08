@@ -398,6 +398,10 @@ injectGlobal`
     margin-left: 4.8%;
     margin-bottom: 30px;
     z-index: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 69px;
   }
   @media (min-width: 1152px) {
     .work-post-nav {
@@ -425,7 +429,12 @@ injectGlobal`
   .work-post-nav a[class^="button"]:hover > span {
     opacity: 1;
   }
-
+  .work-post-nav a[class^="button"][rel="next"] {
+    align-self: flex-end;
+  }
+  .work-post-nav a[class^="button"][rel="prev"] {
+    align-self: flex-start;
+  }
   .work-post-container {
     margin-top: 120vh;
     min-height: 240vh;

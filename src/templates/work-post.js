@@ -50,27 +50,25 @@ class WorkPostTemplate extends React.Component {
        <div className="work-post-title centered-title preload">
          <h1>{post.frontmatter.title}</h1>
        </div>
-       <ul
+       <div
         className="work-post-nav"
-        style={{ listStyle: 'none', width: '100%', maxWidth: '260px' }}
+        style={{ width: '100%', maxWidth: '260px' }}
        >
-         <li>
+         
            {
              previous &&
              <Button tiny inlineicon="right" to={previous.fields.slug} rel="prev">
                &uarr; <span>{previous.frontmatter.title}</span> 
              </Button>
            }
-         </li>
-         <li>
+         
            {
              next &&
-             <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
+             <Button tiny inlineicon="left" to={next.fields.slug} rel="next">
                &darr; <span>{next.frontmatter.title}</span>
              </Button>
            }
-         </li>
-       </ul>
+       </div>
        <div className="work-post-website-btn">
          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
        </div>
