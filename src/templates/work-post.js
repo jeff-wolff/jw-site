@@ -7,6 +7,19 @@ import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 
 class WorkPostTemplate extends React.Component {
+  theme(bg,bgf,p,pf,s,sf,wb,wt) {
+    document.documentElement.style.setProperty('--bg', bg);
+    document.documentElement.style.setProperty('--bg-faded', bgf);
+    document.documentElement.style.setProperty('--primary', p);
+    document.documentElement.style.setProperty('--primary-faded', pf);
+    document.documentElement.style.setProperty('--secondary', s);
+    document.documentElement.style.setProperty('--secondary-faded', sf);
+    document.documentElement.style.setProperty('--window-border', wb);
+    document.documentElement.style.setProperty('--window-title', wt);
+  }
+  // componentDidMount() {
+    
+  // }
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -20,6 +33,10 @@ class WorkPostTemplate extends React.Component {
            </video>;
     } else {
      coverVideo = "";
+    }
+    console.log(post.frontmatter);
+    if (post.frontmatter.theme) {
+      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt);
     }
     return (
       <Layout location={this.props.location}>
@@ -89,6 +106,15 @@ export const pageQuery = graphql`
         featuredVideo {
           publicURL
         }
+        theme
+        tbg
+        tbgf
+        tp
+        tpf
+        ts
+        tsf
+        twb
+        twt
       }
     }
   }

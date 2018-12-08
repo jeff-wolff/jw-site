@@ -12,8 +12,8 @@ class HomeInfo extends React.Component {
     render() {
         return (
             <div className="home-container container">
-                {/*<h2>Website developer based in San Diego, CA.</h2>*/}
-                <h2>I just launched a new site. <Link to="/new-site/">Read &rarr;</Link></h2>
+                <h2>Website developer based in San Diego, CA.  <Link to="/work/">Work &rarr;</Link></h2>
+                {/*<h2>I just launched a new site. <Link to="/new-site/">Read &rarr;</Link></h2>*/}
             </div>
         );
     }
