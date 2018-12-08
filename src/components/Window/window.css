@@ -135,6 +135,7 @@
 .react-draggable > .window-content h4,
 .react-draggable > .window-content h5,
 .react-draggable > .window-content h6 {
+    color: #fff;
     line-height:  1;
     margin: 0 0 .6em;
 }

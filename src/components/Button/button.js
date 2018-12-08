@@ -34,7 +34,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     &:hover {
         background: #111;
         background: var(--bg);
-        color: #000;
+        color: #333;
         color: var(--secondary);
         padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.2em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
@@ -49,6 +49,10 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
             }
             padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.6em' ) };
         `}
+    }
+    &:active {
+        color: #000;
+        color: var(--secondary-faded);
     }
     &:before, &:after {
         transition: all 0.125s ease-in-out;
