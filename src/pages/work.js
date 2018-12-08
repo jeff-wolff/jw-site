@@ -53,7 +53,7 @@ class WorkIndex extends React.Component {
                             className="work-window"
                             coverVideo={coverVideoURL}
                             >
-                              <h2>{post.frontmatter.title}</h2>
+                              <h2 className="h3">{post.frontmatter.title}</h2>
                               <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                           </Window>
                         ) : (
@@ -68,7 +68,7 @@ class WorkIndex extends React.Component {
                             className="work-window"
                             coverVideo={coverVideoURL}
                             >
-                              <h2>{post.frontmatter.title}</h2>
+                              <h2 className="h3">{post.frontmatter.title}</h2>
                               <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                           </Window>
                         )
@@ -86,7 +86,7 @@ class WorkIndex extends React.Component {
                       className="work-window"
                       coverVideo={coverVideoURL}
                       >
-                        <h2>{post.frontmatter.title}</h2>
+                        <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   )

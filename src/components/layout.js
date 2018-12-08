@@ -55,7 +55,7 @@ injectGlobal`
   }
   body {
       margin: 0;
-      color: rgba(255,255,255,.9);
+      color: rgba(255,255,255,.74);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.789474;
@@ -130,30 +130,29 @@ injectGlobal`
       color:  inherit;
   }
   p {
-    letter-spacing: 0.075em;
+    
   }
-  h1,.h1,h2,h3,h4,h5,h6,p {
+  h1,.h1,h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,p {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       font-weight: normal;
       margin: 0;
+      letter-spacing: 0.025em;
   }
-  h1,h2 {
+  h1,.h1,h2,.h2,h3,.h3 {
       color: rgba(255,255,255,1);
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
-      font-weight: bold;
   }
       
-  h3,h4,h5,h6 {
-      color: rgba(255,255,255,.96);
+  h4,.h4,h5,.h5,h6,.h6 {
+      color: inherit;
       margin-top: 2rem;
       margin-bottom: .5rem;
   }
   h1,.h1 {
       font-size: 41px;
       line-height: 1;
-      letter-spacing: .025em;
   }
   @media (min-width: 320px) {
       h1,.h1 {
@@ -166,49 +165,41 @@ injectGlobal`
       }
   }
   
-  h2,h3,h4,h5,h6 {
+  h2,.h2,h3,.h3,.h4,h4 {
       font-family: 'IBM Plex Mono';
       font-size: 1.14285714em;
-      line-height: 1.2;
-      letter-spacing: .025em;
+    
   }
 
-  h2 {
+  h2,.h2 {
       font-size: 1.28571429em;
   }
   @media (min-width: 375px) {
-      h2 {
+      h2,.h2 {
           font-size: 1.5em;
       }
   }
-  @media (min-width: 768px) {
-      h2 {
-          font-size: 2.66666667em;
-      }
-  }
-  @media (min-width: 1440px) {
-      h2 {
-          font-size: 2.88888889em;
-      }
-  }
-
 
   @media (min-width: 375px) {
-      h3 {
-          font-size: 1.28571429em;
-      }
-  }
-  @media (min-width: 768px) {
-      h3 {
-          font-size: 1em;
-      }
-  }
-  @media (min-width: 1440px) {
-      h3 {
-          font-size: 33px;
+      h3,.h3 {
+          font-size: 1.25em;
       }
   }
 
+  h4,.h4 {
+    color: rgba(255,255,255,.96)
+  }
+  @media (min-width: 375px) {
+      h4,.h4 {
+          font-size: 1.125em;
+      }
+  }
+
+  h5,.h5,figcaption {
+    text-transform: uppercase;
+    font-size: .875em;
+    letter-spacing: .125em;
+  }
 
   strong {
       color: rgba(255,255,255,.96);
@@ -217,19 +208,16 @@ injectGlobal`
   figure {
       margin: 0;
   }
-  figcaption {
-    text-transform: uppercase;
-  }
-  figcaption, small {
+  small {
       font-size:  12px;
   }
   @media (min-width: 1152px) {
-      figcaption, small {
+      small {
         font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
-      figcaption, small {
+      small {
         font-size: 16px;
       }
   }
@@ -344,24 +332,51 @@ injectGlobal`
   .work-post-website-btn {
     position: sticky;
     top: calc(100vh - 70px - 1rem);
-    width: calc(100% - 2rem);
+    width: calc(100% - 9.6%);
     max-width: 320px;
     float: right;
-    margin-right: 1rem;
+    margin-right: 4.8%;
     margin-bottom: 1rem;
     z-index: 2;
   }
   @media (min-width: 1152px) {
     .work-post-website-btn {
       top: calc(100vh - 88px - 2rem);
-      max-width: 480px;
-      width: calc(100% - 4rem);
-      margin-right: 2rem;
+      max-width: 460px;
+      width: calc(100% - 8.5%);
+      margin-right: 8.5%;
       margin-bottom: 2rem;
     }
   }
   .work-post-container {
     margin-top: 120vh;
+  }
+  @media (min-width: 1440px) {
+    .work-post-container.container {
+      padding-left: 12%;
+      padding-right: 12%;
+    }
+  }
+  @media (min-width: 1920px) {
+    .work-post-container.container {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
+  @media (min-width: 375px) {
+    .work-post-container h3, .work-post-container .h3 {
+      font-size: calc(1.25em + .75vw);
+    }
+  }
+  @media (min-width: 1152px) {
+    .work-post-container h3, .work-post-container .h3 {
+      font-size: calc(1.25em + 1.25vw);
+    }
+  }
+  @media (min-width: 1920px) {
+    .work-post-container h3, .work-post-container .h3 {
+      font-size: calc(1.25em + 1.5vw);
+    }
   }
 
   video {

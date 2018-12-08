@@ -29,7 +29,7 @@ class WorkPostTemplate extends React.Component {
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
         {coverVideo}
-       <div className="work-post-title centered-title preload">
+       <div className="work-post-title centered-title">
          <h1>{post.frontmatter.title}</h1>
        </div>
        <div className="work-post-website-btn">
@@ -56,21 +56,21 @@ class WorkPostTemplate extends React.Component {
          />
          
          <ul
-
+          style={{ listStyle: 'none', width: '40%', maxWidth: '240px' }}
          >
            <li>
              {
                previous &&
                <Button tiny inlineicon="left" to={previous.fields.slug} rel="prev">
-                 <span>&larr;</span> {previous.frontmatter.title}
+                 <span>&uarr;</span> {previous.frontmatter.title}
                </Button>
              }
            </li>
            <li>
              {
                next &&
-               <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
-                 {next.frontmatter.title} <span>&rarr;</span>
+               <Button tiny inlineicon="left" to={next.fields.slug} rel="next">
+                 {next.frontmatter.title} <span>&darr;</span>
                </Button>
              }
            </li>

@@ -106,7 +106,7 @@ class Window extends React.Component {
             borderColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
-          bounds='body'
+          bounds='parent'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
           minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 44}
           maxWidth={this.props.maxWidth}

@@ -6,12 +6,15 @@ import './footer.css'
 const Footer = ({}) => (
   <footer>
      <div className="container">
+        <span className="right-nav">
+          <a href="http://jeffwolff.net/v3">view previous site</a>
+        </span>
         <div className="local-navigation">
           <Button to="/work/" inlineicon="right"><span>💼</span> Work</Button>
           <Button external="true" href="mailto:hello@jeffwolff.net" inlineicon="right">Contact <span>📧</span></Button>
         </div>
         <div className="navigation">
-            <p>&copy; Jeff Wolff &bull; <a href="http://jeffwolff.net/v3"><small>view previous site</small></a></p>
+            <p>&copy; Jeff Wolff</p>
             <div className="menu">
                 <a href="//twitter.com/jeffwolff" target="_blank">Twitter</a>
                 <a href="//linkedin.com/in/jrwolff/" target="_blank">LinkedIn</a>
