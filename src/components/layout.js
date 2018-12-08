@@ -198,7 +198,7 @@ injectGlobal`
   h5,.h5,figcaption {
     text-transform: uppercase;
     font-size: .875em;
-    letter-spacing: .125em;
+    letter-spacing: .25em;
   }
 
   strong {
@@ -318,11 +318,13 @@ injectGlobal`
       text-shadow: 3px 4px 1rem rgba(0,0,0,.35);
   }
   .work-post-title.centered-title {
-    top: 280px;
+    top: 260px;
+    margin-bottom: 260px;
   }
-  @media (min-width: 1152px) {
+  @media (min-width: 1440PX) {
     .work-post-title.centered-title {
-      top: 380px;
+      top: 300px;
+      margin-bottom: 300px;
       padding: 0 8.5%;
     }
   }
@@ -350,6 +352,7 @@ injectGlobal`
   }
   .work-post-container {
     margin-top: 120vh;
+    min-height: 240vh;
   }
   @media (min-width: 1440px) {
     .work-post-container.container {

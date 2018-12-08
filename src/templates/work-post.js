@@ -36,24 +36,11 @@ class WorkPostTemplate extends React.Component {
          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
        </div>
        <div className="work-post-container container">
-
-         <p
-           style={{
-             // ...scale(-1 / 5),
-             display: 'block',
-             // marginBottom: rhythm(1),
-             // marginTop: rhythm(-1),
-           }}
-         >
-          Launched on: {post.frontmatter.date}
-          
-         </p>
+       <h5>
+        {post.frontmatter.date}
+       </h5>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-         <hr
-           style={{
-             // marginBottom: rhythm(1),
-           }}
-         />
+
          
          <ul
           style={{ listStyle: 'none', width: '40%', maxWidth: '240px' }}

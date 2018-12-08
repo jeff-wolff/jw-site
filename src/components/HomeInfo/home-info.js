@@ -12,7 +12,7 @@ class HomeInfo extends React.Component {
     render() {
         return (
             <div className="home-container container">
-                <p>Website developer based in San Diego, CA.</p>
+                <h2>Website developer based in San Diego, CA.</h2>
             </div>
         );
     }

@@ -7,7 +7,7 @@ const Footer = ({}) => (
   <footer>
      <div className="container">
         <span className="right-nav">
-          <a href="http://jeffwolff.net/v3">view previous site</a>
+          <a href="http://jeffwolff.net/v3" target="_blank">view previous site</a>
         </span>
         <div className="local-navigation">
           <Button to="/work/" inlineicon="right"><span>💼</span> Work</Button>
