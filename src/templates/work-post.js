@@ -17,9 +17,13 @@ class WorkPostTemplate extends React.Component {
     document.documentElement.style.setProperty('--window-border', wb);
     document.documentElement.style.setProperty('--window-title', wt);
   }
-  // componentDidMount() {
-    
-  // }
+  componentDidMount() {
+    const post = this.props.data.markdownRemark
+    console.log(post.frontmatter);
+    if (post.frontmatter.theme) {
+      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt);
+    }
+  }
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -34,10 +38,7 @@ class WorkPostTemplate extends React.Component {
     } else {
      coverVideo = "";
     }
-    console.log(post.frontmatter);
-    if (post.frontmatter.theme) {
-      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt);
-    }
+
     return (
       <Layout location={this.props.location}>
         <Helmet
