@@ -23,8 +23,8 @@
     font-size: 22px;
     line-height: 1;
     font-style: italic;
-    padding: 1rem 1rem 1rem;
-    text-indent: -.7rem;
+    /* padding: 1rem 1rem 1rem;
+    text-indent: -.7rem; */
     letter-spacing: -.025em;
     transform: translate3d(0, 0, 0);
     outline: 0;

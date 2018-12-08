@@ -5,7 +5,7 @@ url: "www.sunbeltrentals.com"
 featuredVideo: "./sunbelt_autoplay_720.mp4"
 theme: true
 tbg: "#0d723b"
-tbgf: "rgba(13, 114, 59, 0.8)"
+tbgf: "rgba(13, 114, 59, 0.9)"
 tp: "#ffe113"
 tpf: "rgba(255, 225, 19, 0.87)"
 ts: "#000"

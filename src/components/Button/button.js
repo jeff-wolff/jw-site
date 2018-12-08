@@ -20,7 +20,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     text-transform: uppercase;
     word-break: break-all;
     user-select: none;
-    font-size: ${ props => ( props.tiny ? '13px' : props.small ? '15px' : '19px' ) }; 
+    font-size: ${ props => ( props.tiny ? '12px' : props.small ? '15px' : '19px' ) }; 
     padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
     width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon == "left" ? 'right' : 'left')};
@@ -28,7 +28,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
     `}
     ${media.large`
-        font-size: ${ props => ( props.tiny ? '14px' : props.small ? '19px' : '24px' ) };
+        font-size: ${ props => ( props.tiny ? '13px' : props.small ? '19px' : '24px' ) };
         padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.1em' ) };
     `}
     &:hover {

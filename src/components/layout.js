@@ -40,7 +40,7 @@ injectGlobal`
   :root {
     // Base
     --bg: #111;
-    --bg-faded: rgba(17, 17, 17, 0.8);
+    --bg-faded: rgba(17, 17, 17, 0.9);
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
@@ -357,6 +357,7 @@ injectGlobal`
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
       filter: blur(0);
   }
+
   .work-post-title.centered-title {
     top: 260px;
   }
@@ -371,12 +372,12 @@ injectGlobal`
   }
   .work-post-website-btn {
     position: sticky;
-    top: calc(100vh - 70px - 20px);
+    top: calc(100vh - 70px - 30px);
     width: calc(100% - 9.6%);
     max-width: 320px;
     float: right;
     margin-right: 4.8%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     z-index: 2;
   }
   @media (min-width: 1152px) {
@@ -388,6 +389,43 @@ injectGlobal`
       margin-bottom: 30px;
     }
   }
+  .work-post-nav {
+    position: sticky;
+    top: calc(100vh - 69px - 30px);
+    width: calc(100% - 9.6%);
+    max-width: 320px;
+    float: left;
+    margin-left: 4.8%;
+    margin-bottom: 30px;
+    z-index: 2;
+  }
+  @media (min-width: 1152px) {
+    .work-post-nav {
+      top: calc(100vh - 81px - 5.6%);
+      max-width: 460px;
+      width: calc(100% - 5.6%);
+      margin-right: 5.6%;
+      margin-bottom: 30px;
+    }
+  }
+  .work-post-nav a[class^="button"] {
+    transition: all 125ms ease;
+    width: 48px; 
+  }
+  .work-post-nav a[class^="button"] > span {
+    transition: all 125ms ease;
+    opacity: 0;
+    height: 0;
+    white-space: nowrap;
+  } 
+  .work-post-nav a[class^="button"]:hover {
+    width: 100%;
+    height: auto;
+  }
+  .work-post-nav a[class^="button"]:hover > span {
+    opacity: 1;
+  }
+
   .work-post-container {
     margin-top: 120vh;
     min-height: 240vh;
@@ -422,6 +460,9 @@ injectGlobal`
 
   video {
     max-width: 100%;
+  }
+  .work-grid {
+
   }
 `;
 

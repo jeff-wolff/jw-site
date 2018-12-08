@@ -47,9 +47,30 @@ class WorkPostTemplate extends React.Component {
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
         {coverVideo}
-       <div className="work-post-title centered-title">
+       <div className="work-post-title centered-title preload">
          <h1>{post.frontmatter.title}</h1>
        </div>
+       <ul
+        className="work-post-nav"
+        style={{ listStyle: 'none', width: '100%', maxWidth: '260px' }}
+       >
+         <li>
+           {
+             previous &&
+             <Button tiny inlineicon="right" to={previous.fields.slug} rel="prev">
+               &uarr; <span>{previous.frontmatter.title}</span> 
+             </Button>
+           }
+         </li>
+         <li>
+           {
+             next &&
+             <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
+               &darr; <span>{next.frontmatter.title}</span>
+             </Button>
+           }
+         </li>
+       </ul>
        <div className="work-post-website-btn">
          <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
        </div>
@@ -60,26 +81,7 @@ class WorkPostTemplate extends React.Component {
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
          
-         <ul
-          style={{ listStyle: 'none', width: '100%', maxWidth: '260px' }}
-         >
-           <li>
-             {
-               previous &&
-               <Button tiny inlineicon="left" to={previous.fields.slug} rel="prev">
-                 <span>&uarr;</span> {previous.frontmatter.title}
-               </Button>
-             }
-           </li>
-           <li>
-             {
-               next &&
-               <Button tiny inlineicon="left" to={next.fields.slug} rel="next">
-                 {next.frontmatter.title} <span>&darr;</span>
-               </Button>
-             }
-           </li>
-         </ul>
+        
        </div>
       </Layout>
     )

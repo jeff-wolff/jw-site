@@ -5,7 +5,7 @@ url: "www.ripcurl.com"
 featuredVideo: "./ripcurl_autoplay_720.mp4"
 theme: true
 tbg: "#962313"
-tbgf: "rgba(150, 35, 19, 0.8)"
+tbgf: "rgba(150, 35, 19, 0.9)"
 tp: "#00ffff"
 tpf: "rgba(0, 255, 255, 1)"
 ts: "#d24936"

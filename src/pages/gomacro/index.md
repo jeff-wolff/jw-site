@@ -5,7 +5,7 @@ url: "www.gomacro.com"
 featuredVideo: "./gomacro_autoplay_720.mp4"
 theme: true
 tbg: "#61503e"
-tbgf: "rgba(97, 80, 62, 0.8)"
+tbgf: "rgba(97, 80, 62, 0.9)"
 tp: "#fb7e26"
 tpf: "rgba(251, 126, 38, 0.87)"
 ts: "#fff"

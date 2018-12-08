@@ -32,14 +32,28 @@ class Window extends React.Component {
       coverVideoURL: this.props.coverVideo ? this.props.coverVideo : ""
     }
 
+    this.theme = this.theme.bind(this);
     this.collision = this.collision.bind(this);
     this.toggleCollapse = this.toggleCollapse.bind(this);
     this.handlePreventTouchmoveWhenPanning = this.handlePreventTouchmoveWhenPanning.bind(this);
   }
 
+  theme() {
+    console.log('theme changed');
+    document.documentElement.style.setProperty('--bg', this.props.tbg);
+    document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
+    document.documentElement.style.setProperty('--primary', this.props.tp);
+    document.documentElement.style.setProperty('--primary-faded', this.props.tpf);
+    document.documentElement.style.setProperty('--secondary', this.props.ts);
+    document.documentElement.style.setProperty('--secondary-faded', this.props.tsf);
+    document.documentElement.style.setProperty('--window-border', this.props.twb);
+    document.documentElement.style.setProperty('--window-title', this.props.twt);
+  }
+
   collision() {
       var x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width))),
-          y = Math.floor(Math.random() + Math.floor(count+=120));
+          y = Math.floor(Math.random() + Math.floor(count+=140));
+          console.log(x,y);
           // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
 
       positions.push({
@@ -102,7 +116,7 @@ class Window extends React.Component {
             y: this.state.y
           }}
           style={{
-            backgroundColor: this.state.bgColor,
+            // backgroundColor: this.state.bgColor,
             borderColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
@@ -158,7 +172,10 @@ class Window extends React.Component {
                   // Auto-play was prevented
                 });
               }
-            } 
+            }
+            if (this.props.theme) {
+              this.theme(); 
+            }
           }}
           onDragStop={(e, d) => { 
             this.setState({ dragging: false })
@@ -184,11 +201,20 @@ class Window extends React.Component {
                 });
               }
             } 
+            if (this.props.theme) {
+              this.theme(); 
+            }
           }}
           onMouseLeave={() => { 
             if (this.refs.coverVid) {
               this.refs.coverVid.pause();
             } 
+          }}
+          onTouchStart={() => { 
+            console.log('touch')
+            if (this.props.theme) {
+              this.theme(); 
+            }
           }}
       >
           <div className="window-title"

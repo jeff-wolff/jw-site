@@ -5,7 +5,7 @@ url: "www.vans.com/history"
 featuredVideo: "./vans_autoplay_720.mp4"
 theme: true
 tbg: "rgb(181, 179, 179)"
-tbgf: "rgba(150, 35, 19, 0.8)"
+tbgf: "rgba(150, 35, 19, 0.9)"
 tp: "#000"
 tpf: "rgba(0, 0, 0, 0.87)"
 ts: "#fff"

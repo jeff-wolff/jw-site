@@ -35,63 +35,90 @@ class WorkIndex extends React.Component {
             }
            return (
               <Media query="(min-width: 741px)" key={post.id}>
-                {matches =>
-                  matches ? (
-                    <Media query="(min-width: 1440px)">
-                      {matches =>
-                        matches ? (
-                          <Window 
-                            title={windowTitle}
-                            width={640}
-                            height={398}
-                            minWidth={359}
-                            minHeight={240}
-                            maxWidth={1280}
-                            maxHeight={758}
-                            lockAspect={1.77777778}
-                            lockAspectRatioExtraHeight={38}
-                            className="work-window"
-                            coverVideo={coverVideoURL}
-                            >
-                              <h2 className="h3">{post.frontmatter.title}</h2>
-                              <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                          </Window>
-                        ) : (
-                          <Window 
-                            title={windowTitle}
-                            width={425}
-                            height={277}
-                            minWidth={224}
-                            minHeight={164}
-                            lockAspect={1.77777778}
-                            lockAspectRatioExtraHeight={38}
-                            className="work-window"
-                            coverVideo={coverVideoURL}
-                            >
-                              <h2 className="h3">{post.frontmatter.title}</h2>
-                              <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                          </Window>
-                        )
-                      }
-                    </Media>
-                  ) : (
-                    <Window 
-                      title={windowTitle}
-                      width={267}
-                      height={188}
-                      minWidth={180}
-                      minHeight={139}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={38}
-                      className="work-window"
-                      coverVideo={coverVideoURL}
-                      >
-                        <h2 className="h3">{post.frontmatter.title}</h2>
-                        <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                    </Window>
-                  )
-                }
-              </Media>
+              {matches =>
+                matches ? (
+                  <Media query="(min-width: 1440px)">
+                    {matches =>
+                      matches ? (
+                        <Window 
+                          title={windowTitle}
+                          width={640}
+                          height={398}
+                          minWidth={359}
+                          minHeight={240}
+                          maxWidth={1280}
+                          maxHeight={758}
+                          lockAspect={1.77777778}
+                          lockAspectRatioExtraHeight={38}
+                          className="work-window"
+                          coverVideo={coverVideoURL}
+                          theme={post.frontmatter.theme}
+                          tbg={post.frontmatter.tbg}
+                          tbgf={post.frontmatter.tbgf}
+                          tp={post.frontmatter.tp}
+                          tpf={post.frontmatter.tpf}
+                          ts={post.frontmatter.ts}
+                          tsf={post.frontmatter.tsf}
+                          twb={post.frontmatter.twb}
+                          twt={post.frontmatter.twt}
+                          >
+                            <h2 className="h3">{post.frontmatter.title}</h2>
+                            <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                        </Window>
+                      ) : (
+                        <Window 
+                          title={windowTitle}
+                          width={425}
+                          height={277}
+                          minWidth={224}
+                          minHeight={164}
+                          lockAspect={1.77777778}
+                          lockAspectRatioExtraHeight={38}
+                          className="work-window"
+                          coverVideo={coverVideoURL}
+                          theme={post.frontmatter.theme}
+                          tbg={post.frontmatter.tbg}
+                          tbgf={post.frontmatter.tbgf}
+                          tp={post.frontmatter.tp}
+                          tpf={post.frontmatter.tpf}
+                          ts={post.frontmatter.ts}
+                          tsf={post.frontmatter.tsf}
+                          twb={post.frontmatter.twb}
+                          twt={post.frontmatter.twt}
+                          >
+                            <h2 className="h3">{post.frontmatter.title}</h2>
+                            <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                        </Window>
+                      )
+                    }
+                  </Media>
+                ) : (
+                  <Window 
+                    title={windowTitle}
+                    width={267}
+                    height={188}
+                    minWidth={180}
+                    minHeight={139}
+                    lockAspect={1.77777778}
+                    lockAspectRatioExtraHeight={38}
+                    className="work-window"
+                    coverVideo={coverVideoURL}
+                    theme={post.frontmatter.theme}
+                    tbg={post.frontmatter.tbg}
+                    tbgf={post.frontmatter.tbgf}
+                    tp={post.frontmatter.tp}
+                    tpf={post.frontmatter.tpf}
+                    ts={post.frontmatter.ts}
+                    tsf={post.frontmatter.tsf}
+                    twb={post.frontmatter.twb}
+                    twt={post.frontmatter.twt}
+                    >
+                      <h2 className="h3">{post.frontmatter.title}</h2>
+                      <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                  </Window>
+                )
+              }
+            </Media>
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{
@@ -137,6 +164,15 @@ export const pageQuery = graphql`
             featuredVideo {
               publicURL
             }
+            theme
+            tbg
+            tbgf
+            tp
+            tpf
+            ts
+            tsf
+            twb
+            twt
           }
         }
       }

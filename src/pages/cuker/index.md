@@ -4,7 +4,7 @@ title: "Cuker Agency"
 url: "www.cukeragency.com"
 theme: true
 tbg: "#252525"
-tbgf: "rgba(37, 37, 37, 0.8)"
+tbgf: "rgba(37, 37, 37, 0.9)"
 tp: "#fb3737"
 tpf: "rgba(251, 55, 55, 0.87)"
 ts: "#fff"
