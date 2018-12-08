@@ -13,14 +13,18 @@ footer .container {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
+
 footer .navigation {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 13px;
+}
+@media (min-width: 1152px) {
+    footer .navigation {
+        margin-bottom:  20px;
+    }
 }
 
 footer a {

@@ -43,7 +43,7 @@ class WorkPostTemplate extends React.Component {
 
          
          <ul
-          style={{ listStyle: 'none', width: '40%', maxWidth: '240px' }}
+          style={{ listStyle: 'none', width: '100%', maxWidth: '200px' }}
          >
            <li>
              {

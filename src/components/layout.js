@@ -152,23 +152,23 @@ injectGlobal`
   }
   h1,.h1 {
       font-size: 41px;
-      line-height: 1;
+      line-height: 1.25;
   }
   @media (min-width: 320px) {
       h1,.h1 {
-        font-size: calc(41px + 119 * ((100vw - 320px) / 1120));
+        font-size: calc(41px + 95 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
       h1,.h1 {
-          font-size: 160px;
+          font-size: 136px;
       }
   }
   
   h2,.h2,h3,.h3,.h4,h4 {
       font-family: 'IBM Plex Mono';
       font-size: 1.14285714em;
-    
+      line-height: 1.5;
   }
 
   h2,.h2 {
@@ -273,10 +273,10 @@ injectGlobal`
       padding-left: 4.8%;
       padding-right: 4.8%;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1152px) {
       .container {
-          padding-left: 8.5%;
-          padding-right: 8.5%;
+          padding-left: 5.6%;
+          padding-right: 5.6%;
       }
   }
 
@@ -321,11 +321,11 @@ injectGlobal`
     top: 260px;
     margin-bottom: 260px;
   }
-  @media (min-width: 1440PX) {
+  @media (min-width: 1152px) {
     .work-post-title.centered-title {
       top: 300px;
       margin-bottom: 300px;
-      padding: 0 8.5%;
+      padding: 0 5.6%;
     }
   }
   .work-post-title h1 {
@@ -333,21 +333,21 @@ injectGlobal`
   }
   .work-post-website-btn {
     position: sticky;
-    top: calc(100vh - 70px - 1rem);
+    top: calc(100vh - 70px - 20px);
     width: calc(100% - 9.6%);
     max-width: 320px;
     float: right;
     margin-right: 4.8%;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     z-index: 2;
   }
   @media (min-width: 1152px) {
     .work-post-website-btn {
-      top: calc(100vh - 88px - 2rem);
+      top: calc(100vh - 88px - 5.6%);
       max-width: 460px;
-      width: calc(100% - 8.5%);
-      margin-right: 8.5%;
-      margin-bottom: 2rem;
+      width: calc(100% - 5.6%);
+      margin-right: 5.6%;
+      margin-bottom: 30px;
     }
   }
   .work-post-container {

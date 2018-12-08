@@ -7,15 +7,15 @@
     width: 100%;
     top: 0;
     z-index: 99;
-    padding: 20px 4.8% 19px;
+    padding: 20px 4.8% 0;
 }
 .header {
   /* background-color: #111;
   background-color: var(--bg); */
 }
-@media (min-width: 1440px) {
+@media (min-width: 1152px) {
     .header {
-        padding: 40px 8.5% 10px;
+        padding: 30px 5.6% 0;
     }
 }
 .no-footer .header {
