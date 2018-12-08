@@ -6,7 +6,12 @@ footer {
     background-color: #fff;
     color: #111;
     color: var(--bg);
-    height: 280px;
+    height: 60vh;
+}
+@media (min-height: 1280px) {
+    footer {
+        height: 50vh;
+    }
 }
 footer .container {
     display: flex;
@@ -20,6 +25,7 @@ footer .navigation {
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 13px;
+    margin-bottom: 4px;
 }
 @media (min-width: 1152px) {
     footer .navigation {
@@ -36,17 +42,28 @@ footer a {
     box-shadow: 0 0.1em 0 #111;
     box-shadow: 0 .1em 0 var(--bg);
 }
-@media (min-width: 1152px) {
-    footer .local-navigation a:first-child {
-        margin-right: 20px;
+footer .local-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    footer .local-navigation {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    footer .local-navigation a {
+        margin-left:  0;
+        margin-right: 0;
     }
     footer .local-navigation a:last-child {
-        margin-left: 20px;
+        margin-right: 0;
     }
 }
 footer a[class^="button"] {
     width: 100%;
-    margin: .25em 0;
+    margin-left: 0;
+    margin-bottom: 20px;
     font-size: 24px;
     letter-spacing: .1em;
     background-color: transparent;
@@ -58,14 +75,24 @@ footer a[class^="button"]:hover:after {
     /* border-width: 2px; */
     background: transparent;
 }
-@media (min-width: 1152px) {
+@media (min-width: 768px) {
     footer a[class^="button"] {
         width: calc(50% - 20px);
-        font-size: 36px;
+    }
+}
+@media (min-width: 1152px) {
+    footer a[class^="button"] {
+        width: calc(33.333333% - 20px);
+    }
+}
+@media (min-width: 1920px) {
+    footer a[class^="button"] {
+        width: calc(25% - 20px);
+        max-width: 420px;
     }
     footer a[class^="button"]:after,
     footer a[class^="button"]:hover:after {
-        border-width: 3px;
+        /* border-width: 3px; */
     }
 }
 footer a[class^="button"]:hover {

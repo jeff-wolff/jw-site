@@ -11,6 +11,7 @@ const Footer = ({}) => (
         </span>
         <div className="local-navigation">
           <Button to="/work/" inlineicon="right"><span>💼</span> Work</Button>
+          <Button to="/Posts/" inlineicon="right"><span>💼</span> Posts</Button>
           <Button external="true" href="mailto:hello@jeffwolff.net" inlineicon="right">Contact <span>📧</span></Button>
         </div>
         <div className="navigation">

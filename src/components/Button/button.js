@@ -21,33 +21,33 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     word-break: break-all;
     user-select: none;
     font-size: ${ props => ( props.tiny ? '13px' : props.small ? '15px' : '19px' ) }; 
-    padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.2em' ) };
+    padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
     width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon == "left" ? 'right' : 'left')};
     ${media.medium`
-        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 2em' ) };
+        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
     `}
     ${media.large`
         font-size: ${ props => ( props.tiny ? '14px' : props.small ? '19px' : '24px' ) };
-        padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.6em' ) };
+        padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.1em' ) };
     `}
     &:hover {
         background: #111;
         background: var(--bg);
         color: #333;
         color: var(--secondary);
-        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.2em' ) };
+        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
             transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '6px, -6px, 0' : '6px, -6px, 0' ) });
         }
         ${media.medium`
-            padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.6em' ) };
+            padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
         `}
         ${media.large`
             @media (-moz-touch-enabled: 0), (hover: hover) {
                 transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
             }
-            padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.6em' ) };
+            padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.1em' ) };
         `}
     }
     &:active {
