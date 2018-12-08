@@ -60,7 +60,7 @@ injectGlobal`
     --bg-faded: rgba(150, 35, 19, 0.8);
     --primary: #000;
     --primary-faded: rgba(0, 0, 0, 0.87);
-    --secondary: #121212;
+    --secondary: #fff;
     --secondary-faded: rgba(255,255,255,.87);
     --window-border: 105, 103, 103;
     --window-title: 255,255,255;
