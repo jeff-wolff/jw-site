@@ -12,9 +12,10 @@ class Header extends React.Component {
     if (this.props.isWorkPage) {
       navigation = "";
     } else {
-      navigation = <div className="navigation">
-                     <Link to="/work/" tiny>Work</Link>
-                   </div>;
+      navigation = <ul className="navigation">
+                     <li><Link to="/posts/" tiny>Posts</Link></li>
+                     <li><Link to="/work/" tiny>Work</Link></li>
+                   </ul>;
     }
     return (
       <div className="header">

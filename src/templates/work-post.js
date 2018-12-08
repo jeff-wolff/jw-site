@@ -37,13 +37,13 @@ class WorkPostTemplate extends React.Component {
        </div>
        <div className="work-post-container container">
        <h5>
-        {post.frontmatter.date}
+        Launched {post.frontmatter.date}
        </h5>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
          
          <ul
-          style={{ listStyle: 'none', width: '100%', maxWidth: '200px' }}
+          style={{ listStyle: 'none', width: '100%', maxWidth: '260px' }}
          >
            <li>
              {
