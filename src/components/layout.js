@@ -44,54 +44,54 @@ injectGlobal`
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
-    --secondary-faded: #333;
+    --secondary-faded: #eee;
     --window-border: 190,190,190;
     --window-title: 0,0,0;
     // Rip Curl
-    --bg: #962313;
-    --bg-faded: rgba(150, 35, 19, 0.8);
-    --primary: #00ffff;
-    --primary-faded: rgba(0, 255, 255, 1);
-    --secondary: #d24936;
-    --secondary-faded: rgba(210, 73, 54, 0.87);
-    --window-border: 31,222,222;
-    --window-title: 150, 35, 19;
+    // --bg: #962313;
+    // --bg-faded: rgba(150, 35, 19, 0.8);
+    // --primary: #00ffff;
+    // --primary-faded: rgba(0, 255, 255, 1);
+    // --secondary: #d24936;
+    // --secondary-faded: #fff;
+    // --window-border: 31,222,222;
+    // --window-title: 150, 35, 19;
     // Vans
-    --bg: rgb(181, 179, 179);
-    --bg-faded: rgba(150, 35, 19, 0.8);
-    --primary: #000;
-    --primary-faded: rgba(0, 0, 0, 0.87);
-    --secondary: #fff;
-    --secondary-faded: rgba(255,255,255,.87);
-    --window-border: 105, 103, 103;
-    --window-title: 255,255,255;
+    // --bg: rgb(181, 179, 179);
+    // --bg-faded: rgba(150, 35, 19, 0.8);
+    // --primary: #000;
+    // --primary-faded: rgba(0, 0, 0, 0.87);
+    // --secondary: #fff;
+    // --secondary-faded: rgba(255,255,255,.87);
+    // --window-border: 105, 103, 103;
+    // --window-title: 255,255,255;
     // Sunbelt
-    --bg: #00401d;
-    --bg-faded: rgba(0, 104, 48, 0.8);
-    --primary: #ffe113;
-    --primary-faded: rgba(255, 225, 19, 0.87);
-    --secondary: #006830;
-    --secondary-faded: #005830;
-    --window-border: 255, 225, 19;
-    --window-title: 0, 0, 0;
+    // --bg: #0d723b;
+    // --bg-faded: rgba(13, 114, 59, 0.8);
+    // --primary: #ffe113;
+    // --primary-faded: rgba(255, 225, 19, 0.87);
+    // --secondary: #000;
+    // --secondary-faded: #fff;
+    // --window-border: 255, 225, 19;
+    // --window-title: 0, 0, 0;
     // GoMacro
-    --bg: #61503e;
-    --bg-faded: rgba(0, 104, 48, 0.8);
-    --primary: #fb7e26;
-    --primary-faded: rgba(251, 126, 38, 0.87);
-    --secondary: #fff;
-    --secondary-faded: rgb(255,255,255,.87);
-    --window-border: 227, 109, 24;
-    --window-title: 0, 0, 0;
+    // --bg: #61503e;
+    // --bg-faded: rgba(97, 80, 62, 0.8);
+    // --primary: #fb7e26;
+    // --primary-faded: rgba(251, 126, 38, 0.87);
+    // --secondary: #fff;
+    // --secondary-faded: rgb(255,255,255,.87);
+    // --window-border: 227, 109, 24;
+    // --window-title: 0, 0, 0;
     // Cuker
-    --bg: #252525;
-    --bg-faded: rgba(37, 37, 37, 0.8);
-    --primary: #fb3737;
-    --primary-faded: rgba(251, 55, 55, 0.87);
-    --secondary: #fff;
-    --secondary-faded: #ddd;
-    --window-border: 251, 55, 55;
-    --window-title: 0, 0, 0;
+    // --bg: #252525;
+    // --bg-faded: rgba(37, 37, 37, 0.8);
+    // --primary: #fb3737;
+    // --primary-faded: rgba(251, 55, 55, 0.87);
+    // --secondary: #fff;
+    // --secondary-faded: #ddd;
+    // --window-border: 251, 55, 55;
+    // --window-title: 0, 0, 0;
   }
   html {
       box-sizing: border-box;
@@ -132,8 +132,8 @@ injectGlobal`
   }
   a:hover {
       padding: .12em 0 0;
-      background: rgba(255, 255, 0, 0.87);
-      background: var(--primary-faded);
+      background: #ff0;
+      background: var(--primary);
       color: #333;
       color:  var(--secondary);
       box-shadow: none;
@@ -142,8 +142,13 @@ injectGlobal`
   a:active {
       position: relative;
       top: 1px;
+      background: rgba(255, 255, 0, 0.87);
+      background: var(--primary-faded);
       color: #000;
       color: var(--secondary-faded);
+  }
+  a:visited:not(:hover,:active) {
+      color: var(--primary-faded);
   }
   img {
       width: 100%;

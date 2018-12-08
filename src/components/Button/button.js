@@ -32,8 +32,6 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.1em' ) };
     `}
     &:hover {
-        background: #111;
-        background: var(--bg);
         color: #333;
         color: var(--secondary);
         padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.1em' ) };
@@ -49,10 +47,6 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
             }
             padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.1em' ) };
         `}
-    }
-    &:active {
-        color: #000;
-        color: var(--secondary-faded);
     }
     &:before, &:after {
         transition: all 0.125s ease-in-out;
@@ -83,7 +77,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     }
     &:hover:after {
         border: 2px solid #ff0;
-        border: 2px solid var(--primary);
+        border: 2px solid var(--primary-faded);
         // border-width: ${ props => ( props.tiny ? '1px' : '4px')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
             transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
@@ -94,11 +88,16 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     }
     &:active {
         transform: translate3d(0,0,0);
+        color: #333;
+        color: var(--secondary-faded);
+    }
+    &:active:before {
+        background: rgba(255, 255, 0, 0.87);
+        background: var(--primary-faded);
     }
     &:active:after {
         transform: translate3d(0,0,0);
     }
-    
     span {
         float: ${ props => (props.inlineicon == "left" ? 'left' : 'right')};
     }

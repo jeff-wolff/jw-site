@@ -39,8 +39,11 @@ footer a {
     line-height: 1;
     color: #111;
     color: var(--bg);
-    box-shadow: 0 0.1em 0 #111;
-    box-shadow: 0 .1em 0 var(--bg);
+}
+footer a:visited:not(:hover,:active) {
+    color: var(--bg-faded);
+    box-shadow:  0 .1em 0 rgba(17, 17, 17, 0.8);
+    box-shadow:  0 .1em 0 var(--bg-faded);
 }
 footer .local-navigation {
     display: flex;
@@ -68,7 +71,11 @@ footer a[class^="button"] {
     letter-spacing: .1em;
     background-color: transparent;
     color: var(--bg);
-    
+    box-shadow: -0.2em 0.2em 0 #111;
+    box-shadow: -0.2em 0.2em 0 var(--bg);
+}
+footer a[class^="button"]:hover {
+    box-shadow: none;
 }
 footer a[class^="button"]:after,
 footer a[class^="button"]:hover:after {
@@ -95,16 +102,19 @@ footer a[class^="button"]:hover:after {
         /* border-width: 3px; */
     }
 }
-footer a[class^="button"]:hover {
+footer a[class^="button"]:hover {    
+    color: var(--secondary-faded);
+}
+footer a[class^="button"]:active {
     background-color: var(--bg);
-    color: var(--primary);
+    color: var(--secondary);
 }
 footer a[class^="button"]:after,
 footer a[class^="button"]:hover:after {
     border-color: var(--bg);
 }
 footer a[class^="button"]:hover:before {
-    background-color: var(--bg);
+    background-color: var(--bg-faded);
 }
 
 footer .right-nav {
