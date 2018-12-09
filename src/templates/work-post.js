@@ -64,7 +64,7 @@ class WorkPostTemplate extends React.Component {
          
            {
              next &&
-             <Button tiny inlineicon="left" to={next.fields.slug} rel="next">
+             <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
                &darr; <span>{next.frontmatter.title}</span>
              </Button>
            }

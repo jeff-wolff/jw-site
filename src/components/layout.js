@@ -399,8 +399,7 @@ injectGlobal`
     margin-bottom: 30px;
     z-index: 2;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     min-height: 69px;
   }
   @media (min-width: 1152px) {
@@ -429,12 +428,16 @@ injectGlobal`
   .work-post-nav a[class^="button"]:hover > span {
     opacity: 1;
   }
-  .work-post-nav a[class^="button"][rel="next"] {
-    align-self: flex-end;
+  .work-post-nav a[class^="button"][rel="next"]:only-child {
+      margin-top: 33px;
   }
-  .work-post-nav a[class^="button"][rel="prev"] {
-    align-self: flex-start;
+  .work-post-nav a:not(:only-child)[class^="button"][rel="next"]:after {
+    border-top-width: 1px;
   }
+  .work-post-nav a:not(:only-child)[class^="button"][rel="prev"]:after {
+    border-bottom-width: 1px;
+  }
+
   .work-post-container {
     margin-top: 120vh;
     min-height: 240vh;
