@@ -1,7 +1,7 @@
 ---
 date: "2016-02-26T00:00:00"
 title: "Vans History"
-url: "www.vans.com/history"
+url: "vans.com/history"
 featuredVideo: "./vans_autoplay_720.mp4"
 theme: true
 tbg: "rgb(181, 179, 179)"

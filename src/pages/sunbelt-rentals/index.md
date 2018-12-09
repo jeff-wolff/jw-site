@@ -1,7 +1,7 @@
 ---
 date: "2018-01-20T00:00:00"
 title: "Sunbelt Rentals"
-url: "www.sunbeltrentals.com"
+url: "sunbeltrentals.com"
 featuredVideo: "./sunbelt_autoplay_720.mp4"
 theme: true
 tbg: "#0d723b"

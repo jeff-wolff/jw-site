@@ -1,7 +1,7 @@
 ---
 date: "2018-02-13T00:00:00"
 title: "GoMacro"
-url: "www.gomacro.com"
+url: "gomacro.com"
 featuredVideo: "./gomacro_autoplay_720.mp4"
 theme: true
 tbg: "#61503e"

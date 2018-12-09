@@ -28,7 +28,7 @@ class WorkIndex extends React.Component {
         <h1 className="centered-title preload">Work</h1>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
-            const windowTitle = "https://"+post.frontmatter.url;
+            const windowTitle = "https://www."+post.frontmatter.url+"/";
             let coverVideoURL = "";
             if (post.frontmatter.featuredVideo != null) {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;

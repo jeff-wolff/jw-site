@@ -1,7 +1,7 @@
 ---
 date: "2015-11-10T00:00:00"
 title: "Rip Curl"
-url: "www.ripcurl.com"
+url: "ripcurl.com"
 featuredVideo: "./ripcurl_autoplay_720.mp4"
 theme: true
 tbg: "#962313"

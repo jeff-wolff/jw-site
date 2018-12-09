@@ -1,7 +1,7 @@
 ---
 date: "2017-10-23T00:00:00"
 title: "Cuker Agency"
-url: "www.cukeragency.com"
+url: "cukeragency.com"
 theme: true
 tbg: "#252525"
 tbgf: "rgba(37, 37, 37, 0.9)"
