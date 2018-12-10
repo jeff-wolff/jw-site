@@ -48,6 +48,8 @@ class Window extends React.Component {
     document.documentElement.style.setProperty('--secondary-faded', this.props.tsf);
     document.documentElement.style.setProperty('--window-border', this.props.twb);
     document.documentElement.style.setProperty('--window-title', this.props.twt);
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
 
   collision() {

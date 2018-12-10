@@ -348,6 +348,7 @@ injectGlobal`
   }
   .centered-title:hover {
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
+      text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
       color: rgba(255,255, 255, .92);
       filter: blur(0);
   }
@@ -355,6 +356,7 @@ injectGlobal`
       z-index: 2;
       color: #fff;
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
+      text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
       filter: blur(0);
   }
 

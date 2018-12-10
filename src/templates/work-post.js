@@ -16,6 +16,8 @@ class WorkPostTemplate extends React.Component {
     document.documentElement.style.setProperty('--secondary-faded', sf);
     document.documentElement.style.setProperty('--window-border', wb);
     document.documentElement.style.setProperty('--window-title', wt);
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
   componentDidMount() {
     const post = this.props.data.markdownRemark
@@ -68,7 +70,7 @@ class WorkPostTemplate extends React.Component {
            }
        </div>
        <div className="work-post-website-btn">
-         <Button external="true" href={`https://${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+         <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
        </div>
        <div className="work-post-container container">
        <h5>
