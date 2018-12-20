@@ -34,10 +34,9 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription },
-                 { httpEquiv: 'Content-Language', content: 'en_US' }
-                ]}
+          meta={[{ name: 'description', content: siteDescription } ]}
           title={siteTitle + ' - ' + siteTagline}>
+          <meta name="google" content="notranslate" />
         </Helmet>
         <HomeInfo />
         <div className="container">
