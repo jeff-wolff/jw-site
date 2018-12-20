@@ -8,9 +8,10 @@ tbg: "#962313"
 tbgf: "rgba(150, 35, 19, 0.9)"
 tp: "#00ffff"
 tpf: "rgba(0, 255, 255, 1)"
-ts: "#d24936"
-tsf: "#fff"
+ts: "#b13a29"
+tsf: "rgba(177, 58, 41,.78)"
 twb: "31,222,222"
 twt: "150, 35, 19"
+tfbg: "hsla(7.3, 77.5%, 23.1%, 1.0)"
 ---
 ###In 2016, I was tasked with coding the front-end of the new Cuker Agency website. This includes a blog, news, and careers section as well as services 

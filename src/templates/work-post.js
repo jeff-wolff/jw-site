@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 
 class WorkPostTemplate extends React.Component {
-  theme(bg,bgf,p,pf,s,sf,wb,wt) {
+  theme(bg,bgf,p,pf,s,sf,wb,wt,fbg) {
     document.documentElement.style.setProperty('--bg', bg);
     document.documentElement.style.setProperty('--bg-faded', bgf);
     document.documentElement.style.setProperty('--primary', p);
@@ -16,6 +16,7 @@ class WorkPostTemplate extends React.Component {
     document.documentElement.style.setProperty('--secondary-faded', sf);
     document.documentElement.style.setProperty('--window-border', wb);
     document.documentElement.style.setProperty('--window-title', wt);
+    document.documentElement.style.setProperty('--footer-bg', fbg);
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
@@ -23,7 +24,7 @@ class WorkPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     console.log(post.frontmatter);
     if (post.frontmatter.theme) {
-      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt);
+      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
   }
   render() {
@@ -116,6 +117,7 @@ export const pageQuery = graphql`
         tsf
         twb
         twt
+        tfbg
       }
     }
   }

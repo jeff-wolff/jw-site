@@ -3,11 +3,14 @@ footer {
     z-index: -200;
     bottom: 0;
     width: 100%;
-    background-color: #fff;
-    color: #111;
-    color: var(--bg);
+    background-color: #000;
+    background-color: var(--footer-bg);
+    color: #ff0;
+    color: var(--primary);
     height: 75vh;
+    opacity: .75;
 }
+
 @media (min-height: 1280px) {
     footer {
         height: 50vh;
@@ -33,15 +36,22 @@ footer .navigation {
     }
 }
 
-footer a {
+footer a:not([class^="button"]) {
     margin: 0 0 0 1em;
     font-size: 12px;
     line-height: 1;
-    color: #111;
-    color: var(--bg);
+    color: #ff0;
+    color: var(--primary);
+}
+footer a:not([class^="button"]):hover {
+    color: #000;
+    color: var(--footer-bg);
+}
+footer a:not([class^="button"]):active {
+    opacity: .9;
 }
 footer a:visited:not(:hover,:active) {
-    color: var(--bg-faded);
+    color: var(--primary-faded);
     box-shadow:  0 .1em 0 rgba(17, 17, 17, 0.8);
     box-shadow:  0 .1em 0 var(--bg-faded);
 }
@@ -69,10 +79,14 @@ footer a[class^="button"] {
     margin-bottom: 20px;
     font-size: 24px;
     letter-spacing: .1em;
-    background-color: transparent;
+    background-color: #000;
+    background-color: var(--footer-bg);
+    color: #ff0;
+    color: var(--primary);
+/*     color:  #111;
     color: var(--bg);
     box-shadow: -0.2em 0.2em 0 #111;
-    box-shadow: -0.2em 0.2em 0 var(--bg);
+    box-shadow: -0.2em 0.2em 0 var(--bg); */
 }
 footer a[class^="button"]:hover {
     box-shadow: none;
@@ -102,20 +116,30 @@ footer a[class^="button"]:hover:after {
         /* border-width: 3px; */
     }
 }
-footer a[class^="button"]:hover {    
-    color: var(--secondary-faded);
+footer a[class^="button"]:hover {        
+    color:  #fff;
+    color: var(--secondary);
 }
 footer a[class^="button"]:active {
+    color:  #111;
     background-color: var(--bg);
-    color: var(--secondary);
+    color:  #ddd;
+    color: var(--secondary-faded);
 }
 footer a[class^="button"]:after,
 footer a[class^="button"]:hover:after {
-    border-color: var(--bg);
+    /* border-color: #111;
+    border-color: var(--bg); */
 }
 footer a[class^="button"]:hover:before {
-    background-color: var(--bg-faded);
+    /* background-color: rgba(17, 17, 17, 0.9);
+    background-color: var(--bg-faded); */
 }
+
+footer a[class^="button"] span {
+
+}
+
 
 footer .right-nav {
     text-align: right;

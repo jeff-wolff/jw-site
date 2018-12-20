@@ -5,12 +5,13 @@ url: "cukeragency.com"
 theme: true
 tbg: "#252525"
 tbgf: "rgba(37, 37, 37, 0.9)"
-tp: "#fb3737"
-tpf: "rgba(251, 55, 55, 0.87)"
+tp: "#ff4545"
+tpf: "rgba(255, 69, 69, 0.87)"
 ts: "#fff"
-tsf: "#ddd"
+tsf: "rgba(255,255,255,.78)"
 twb: " 251, 55, 55"
 twt: "0,0,0"
+tfbg: "hsla(0.0, 0.0%, 4.5%, 1.0)"
 ---
 ###In 2016, I was tasked with coding the front-end of the new Cuker Agency website. This includes a blog, news, and careers section as well as services and work case studies. Work case studies were adapted to a new design system and older case studies have a minimized design system.
 

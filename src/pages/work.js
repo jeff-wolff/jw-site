@@ -9,6 +9,22 @@ import Window from '../components/Window/window.js'
 import Media from 'react-media'
 
 class WorkIndex extends React.Component {
+  defaultTheme() {
+    document.documentElement.style.setProperty('--bg', '#111');
+    document.documentElement.style.setProperty('--bg-faded', 'rgba(17, 17, 17, 0.9)');
+    document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
+    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+    document.documentElement.style.setProperty('--secondary', '#000');
+    document.documentElement.style.setProperty('--secondary-faded', '#222');
+    document.documentElement.style.setProperty('--window-border', '190,190,190');
+    document.documentElement.style.setProperty('--window-title', '0,0,0');
+    document.documentElement.style.setProperty('--footer-bg', '#000');
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+  }
+  componentDidMount() {
+    this.defaultTheme();
+  }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -23,7 +39,7 @@ class WorkIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Work - ${siteTitle}`}
           >
-        <body className="wrapper-large" />
+        <body className="wrapper-large"/>
         </Helmet>
         <h1 className="centered-title preload">Work</h1>
          {posts.map(({ node: post }) => {
@@ -61,6 +77,7 @@ class WorkIndex extends React.Component {
                           tsf={post.frontmatter.tsf}
                           twb={post.frontmatter.twb}
                           twt={post.frontmatter.twt}
+                          tfbg={post.frontmatter.tfbg}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
                             <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -85,6 +102,7 @@ class WorkIndex extends React.Component {
                           tsf={post.frontmatter.tsf}
                           twb={post.frontmatter.twb}
                           twt={post.frontmatter.twt}
+                          tfbg={post.frontmatter.tfbg}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
                             <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -112,6 +130,7 @@ class WorkIndex extends React.Component {
                     tsf={post.frontmatter.tsf}
                     twb={post.frontmatter.twb}
                     twt={post.frontmatter.twt}
+                    tfbg={post.frontmatter.tfbg}
                     >
                       <h2 className="h3">{post.frontmatter.title}</h2>
                       <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -173,6 +192,7 @@ export const pageQuery = graphql`
             tsf
             twb
             twt
+            tfbg
           }
         }
       }

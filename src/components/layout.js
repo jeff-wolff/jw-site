@@ -44,54 +44,10 @@ injectGlobal`
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
-    --secondary-faded: #eee;
+    --secondary-faded: #222;
     --window-border: 190,190,190;
     --window-title: 0,0,0;
-    // Rip Curl
-    // --bg: #962313;
-    // --bg-faded: rgba(150, 35, 19, 0.8);
-    // --primary: #00ffff;
-    // --primary-faded: rgba(0, 255, 255, 1);
-    // --secondary: #d24936;
-    // --secondary-faded: #fff;
-    // --window-border: 31,222,222;
-    // --window-title: 150, 35, 19;
-    // Vans
-    // --bg: rgb(181, 179, 179);
-    // --bg-faded: rgba(150, 35, 19, 0.8);
-    // --primary: #000;
-    // --primary-faded: rgba(0, 0, 0, 0.87);
-    // --secondary: #fff;
-    // --secondary-faded: rgba(255,255,255,.87);
-    // --window-border: 105, 103, 103;
-    // --window-title: 255,255,255;
-    // Sunbelt
-    // --bg: #0d723b;
-    // --bg-faded: rgba(13, 114, 59, 0.8);
-    // --primary: #ffe113;
-    // --primary-faded: rgba(255, 225, 19, 0.87);
-    // --secondary: #000;
-    // --secondary-faded: #fff;
-    // --window-border: 255, 225, 19;
-    // --window-title: 0, 0, 0;
-    // GoMacro
-    // --bg: #61503e;
-    // --bg-faded: rgba(97, 80, 62, 0.8);
-    // --primary: #fb7e26;
-    // --primary-faded: rgba(251, 126, 38, 0.87);
-    // --secondary: #fff;
-    // --secondary-faded: rgb(255,255,255,.87);
-    // --window-border: 227, 109, 24;
-    // --window-title: 0, 0, 0;
-    // Cuker
-    // --bg: #252525;
-    // --bg-faded: rgba(37, 37, 37, 0.8);
-    // --primary: #fb3737;
-    // --primary-faded: rgba(251, 55, 55, 0.87);
-    // --secondary: #fff;
-    // --secondary-faded: #ddd;
-    // --window-border: 251, 55, 55;
-    // --window-title: 0, 0, 0;
+    --footer-bg: #000;
   }
   html {
       box-sizing: border-box;
@@ -101,7 +57,7 @@ injectGlobal`
   }
   body {
       margin: 0;
-      color: rgba(255,255,255,.87);
+      color: rgba(255,255,255,.96);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.789474;
@@ -175,19 +131,19 @@ injectGlobal`
   p {
     
   }
-  h1,.h1,h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,p {
+  .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6,p {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       font-weight: normal;
       margin: 0;
       letter-spacing: 0.025em;
   }
-  h1,.h1,h2,.h2,h3,.h3 {
+  .Rte .h1,.Rte .h1,.Rte h2,.Rte .h2,.Rte h3,.Rte .h3 {
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
   }
       
-  h4,.h4,h5,.h5,h6,.h6 {
+  .Rte h4,.Rte .h4,.Rte h5,.Rte .h5,.Rte h6,.Rte .h6 {
       color: inherit;
       margin-top: 2rem;
       margin-bottom: .5rem;
@@ -195,7 +151,7 @@ injectGlobal`
   h1,.h1 {
       font-weight: bold;
       font-size: 41px;
-      line-height: 1.17;
+      line-height: 1.111;
   }
   @media (min-width: 320px) {
       h1,.h1 {
@@ -335,6 +291,7 @@ injectGlobal`
       color: rgba(255, 255, 255, .25);
       position: sticky;
       top: 100px;
+      width: 80%;
       display: table;
       margin: 0 auto;
       text-align: center;
@@ -365,8 +322,7 @@ injectGlobal`
   }
   @media (min-width: 1152px) {
     .work-post-title.centered-title {
-      top: 300px;
-      padding: 0 8%;
+      
     }
   }
   .work-post-title h1 {
@@ -374,49 +330,51 @@ injectGlobal`
   }
   .work-post-website-btn {
     position: sticky;
-    top: calc(100vh - 69px - 30px);
+    top: calc(100vh - 69px - 60px);
     width: calc(100% - 12%);
-    max-width: 72%;
+    max-width: 70%;
     float: right;
     margin-right: 6%;
-    margin-bottom: 30px;
+    margin-left: 6%;
+    margin-bottom: 60px;
     z-index: 2;
   }
   @media (min-width: 585px) {
     .work-post-website-btn {
-      max-width: 420px;
+      max-width: 360px;
     }
   }
   @media (min-width: 1152px) {
     .work-post-website-btn {
-      top: calc(100vh - 90px - 30px);
-      width: calc(100% - 8%);
+      top: calc(100vh - 90px - 60px);
+      max-width: 420px;
+      width: calc(100% - 16%);
       margin-right: 8%;
-      margin-bottom: 30px;
+      margin-left: 8%;
     }
   }
   .work-post-nav {
     position: sticky;
-    top: calc(100vh - 69px - 30px);
-    width: calc(100% - 12%);
-    max-width: 12%;
+    top: calc(100vh - 69px - 60px);
+    width: calc(100% - 6%);
+    max-width: 54%;
     float: left;
     margin-left: 6%;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 69px;
+    justify-content: center;
+    min-height: 71px;
   }
   @media (min-width: 1152px) {
     .work-post-nav {
-      top: calc(100vh - 90px - 30px);
+      top: calc(100vh - 90px - 60px);
       max-width: 460px;
-      width: calc(100% - 8%);
+      width: calc(100% - 16%);
       height: 90px;
       margin-right: 8%;
-      margin-bottom: 30px;
+      margin-left: 8%;
     }
   }
   .work-post-nav a[class^="button"] {
@@ -435,26 +393,33 @@ injectGlobal`
     height: 0;
     white-space: nowrap;
   } 
-  .work-post-nav a[class^="button"]:hover {
-    width: 100%;
-    height: auto;
+
+  @media (hover: hover) {
+    .work-post-nav a[class^="button"]:hover {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+    }
+    .work-post-nav a[class^="button"]:hover > span {
+      opacity: 1;
+    }
   }
-  .work-post-nav a[class^="button"]:hover > span {
-    opacity: 1;
+  .work-post-nav a[class^="button"][rel="prev"] {
+    margin-bottom: 2px;
   }
   .work-post-nav a[class^="button"][rel="prev"]:only-child {
-      margin-bottom: 28px;
+      margin-bottom: 29px;
+  }
+  .work-post-nav a[class^="button"][rel="next"] {
+    margin-top: 2px;
+  }
+  .work-post-nav a[class^="button"][rel="next"]:only-child {
+      margin-top: 29px;
   }
   @media (min-width: 1152px) {
     .work-post-nav a[class^="button"][rel="prev"]:only-child {
         margin-bottom: 33px;
     }
-  }
-  .work-post-nav a:not(:only-child)[class^="button"][rel="next"]:after {
-    border-top-width: 1px;
-  }
-  .work-post-nav a:not(:only-child)[class^="button"][rel="prev"]:after {
-    border-bottom-width: 1px;
   }
 
   .work-post-container {
