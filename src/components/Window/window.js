@@ -172,6 +172,9 @@ class Window extends React.Component {
           enableResizing={{ bottomRight: this.state.enableResize }}
           onDrag={(e, d) => { 
             this.setState({ x: d.x, y: d.y })
+            if (this.props.theme && this.state.dragging || this.state.resizing) {
+              this.theme(); 
+            }
           }}
           onDragStart={(e, d) => { 
             globalZIndex = globalZIndex+1;
@@ -188,9 +191,6 @@ class Window extends React.Component {
                   // Auto-play was prevented
                 });
               }
-            }
-            if (this.props.theme) {
-              this.theme(); 
             }
           }}
           onDragStop={(e, d) => { 
