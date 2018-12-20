@@ -1,7 +1,4 @@
-
-
 .react-draggable {
-    transition: all 125ms ease;
     border: 4px solid;
     background-color: #111;
 }
@@ -87,7 +84,7 @@
     }
     .react-draggable.dragging .window-content > .window-video,
     .react-draggable:hover .window-content > .window-video {
-        opacity: .68;
+        opacity: .48;
     }
 
     .react-draggable.collapsed > .window-content {
