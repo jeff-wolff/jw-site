@@ -76,34 +76,35 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    opacity: .24;
+    opacity: .5;
     filter: grayscale(66%);
     mix-blend-mode: screen;
 }
-.react-draggable > .window-content > video {
-    
-}
-.react-draggable.dragging .window-content > .window-video,
-.react-draggable:hover .window-content > .window-video {
-    opacity: .87;
-}
 
-.react-draggable.collapsed > .window-content {
-    opacity: 0;
-}
-.react-draggable > .window-content > .window-button,
-.react-draggable > .window-content > h2 {
-   transition: opacity 125ms ease;
-   opacity: 0;
-}
-.react-draggable.dragging > .window-content .window-button,
-.react-draggable:hover > .window-content .window-button,
-.react-draggable.dragging > .window-content h2,
-.react-draggable:hover > .window-content h2  {
-    opacity: 1;
-}
-.react-draggable > .window-content > .window-button:hover + video {
-    opacity: 0.44;
+@media (hover: hover) {
+    .react-draggable.dragging .window-content > .window-video,
+    .react-draggable:hover .window-content > .window-video {
+        opacity: .87;
+    }
+
+    .react-draggable.collapsed > .window-content {
+        opacity: 0;
+    }
+    .react-draggable > .window-content > .window-button,
+    .react-draggable > .window-content > h2 {
+       transition: opacity 125ms ease;
+       opacity: 0;
+    }
+
+    .react-draggable.dragging > .window-content .window-button,
+    .react-draggable:hover > .window-content .window-button,
+    .react-draggable.dragging > .window-content h2,
+    .react-draggable:hover > .window-content h2  {
+        opacity: 1;
+    }
+    .react-draggable > .window-content > .window-button:hover + .window-video {
+        opacity: 0.44;
+    }
 }
 
 .react-draggable a.window-link:hover,
