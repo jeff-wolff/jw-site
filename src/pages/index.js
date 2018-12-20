@@ -36,7 +36,7 @@ class Index extends React.Component {
         <Helmet
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle + ' - ' + siteTagline}>
-          <meta http-equiv="Content-Language" content="en" />
+          <meta http-equiv="Content-Language" content="en_US" />
         </Helmet>
         <HomeInfo />
         <div className="container">
