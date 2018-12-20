@@ -12,19 +12,6 @@ var count = 600;
 var positions = [];
 
 class Window extends React.Component {
-  defaultTheme() {
-    document.documentElement.style.setProperty('--bg', '#111');
-    document.documentElement.style.setProperty('--bg-faded', 'rgba(17, 17, 17, 0.9)');
-    document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
-    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-    document.documentElement.style.setProperty('--secondary', '#000');
-    document.documentElement.style.setProperty('--secondary-faded', '#222');
-    document.documentElement.style.setProperty('--window-border', '190,190,190');
-    document.documentElement.style.setProperty('--window-title', '0,0,0');
-    document.documentElement.style.setProperty('--footer-bg', '#000');
-    let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -51,19 +38,37 @@ class Window extends React.Component {
     this.handlePreventTouchmoveWhenPanning = this.handlePreventTouchmoveWhenPanning.bind(this);
   }
 
+  defaultTheme() {
+    // setTimeout(function(){
+      document.documentElement.style.setProperty('--bg', '#111');
+      document.documentElement.style.setProperty('--bg-faded', 'rgba(17, 17, 17, 0.9)');
+      document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
+      document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+      document.documentElement.style.setProperty('--secondary', '#000');
+      document.documentElement.style.setProperty('--secondary-faded', '#222');
+      document.documentElement.style.setProperty('--window-border', '190,190,190');
+      document.documentElement.style.setProperty('--window-title', '0,0,0');
+      document.documentElement.style.setProperty('--footer-bg', '#000');
+      let metaThemeColor = document.querySelector("meta[name=theme-color]");
+      metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('#111'));
+    // },125);
+  }
+
   theme() {
     console.log('theme changed');
-    document.documentElement.style.setProperty('--bg', this.props.tbg);
-    document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
-    document.documentElement.style.setProperty('--primary', this.props.tp);
-    document.documentElement.style.setProperty('--primary-faded', this.props.tpf);
-    document.documentElement.style.setProperty('--secondary', this.props.ts);
-    document.documentElement.style.setProperty('--secondary-faded', this.props.tsf);
-    document.documentElement.style.setProperty('--window-border', this.props.twb);
-    document.documentElement.style.setProperty('--window-title', this.props.twt);
-    document.documentElement.style.setProperty('--footer-bg', this.props.tfbg);
-    let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+    // setTimeout(function(){
+      document.documentElement.style.setProperty('--bg', this.props.tbg);
+      document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
+      document.documentElement.style.setProperty('--primary', this.props.tp);
+      document.documentElement.style.setProperty('--primary-faded', this.props.tpf);
+      document.documentElement.style.setProperty('--secondary', this.props.ts);
+      document.documentElement.style.setProperty('--secondary-faded', this.props.tsf);
+      document.documentElement.style.setProperty('--window-border', this.props.twb);
+      document.documentElement.style.setProperty('--window-title', this.props.twt);
+      document.documentElement.style.setProperty('--footer-bg', this.props.tfbg);
+      let metaThemeColor = document.querySelector("meta[name=theme-color]");
+      metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+    // }.bind(this),125);
   }
 
   collision() {
@@ -172,7 +177,7 @@ class Window extends React.Component {
           enableResizing={{ bottomRight: this.state.enableResize }}
           onDrag={(e, d) => { 
             this.setState({ x: d.x, y: d.y })
-            if (this.props.theme && this.state.dragging || this.state.resizing) {
+            if (this.props.theme && this.state.dragging) {
               this.theme(); 
             }
           }}
@@ -192,6 +197,7 @@ class Window extends React.Component {
                 });
               }
             }
+            
           }}
           onDragStop={(e, d) => { 
             this.setState({ dragging: false })
@@ -204,7 +210,9 @@ class Window extends React.Component {
             });
           }}
           onResizeStart={() => { this.setState({ resizing: true }) }}
-          onResizeStop={() => { this.setState({ resizing: false }) }}
+          onResizeStop={() => { 
+            this.setState({ resizing: false }) 
+          }}
           onMouseEnter={() => { 
             if (this.refs.coverVid) {
               let playPromise = this.refs.coverVid.play();
@@ -231,7 +239,7 @@ class Window extends React.Component {
           }}
           onTouchStart={() => { 
             console.log('touch')
-            if (this.props.theme) {
+            if (this.props.theme && !this.state.dragging) {
               this.theme(); 
             }
           }}

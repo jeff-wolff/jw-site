@@ -20,7 +20,7 @@ class WorkIndex extends React.Component {
     document.documentElement.style.setProperty('--window-title', '0,0,0');
     document.documentElement.style.setProperty('--footer-bg', '#000');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('#111'));
   }
   componentDidMount() {
     this.defaultTheme();
@@ -77,6 +77,7 @@ class WorkIndex extends React.Component {
                           twb={post.frontmatter.twb}
                           twt={post.frontmatter.twt}
                           tfbg={post.frontmatter.tfbg}
+                          enableResize={false}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
                             <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -102,6 +103,7 @@ class WorkIndex extends React.Component {
                           twb={post.frontmatter.twb}
                           twt={post.frontmatter.twt}
                           tfbg={post.frontmatter.tfbg}
+                          enableResize={false}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
                             <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -130,6 +132,7 @@ class WorkIndex extends React.Component {
                     twb={post.frontmatter.twb}
                     twt={post.frontmatter.twt}
                     tfbg={post.frontmatter.tfbg}
+                    enableResize={false}
                     >
                       <h2 className="h3">{post.frontmatter.title}</h2>
                       <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>

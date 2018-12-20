@@ -18,7 +18,7 @@ class WorkPostTemplate extends React.Component {
     document.documentElement.style.setProperty('--window-title', wt);
     document.documentElement.style.setProperty('--footer-bg', fbg);
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('#111'));
   }
   componentDidMount() {
     const post = this.props.data.markdownRemark
