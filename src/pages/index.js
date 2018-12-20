@@ -18,7 +18,7 @@ class Index extends React.Component {
     document.documentElement.style.setProperty('--window-title', '0,0,0');
     document.documentElement.style.setProperty('--footer-bg', '#000');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('#111'));
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
   componentDidMount() {
     this.defaultTheme();
