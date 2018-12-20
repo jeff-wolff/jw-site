@@ -76,15 +76,18 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    opacity: .5;
+    opacity: .68;
     filter: grayscale(66%);
     mix-blend-mode: screen;
 }
 
 @media (hover: hover) {
+    .react-draggable > .window-content > .window-video {
+        opacity: .24;
+    }
     .react-draggable.dragging .window-content > .window-video,
     .react-draggable:hover .window-content > .window-video {
-        opacity: .87;
+        opacity: .68;
     }
 
     .react-draggable.collapsed > .window-content {
