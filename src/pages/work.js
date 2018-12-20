@@ -58,7 +58,7 @@ class WorkIndex extends React.Component {
                         <Window 
                           title={windowTitle}
                           width={640}
-                          height={398}
+                          height={400}
                           minWidth={359}
                           minHeight={240}
                           maxWidth={1280}
@@ -86,7 +86,7 @@ class WorkIndex extends React.Component {
                         <Window 
                           title={windowTitle}
                           width={425}
-                          height={277}
+                          height={279}
                           minWidth={224}
                           minHeight={164}
                           lockAspect={1.77777778}
@@ -115,7 +115,7 @@ class WorkIndex extends React.Component {
                   <Window 
                     title={windowTitle}
                     width={267}
-                    height={188}
+                    height={190}
                     minWidth={180}
                     minHeight={139}
                     lockAspect={1.77777778}
