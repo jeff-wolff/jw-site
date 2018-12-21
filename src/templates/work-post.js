@@ -52,31 +52,34 @@ class WorkPostTemplate extends React.Component {
        <div className="work-post-title centered-title preload">
          <h1>{post.frontmatter.title}</h1>
        </div>
-       <div
-        className="work-post-nav">
-         
-           {
-             previous &&
-             <Button tiny inlineicon="right" to={previous.fields.slug} rel="prev">
-               &larr; <span>Prev: {previous.frontmatter.title}</span> 
-             </Button>
-           }
-         
-           {
-             next &&
-             <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
-               &rarr; <span>Next: {next.frontmatter.title}</span>
-             </Button>
-           }
-       </div>
-       <div className="work-post-website-btn">
-         <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
-       </div>
+
+      <div className="work-post-scrollDown">👇</div>
+       
        <div className="work-post-container container Rte">
          <p>Company: {post.frontmatter.title}</p>
          <p>Date: {post.frontmatter.date}</p>
          <p>Team: {post.frontmatter.team}</p>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+         <div
+          className="work-post-nav">
+           
+             {
+               previous &&
+               <Button tiny inlineicon="right" to={previous.fields.slug} rel="prev">
+                 &larr; <span>Prev: {previous.frontmatter.title}</span> 
+               </Button>
+             }
+           
+             {
+               next &&
+               <Button tiny inlineicon="right" to={next.fields.slug} rel="next">
+                 &rarr; <span>Next: {next.frontmatter.title}</span>
+               </Button>
+             }
+         </div>
+         <div className="work-post-website-btn">
+           <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+         </div>
        </div>
       </Layout>
     )

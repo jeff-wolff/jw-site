@@ -328,6 +328,9 @@ injectGlobal`
   .work-post-title h1 {
     
   }
+  .work-post-scrollDown {
+    font-size: 6em;
+  }
   .work-post-website-btn {
     position: sticky;
     top: calc(100vh - 69px - 50px);
@@ -405,13 +408,13 @@ injectGlobal`
     }
   }
   .work-post-nav a[class^="button"][rel="prev"] {
-    margin-bottom: 2px;
+    margin-bottom: 6px;
   }
   .work-post-nav a[class^="button"][rel="prev"]:only-child {
       margin-bottom: 29px;
   }
   .work-post-nav a[class^="button"][rel="next"] {
-    margin-top: 2px;
+    margin-top: 6px;
   }
   .work-post-nav a[class^="button"][rel="next"]:only-child {
       margin-top: 29px;
