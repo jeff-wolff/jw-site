@@ -72,14 +72,11 @@ class WorkPostTemplate extends React.Component {
        <div className="work-post-website-btn">
          <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
        </div>
-       <div className="work-post-container container">
-       <h5>
-        Launched {post.frontmatter.date}
-       </h5>
+       <div className="work-post-container container Rte">
+         <p>Company: {post.frontmatter.title}</p>
+         <p>Date: {post.frontmatter.date}</p>
+         <p>Team: {post.frontmatter.team}</p>
          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-         
-        
        </div>
       </Layout>
     )
@@ -103,6 +100,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        team
         url
         featuredVideo {
           publicURL

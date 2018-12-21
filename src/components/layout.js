@@ -168,7 +168,6 @@ injectGlobal`
   h2,.h2,h3,.h3,.h4,h4 {
       font-family: 'IBM Plex Mono';
       font-size: 1.14285714em;
-      line-height: 1.5;
   }
 
   h2,.h2 {

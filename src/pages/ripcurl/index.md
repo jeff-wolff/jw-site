@@ -1,6 +1,7 @@
 ---
 date: "2015-11-10T00:00:00"
 title: "Rip Curl"
+team: "Cuker Agency"
 url: "ripcurl.com"
 featuredVideo: "./ripcurl_autoplay_720.mp4"
 theme: true
@@ -14,4 +15,4 @@ twb: "31,222,222"
 twt: "150, 35, 19"
 tfbg: "hsla(7.3, 77.5%, 23.1%, 1.0)"
 ---
-###In 2016, I was tasked with coding the [front-end](http://google.com) of the new Cuker Agency website. This includes a blog, news, and careers section as well as services 
+Rip Curl is &lsquo;the ultimate surfing company&rsquo; specializing in wetsuits, watches, and apparel. In November 2015, we launched a responsive website to enable surfers to shop on their mobile phones. I was responsible for the front-end development of the page. We took their existing design and updated it to be mobile friendly.

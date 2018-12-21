@@ -1,6 +1,7 @@
 ---
 date: "2018-02-13T00:00:00"
 title: "GoMacro"
+team: "Cuker Agency"
 url: "gomacro.com"
 featuredVideo: "./gomacro_autoplay_720.mp4"
 theme: true
@@ -14,4 +15,4 @@ twb: "227, 109, 24"
 twt: "0,0,0"
 tfbg: "hsla(30.9, 22.0%, 21.2%, 1.0)"
 ---
-###Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio reprehenderit ea quibusdam illum odio facilis nostrum fuga eius assumenda cum aliquam nobis unde possimus blanditiis quod, perferendis debitis error est culpa nihil quidem cupiditate. Quos nostrum quam possimus optio iure ab minus dolore voluptatibus earum magni cumque qui, fuga, illum consectetur tempore perspiciatis. Sint ullam nam commodi rem, est dolor animi maiores nisi unde, culpa soluta fugit ducimus repellendus, dolorem non, alias quasi quisquam molestias cumque minima quae fugiat? Exercitationem mollitia, sed ipsa vel eveniet quidem aperiam aspernatur quis veniam minima unde odit iure, minus. 
+GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. In February 2018, we launched a new e-commerce platform, website re-design, and marketing campaign which helped grow the company's online prescence. I was responsible for the front-end development of the website. I developed a custom product theme system which allows each product page to have its own style. We used the GoMacro mosaics that are featured on every package to differentiate the product pages even more. The <a href="https://www.gomacro.com/how-its-made/" target="_blank">&lsquo;How It&lsquo;s Made&rsquo;</a> page features an animation triggered by scrolling the page.
