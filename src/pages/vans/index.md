@@ -14,4 +14,4 @@ twb: "105, 103, 103"
 twt: "255,255,255"
 tfbg: "#fff"
 ---
-###In 2016, I was tasked with coding the front-end of the new Cuker Agency website. This includes a blog, news, and careers section as well as services 
+###In 2016, I was tasked with coding the [front-end](http://google.com) of the new Cuker Agency website. This includes a blog, news, and careers section as well as services 

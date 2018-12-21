@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 import HomeInfo from '../components/HomeInfo/home-info.js'
 import Window from '../components/Window/window.js'
-import Media from 'react-media'
+import MediaQuery from 'react-responsive'
 
 class WorkIndex extends React.Component {
   defaultTheme() {
@@ -49,10 +49,10 @@ class WorkIndex extends React.Component {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
             }
            return (
-              <Media query="(min-width: 741px)" key={post.id}>
+              <MediaQuery query="(min-width: 741px)" key={post.id}>
               {matches =>
                 matches ? (
-                  <Media query="(min-width: 1440px)">
+                  <MediaQuery query="(min-width: 1440px)">
                     {matches =>
                       matches ? (
                         <Window 
@@ -110,7 +110,7 @@ class WorkIndex extends React.Component {
                         </Window>
                       )
                     }
-                  </Media>
+                  </MediaQuery>
                 ) : (
                   <Window 
                     title={windowTitle}
@@ -139,7 +139,7 @@ class WorkIndex extends React.Component {
                   </Window>
                 )
               }
-            </Media>
+            </MediaQuery>
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{

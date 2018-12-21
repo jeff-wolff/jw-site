@@ -13,5 +13,5 @@ twb: " 251, 55, 55"
 twt: "0,0,0"
 tfbg: "hsla(0.0, 0.0%, 4.5%, 1.0)"
 ---
-###In 2016, I was tasked with coding the front-end of the new Cuker Agency website. This includes a blog, news, and careers section as well as services and work case studies. Work case studies were adapted to a new design system and older case studies have a minimized design system.
+###In 2016, I was tasked with coding the front-end of the new [Cuker Agency](https://www.cukeragency.com/) website. This includes a blog, news, and careers section as well as services and work case studies. Work case studies were adapted to a new design system and older case studies have a minimized design system.
 
