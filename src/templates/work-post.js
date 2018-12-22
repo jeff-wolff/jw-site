@@ -56,11 +56,15 @@ class WorkPostTemplate extends React.Component {
       <div className="work-post-scrollDown">👇</div>
        
        <div className="work-post-container container Rte">
-         <p>Company: {post.frontmatter.title}</p>
-         <p>Date: {post.frontmatter.date}</p>
-         <p>Team: {post.frontmatter.team}</p>
-
-         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+         <div className="work-post-description">
+          <div className="desc-info">
+             <p>Company: {post.frontmatter.title}<br />
+             Date: {post.frontmatter.date}<br />
+             Team: {post.frontmatter.team}</p>
+           </div>
+           
+           <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
 
          <div className="demoVideo" style={{marginTop: '20vh'}}>
           <img src="https://placehold.it/1280x720" />

@@ -61,9 +61,9 @@ injectGlobal`
       color: rgba(255,255,255,.96);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
-      line-height: 1.789474;
-      background-color: #111;
-      background-color: var(--bg);
+      line-height: 2.3333333;
+      background-color: #000;
+      background-color: var(--footer-bg);
   }
   @media (min-width: 320px) {
       body {
@@ -130,9 +130,9 @@ injectGlobal`
       color:  inherit;
   }
   p {
-    
+    margin-top: 0;
   }
-  .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6,p {
+  .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       font-weight: normal;
@@ -329,12 +329,20 @@ injectGlobal`
     
   }
   .work-post-scrollDown {
-    font-size: 6em;
+    font-size: 2.6em;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
   }
-
+  @media (min-width: 768px) {
+    .work-post-scrollDown {
+      font-size: 4em;
+    }
+  }
   .work-post-container {
     margin-top: 120vh;
-    min-height: 160vh;
+    min-height: 250vh;
     padding-bottom: 50px;
   }
   @media (min-width: 1440px) {
@@ -364,10 +372,35 @@ injectGlobal`
       font-size: calc(1.25em + 1.5vw);
     }
   }
+  .work-post-description {
+    display: flex;
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+  .work-post-description .desc-info {
+    flex: 1 1 20%;
+    font-size: 10px;
+  }
+  @media (min-width: 320px) {
+    .work-post-description .desc-info {
+      font-size: calc(10px + 5 * ((100vw - 320px) / 1120));
+    }
+  }
+  @media (min-width: 1440px) {
+    .work-post-description .desc-info {
+      font-size: 15px;
+    }
+  }
+  .work-post-description .desc-content {
+    flex: 1 1 80%;
+    text-align: justify;
+    padding-left: 6%;
+  }
   .work-post-footer {
-    overflow: hidden;
     position: sticky;
     top: calc(100vh - 69px - 50px);
+    display: flex;
+    justify-content: space-between;
   }
   @media (min-width: 1152px) {
     .work-post-footer {
@@ -375,23 +408,18 @@ injectGlobal`
     }
   }
   .work-post-website-btn {
-    width: 86%;
-    float: left;
+    flex: 1 1 50%;
   }
   @media (min-width: 768px) {
     .work-post-website-btn {
-      width: 60%;
       max-width: 420px;
     }
   }
   .work-post-nav {
-    width: 14%;
-    float: right;
-    min-height: 71px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
   }
   @media (min-width: 768px) {
     .work-post-nav {
@@ -400,10 +428,11 @@ injectGlobal`
   }
   @media (min-width: 1152px) {
     .work-post-nav {
-      min-height: 91px;
+
     }
   }
   .work-post-nav a[class^="button"] {
+    overflow: hidden;
     transition: all 125ms ease;
     width: 38px;
   }
