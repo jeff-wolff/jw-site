@@ -378,10 +378,10 @@ injectGlobal`
     width: 86%;
     float: left;
   }
-  @media (min-width: 1152px) {
+  @media (min-width: 768px) {
     .work-post-website-btn {
-      width: 80%;
-      max-width: 540px;
+      width: 60%;
+      max-width: 420px;
     }
   }
   .work-post-nav {
@@ -393,9 +393,13 @@ injectGlobal`
     align-items: flex-end;
     justify-content: flex-end;
   }
+  @media (min-width: 768px) {
+    .work-post-nav {
+      width: 40%;
+    }
+  }
   @media (min-width: 1152px) {
     .work-post-nav {
-      width: 20%;
       min-height: 91px;
     }
   }
@@ -425,22 +429,23 @@ injectGlobal`
     .work-post-nav a[class^="button"]:hover > span {
       opacity: 1;
     }
-    .work-post-nav a[class^="button"][rel="prev"] {
-      margin-bottom: 2px;
-    }
+  }
+  
+  .work-post-nav a[class^="button"][rel="prev"] {
+    margin-bottom: 2px;
+  }
+  .work-post-nav a[class^="button"][rel="prev"]:only-child {
+      margin-bottom: 29px;
+  }
+  .work-post-nav a[class^="button"][rel="next"] {
+    margin-top: 2px;
+  }
+  .work-post-nav a[class^="button"][rel="next"]:only-child {
+      margin-top: 29px;
+  }
+  @media (min-width: 1152px) {
     .work-post-nav a[class^="button"][rel="prev"]:only-child {
-        margin-bottom: 29px;
-    }
-    .work-post-nav a[class^="button"][rel="next"] {
-      margin-top: 2px;
-    }
-    .work-post-nav a[class^="button"][rel="next"]:only-child {
-        margin-top: 29px;
-    }
-    @media (min-width: 1152px) {
-      .work-post-nav a[class^="button"][rel="prev"]:only-child {
-          margin-bottom: 36px;
-      }
+        margin-bottom: 37px;
     }
   }
 
