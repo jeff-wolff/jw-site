@@ -331,103 +331,11 @@ injectGlobal`
   .work-post-scrollDown {
     font-size: 6em;
   }
-  .work-post-website-btn {
-    position: sticky;
-    top: calc(100vh - 69px - 50px);
-    width: calc(100% - 12%);
-    max-width: 70%;
-    float: right;
-    margin-right: 6%;
-    margin-left: 6%;
-    margin-bottom: 50px;
-    z-index: 2;
-  }
-  @media (min-width: 585px) {
-    .work-post-website-btn {
-      max-width: 360px;
-    }
-  }
-  @media (min-width: 1152px) {
-    .work-post-website-btn {
-      top: calc(100vh - 90px - 50px);
-      max-width: 420px;
-      width: calc(100% - 16%);
-      margin-right: 8%;
-      margin-left: 8%;
-    }
-  }
-  .work-post-nav {
-    position: sticky;
-    top: calc(100vh - 69px - 50px);
-    width: calc(100% - 6%);
-    max-width: 54%;
-    float: left;
-    margin-left: 6%;
-    margin-bottom: 50px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    min-height: 71px;
-  }
-  @media (min-width: 1152px) {
-    .work-post-nav {
-      top: calc(100vh - 90px - 50px);
-      max-width: 460px;
-      width: calc(100% - 16%);
-      height: 90px;
-      margin-right: 8%;
-      margin-left: 8%;
-    }
-  }
-  .work-post-nav a[class^="button"] {
-    transition: all 125ms ease;
-    width: 38px; 
-  }
-  @media (min-width: 1152px) {
-    .work-post-nav a[class^="button"] {
-      width: 48px; 
-    }
-  }
-
-  .work-post-nav a[class^="button"] > span {
-    transition: all 125ms ease;
-    opacity: 0;
-    height: 0;
-    white-space: nowrap;
-  } 
-
-  @media (hover: hover) {
-    .work-post-nav a[class^="button"]:hover {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
-    }
-    .work-post-nav a[class^="button"]:hover > span {
-      opacity: 1;
-    }
-  }
-  .work-post-nav a[class^="button"][rel="prev"] {
-    margin-bottom: 6px;
-  }
-  .work-post-nav a[class^="button"][rel="prev"]:only-child {
-      margin-bottom: 29px;
-  }
-  .work-post-nav a[class^="button"][rel="next"] {
-    margin-top: 6px;
-  }
-  .work-post-nav a[class^="button"][rel="next"]:only-child {
-      margin-top: 29px;
-  }
-  @media (min-width: 1152px) {
-    .work-post-nav a[class^="button"][rel="prev"]:only-child {
-        margin-bottom: 36px;
-    }
-  }
 
   .work-post-container {
     margin-top: 120vh;
-    min-height: 240vh;
+    min-height: 160vh;
+    padding-bottom: 50px;
   }
   @media (min-width: 1440px) {
     .work-post-container.container {
@@ -454,6 +362,85 @@ injectGlobal`
   @media (min-width: 1920px) {
     .work-post-container h3, .work-post-container .h3 {
       font-size: calc(1.25em + 1.5vw);
+    }
+  }
+  .work-post-footer {
+    overflow: hidden;
+    position: sticky;
+    top: calc(100vh - 69px - 50px);
+  }
+  @media (min-width: 1152px) {
+    .work-post-footer {
+      top: calc(100vh - 90px - 50px);
+    }
+  }
+  .work-post-website-btn {
+    width: 86%;
+    float: left;
+  }
+  @media (min-width: 1152px) {
+    .work-post-website-btn {
+      width: 80%;
+      max-width: 540px;
+    }
+  }
+  .work-post-nav {
+    width: 14%;
+    float: right;
+    min-height: 71px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  @media (min-width: 1152px) {
+    .work-post-nav {
+      width: 20%;
+      min-height: 91px;
+    }
+  }
+  .work-post-nav a[class^="button"] {
+    transition: all 125ms ease;
+    width: 38px;
+  }
+  @media (min-width: 1152px) {
+    .work-post-nav a[class^="button"] {
+      width: 48px; 
+    }
+  }
+
+  .work-post-nav a[class^="button"] > span {
+    transition: all 125ms ease;
+    opacity: 0;
+    height: 0;
+    white-space: nowrap;
+  } 
+
+  @media (hover: hover) {
+    .work-post-nav a[class^="button"]:hover {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+    }
+    .work-post-nav a[class^="button"]:hover > span {
+      opacity: 1;
+    }
+    .work-post-nav a[class^="button"][rel="prev"] {
+      margin-bottom: 2px;
+    }
+    .work-post-nav a[class^="button"][rel="prev"]:only-child {
+        margin-bottom: 29px;
+    }
+    .work-post-nav a[class^="button"][rel="next"] {
+      margin-top: 2px;
+    }
+    .work-post-nav a[class^="button"][rel="next"]:only-child {
+        margin-top: 29px;
+    }
+    @media (min-width: 1152px) {
+      .work-post-nav a[class^="button"][rel="prev"]:only-child {
+          margin-bottom: 36px;
+      }
     }
   }
 

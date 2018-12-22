@@ -15,3 +15,4 @@ twt: "0,0,0"
 tfbg: "hsla(0.0, 0.0%, 4.5%, 1.0)"
 ---
 Cuker Agency is a digital agency that focuses on providing robust e-commerce websites and digital marketing consulting. In October 2017, we launched Cuker Agency's <a href="https://www.cukeragency.com/" target="_blank">new website</a>. I was responsible for the front-end development of the website. I explored a block-style design system for easily creating unique looking work case studies. I also adapted the existing case studies to the new design. Industry service pages were redesigned to better educate clients and increase organic SEO traffic.
+
