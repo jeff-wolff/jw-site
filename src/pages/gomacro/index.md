@@ -15,4 +15,4 @@ twb: "227, 109, 24"
 twt: "0,0,0"
 tfbg: "hsla(30.9, 22.0%, 21.2%, 1.0)"
 ---
-GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. In February 2018, we launched a new e-commerce platform, website re-design, and marketing campaign which helped grow the company's online prescence. I was responsible for the front-end development of the website. I developed a custom product theme system which allows each product page to have its own style. We used the GoMacro mosaics that are featured on every package to differentiate the product pages even more. The <a href="https://www.gomacro.com/how-its-made/" target="_blank">&lsquo;How It&lsquo;s Made&rsquo;</a> page features an animation triggered by scrolling the page.
+GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. I was responsible for the front-end development of the website. I developed a theme system which allows each product page to have its own style based on the custom style of the packaging. The <a href="https://www.gomacro.com/how-its-made/" target="_blank">&lsquo;How It&lsquo;s Made&rsquo;</a> page features an animation triggered by scrolling.
