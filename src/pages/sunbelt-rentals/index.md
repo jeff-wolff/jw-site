@@ -3,6 +3,7 @@ date: "2018-01-20T00:00:00"
 title: "Sunbelt Rentals"
 team: "Cuker Agency"
 url: "sunbeltrentals.com"
+favIcon: "./sunbelt_fav.png"
 featuredVideo: "./sunbelt_autoplay_720.mp4"
 theme: true
 tbg: "#0d723b"

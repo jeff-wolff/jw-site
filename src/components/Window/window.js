@@ -29,7 +29,8 @@ class Window extends React.Component {
       bgColor: this.props.bgColor ? this.props.bgColor : "var(--bg)",
       titleColor: this.props.titleColor ? this.props.titleColor : "var(--window-title)",
       borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)",
-      coverVideoURL: this.props.coverVideo ? this.props.coverVideo : ""
+      coverVideoURL: this.props.coverVideo ? this.props.coverVideo : "",
+      favIconURL: this.props.favIcon ? this.props.favIcon : ""
     }
 
     this.theme = this.theme.bind(this);
@@ -252,6 +253,7 @@ class Window extends React.Component {
           >
             <div className="content">
               {/*<small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small> - */}
+              {this.state.favIconURL ? <img src={this.state.favIconURL} className="favicon" /> : "" }
               {this.props.title}
             </div>
           </div>

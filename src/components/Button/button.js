@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { media, mediamax } from '../../utils/media'
 
-const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props} target="_blank" /> : <Link {...props} />
+const Button = styled(({size = 'default', ...props}) => props.external ? <a {...props} target="_blank" /> : <Link {...props} />
     )`
     transform: translate3d(0,0,0);
     outline: 0;
@@ -20,32 +20,32 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     text-transform: uppercase;
     word-break: break-all;
     user-select: none;
-    font-size: ${ props => ( props.tiny ? '12px' : props.small ? '15px' : '19px' ) }; 
-    padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.5em' ) };
+    font-size: ${ props => ( props.size == 'tiny' ? '12px' : props.size == 'small' ? '15px' : '19px' ) }; 
+    padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon == "left" ? 'right' : 'left')};
     ${media.medium`
-        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     `}
     ${media.large`
-        font-size: ${ props => ( props.tiny ? '13px' : props.small ? '19px' : '24px' ) };
-        padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.5em' ) };
+        font-size: ${ props => ( props.size == 'tiny' ? '13px' : props.size == 'small' ? '19px' : '24px' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.7em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
     `}
     &:hover {
         color: #333;
         color: var(--secondary);
-        padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '6px, -6px, 0' : '6px, -6px, 0' ) });
+            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '6px, -6px, 0' : '6px, -6px, 0' ) });
         }
         ${media.medium`
-            padding: ${ props => ( props.tiny ? '.6em 1.25em' : props.small ? '.7em 1.25em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
         `}
         ${media.large`
             @media (-moz-touch-enabled: 0), (hover: hover) {
-                transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '8px, -8px, 0' : '10px, -10px, 0' ) });
+                transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '8px, -8px, 0' : '10px, -10px, 0' ) });
             }
-            padding: ${ props => ( props.tiny ? '.7em 1.5em' : props.small ? '1em 1.5em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.7em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
         `}
     }
     &:before, &:after {
@@ -67,7 +67,7 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
         background-color: var(--bg);
         border: 2px solid #ff0;
         border: 2px solid var(--primary);
-        // border-width: ${ props => ( props.tiny ? '1px' : '4px')};
+        // border-width: ${ props => ( props.size == 'tiny' ? '1px' : '4px')};
         transform: translate3d(0,0,0);
     }
     
@@ -78,11 +78,11 @@ const Button = styled(({small, tiny, ...props}) => props.external ? <a {...props
     &:hover:after {
         border: 2px solid #ff0;
         border: 2px solid var(--primary-faded);
-        // border-width: ${ props => ( props.tiny ? '1px' : '4px')};
+        // border-width: ${ props => ( props.size == 'tiny' ? '1px' : '4px')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
+            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
             ${media.large`
-                transform: translate3d(${ props => ( props.tiny ? '0' : props.small ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
+                transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
             `}
         }
     }

@@ -3,6 +3,7 @@ date: "2017-10-23T00:00:00"
 title: "Cuker Agency"
 team: "Cuker Agency"
 url: "cukeragency.com"
+favIcon: "./cuker_fav.png"
 theme: true
 tbg: "#252525"
 tbgf: "rgba(37, 37, 37, 0.9)"

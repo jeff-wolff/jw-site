@@ -338,6 +338,7 @@ injectGlobal`
   @media (min-width: 768px) {
     .work-post-scrollDown {
       font-size: 4em;
+      bottom: 0;
     }
   }
   .work-post-container {

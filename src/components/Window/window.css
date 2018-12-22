@@ -49,7 +49,17 @@
     overflow-x: hidden;
     white-space: nowrap;
     padding-right: .25rem;
+    display: flex;
+    align-items: center;
 }
+
+.window-title .favicon {
+    width: 16px;
+    height: 16px;
+    margin: -4px 8px 0 0;
+}
+
+
 
 .react-draggable > .window-content {
     position: relative;

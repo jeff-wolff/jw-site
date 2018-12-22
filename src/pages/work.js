@@ -44,9 +44,12 @@ class WorkIndex extends React.Component {
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = "https://www."+post.frontmatter.url+"/";
-            let coverVideoURL = "";
+            let coverVideoURL, favIconURL;
             if (post.frontmatter.featuredVideo != null) {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;
+            }
+            if (post.frontmatter.favIcon != null) {
+              favIconURL = post.frontmatter.favIcon.publicURL;
             }
            return (
               <MediaQuery query="(min-width: 741px)" key={post.id}>
@@ -67,6 +70,7 @@ class WorkIndex extends React.Component {
                           lockAspectRatioExtraHeight={38}
                           className="work-window"
                           coverVideo={coverVideoURL}
+                          favIcon={favIconURL}
                           theme={post.frontmatter.theme}
                           tbg={post.frontmatter.tbg}
                           tbgf={post.frontmatter.tbgf}
@@ -80,7 +84,7 @@ class WorkIndex extends React.Component {
                           enableResize={false}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
-                            <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                            <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                         </Window>
                       ) : (
                         <Window 
@@ -93,6 +97,7 @@ class WorkIndex extends React.Component {
                           lockAspectRatioExtraHeight={38}
                           className="work-window"
                           coverVideo={coverVideoURL}
+                          favIcon={favIconURL}
                           theme={post.frontmatter.theme}
                           tbg={post.frontmatter.tbg}
                           tbgf={post.frontmatter.tbgf}
@@ -106,7 +111,7 @@ class WorkIndex extends React.Component {
                           enableResize={false}
                           >
                             <h2 className="h3">{post.frontmatter.title}</h2>
-                            <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                            <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                         </Window>
                       )
                     }
@@ -122,6 +127,7 @@ class WorkIndex extends React.Component {
                     lockAspectRatioExtraHeight={38}
                     className="work-window"
                     coverVideo={coverVideoURL}
+                    favIcon={favIconURL}
                     theme={post.frontmatter.theme}
                     tbg={post.frontmatter.tbg}
                     tbgf={post.frontmatter.tbgf}
@@ -135,7 +141,7 @@ class WorkIndex extends React.Component {
                     enableResize={false}
                     >
                       <h2 className="h3">{post.frontmatter.title}</h2>
-                      <Button tiny to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                      <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                   </Window>
                 )
               }
@@ -182,6 +188,9 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             url
+            favIcon {
+              publicURL
+            }
             featuredVideo {
               publicURL
             }

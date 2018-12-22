@@ -3,6 +3,7 @@ date: "2016-02-26T00:00:00"
 title: "Vans History"
 team: "Cuker Agency"
 url: "vans.com/history"
+favIcon: "./vans_fav.png"
 featuredVideo: "./vans_autoplay_720.mp4"
 theme: true
 tbg: "rgb(181, 179, 179)"
