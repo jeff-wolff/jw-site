@@ -26,6 +26,26 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
+    
+    window.addEventListener('scroll', this.removeTitle);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.removeTitle);
+  }
+  removeTitle() {
+    let title = document.querySelector(".work-post-title"),
+        titleHeight = title.offsetHeight,
+        scrollBottom = document.documentElement.scrollTop + titleHeight,
+        footerOffset = document.querySelector(".wrapper").offsetHeight,
+        newTopValue = footerOffset - titleHeight+"px";
+    if (scrollBottom >= footerOffset) {
+      title.style.position = "absolute";
+      title.style.top = newTopValue;
+    } else {
+      title.style.position = "fixed";
+      title.style.top = "0";
+    }
+    console.log(scrollBottom, footerOffset);
   }
   render() {
     const post = this.props.data.markdownRemark
@@ -67,7 +87,7 @@ class WorkPostTemplate extends React.Component {
           </div>
 
          <div className="demoVideo" style={{marginTop: '20vh'}}>
-          <img src="https://placehold.it/1280x720" />
+          <img src="https://placehold.it/1920x1080" />
          </div>
          <div className="work-post-footer">
            <div className="work-post-website-btn">
