@@ -27,15 +27,24 @@ class WorkPostTemplate extends React.Component {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
     
-    window.addEventListener('scroll', this.removeTitle);
+    window.addEventListener('scroll', this.throttle(this.removeTitle,50));
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.removeTitle);
+    window.removeEventListener('scroll', this.throttle(this.removeTitle,50));
+  }
+  throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    }
   }
   removeTitle() {
     let title = document.querySelector(".work-post-title"),
         titleHeight = title.offsetHeight,
-        scrollBottom = document.documentElement.scrollTop + titleHeight,
+        scrollBottom = window.pageYOffset + titleHeight,
         footerOffset = document.querySelector(".wrapper").offsetHeight,
         newTopValue = footerOffset - titleHeight+"px";
     if (scrollBottom >= footerOffset) {
@@ -45,6 +54,7 @@ class WorkPostTemplate extends React.Component {
       title.style.position = "fixed";
       title.style.top = "0";
     }
+    console.log(scrollBottom, footerOffset);
   }
   render() {
     const post = this.props.data.markdownRemark
@@ -54,9 +64,7 @@ class WorkPostTemplate extends React.Component {
     const siteURL = post.frontmatter.url
     let coverVideo;
     if (post.frontmatter.featuredVideo != null) {
-     coverVideo = <video autoPlay muted loop playsInline muted className="vid-wrap">
-             <source src={post.frontmatter.featuredVideo.publicURL} type="video/mp4" />
-           </video>;
+     coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline className="vid-wrap" />;
     } else {
      coverVideo = "";
     }

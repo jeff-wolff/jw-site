@@ -298,6 +298,7 @@ injectGlobal`
       justify-content: center;
       text-align: center;
       transform-style: preserve-3d;
+      transform : translate3d(0, 0, 0);
       filter: blur(6px);
   }
   @media (min-width: 1152px) {
