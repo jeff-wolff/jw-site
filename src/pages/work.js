@@ -72,100 +72,98 @@ class WorkIndex extends React.Component {
               favIconURL = post.frontmatter.favIcon.publicURL;
             }
            return (
-              <MediaQuery query="(min-width: 741px)" key={post.id}>
-              {matches =>
-                matches ? (
+              <MediaQuery query="(min-width: 1px)" key={post.id}>
                   <MediaQuery query="(min-width: 1440px)">
-                    {matches =>
-                      matches ? (
-                        <Window 
-                          title={windowTitle}
-                          width={640}
-                          height={400}
-                          minWidth={359}
-                          minHeight={240}
-                          maxWidth={1280}
-                          maxHeight={758}
-                          lockAspect={1.77777778}
-                          lockAspectRatioExtraHeight={38}
-                          className="work-window"
-                          coverVideo={coverVideoURL}
-                          favIcon={favIconURL}
-                          theme={post.frontmatter.theme}
-                          tbg={post.frontmatter.tbg}
-                          tbgf={post.frontmatter.tbgf}
-                          tp={post.frontmatter.tp}
-                          tpf={post.frontmatter.tpf}
-                          ts={post.frontmatter.ts}
-                          tsf={post.frontmatter.tsf}
-                          twb={post.frontmatter.twb}
-                          twt={post.frontmatter.twt}
-                          tfbg={post.frontmatter.tfbg}
-                          enableResize={false}
-                          >
-                            <h2 className="h3">{post.frontmatter.title}</h2>
-                            <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                        </Window>
-                      ) : (
-                        <Window 
-                          title={windowTitle}
-                          width={425}
-                          height={279}
-                          minWidth={224}
-                          minHeight={164}
-                          lockAspect={1.77777778}
-                          lockAspectRatioExtraHeight={38}
-                          className="work-window"
-                          coverVideo={coverVideoURL}
-                          favIcon={favIconURL}
-                          theme={post.frontmatter.theme}
-                          tbg={post.frontmatter.tbg}
-                          tbgf={post.frontmatter.tbgf}
-                          tp={post.frontmatter.tp}
-                          tpf={post.frontmatter.tpf}
-                          ts={post.frontmatter.ts}
-                          tsf={post.frontmatter.tsf}
-                          twb={post.frontmatter.twb}
-                          twt={post.frontmatter.twt}
-                          tfbg={post.frontmatter.tfbg}
-                          enableResize={false}
-                          >
-                            <h2 className="h3">{post.frontmatter.title}</h2>
-                            <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                        </Window>
-                      )
-                    }
+                    <Window 
+                      title={windowTitle}
+                      width={640}
+                      height={400}
+                      minWidth={359}
+                      minHeight={240}
+                      maxWidth={1280}
+                      maxHeight={758}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={38}
+                      className="work-window"
+                      coverVideo={coverVideoURL}
+                      favIcon={favIconURL}
+                      theme={post.frontmatter.theme}
+                      tbg={post.frontmatter.tbg}
+                      tbgf={post.frontmatter.tbgf}
+                      tp={post.frontmatter.tp}
+                      tpf={post.frontmatter.tpf}
+                      ts={post.frontmatter.ts}
+                      tsf={post.frontmatter.tsf}
+                      twb={post.frontmatter.twb}
+                      twt={post.frontmatter.twt}
+                      tfbg={post.frontmatter.tfbg}
+                      enableResize={false}
+                      >
+                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                    </Window>
                   </MediaQuery>
-                ) : (
-                  <Window 
-                    title={windowTitle}
-                    width={267}
-                    height={190}
-                    minWidth={180}
-                    minHeight={139}
-                    lockAspect={1.77777778}
-                    lockAspectRatioExtraHeight={38}
-                    className="work-window"
-                    coverVideo={coverVideoURL}
-                    favIcon={favIconURL}
-                    theme={post.frontmatter.theme}
-                    tbg={post.frontmatter.tbg}
-                    tbgf={post.frontmatter.tbgf}
-                    tp={post.frontmatter.tp}
-                    tpf={post.frontmatter.tpf}
-                    ts={post.frontmatter.ts}
-                    tsf={post.frontmatter.tsf}
-                    twb={post.frontmatter.twb}
-                    twt={post.frontmatter.twt}
-                    tfbg={post.frontmatter.tfbg}
-                    enableResize={false}
-                    >
-                      <h2 className="h3">{post.frontmatter.title}</h2>
-                      <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
-                  </Window>
-                )
-              }
-            </MediaQuery>
+                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                    <Window 
+                      title={windowTitle}
+                      width={425}
+                      height={279}
+                      minWidth={224}
+                      minHeight={164}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={38}
+                      className="work-window"
+                      coverVideo={coverVideoURL}
+                      favIcon={favIconURL}
+                      theme={post.frontmatter.theme}
+                      tbg={post.frontmatter.tbg}
+                      tbgf={post.frontmatter.tbgf}
+                      tp={post.frontmatter.tp}
+                      tpf={post.frontmatter.tpf}
+                      ts={post.frontmatter.ts}
+                      tsf={post.frontmatter.tsf}
+                      twb={post.frontmatter.twb}
+                      twt={post.frontmatter.twt}
+                      tfbg={post.frontmatter.tfbg}
+                      enableResize={false}
+                      >
+                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(max-width: 740px)">
+                    <Window 
+                      title={windowTitle}
+                      width={267}
+                      height={190}
+                      minWidth={180}
+                      minHeight={139}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={38}
+                      className="work-window"
+                      coverVideo={coverVideoURL}
+                      favIcon={favIconURL}
+                      theme={post.frontmatter.theme}
+                      tbg={post.frontmatter.tbg}
+                      tbgf={post.frontmatter.tbgf}
+                      tp={post.frontmatter.tp}
+                      tpf={post.frontmatter.tpf}
+                      ts={post.frontmatter.ts}
+                      tsf={post.frontmatter.tsf}
+                      twb={post.frontmatter.twb}
+                      twt={post.frontmatter.twt}
+                      tfbg={post.frontmatter.tfbg}
+                      enableResize={false}
+                      >
+                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                    </Window>
+                  </MediaQuery>
+              </MediaQuery>
+
+          
+  
+          
              // <div key={post.fields.slug}>
              //   <h3
              //     style={{
