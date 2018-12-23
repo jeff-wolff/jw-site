@@ -54,7 +54,7 @@ class WorkPostTemplate extends React.Component {
     const siteURL = post.frontmatter.url
     let coverVideo;
     if (post.frontmatter.featuredVideo != null) {
-     coverVideo = <video autoPlay muted loop playsInline className="vid-wrap">
+     coverVideo = <video autoPlay muted loop playsInline muted className="vid-wrap">
              <source src={post.frontmatter.featuredVideo.publicURL} type="video/mp4" />
            </video>;
     } else {
