@@ -254,12 +254,12 @@ injectGlobal`
   }
   @media (min-height: 500px) {
     body.wrapper-large .wrapper {
-        height: 190vh;
+        height: 230vh;
     }
   }
-  @media (min-height: 741px) {
+  @media (min-height: 1024px) {
     body.wrapper-large .wrapper {
-        height: 150vh;
+        height: 160vh;
     }
   }
   .container {
@@ -318,12 +318,13 @@ injectGlobal`
       z-index: 0;
   }
 
-  .work-post-title.centered-title {
-    
+  .work-title.centered-title {
+    justify-content: flex-start;
+    padding-top: 120px;
   }
   @media (min-width: 1152px) {
-    .work-post-title.centered-title {
-      
+    .work-title.centered-title {
+      padding-top: 220px;
     }
   }
   .work-post-title h1 {

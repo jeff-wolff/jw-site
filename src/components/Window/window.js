@@ -7,9 +7,10 @@ import './window.css'
 
 const windowGlobal = typeof window !== 'undefined' && window;
 
-var globalZIndex = 1;
-var count = 600;
-var positions = [];
+let globalZIndex = 1;
+let count = 80;
+let positions = [];
+let hasPoints = false;
 
 class Window extends React.Component {
   constructor(props) {
@@ -73,11 +74,10 @@ class Window extends React.Component {
   }
 
   collision() {
-      var x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width))),
-          y = Math.floor(Math.random() + Math.floor(count+=140));
+      let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 20))),
+          y = Math.floor(Math.random() + Math.floor(count+=240));
           console.log(x,y);
           // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
-
       positions.push({
         width: this.state.width,
         height: this.state.height,
@@ -90,7 +90,6 @@ class Window extends React.Component {
           y: y
         });
       }, 10);
-      
   }
 
   toggleCollapse() {
@@ -104,7 +103,7 @@ class Window extends React.Component {
    }
   };
 
-  componentDidMount() {
+  componentDidMount() {    
     this.collision();
     window.document.body.addEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
        passive: false
@@ -118,7 +117,7 @@ class Window extends React.Component {
   }
 
   render() {
-    count = 120;
+    count = 80;
     return(
       <Rnd  
           className={

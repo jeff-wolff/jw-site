@@ -45,7 +45,6 @@ class WorkPostTemplate extends React.Component {
       title.style.position = "fixed";
       title.style.top = "0";
     }
-    console.log(scrollBottom, footerOffset);
   }
   render() {
     const post = this.props.data.markdownRemark

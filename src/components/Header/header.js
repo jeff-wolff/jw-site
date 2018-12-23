@@ -13,8 +13,8 @@ class Header extends React.Component {
       navigation = "";
     } else {
       navigation = <ul className="navigation">
-                     {/*<li><Link to="/posts/" tiny>Posts</Link></li>*/}
-                     <li><Link to="/work/" tiny>Work</Link></li>
+                     {/*<li><Link to="/posts/">Posts</Link></li>*/}
+                     <li><Link to="/work/">Work</Link></li>
                    </ul>;
     }
     return (

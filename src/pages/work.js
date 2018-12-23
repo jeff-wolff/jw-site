@@ -24,6 +24,24 @@ class WorkIndex extends React.Component {
   }
   componentDidMount() {
     this.defaultTheme();
+    window.addEventListener('scroll', this.removeTitle);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.removeTitle);
+  }
+  removeTitle() {
+    let title = document.querySelector(".centered-title"),
+        titleHeight = title.offsetHeight,
+        scrollBottom = document.documentElement.scrollTop + titleHeight,
+        footerOffset = document.querySelector(".wrapper").offsetHeight,
+        newTopValue = footerOffset - titleHeight+"px";
+    if (scrollBottom >= footerOffset) {
+      title.style.position = "absolute";
+      title.style.top = newTopValue;
+    } else {
+      title.style.position = "fixed";
+      title.style.top = "0";
+    }
   }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -40,7 +58,9 @@ class WorkIndex extends React.Component {
           >
         <body className="wrapper-large"/>
         </Helmet>
-        <h1 className="centered-title preload">Work</h1>
+        <div className="work-title centered-title preload">
+          <h1 className=" ">Work</h1>
+        </div>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = "https://www."+post.frontmatter.url+"/";
