@@ -54,7 +54,7 @@ class WorkPostTemplate extends React.Component {
       title.style.position = "fixed";
       title.style.top = "0";
     }
-    console.log(scrollBottom, footerOffset);
+    // console.log(scrollBottom, footerOffset);
   }
   render() {
     const post = this.props.data.markdownRemark
@@ -97,22 +97,22 @@ class WorkPostTemplate extends React.Component {
           <img src="https://placehold.it/1920x1080" />
          </div>
          <div className="work-post-footer">
-           <div className="work-post-website-btn">
+           <div className="website-btn">
              <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
            </div>
            <div className="work-post-nav">
                {
-                 previous &&
-                 <Button size="tiny" inlineicon="left" to={previous.fields.slug} rel="prev">
-                   &larr; <span>Prev: {previous.frontmatter.title}</span> 
-                 </Button>
-               }
-               {
-                 next &&
-                 <Button size="tiny" inlineicon="left" to={next.fields.slug} rel="next">
-                   &rarr; <span>Next: {next.frontmatter.title}</span>
-                 </Button>
-               }               
+                   previous &&
+                   <Button className="prev-btn" size="tiny" inlineicon="left" to={previous.fields.slug} rel="prev">
+                     Prev: {previous.frontmatter.title} <span>&larr;</span> 
+                   </Button>
+                 }
+                 {
+                   next &&
+                   <Button className="next-btn" size="tiny" inlineicon="right" to={next.fields.slug} rel="next">
+                     Next: {next.frontmatter.title} <span>&rarr;</span>
+                   </Button>
+                 }
            </div>
          </div>
        </div>

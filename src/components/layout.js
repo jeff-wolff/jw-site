@@ -355,7 +355,7 @@ injectGlobal`
   }
   @media (min-width: 1152px) {
     .work-post-container.container {
-      min-height: 200vh;
+      min-height: 240vh;
     }
   }
   @media (min-width: 1440px) {
@@ -431,9 +431,8 @@ injectGlobal`
   .work-post-footer {
     position: sticky;
     top: calc(100vh - 69px - 50px);
-    display: flex;
-    justify-content: space-between;
     max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
   }
   @media (min-width: 1152px) {
@@ -441,76 +440,79 @@ injectGlobal`
       top: calc(100vh - 90px - 50px);
     }
   }
-  .work-post-website-btn {
-    flex: 1 1 50%;
+  .website-btn {
+    margin: 0 auto 18px;
   }
   @media (min-width: 768px) {
-    .work-post-website-btn {
+    .website-btn {
       max-width: 420px;
+      margin-bottom: 36px;
     }
   }
   .work-post-nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+@media (min-width: 768px) {
+  .work-post-nav {
+  }
+}
+  .work-post-nav .next-btn,
+  .work-post-nav .prev-btn {
+    width: 100%;
+    max-width: 260px;
+    margin-bottom: 18px;
+    order: 1;
+  }
+  @media (min-width: 640px) {
+    .work-post-nav .next-btn,
+    .work-post-nav .prev-btn {
+      width: calc(50% - 9px);
+    }
   }
   @media (min-width: 768px) {
-    .work-post-nav {
-      width: 40%;
+    .work-post-nav .next-btn,
+    .work-post-nav .prev-btn {
+      order: unset;
+      margin-bottom: 0;
     }
   }
-  @media (min-width: 1152px) {
-    .work-post-nav {
+  .work-post-nav .prev-btn {
 
-    }
   }
-  .work-post-nav a[class^="button"] {
-    overflow: hidden;
-    transition: all 125ms ease;
-    width: 38px;
+  .work-post-nav .next-btn {
+    margin-left: auto;
   }
-  @media (min-width: 1152px) {
-    .work-post-nav a[class^="button"] {
-      width: 48px; 
-    }
-  }
-
-  .work-post-nav a[class^="button"] > span {
-    transition: all 125ms ease;
-    opacity: 0;
-    height: 0;
-    white-space: nowrap;
-  } 
-
-  @media (hover: hover) {
-    .work-post-nav a[class^="button"]:hover {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
-    }
-    .work-post-nav a[class^="button"]:hover > span {
-      opacity: 1;
-    }
-  }
+  // @media (hover: hover) {
+  //   .work-post-nav > a[class*="button"] {
+  //     overflow: hidden;
+  //     transition: all 125ms ease;
+  //     width: 38px;
+  //   }
+  //   @media (min-width: 1152px) {
+  //     .work-post-nav > a[class*="button"] {
+  //       width: 48px; 
+  //     }
+  //   }
+  //   .work-post-nav > a[class*="button"] > span {
+  //     transition: all 125ms ease;
+  //     opacity: 0;
+  //     height: 0;
+  //     white-space: nowrap;
+  //   } 
+  //   .work-post-nav > a[class*="button"]:hover {
+  //     width: 100%;
+  //     max-width: 260px;
+  //     height: auto;
+  //   }
+  //   .work-post-nav > a[class*="button"]:hover > span {
+  //     opacity: 1;
+  //   }
+  // }
   
-  .work-post-nav a[class^="button"][rel="prev"] {
-    margin-bottom: 2px;
-  }
-  .work-post-nav a[class^="button"][rel="prev"]:only-child {
-      margin-bottom: 29px;
-  }
-  .work-post-nav a[class^="button"][rel="next"] {
-    margin-top: 2px;
-  }
-  .work-post-nav a[class^="button"][rel="next"]:only-child {
-      margin-top: 29px;
-  }
-  @media (min-width: 1152px) {
-    .work-post-nav a[class^="button"][rel="prev"]:only-child {
-        margin-bottom: 37px;
-    }
-  }
   .demoVideo {
     max-width: 1920px;
     margin: 0 auto;

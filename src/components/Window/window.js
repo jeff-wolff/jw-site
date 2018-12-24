@@ -57,7 +57,7 @@ class Window extends React.Component {
   }
 
   theme() {
-    console.log('theme changed');
+    // console.log('theme changed');
     // setTimeout(function(){
       document.documentElement.style.setProperty('--bg', this.props.tbg);
       document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
@@ -76,7 +76,7 @@ class Window extends React.Component {
   collision() {
       let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 20))),
           y = Math.floor(Math.random() + Math.floor(count+=240));
-          console.log(x,y);
+          // console.log(x,y);
           // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
       positions.push({
         width: this.state.width,
@@ -238,7 +238,6 @@ class Window extends React.Component {
             }
           }}
           onTouchStart={() => { 
-            console.log('touch')
             if (this.props.theme && !this.state.dragging) {
               this.theme(); 
             }
