@@ -7,7 +7,7 @@ footer {
     background-color: var(--footer-bg);
     color: #ff0;
     color: var(--primary);
-    height: 75vh;
+    height: 82vh;
     opacity: .75;
 }
 
@@ -57,13 +57,14 @@ footer a:visited:not(:hover,:active) {
 }
 footer .local-navigation {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
 @media (min-width: 768px) {
     footer .local-navigation {
-        flex-direction: row;
-        justify-content: space-around;
+        max-width: 500px;
     }
     footer .local-navigation a {
         margin-left:  0;
@@ -71,6 +72,13 @@ footer .local-navigation {
     }
     footer .local-navigation a:last-child {
         margin-right: 0;
+    }
+}
+@media (min-width: 1152px) {
+    footer .local-navigation {
+        max-width: none;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 footer a[class^="button"] {
@@ -96,11 +104,7 @@ footer a[class^="button"]:hover:after {
     /* border-width: 2px; */
     background: transparent;
 }
-@media (min-width: 768px) {
-    footer a[class^="button"] {
-        width: calc(50% - 20px);
-    }
-}
+
 @media (min-width: 1152px) {
     footer a[class^="button"] {
         width: calc(33.333333% - 20px);
@@ -137,7 +141,7 @@ footer a[class^="button"]:hover:before {
 }
 
 footer a[class^="button"] span {
-
+    font-family: "Emoji";
 }
 
 

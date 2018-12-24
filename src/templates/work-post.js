@@ -26,11 +26,10 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
-    
-    window.addEventListener('scroll', this.throttle(this.removeTitle,50));
+    // window.addEventListener('scroll', this.throttle(this.removeTitle,50));
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.throttle(this.removeTitle,50));
+    // window.removeEventListener('scroll', this.throttle(this.removeTitle,50));
   }
   throttle(fn, wait) {
     var time = Date.now();
@@ -41,21 +40,6 @@ class WorkPostTemplate extends React.Component {
       }
     }
   }
-  removeTitle() {
-    let title = document.querySelector(".work-post-title"),
-        titleHeight = title.offsetHeight,
-        scrollBottom = window.pageYOffset + titleHeight,
-        footerOffset = document.querySelector(".wrapper").offsetHeight,
-        newTopValue = footerOffset - titleHeight+"px";
-    if (scrollBottom >= footerOffset) {
-      title.style.position = "absolute";
-      title.style.top = newTopValue;
-    } else {
-      title.style.position = "fixed";
-      title.style.top = "0";
-    }
-    // console.log(scrollBottom, footerOffset);
-  }
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -64,58 +48,65 @@ class WorkPostTemplate extends React.Component {
     const siteURL = post.frontmatter.url
     let coverVideo;
     if (post.frontmatter.featuredVideo != null) {
-     coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline className="vid-wrap" />;
+     coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
     } else {
      coverVideo = "";
     }
 
+    
     return (
       <Layout location={this.props.location}>
         <Helmet
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        {coverVideo}
-       <div className="work-post-title centered-title preload">
-         <h1>{post.frontmatter.title}</h1>
+        <div className="vid-wrap">{coverVideo}</div>
+       <div className="work-post-title centered-title container preload">
+         <h1 className="title">{post.frontmatter.title}</h1>
        </div>
 
-      <div className="work-post-scrollDown">👇</div>
+      <div className="work-post-scrollDown">👇🏻</div>
        
-       <div className="work-post-container container Rte">
-         <div className="work-post-description">
+      <div className="work-post-container Rte">
+        <div className="work-post-content">
+          <div className="work-post-description container narrow">
           <div className="desc-info">
-             <p>Company: {post.frontmatter.title}<br />
-             Date: {post.frontmatter.date}<br />
-             Team: {post.frontmatter.team}</p>
-           </div>
-           
-           <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <p>Company: {post.frontmatter.title}<br />
+            Date: {post.frontmatter.date}<br />
+            Team: {post.frontmatter.team}</p>
           </div>
+          <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+          <div className="demoVideo" style={{marginTop: '0vh'}}>
+            <div className="vid-wrap">{coverVideo}</div>
+          </div>
+        </div>
+        <div className="work-post-footer container">
+          <div className="website-btn">
+            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+          </div>
+        </div>
+        <div className="work-post-footer-cta container">
+          <div className="work-post-title centered-title preload">
+            <h2 className="h1 title">{post.frontmatter.title}</h2>
+          </div>
+        </div>
+        <div className="work-post-nav container">
+          {
+              previous &&
+              <Button className="prev-btn" size="tiny" inlineicon="left" to={previous.fields.slug} rel="prev">
+                Prev: {previous.frontmatter.title} <span>&larr;</span> 
+              </Button>
+            }
+            {
+              next &&
+              <Button className="next-btn" size="tiny" inlineicon="right" to={next.fields.slug} rel="next">
+                Next: {next.frontmatter.title} <span>&rarr;</span>
+              </Button>
+            }
+        </div>
+      </div>
 
-         <div className="demoVideo" style={{marginTop: '20vh'}}>
-          <img src="https://placehold.it/1920x1080" />
-         </div>
-         <div className="work-post-footer">
-           <div className="website-btn">
-             <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
-           </div>
-           <div className="work-post-nav">
-               {
-                   previous &&
-                   <Button className="prev-btn" size="tiny" inlineicon="left" to={previous.fields.slug} rel="prev">
-                     Prev: {previous.frontmatter.title} <span>&larr;</span> 
-                   </Button>
-                 }
-                 {
-                   next &&
-                   <Button className="next-btn" size="tiny" inlineicon="right" to={next.fields.slug} rel="next">
-                     Next: {next.frontmatter.title} <span>&rarr;</span>
-                   </Button>
-                 }
-           </div>
-         </div>
-       </div>
 
       </Layout>
     )

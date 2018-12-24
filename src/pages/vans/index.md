@@ -16,4 +16,4 @@ twb: "105, 103, 103"
 twt: "255,255,255"
 tfbg: "#fff"
 ---
-Vans is a popular skateboard shoe manufacturer and apparel company based in Santa Ana, CA. I was responsible for the front-end development of a new about page for the company's 50th anniversary marketing campaign. The project features a large scrollable timeline showcasing the history of Vans since 1966. Our team displayed the information in cards to make it easier to digest the company's long history.
+Vans is a popular <a href="#">skateboard</a> shoe manufacturer and apparel company based in Santa Ana, CA. I was responsible for the front-end development of a new about page for the company's 50th anniversary marketing campaign. The project features a large scrollable timeline showcasing the history of Vans since 1966. Our team displayed the information in cards to make it easier to digest the company's long history.

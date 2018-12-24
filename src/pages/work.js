@@ -24,25 +24,12 @@ class WorkIndex extends React.Component {
   }
   componentDidMount() {
     this.defaultTheme();
-    window.addEventListener('scroll', this.removeTitle);
+    // window.addEventListener('scroll', this.removeTitle);
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.removeTitle);
+    // window.removeEventListener('scroll', this.removeTitle);
   }
-  removeTitle() {
-    let title = document.querySelector(".centered-title"),
-        titleHeight = title.offsetHeight,
-        scrollBottom = document.documentElement.scrollTop + titleHeight,
-        footerOffset = document.querySelector(".wrapper").offsetHeight,
-        newTopValue = footerOffset - titleHeight+"px";
-    if (scrollBottom >= footerOffset) {
-      title.style.position = "absolute";
-      title.style.top = newTopValue;
-    } else {
-      title.style.position = "fixed";
-      title.style.top = "0";
-    }
-  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
@@ -56,7 +43,7 @@ class WorkIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Work - ${siteTitle}`}
           >
-        <body className="wrapper-large"/>
+        <body className="wrapper-work"/>
         </Helmet>
         <div className="work-title centered-title preload">
           <h1 className=" ">Work</h1>

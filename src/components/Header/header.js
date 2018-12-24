@@ -8,15 +8,7 @@ import './header.css'
 
 class Header extends React.Component {
   render() {
-    let navigation;
-    if (this.props.isWorkPage) {
-      navigation = "";
-    } else {
-      navigation = <ul className="navigation">
-                     {/*<li><Link to="/posts/">Posts</Link></li>*/}
-                     <li><Link to="/work/">Work</Link></li>
-                   </ul>;
-    }
+
     return (
       <div className="header">
         <Link
@@ -29,7 +21,11 @@ class Header extends React.Component {
           <span>Je</span>ff<span> Wol</span>ff
         </Link>
 
-        {navigation}
+        <ul className="navigation">
+         <li><Link to="/work/">Work</Link></li>
+         <li><Link to="/posts/">Posts</Link></li>
+         <li><a href="mailto:hello@jeffwolff.net">Contact</a></li>
+        </ul>
 
       </div>
     )

@@ -8,7 +8,8 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     transform: translate3d(0,0,0);
     outline: 0;
     box-shadow: none;
-    display: inline-block;
+    display: ${ props => (props.inlineicon ? 'flex' : 'inline-block')};
+    justify-content: space-between;
     transition: all 0.125s ease-in-out;
     position: relative;
     backface-visibility: hidden;
@@ -23,7 +24,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     font-size: ${ props => ( props.size == 'tiny' ? '12px' : props.size == 'small' ? '15px' : '19px' ) }; 
     padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     width: ${ props => (props.inlineicon ? '100%' : 'auto')};
-    text-align: ${ props => (props.inlineicon == "left" ? 'right' : 'left')};
+    text-align: ${ props => (props.inlineicon ? 'justify' : 'left')};
     ${media.medium`
         padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     `}
@@ -99,7 +100,10 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
         transform: translate3d(0,0,0);
     }
     span {
-        float: ${ props => (props.inlineicon == "left" ? 'left' : 'right')};
+        order: ${ props => (props.inlineicon == "left" ? '-1' : '1')};
+        padding: ${ props => ( props.size == 'tiny' ? '0 0.75em' : props.size == 'small' ? '0 0.75em' : '0 0.75em' ) };
+        padding-left: ${ props => (props.inlineicon == "left" ? '0' : '')};
+        padding-right: ${ props => (props.inlineicon == "right" ? '0' : '')};
     }
 `;
 

@@ -10,9 +10,9 @@ const Footer = ({}) => (
           <a href="http://jeffwolff.net/v3" target="_blank">view previous site</a>
         </span>
         <div className="local-navigation">
-          <Button to="/posts/" inlineicon="right"><span>💼</span> Posts</Button>
           <Button to="/work/" inlineicon="right"><span>💼</span> Work</Button>
-          <Button external="true" href="mailto:hello@jeffwolff.net" inlineicon="right">Contact <span>📧</span></Button>
+          <Button to="/posts/" inlineicon="right"><span>📔</span> Posts</Button>
+          <Button external="true" href="mailto:hello@jeffwolff.net" inlineicon="right"><span>📫</span> Contact</Button>
         </div>
         <div className="navigation">
             <p>&copy; Jeff Wolff</p>
