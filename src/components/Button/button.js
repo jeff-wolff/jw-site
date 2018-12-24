@@ -10,6 +10,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     box-shadow: none;
     display: ${ props => (props.inlineicon ? 'flex' : 'inline-block')};
     justify-content: space-between;
+    align-items: center;
     transition: all 0.125s ease-in-out;
     position: relative;
     backface-visibility: hidden;
@@ -101,7 +102,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     }
     span {
         order: ${ props => (props.inlineicon == "left" ? '-1' : '1')};
-        padding: ${ props => ( props.size == 'tiny' ? '0 0.75em' : props.size == 'small' ? '0 0.75em' : '0 0.75em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '0 0.75em' : props.size == 'small' ? '0 1em' : '0 1em' ) };
         padding-left: ${ props => (props.inlineicon == "left" ? '0' : '')};
         padding-right: ${ props => (props.inlineicon == "right" ? '0' : '')};
     }
