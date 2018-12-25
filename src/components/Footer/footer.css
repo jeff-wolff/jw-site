@@ -76,7 +76,7 @@ footer .local-navigation {
 }
 @media (min-width: 1152px) {
     footer .local-navigation {
-        max-width: none;
+        max-width: 1920px;
         flex-direction: row;
         justify-content: space-between;
     }
