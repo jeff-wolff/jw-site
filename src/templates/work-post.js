@@ -77,8 +77,8 @@ class WorkPostTemplate extends React.Component {
           </div>
           <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
-          <div className="demoVideo" style={{marginTop: '0vh'}}>
-            <div className="vid-wrap">{coverVideo}</div>
+          <div className="demoVideo">
+            {coverVideo}
           </div>
         </div>
         <div className="work-post-footer container">
@@ -95,13 +95,13 @@ class WorkPostTemplate extends React.Component {
       <div className="work-post-nav container">
         {
             previous &&
-            <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
-              Prev: {previous.frontmatter.title} <span>&larr;</span> 
+            <Button className="prev-btn" size="small" to={previous.fields.slug} rel="prev">
+              <span>&larr;</span>  Prev: {previous.frontmatter.title}
             </Button>
           }
           {
             next &&
-            <Button className="next-btn" size="small" inlineicon="right" to={next.fields.slug} rel="next">
+            <Button className="next-btn" size="small" to={next.fields.slug} rel="next">
               Next: {next.frontmatter.title} <span>&rarr;</span>
             </Button>
           }

@@ -11,7 +11,7 @@ footer {
     opacity: .75;
 }
 
-@media (min-height: 1280px) {
+@media (min-width: 1152px) {
     footer {
         height: 50vh;
     }
@@ -57,14 +57,14 @@ footer a:visited:not(:hover,:active) {
 }
 footer .local-navigation {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+    max-width: 300px;
 }
 @media (min-width: 768px) {
     footer .local-navigation {
-        max-width: 500px;
     }
     footer .local-navigation a {
         margin-left:  0;
@@ -76,9 +76,8 @@ footer .local-navigation {
 }
 @media (min-width: 1152px) {
     footer .local-navigation {
-        max-width: 1920px;
-        flex-direction: row;
-        justify-content: space-between;
+        
+        max-width:  360px;
     }
 }
 footer a[class^="button"] {
@@ -107,13 +106,12 @@ footer a[class^="button"]:hover:after {
 
 @media (min-width: 1152px) {
     footer a[class^="button"] {
-        width: calc(33.333333% - 20px);
+        
     }
 }
 @media (min-width: 1920px) {
     footer a[class^="button"] {
-        width: calc(25% - 20px);
-        max-width: 420px;
+
     }
     footer a[class^="button"]:after,
     footer a[class^="button"]:hover:after {

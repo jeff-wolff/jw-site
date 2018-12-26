@@ -18,36 +18,36 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     background-color: #111;
     background-color: var(--bg);
     line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: 0.125em;
     text-transform: uppercase;
     word-break: break-all;
     user-select: none;
     font-size: ${ props => ( props.size == 'tiny' ? '12px' : props.size == 'small' ? '15px' : '19px' ) }; 
-    padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
+    padding: ${ props => ( props.size == 'tiny' ? '.7em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon ? 'justify' : 'left')};
     ${media.medium`
-        padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.7em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
     `}
     ${media.large`
         font-size: ${ props => ( props.size == 'tiny' ? '13px' : props.size == 'small' ? '19px' : '24px' ) };
-        padding: ${ props => ( props.size == 'tiny' ? '.7em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.8em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
     `}
     &:hover {
         color: #333;
         color: var(--secondary);
-        padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.7em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
             transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '6px, -6px, 0' : '6px, -6px, 0' ) });
         }
         ${media.medium`
-            padding: ${ props => ( props.size == 'tiny' ? '.6em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.7em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
         `}
         ${media.large`
             @media (-moz-touch-enabled: 0), (hover: hover) {
                 transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '8px, -8px, 0' : '10px, -10px, 0' ) });
             }
-            padding: ${ props => ( props.size == 'tiny' ? '.7em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.8em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
         `}
     }
     &:before, &:after {
