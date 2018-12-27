@@ -23,21 +23,7 @@ footer .container {
     height: 100%;
 }
 
-footer .navigation {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 13px;
-    margin-bottom: 4px;
-}
-@media (min-width: 1152px) {
-    footer .navigation {
-        margin-bottom:  20px;
-    }
-}
-
-footer a:not([class^="button"]) {
-    margin: 0 0 0 1em;
+footer a:not([class^="button"]) {    
     font-size: 12px;
     line-height: 1;
     color: #ff0;
@@ -55,94 +41,53 @@ footer a:visited:not(:hover,:active) {
     box-shadow:  0 .1em 0 rgba(17, 17, 17, 0.8);
     box-shadow:  0 .1em 0 var(--bg-faded);
 }
-footer .local-navigation {
+
+footer a:not(:first-child) {
+    margin: 0 0 0 1.75em;
+}
+
+footer .footer-top {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
-@media (min-width: 768px) {
-    footer .local-navigation {
-    }
-    footer .local-navigation a {
-        margin-left:  0;
-        margin-right: 0;
-    }
-    footer .local-navigation a:last-child {
-        margin-right: 0;
-    }
-}
-@media (min-width: 1152px) {
-    footer .local-navigation {
-        
-        max-width:  360px;
-    }
-}
-footer a[class^="button"] {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 20px;
-    font-size: 24px;
-    letter-spacing: .1em;
-    background-color: #000;
-    background-color: var(--footer-bg);
-    color: #ff0;
-    color: var(--primary);
-/*     color:  #111;
-    color: var(--bg);
-    box-shadow: -0.2em 0.2em 0 #111;
-    box-shadow: -0.2em 0.2em 0 var(--bg); */
-}
-footer a[class^="button"]:hover {
+footer .footer-top-right a {
     box-shadow: none;
 }
-footer a[class^="button"]:after,
-footer a[class^="button"]:hover:after {
-    /* border-width: 2px; */
-    background: transparent;
+footer .footer-top-right a:hover {
+    background: none;
+    color: var(--primary-faded);
+    opacity:  .85;
 }
 
+footer .footer-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer .footer-middle input {
+    background: none;
+    border: 3px solid var(--primary-faded);
+    color: var(--primary);
+    border-width: 0 0 3px;
+    padding: 1em 0;
+    outline: none;
+    width: 80%;
+    max-width: 360px;
+}
+
+footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
 @media (min-width: 1152px) {
-    footer a[class^="button"] {
-        
+    footer .footer-bottom {
+        margin-bottom:  20px;
     }
-}
-@media (min-width: 1920px) {
-    footer a[class^="button"] {
-
-    }
-    footer a[class^="button"]:after,
-    footer a[class^="button"]:hover:after {
-        /* border-width: 3px; */
-    }
-}
-footer a[class^="button"]:hover {        
-    color:  #fff;
-    color: var(--secondary);
-}
-footer a[class^="button"]:active {
-    color:  #111;
-    background-color: var(--bg);
-    color:  #ddd;
-    color: var(--secondary-faded);
-}
-footer a[class^="button"]:after,
-footer a[class^="button"]:hover:after {
-    /* border-color: #111;
-    border-color: var(--bg); */
-}
-footer a[class^="button"]:hover:before {
-    /* background-color: rgba(17, 17, 17, 0.9);
-    background-color: var(--bg-faded); */
-}
-
-footer a[class^="button"] span {
-    font-family: "Emoji";
-}
-
-
-footer .right-nav {
-    text-align: right;
 }

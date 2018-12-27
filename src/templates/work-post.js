@@ -66,7 +66,10 @@ class WorkPostTemplate extends React.Component {
        </div>
 
       <div className="work-post-scrollDown">👇🏻</div>
-       
+       <div className="website-btn">
+         <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+       </div>
+        
       <div className="work-post-container Rte">
         <div className="work-post-content">
           <div className="work-post-description container narrow">
@@ -81,16 +84,15 @@ class WorkPostTemplate extends React.Component {
             {coverVideo}
           </div>
         </div>
+        
         <div className="work-post-footer container">
-          <div className="website-btn">
-            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
-          </div>
+
         </div>
-        <div className="work-post-footer-cta container">
+{/*        <div className="work-post-footer-cta container">
           <div className="work-post-title centered-title preload">
             <h2 className="h1 title">{post.frontmatter.title}</h2>
           </div>
-        </div>
+        </div>*/}
       </div>
       <div className="work-post-nav container">
         {

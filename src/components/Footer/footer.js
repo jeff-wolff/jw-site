@@ -1,20 +1,29 @@
 import React from 'react'
-import Button from '../Button/button.js'
+import { Link } from 'gatsby'
 
 import './footer.css'
 
 const Footer = ({}) => (
   <footer>
      <div className="container">
-        <span className="right-nav">
+        <span className="footer-top">
           <a href="http://jeffwolff.net/v3" target="_blank">view previous site</a>
+          <div className="footer-top-right">
+            <Link to="/work/" size="tiny" inlineicon="left"><span>💼</span> Work</Link><Link to="/notes/" size="tiny" inlineicon="left"><span>📔</span> Notes</Link><Link external="true" href="mailto:hello@jeffwolff.net" size="tiny" inlineicon="left"><span>📫</span> Contact</Link>
+          </div>
         </span>
-        <div className="local-navigation">
-          <Button to="/work/" size="tiny" inlineicon="left"><span>💼</span> Work</Button>
-          <Button to="/notes/" size="tiny" inlineicon="left"><span>📔</span> Notes</Button>
-          <Button external="true" href="mailto:hello@jeffwolff.net" size="tiny" inlineicon="left"><span>📫</span> Contact</Button>
+        <div className="footer-middle">
+          
+            <form>
+              <div>
+                <label for="email" className="h2">Let me keep you posted.</label>
+              </div>
+              <div>
+                <input type="text" id="email" placeholder="Your e-mail" />
+              </div>
+            </form>
         </div>
-        <div className="navigation">
+        <div className="footer-bottom">
             <p>&copy; Jeff Wolff</p>
             <div className="menu">
                 <a href="//twitter.com/jeffwolff" target="_blank">Twitter</a>

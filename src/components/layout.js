@@ -113,6 +113,10 @@ injectGlobal`
   a:visited:not(:hover,:active) {
       color: var(--primary-faded);
   }
+  input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+  }
   img {
       width: 100%;
       height: auto;
@@ -429,17 +433,17 @@ injectGlobal`
       margin-bottom: 25vh;
     }
     .work-post-description:before {
-      content: " ";
-      position: absolute;
-      width: 100%;
-      height: 150vh;
+      // content: " ";
+      // position: absolute;
+      // width: 100%;
+      // height: 150vh;
       // opacity: .5;
       // mix-blend-mode: overlay;
-      background: linear-gradient(transparent,
-        var(--bg) 50%);
-      top: -125%;
-      left: 0;
-      z-index: 0;
+      // background: linear-gradient(transparent,
+      //   var(--bg) 50%);
+      // top: -125%;
+      // left: 0;
+      // z-index: 0;
     }
   }
   @media (min-width: 1920px) {
