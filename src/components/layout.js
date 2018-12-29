@@ -1083,7 +1083,7 @@ injectGlobal`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: bold;
     margin: 0 auto;
     padding: 32px;
