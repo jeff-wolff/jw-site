@@ -8,8 +8,8 @@ import Window from '../components/Window/window.js';
 
 class Index extends React.Component {
   defaultTheme() {
-    document.documentElement.style.setProperty('--bg', '#111');
-    document.documentElement.style.setProperty('--bg-faded', 'rgba(17, 17, 17, 0.9)');
+    document.documentElement.style.setProperty('--bg', '#252525');
+    document.documentElement.style.setProperty('--bg-faded', 'rgba(51, 51, 51, 0.9)');
     document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
     document.documentElement.style.setProperty('--secondary', '#000');

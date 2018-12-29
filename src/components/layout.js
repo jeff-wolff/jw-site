@@ -40,8 +40,8 @@ injectGlobal`
 
   :root {
     // Base
-    --bg: #111;
-    --bg-faded: rgba(17, 17, 17, 0.9);
+    --bg: #252525;
+    --bg-faded: rgba(51, 51, 51, 0.9);
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
@@ -97,7 +97,7 @@ injectGlobal`
       padding: .12em 0 0;
       background: #ff0;
       background: var(--primary);
-      color: #333;
+      color: #252525;
       color:  var(--secondary);
       box-shadow: none;
       text-decoration: none;
@@ -238,7 +238,7 @@ injectGlobal`
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
-      background-color: #111;
+      background-color: #252525;
       background-color: var(--bg);
   }
   @media (min-width: 1152px) {
@@ -259,7 +259,7 @@ injectGlobal`
     animation: spazz 2s steps(1) infinite;
   }
   .wrapper.faded {
-     background-color: rgba(17, 17, 17, 0.8);
+     background-color: rgba(51, 51, 51, 0.8);
      background-color: var(--bg-faded); 
   }
   @supports (position: sticky) {

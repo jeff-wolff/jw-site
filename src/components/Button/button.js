@@ -15,7 +15,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     position: relative;
     backface-visibility: hidden;
     text-decoration: none;
-    background-color: #111;
+    background-color: #252525;
     background-color: var(--bg);
     line-height: 1.2;
     letter-spacing: 0.125em;
@@ -34,7 +34,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
         padding: ${ props => ( props.size == 'tiny' ? '.8em 1.5em' : props.size == 'small' ? '1em 1.5em' : '1.3em 1.5em' ) };
     `}
     &:hover {
-        color: #333;
+        color: #000;
         color: var(--secondary);
         padding: ${ props => ( props.size == 'tiny' ? '.7em 1.25em' : props.size == 'small' ? '.7em 1.25em' : '1.3em 1.5em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
@@ -65,7 +65,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     }
     &:after {
         z-index: -2;
-        background-color: #111;
+        background-color: #252525;
         background-color: var(--bg);
         border: 3px solid #ff0;
         border: 3px solid var(--primary);
@@ -90,7 +90,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     }
     &:active {
         transform: translate3d(0,0,0);
-        color: #333;
+        color: #222;
         color: var(--secondary-faded);
     }
     &:active:before {
