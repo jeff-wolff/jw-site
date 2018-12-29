@@ -150,11 +150,10 @@ injectGlobal`
       margin: 0;
       letter-spacing: 0;
   }
-  .Rte .h1,.Rte .h1,.Rte h2,.Rte .h2,.Rte h3,.Rte .h3 {
+  .Rte h1,.Rte .h1,.Rte h2,.Rte .h2,.Rte h3,.Rte .h3 {
       margin-top: 2.666667rem;
       margin-bottom: .666667rem;
   }
-      
   .Rte h4,.Rte .h4,.Rte h5,.Rte .h5,.Rte h6,.Rte .h6 {
       color: inherit;
       margin-top: 2rem;
@@ -174,6 +173,9 @@ injectGlobal`
       h1,.h1 {
           font-size: 136px;
       }
+  }
+  .Rte h1, .Rte .h1 {
+    font-size: 1em;
   }
   
   h2,.h2,h3,.h3,.h4,h4 {
@@ -1048,6 +1050,83 @@ injectGlobal`
       -webkit-transform: translate(4px, -12px) scale(1.17);
               transform: translate(4px, -12px) scale(1.17);
     }
+  }
+  body.error-page {
+    // #008080
+    background: #0000aa;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .05em;
+  }
+  @media (min-width: 320px) {
+    body.error-page {
+      font-size: calc(14px + 1.4732 * ((100vw - 320px) / 1120));
+    }
+  }
+  @media (min-width: 1440px) {
+    body.error-page {
+      font-size: 15.4732px;
+    }
+  }
+  @media (min-width: 1280px) and (min-height: 960px) {
+    body.error-page {
+      font-size: 19.3415px;
+    }
+  }
+  .error-page .bs-wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+  }
+  .error-page .bs-content {
+    // border: 1px solid #ff0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 32px;
+    max-width: 640px;
+    height: 480px;
+    width: 100%;
+  }
+  .error-page .bs-content p:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width: 768px) {
+    .error-page .bs-content {
+      padding: 32px 64px;
+    }
+  }
+  @media (min-width: 1024px) and (min-height: 768px) {
+    .error-page .bs-content {
+      max-width: none;
+      width: 960px;
+      height: 720px;
+      padding: 104px;
+    }
+  }
+  @media (min-width: 1280px) and (min-height: 960px) {
+    .error-page .bs-content {
+      width: 1024px;
+      height: 768px;
+      padding: 136px;
+    }
+  }
+  .error-page .bs-content h1 {
+    display: inline-block;
+    color: #0000aa;
+    background: #aaaaaa;
+    text-align: center;
+    padding: .129em .517em;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+  .text-center {
+    text-align: center;
   }
 `;
 

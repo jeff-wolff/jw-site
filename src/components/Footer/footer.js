@@ -8,7 +8,7 @@ const Footer = ({}) => (
      <div className="container">
         <span className="footer-top">
           <div className="footer-top-left">
-            <a href="http://jeffwolff.net/v3" target="_blank" className="rewind">⏪</a>
+            <a href="http://jeffwolff.net/time_machine.html" target="_blank" className="rewind">⏪</a>
           </div>
           <div className="footer-top-right">
             <Link to="/work/"><span>💼</span> Work</Link><Link to="/notes/"><span>📔</span> Notes</Link><a href="mailto:hello@jeffwolff.net" target="_blank"><span>📫</span> Contact</a>
