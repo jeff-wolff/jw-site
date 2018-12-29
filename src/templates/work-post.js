@@ -46,9 +46,10 @@ class WorkPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
     const siteURL = post.frontmatter.url
-    let coverVideo;
+    let coverVideo, reelVideo;
     if (post.frontmatter.featuredVideo != null) {
      coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
+     reelVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline controls />;
     } else {
      coverVideo = "";
     }
@@ -73,21 +74,19 @@ class WorkPostTemplate extends React.Component {
       <div className="work-post-container Rte">
         <div className="work-post-content">
           <div className="work-post-description container narrow">
-          <div className="desc-info">
-            <p>Company: {post.frontmatter.title}<br />
-            Date: {post.frontmatter.date}<br />
-            Team: {post.frontmatter.team}</p>
+            <div className="desc-content">
+              <p><small>Company: {post.frontmatter.title}<br />
+                Date: {post.frontmatter.date}<br />
+                Team: {post.frontmatter.team}</small></p>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
           </div>
-          <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
-          <div className="demoVideo">
-            {coverVideo}
-          </div>
+          <figure className="demoVideo">
+            {reelVideo}
+            <figcaption className="show-for-mobile container">&#8627; Turn your phone horizontally to view video.</figcaption>
+          </figure>
         </div>
         
-        <div className="work-post-footer container">
-
-        </div>
 {/*        <div className="work-post-footer-cta container">
           <div className="work-post-title centered-title preload">
             <h2 className="h1 title">{post.frontmatter.title}</h2>

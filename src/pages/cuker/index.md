@@ -15,5 +15,8 @@ twb: "251, 55, 55"
 twt: "0,0,0"
 tfbg: "hsla(0.0, 0.0%, 4.5%, 1.0)"
 ---
-Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. I was responsible for the front-end development of Cuker Agency's <a href="https://www.cukeragency.com/" target="_blank">new website</a>. I conceptialized a design system for easily creating unique, but consistent looking case studies. I also adapted the existing content to the new design.
+Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. 
 
+I conceptualized a design system for creating unique, but consistent looking work case studies.
+
+I was responsible for the front-end development of Cuker's <a href="https://www.cukeragency.com/" target="_blank">new website</a>.

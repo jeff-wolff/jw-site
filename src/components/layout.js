@@ -113,7 +113,7 @@ injectGlobal`
   a:visited:not(:hover,:active) {
       color: var(--primary-faded);
   }
-  input, textarea {
+  input, textarea, button {
     font-family: inherit;
     font-size: inherit;
   }
@@ -243,7 +243,7 @@ injectGlobal`
   }
   @media (min-width: 1152px) {
       .wrapper {
-        margin-bottom: 50vh;
+        margin-bottom: 360px;
       }
   }
   html.spazz .wrapper,
@@ -289,15 +289,9 @@ injectGlobal`
       padding-left: 6%;
       padding-right: 6%;
   }
-  @media (min-width: 1440px) {
-      .container {
-          padding-left: 12%;
-          padding-right: 12%;
-      }
-  }
   .container.narrow {
-    padding-left: 16%;
-    padding-right: 16%;
+    padding-left: 12%;
+    padding-right: 12%;
   }
   @media (min-width: 1440px) {
       .container.narrow {
@@ -356,8 +350,10 @@ injectGlobal`
   }
 
   .work-title.centered-title {
+    position: sticky;
+    top: 0;
     justify-content: flex-start;
-    padding-top: 120px;
+    padding-top: 160px;
   }
   @media (min-width: 1152px) {
     .work-title.centered-title {
@@ -409,55 +405,33 @@ injectGlobal`
   }
   .work-post-content {
   }
-  @media (min-width: 1920px) {
-    .work-post-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 6%;
-      margin-top: 25vh;
-      margin-bottom: 25vh;
-    }
-  }
   .work-post-description {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 150vh;
     margin: 0 auto;
   }
   @media (min-width: 768px) {
     .work-post-description {
-      margin-top: 0;
-      margin-bottom: 25vh;
+
     }
     .work-post-description:before {
-      // content: " ";
-      // position: absolute;
-      // width: 100%;
-      // height: 150vh;
-      // opacity: .5;
-      // mix-blend-mode: overlay;
-      // background: linear-gradient(transparent,
-      //   var(--bg) 50%);
-      // top: -125%;
-      // left: 0;
-      // z-index: 0;
+
     }
   }
   @media (min-width: 1920px) {
     .work-post-description.container {
-      order: 1;
-      width: 50%;
-      padding: 8% 10% 8% 8%;
-      margin-top: 0;
-      margin-bottom: 0;
+
     }
   }
   .work-post-description .desc-info {
     z-index: 1;
     font-size: 12px;
+  }
+  .work-post-description .desc-info p {
+    margin-bottom: 3em;
   }
   @media (min-width: 320px) {
     .work-post-description .desc-info {
@@ -475,6 +449,9 @@ injectGlobal`
     }
   }
   .work-post-description .desc-content {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1;
   }
   .work-post-description .desc-content p {
@@ -488,26 +465,13 @@ injectGlobal`
       text-align: justify;
     }
   }
-  .work-post-footer {
-    position: sticky;
-    top: calc(100vh - 69px - 50px);
-    width: 100%;
-    margin-top: -50px;
-    z-index: 2;
-  }
-  @media (min-width: 1440px) {
-    .work-post-footer {
-      top: calc(100vh - 90px - 50px);
-      margin-bottom: 64px;
-    }
-  }
   .website-btn {
     margin: 0 auto;
+    width: 88%;
     max-width: 540px;
   }
   @media (min-width: 768px) {
     .website-btn {
-      width: calc(80% - 12%);
       margin-bottom: 56px;
     }
   }
@@ -527,7 +491,7 @@ injectGlobal`
     justify-content: space-between;
     width: 100%;
     padding-top: 60px;
-    padding-bottom: 20vh;
+    padding-bottom: 50vh;
   }
 
   .work-post-nav .next-btn,
@@ -547,7 +511,6 @@ injectGlobal`
   @media (min-width: 1440px) {
     .work-post-nav .next-btn,
     .work-post-nav .prev-btn {
-        width: calc(50% - 12%);
         max-width: 432px;
     }
   }
@@ -569,10 +532,8 @@ injectGlobal`
   .demoVideo { 
     z-index: 1;
     position: relative;
-    flex: 1 1 50%;
   }
   .demoVideo video {
-    max-width: 1920px;
     width: 100%;
   }
   @media (min-width: 1024px) {
@@ -593,6 +554,15 @@ injectGlobal`
   }
   .work-post-footer-cta {
     margin-bottom: 50vh;
+  }
+
+  .show-for-mobile {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .show-for-mobile {
+      display: block;
+    }
   }
   @keyframes spazz {
     0% {

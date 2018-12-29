@@ -7,28 +7,31 @@ const Footer = ({}) => (
   <footer>
      <div className="container">
         <span className="footer-top">
-          <a href="http://jeffwolff.net/v3" target="_blank">view previous site</a>
+          <div className="footer-top-left">
+            <a href="http://jeffwolff.net/v3" target="_blank" className="rewind">⏪</a>
+          </div>
           <div className="footer-top-right">
-            <Link to="/work/" size="tiny" inlineicon="left"><span>💼</span> Work</Link><Link to="/notes/" size="tiny" inlineicon="left"><span>📔</span> Notes</Link><Link external="true" href="mailto:hello@jeffwolff.net" size="tiny" inlineicon="left"><span>📫</span> Contact</Link>
+            <Link to="/work/"><span>💼</span> Work</Link><Link to="/notes/"><span>📔</span> Notes</Link><a href="mailto:hello@jeffwolff.net" target="_blank"><span>📫</span> Contact</a>
           </div>
         </span>
         <div className="footer-middle">
           
-            <form>
+            <form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
               <div>
-                <label for="email" className="h2">Let me keep you posted.</label>
+                <label htmlFor="mce-EMAIL" className="h2">Let me keep you updated.</label>
               </div>
               <div>
-                <input type="text" id="email" placeholder="Your e-mail" />
+                <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail" />
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
               </div>
             </form>
         </div>
         <div className="footer-bottom">
             <p>&copy; Jeff Wolff</p>
             <div className="menu">
-                <a href="//twitter.com/jeffwolff" target="_blank">Twitter</a>
-                <a href="//linkedin.com/in/jrwolff/" target="_blank">LinkedIn</a>
                 <a href="//last.fm/user/jeffwolff" target="_blank">Last.fm</a>
+                <a href="//linkedin.com/in/jrwolff/" target="_blank">LinkedIn</a>
+                <a href="//twitter.com/jeffwolff" target="_blank">Twitter</a>
              </div>
         </div>
      </div>

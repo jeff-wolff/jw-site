@@ -24,7 +24,7 @@ class Header extends React.Component {
         <ul className="navigation">
          <li><Link to="/work/">Work</Link></li>
          <li><Link to="/notes/">Notes</Link></li>
-         <li><a href="mailto:hello@jeffwolff.net">Contact</a></li>
+         <li><a href="mailto:hello@jeffwolff.net" target="_blank">Contact</a></li>
         </ul>
 
       </div>

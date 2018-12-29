@@ -16,4 +16,11 @@ twb: "31,222,222"
 twt: "150, 35, 19"
 tfbg: "hsla(7.3, 77.5%, 23.1%, 1.0)"
 ---
-Rip Curl is <a href="/">&lsquo;the ultimate surfing company&rsquo;</a> specializing in wetsuits, watches, and apparel. Our team was asked to create a mobile friendly version of their existing site. I was responsible for the front-end development of the website.
+Rip Curl is &lsquo;the ultimate surfing company&rsquo; specializing in wetsuits, watches, and apparel.
+
+Our goal was to create a mobile-friendly version of their existing site.
+
+I was responsible for the front-end development of the new responsive website.
+
+
+

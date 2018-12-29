@@ -8,12 +8,12 @@ footer {
     color: #ff0;
     color: var(--primary);
     height: 82vh;
-    opacity: .75;
+    opacity: .8;
 }
 
 @media (min-width: 1152px) {
     footer {
-        height: 50vh;
+        height: 360px;
     }
 }
 footer .container {
@@ -43,7 +43,7 @@ footer a:visited:not(:hover,:active) {
 }
 
 footer a:not(:first-child) {
-    margin: 0 0 0 1.75em;
+    margin: 0 0 0 2.5em;
 }
 
 footer .footer-top {
@@ -53,13 +53,22 @@ footer .footer-top {
     flex-wrap: wrap;
     margin-top: 10px;
 }
-footer .footer-top-right a {
+footer .footer-top a {
     box-shadow: none;
 }
-footer .footer-top-right a:hover {
+footer .footer-top a:hover {
     background: none;
+}
+footer .footer-top-right a:hover {
     color: var(--primary-faded);
     opacity:  .85;
+}
+
+footer a.rewind {
+    font-size: 1em;
+}
+footer a.rewind:hover {
+    opacity: .8;
 }
 
 footer .footer-middle {
@@ -70,13 +79,32 @@ footer .footer-middle {
 }
 footer .footer-middle input {
     background: none;
+    border: 3px solid #ff0;
     border: 3px solid var(--primary-faded);
+    color:  #ff0;
     color: var(--primary);
     border-width: 0 0 3px;
     padding: 1em 0;
     outline: none;
     width: 80%;
     max-width: 360px;
+}
+
+footer .footer-middle button {
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+    color:  #ff0;
+    color: var(--primary);
+    height: 65px;
+    width: 39px;
+    position: absolute;
+    right: 39px;
+}
+
+footer form > div {
+    position: relative;
 }
 
 footer .footer-bottom {
@@ -91,3 +119,5 @@ footer .footer-bottom {
         margin-bottom:  20px;
     }
 }
+
+
