@@ -1091,6 +1091,16 @@ injectGlobal`
     height: 480px;
     width: 100%;
   }
+  .error-page .bs-content ul {
+    position: relative;
+    list-style: none;
+    margin-left: 1em;
+  }
+  .error-page .bs-content ul li::before {
+    content: '*';
+    position: absolute;
+    left: -1em;
+  }
   .error-page .bs-content p:last-child {
     margin-bottom: 0;
   }
