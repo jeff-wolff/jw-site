@@ -16,7 +16,7 @@ const NotFoundPage = () => (
                     <li>Press any key to terminate the current application.</li>
                     <li>Press CTRL+ALT+DEL again to restart your computer. You will lose any unsaved information in all applications.</li>
                 </ul>
-                <p className="text-center">Press any key to continue _</p>
+                <p className="text-center">Press any key to continue <span className="bs-cursor">_</span></p>
             </div>
         </div>
     </div>

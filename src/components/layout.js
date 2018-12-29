@@ -1135,6 +1135,20 @@ injectGlobal`
     margin-right: auto;
     margin-bottom: 1em;
   }
+  .error-page .bs-cursor {
+    animation: blink 300ms ease infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   .text-center {
     text-align: center;
   }
