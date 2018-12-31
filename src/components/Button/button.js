@@ -15,7 +15,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     position: relative;
     backface-visibility: hidden;
     text-decoration: none;
-    background-color: #252525;
+    background-color: #212121;
     background-color: var(--bg);
     line-height: 1.2;
     letter-spacing: 0.125em;
@@ -65,7 +65,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     }
     &:after {
         z-index: -2;
-        background-color: #252525;
+        background-color: #212121;
         background-color: var(--bg);
         border: 3px solid #ff0;
         border: 3px solid var(--primary);

@@ -5,15 +5,15 @@ team: "Cuker Agency"
 url: "cukeragency.com"
 favIcon: "./cuker_fav.png"
 theme: true
-tbg: "#252525"
+tbg: "#222"
 tbgf: "rgba(37, 37, 37, 0.9)"
-tp: "#ff4545"
-tpf: "rgba(255, 69, 69, 0.87)"
+tp: "#ff2323"
+tpf: "rgba(255, 35, 35, 0.87)"
 ts: "#fff"
 tsf: "rgba(255,255,255,.78)"
-twb: "251, 55, 55"
+twb: "255, 55, 55"
 twt: "0,0,0"
-tfbg: "hsla(0.0, 0.0%, 4.5%, 1.0)"
+tfbg: "#151515"
 ---
 Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. 
 

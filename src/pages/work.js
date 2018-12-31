@@ -10,15 +10,15 @@ import MediaQuery from 'react-responsive'
 
 class WorkIndex extends React.Component {
   defaultTheme() {
-    document.documentElement.style.setProperty('--bg', '#252525');
-    document.documentElement.style.setProperty('--bg-faded', 'rgba(51, 51, 51, 0.9)');
+    document.documentElement.style.setProperty('--bg', '#151515');
+    document.documentElement.style.setProperty('--bg-faded', 'rgba(33, 33, 33, 0.9)');
     document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
     document.documentElement.style.setProperty('--secondary', '#000');
     document.documentElement.style.setProperty('--secondary-faded', '#222');
     document.documentElement.style.setProperty('--window-border', '190,190,190');
     document.documentElement.style.setProperty('--window-title', '0,0,0');
-    document.documentElement.style.setProperty('--footer-bg', '#000');
+    document.documentElement.style.setProperty('--footer-bg', '#111');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }

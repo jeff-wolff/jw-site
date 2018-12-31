@@ -3,11 +3,12 @@ footer {
     z-index: -200;
     bottom: 0;
     width: 100%;
-    background-color: #000;
+    background-color: #151515;
     background-color: var(--footer-bg);
     color: #ff0;
     color: var(--primary);
     height: 82vh;
+    opacity: .8;
 }
 
 @media (min-width: 1152px) {
@@ -37,7 +38,7 @@ footer a:not([class^="button"]):active {
 }
 footer a:visited:not(:hover,:active) {
     color: var(--primary-faded);
-    box-shadow:  0 .1em 0 rgba(51, 51, 51, 0.8);
+    box-shadow:  0 .1em 0 rgba(33, 33, 33, 0.8);
     box-shadow:  0 .1em 0 var(--bg-faded);
 }
 

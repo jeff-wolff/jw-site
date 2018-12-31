@@ -83,7 +83,7 @@ class WorkPostTemplate extends React.Component {
           </div>
           <figure className="demoVideo">
             {reelVideo}
-            <figcaption className="show-for-mobile container">&#8627; Turn your phone horizontally to view video.</figcaption>
+            <figcaption className="show-for-mobile container">&#8627; Tip: Turn your device horizontally to view video fullscreen.</figcaption>
           </figure>
         </div>
         

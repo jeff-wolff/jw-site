@@ -6,15 +6,15 @@ url: "vans.com/history"
 favIcon: "./vans_fav.png"
 featuredVideo: "./vans_autoplay_720.mp4"
 theme: true
-tbg: "rgb(181, 179, 179)"
-tbgf: "rgba(150, 35, 19, 0.9)"
-tp: "#000"
-tpf: "rgba(0, 0, 0, 0.87)"
+tbg: "#6f6f6f"
+tbgf: "rgba(133, 133, 133, 0.9)"
+tp: "#111"
+tpf: "rgba(17, 17, 17, 0.87)"
 ts: "#fff"
 tsf: "rgba(255,255,255,.78)"
-twb: "105, 103, 103"
+twb: "28, 28, 28"
 twt: "255,255,255"
-tfbg: "#fff"
+tfbg: "#757575"
 ---
 Vans is a popular skateboard shoe manufacturer and apparel company based in Santa Ana, CA. 
 

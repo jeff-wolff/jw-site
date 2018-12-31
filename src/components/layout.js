@@ -40,15 +40,15 @@ injectGlobal`
 
   :root {
     // Base
-    --bg: #252525;
-    --bg-faded: rgba(51, 51, 51, 0.9);
+    --bg: #151515;
+    --bg-faded: rgba(33, 33, 33, 0.9);
     --primary: rgb(255,255,0);
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000;
     --secondary-faded: #222;
     --window-border: 190,190,190;
     --window-title: 0,0,0;
-    --footer-bg: #000;
+    --footer-bg: #111;
   }
   ::-moz-selection {
       background-color: var(--primary);
@@ -97,7 +97,7 @@ injectGlobal`
       padding: .12em 0 0;
       background: #ff0;
       background: var(--primary);
-      color: #252525;
+      color: #212121;
       color:  var(--secondary);
       box-shadow: none;
       text-decoration: none;
@@ -130,7 +130,7 @@ injectGlobal`
       padding: 0;
   }
   li {
-      margin-bottom: .25em;
+      margin-bottom: .5em;
       font-size: 1em;
   }
   li > * {
@@ -240,7 +240,7 @@ injectGlobal`
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
-      background-color: #252525;
+      background-color: #212121;
       background-color: var(--bg);
   }
   @media (min-width: 1152px) {
@@ -261,7 +261,7 @@ injectGlobal`
     animation: spazz 2s steps(1) infinite;
   }
   .wrapper.faded {
-     background-color: rgba(51, 51, 51, 0.8);
+     background-color: rgba(33, 33, 33, 0.8);
      background-color: var(--bg-faded); 
   }
   @supports (position: sticky) {
@@ -1079,7 +1079,6 @@ injectGlobal`
     align-items: center;
   }
   .error-page .bs-content {
-    // border: 1px solid #ff0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1088,13 +1087,13 @@ injectGlobal`
     margin: 0 auto;
     padding: 32px;
     max-width: 640px;
-    height: 480px;
+    max-height: 480px;
     width: 100%;
   }
   .error-page .bs-content ul {
     position: relative;
     list-style: none;
-    margin-left: 1em;
+    margin: 1em 0 1em 1em;
   }
   .error-page .bs-content ul li::before {
     content: '*';
@@ -1106,18 +1105,19 @@ injectGlobal`
   }
   @media (min-width: 768px) {
     .error-page .bs-content {
-      padding: 32px 64px;
+      padding: 32px;
     }
   }
-  @media (min-width: 1024px) and (min-height: 768px) {
+  @media (min-width: 1024px) {
     .error-page .bs-content {
+      max-height: none;
       max-width: none;
       width: 960px;
       height: 720px;
       padding: 104px;
     }
   }
-  @media (min-width: 1280px) and (min-height: 960px) {
+  @media (min-width: 1440px) {
     .error-page .bs-content {
       width: 1024px;
       height: 768px;
