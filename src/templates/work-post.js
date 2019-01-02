@@ -64,12 +64,12 @@ class WorkPostTemplate extends React.Component {
         <div className="vid-wrap">{coverVideo}</div>
        <div className="work-post-title centered-title container preload">
          <h1 className="title">{post.frontmatter.title}</h1>
+         <div className="website-btn">
+           <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+         </div>
        </div>
-
       <div className="work-post-scrollDown">👇🏻</div>
-       <div className="website-btn">
-         <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
-       </div>
+       
         
       <div className="work-post-container Rte">
         <div className="work-post-content">

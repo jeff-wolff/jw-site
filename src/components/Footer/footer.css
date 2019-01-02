@@ -79,11 +79,11 @@ footer .footer-middle {
 }
 footer .footer-middle input {
     background: none;
-    border: 3px solid #ff0;
-    border: 3px solid var(--primary-faded);
+    border: solid #ff0;
+    border: solid var(--primary-faded);
+    border-width: 0 0 2px;
     color:  #ff0;
     color: var(--primary);
-    border-width: 0 0 3px;
     padding: 1em 0;
     outline: none;
     width: 80%;
@@ -95,8 +95,8 @@ footer .footer-middle button {
     outline: none;
     background: none;
     border: none;
-    border-bottom: 3px solid #ff0;
-    border-bottom: 3px solid var(--primary-faded);
+    border-bottom: 2px solid #ff0;
+    border-bottom: 2px solid var(--primary-faded);
     color:  #ff0;
     color: var(--primary);
     padding: 0 1em;
