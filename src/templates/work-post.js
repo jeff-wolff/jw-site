@@ -62,7 +62,7 @@ class WorkPostTemplate extends React.Component {
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
         <div className="vid-wrap">{coverVideo}</div>
-       <div className="work-post-title centered-title container preload">
+       <div className="work-post-title centered-title container">
          <h1 className="title">{post.frontmatter.title}</h1>
          <div className="website-btn">
            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
@@ -74,11 +74,12 @@ class WorkPostTemplate extends React.Component {
       <div className="work-post-container Rte">
         <div className="work-post-content">
           <div className="work-post-description container narrow">
-            <div className="desc-content">
-              <p><small>Company: {post.frontmatter.title}<br />
-                Date: {post.frontmatter.date}<br />
-                Team: {post.frontmatter.team}</small></p>
-              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="desc-info">
+              <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
+              <p>AGENCY<br />{post.frontmatter.team}</p>
+              <p>ROLE<br />Web Developer</p>
+            </div>
+            <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
             </div>
           </div>
           <figure className="demoVideo">
@@ -97,13 +98,15 @@ class WorkPostTemplate extends React.Component {
         {
             previous &&
             <Button className="prev-btn" size="small" to={previous.fields.slug} rel="prev">
-              <span>&larr;</span>  Prev: {previous.frontmatter.title}
+              Prev: {previous.frontmatter.title}
+
             </Button>
           }
           {
             next &&
             <Button className="next-btn" size="small" to={next.fields.slug} rel="next">
-              Next: {next.frontmatter.title} <span>&rarr;</span>
+              Next: {next.frontmatter.title}
+
             </Button>
           }
       </div>

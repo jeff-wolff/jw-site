@@ -7,7 +7,7 @@ favIcon: "./ripcurl_fav.png"
 featuredVideo: "./ripcurl_autoplay_720.mp4"
 theme: true
 tbg: "#962313"
-tbgf: "rgba(150, 35, 19, 0.9)"
+tbgf: "150, 35, 19"
 tp: "#00ffff"
 tpf: "rgba(0, 255, 255, 1)"
 ts: "#b13a29"

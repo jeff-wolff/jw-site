@@ -7,7 +7,7 @@ favIcon: "./sunbelt_fav.png"
 featuredVideo: "./sunbelt_autoplay_720.mp4"
 theme: true
 tbg: "#0d723b"
-tbgf: "rgba(13, 114, 59, 0.9)"
+tbgf: "13, 114, 59"
 tp: "#ffe113"
 tpf: "rgba(255, 225, 19, 0.87)"
 ts: "#0d723b"

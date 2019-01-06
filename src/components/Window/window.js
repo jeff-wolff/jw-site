@@ -43,7 +43,7 @@ class Window extends React.Component {
   defaultTheme() {
     // setTimeout(function(){
       document.documentElement.style.setProperty('--bg', '#151515');
-      document.documentElement.style.setProperty('--bg-faded', 'rgba(33, 33, 33, 0.9)');
+      document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
       document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
       document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
       document.documentElement.style.setProperty('--secondary', '#000');

@@ -38,8 +38,8 @@ footer a:not([class^="button"]):active {
 }
 footer a:visited:not(:hover,:active) {
     color: var(--primary-faded);
-    box-shadow:  0 .1em 0 rgba(33, 33, 33, 0.8);
-    box-shadow:  0 .1em 0 var(--bg-faded);
+    box-shadow:  0 .1em 0 rgba(33, 33, 33, 0.87);
+    box-shadow:  0 .1em 0 rgba(var(--bg-faded), .87);
 }
 
 footer a:not(:first-child) {

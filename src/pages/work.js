@@ -11,7 +11,7 @@ import MediaQuery from 'react-responsive'
 class WorkIndex extends React.Component {
   defaultTheme() {
     document.documentElement.style.setProperty('--bg', '#151515');
-    document.documentElement.style.setProperty('--bg-faded', 'rgba(33, 33, 33, 0.9)');
+    document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
     document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
     document.documentElement.style.setProperty('--secondary', '#000');
@@ -86,7 +86,7 @@ class WorkIndex extends React.Component {
                       tfbg={post.frontmatter.tfbg}
                       enableResize={false}
                       >
-                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>
@@ -114,7 +114,7 @@ class WorkIndex extends React.Component {
                       tfbg={post.frontmatter.tfbg}
                       enableResize={false}
                       >
-                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>
@@ -142,7 +142,7 @@ class WorkIndex extends React.Component {
                       tfbg={post.frontmatter.tfbg}
                       enableResize={false}
                       >
-                        <h2 className="h3">{post.frontmatter.title}</h2>
+                        <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>

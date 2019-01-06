@@ -7,7 +7,7 @@ favIcon: "./vans_fav.png"
 featuredVideo: "./vans_autoplay_720.mp4"
 theme: true
 tbg: "#3c3c3c"
-tbgf: "rgba(133, 133, 133, 0.9)"
+tbgf: "133, 133, 133"
 tp: "#fff"
 tpf: "rgba(255, 255, 255, 0.87)"
 ts: "#000"

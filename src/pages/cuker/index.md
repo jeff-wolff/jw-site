@@ -6,7 +6,7 @@ url: "cukeragency.com"
 favIcon: "./cuker_fav.png"
 theme: true
 tbg: "#222"
-tbgf: "rgba(37, 37, 37, 0.9)"
+tbgf: "37, 37, 37"
 tp: "#ff2323"
 tpf: "rgba(255, 35, 35, 0.87)"
 ts: "#fff"

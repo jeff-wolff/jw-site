@@ -1,13 +1,14 @@
 ---
 date: "2018-02-13T00:00:00"
+updates: "Febraury 14, 2019 - New Homepage Launched 🏠"
 title: "GoMacro"
 team: "Cuker Agency"
 url: "gomacro.com"
 favIcon: "./gomacro_fav.png"
-featuredVideo: "./gomacro_autoplay_720.mp4"
+featuredVideo: "./gomacro_autoplay.mp4"
 theme: true
 tbg: "#42362a"
-tbgf: "rgba(97, 80, 62, 0.9)"
+tbgf: "97, 80, 62"
 tp: "#ff6a00"
 tpf: "rgba(255, 106, 0, 0.87)"
 ts: "#562a03"
