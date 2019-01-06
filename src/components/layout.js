@@ -417,13 +417,15 @@ injectGlobal`
   }
   .work-post-description-wrap:before {
     width: 100%;
-    height: 180vh;
+    height: 100%;
     content: " ";
     position: absolute;
-    top: -10vh;
+    top: 0;
     left: 0;
     z-index: 1;
-    background-image: linear-gradient(rgba(var(--bg-faded), 0), var(--bg));
+    background-image: linear-gradient(rgba(var(--bg-faded), 0),
+                                      rgba(var(--bg-faded), .99) 40%,
+                                      var(--bg) 100%);
   }
   .work-post-description {
     z-index: 1;
@@ -453,21 +455,17 @@ injectGlobal`
     font-size: 78.5714%;
     max-width: fit-content;
     width: 100%;
+    margin-bottom: 1rem;
   }
   @media (min-width: 1024px) {
     .work-post-description .desc-info {
       align-self: center;
-      width: 60%;
-      margin-right: 6rem;
+      width: 66.6667%;
+      // margin-right: 6rem;
       margin-bottom: 0;
     }
   }
-  @media (min-width: 1280px) {
-    .work-post-description .desc-info {
-      align-self: flex-start;
-      margin-right: 8rem;
-    }
-  }
+
   .work-post-description .desc-content {
   }
   @media (min-width: 1024px) {
@@ -479,16 +477,31 @@ injectGlobal`
     margin-right: 4rem;
     margin-bottom: 2rem;
   }
-  .work-post-description .desc-info p:last-child {
-    margin-right: 0;
-  }
-
   @media (min-width: 1024px) {
     .work-post-description .desc-info p {
         width: auto;
     }
     .work-post-description .desc-content {
       text-align: justify;
+    }
+  }
+  @media (min-width: 1280px) {
+    .work-post-description .desc-info {
+      align-self: flex-start;
+      margin-right: 2rem;
+    }
+    .work-post-description .desc-info p:last-child {
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 1440px) {
+    .work-post-description .desc-info {
+      margin-right: 6rem;
+    }
+  }
+  @media (min-width: 1600px) {
+    .work-post-description .desc-info {
+      margin-right: 9rem;
     }
   }
   .website-btn {
@@ -523,6 +536,7 @@ injectGlobal`
 
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
+    text-align: center;
     max-width: 349px;
     width: calc(50% - 3%);
   }
@@ -532,6 +546,7 @@ injectGlobal`
   @media (min-width: 640px) {
     .work-post-nav .next-btn,
     .work-post-nav .prev-btn {
+      text-align: left;
       width: auto;
     }
   }

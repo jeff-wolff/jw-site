@@ -20,7 +20,6 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     line-height: 1.2;
     letter-spacing: 0.125em;
     text-transform: uppercase;
-    word-break: break-all;
     user-select: none;
     font-size: ${ props => ( props.size == 'tiny' ? '11px' : props.size == 'small' ? '11px' : '15px' ) }; 
     padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '.9em 1em' : '1.1em 1.4em' ) };

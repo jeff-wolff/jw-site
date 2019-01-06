@@ -8,7 +8,7 @@ favIcon: "./gomacro_fav.png"
 featuredVideo: "./gomacro_autoplay.mp4"
 theme: true
 tbg: "#42362a"
-tbgf: "97, 80, 62"
+tbgf: "66, 54, 42"
 tp: "#ff6a00"
 tpf: "rgba(255, 106, 0, 0.87)"
 ts: "#562a03"
