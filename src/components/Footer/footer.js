@@ -11,7 +11,9 @@ const Footer = ({}) => (
             <a href="http://jeffwolff.net/time_machine.html" target="_blank" className="rewind">⏪</a>
           </div>
           <div className="footer-top-right">
-            <Link to="/work/"><span>💼</span> Work</Link><Link to="/notes/"><span>📔</span> Notes</Link><a href="mailto:hello@jeffwolff.net" target="_blank"><span>📫</span> Contact</a>
+            <Link to="/work/"><span>💼</span> Work</Link>
+            <Link to="/notes/"><span>📔</span> Notes</Link>
+            <Link to="/about/"><span>👦</span> About</Link>
           </div>
         </span>
         <div className="footer-middle">

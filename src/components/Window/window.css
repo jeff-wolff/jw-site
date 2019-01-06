@@ -192,17 +192,3 @@
     line-height: .8;
     font-weight: normal;
 }
-
-
-/* Custom Social Media Windows (Twitter, Linkedin, Lastfm) */
-
-.window-twitter > .window-content,
-.window-linkedin > .window-content {
-    padding: 1px;
-    opacity: 0.75;
-}
-
-/* Work Page stuff */
-.react-draggable > .window-content > .work-window-button {
-    max-width: 150px;
-}

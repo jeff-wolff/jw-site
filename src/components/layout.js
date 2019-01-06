@@ -168,16 +168,16 @@ injectGlobal`
   }
   @media (min-width: 320px) {
       h1,.h1 {
-        font-size: calc(49px + 61.25 * ((100vw - 320px) / 1120));
+        font-size: calc(49px + 47 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
       h1,.h1 {
-          font-size: 110.25px;
+          font-size: 96px;
       }
   }
   .Rte h1, .Rte .h1 {
-    font-size: 1em;
+    font-size: 1.4em;
   }
   
   h2,.h2,h3,.h3,.h4,h4 {
@@ -509,6 +509,7 @@ injectGlobal`
     width: auto;
     max-width: 429px;
     margin-top: 30px;
+    word-break: break-all;
   }
   @media (min-width: 768px) {
     .website-btn {
@@ -536,7 +537,8 @@ injectGlobal`
 
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     max-width: 349px;
     width: calc(50% - 3%);
   }
@@ -546,7 +548,7 @@ injectGlobal`
   @media (min-width: 640px) {
     .work-post-nav .next-btn,
     .work-post-nav .prev-btn {
-      text-align: left;
+      display: inline-block;
       width: auto;
     }
   }
