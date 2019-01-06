@@ -62,7 +62,7 @@ class WorkPostTemplate extends React.Component {
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
         <div className="vid-wrap">{coverVideo}</div>
-       <div className="work-post-title centered-title container">
+       <div className="work-post-title centered-title preload container">
          <h1 className="title">{post.frontmatter.title}</h1>
          <div className="website-btn">
            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
@@ -73,13 +73,16 @@ class WorkPostTemplate extends React.Component {
         
       <div className="work-post-container Rte">
         <div className="work-post-content">
-          <div className="work-post-description container narrow">
-            <div className="desc-info">
-              <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
-              <p>AGENCY<br />{post.frontmatter.team}</p>
-              <p>ROLE<br />Web Developer</p>
-            </div>
-            <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
+          <div className="work-post-description-wrap container">
+            <div className="work-post-description">
+              <div className="desc-info">
+                <p>PROJECT<br />E-Commerce Launch and Homepage Refresh</p>
+                <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
+                <p>AGENCY<br />{post.frontmatter.team}</p>
+                <p>ROLE<br />Web Developer</p>
+              </div>
+              <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
+              </div>
             </div>
           </div>
           <figure className="demoVideo">
