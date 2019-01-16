@@ -41,7 +41,7 @@ injectGlobal`
   :root {
     // Base
     --bg: #151515;
-    --bg-faded: 33, 33, 33;
+    --bg-faded: 21, 21, 21;
     --primary: #ff0;
     --primary-faded: rgba(255,255,0,.87);
     --secondary: #000080;
