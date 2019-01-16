@@ -1,6 +1,7 @@
 .react-draggable {
     transition: transform 200ms ease;
-    border: 3px solid;
+    border: 1px solid;
+    outline:  1px solid #fff;
     background-color: #212121;
 }
 
@@ -29,19 +30,20 @@
 
 
 .react-draggable > .window-title {
-    width: 100%;
-    height: 36px;
-    line-height: 36px;
-    font-size: 12px;
+    width: calc(100% - 4px);
+    height: 18px;
+    line-height: 18px;
+    font-size: 10px;
     padding-left: .25rem;
-    padding-right: 36px;
+    padding-right: 18px;
+    margin: 2px;
     /* position: relative; */
     /* z-index: -1; */
     user-select: none;
 }
 @media (min-width: 1152px) {
     .react-draggable > .window-title {
-        font-size: 13px;
+        
     }
 }
 .react-draggable > .window-title > .content {
@@ -54,9 +56,8 @@
 }
 
 .window-title .favicon {
-    width: 16px;
-    height: 16px;
-    margin: -4px 8px 0 2px;
+    width: 12px;
+    height: 12px;
 }
 
 
@@ -64,7 +65,7 @@
 .react-draggable > .window-content {
     position: relative;
     width: 100%;
-    height: calc(100% - 36px);
+    height: calc(100% - 22px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,24 +78,24 @@
         padding: 36px;
     }
 }
-.react-draggable > .window-content > .window-video {
+.react-draggable > .window-video {
     transition:  all 125ms ease;
     position: absolute;
-    top: 0;
+    top: 22px;
     left: 0;
     z-index: -1;
     width: 100%;
-    opacity: .68;
-    filter: grayscale(66%);
-    mix-blend-mode: screen;
+    opacity: 1;
+    /* filter: grayscale(66%); */
+    /* mix-blend-mode: screen; */
 }
 
 @media (hover: hover) {
-    .react-draggable > .window-content > .window-video {
+  /*   .react-draggable > .window-video {
         opacity: .24;
     }
-    .react-draggable.dragging .window-content > .window-video,
-    .react-draggable:hover .window-content > .window-video {
+    .react-draggable.dragging > .window-video,
+    .react-draggable:hover > .window-video {
         opacity: .48;
     }
 
@@ -112,10 +113,7 @@
     .react-draggable.dragging > .window-content h2,
     .react-draggable:hover > .window-content h2  {
         opacity: 1;
-    }
-    .react-draggable > .window-content > .window-button:hover + .window-video {
-        opacity: 0.44;
-    }
+    } */
 }
 
 .react-draggable a.window-link:hover,

@@ -41,13 +41,13 @@ injectGlobal`
   :root {
     // Base
     --bg: #151515;
-    --bg-faded: rgba(33, 33, 33,.5);
-    --primary: rgb(255,255,0);
+    --bg-faded: 33, 33, 33;
+    --primary: #ff0;
     --primary-faded: rgba(255,255,0,.87);
-    --secondary: #000;
-    --secondary-faded: #222;
+    --secondary: #000080;
+    --secondary-faded: #1414ab;
     --window-border: 190,190,190;
-    --window-title: 0,0,0;
+    --window-title: 255,255,255;
     --footer-bg: #111;
   }
   ::-moz-selection {

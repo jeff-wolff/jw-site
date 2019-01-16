@@ -8,7 +8,7 @@ import HomeInfo from '../components/HomeInfo/home-info.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
-class WorkIndex extends React.Component {
+class WorkIndex extends React.Component {c0c0c0
   defaultTheme() {
     document.documentElement.style.setProperty('--bg', '#151515');
     document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
@@ -16,7 +16,7 @@ class WorkIndex extends React.Component {
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
     document.documentElement.style.setProperty('--secondary', '#000');
     document.documentElement.style.setProperty('--secondary-faded', '#222');
-    document.documentElement.style.setProperty('--window-border', '190,190,190');
+    document.documentElement.style.setProperty('--window-border', '192,192,192');
     document.documentElement.style.setProperty('--window-title', '0,0,0');
     document.documentElement.style.setProperty('--footer-bg', '#111');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -50,7 +50,7 @@ class WorkIndex extends React.Component {
         </div>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
-            const windowTitle = "https://www."+post.frontmatter.url+"/";
+            const windowTitle = title;
             let coverVideoURL, favIconURL;
             if (post.frontmatter.featuredVideo != null) {
               coverVideoURL = post.frontmatter.featuredVideo.publicURL;

@@ -27,9 +27,10 @@ class Window extends React.Component {
       resizing: false,
       enableResize: this.props.enableResize === undefined || this.props.enableResize == true ? true : false,
       isCollapsed: this.props.isCollapsed ? this.props.isCollapsed : false,
-      bgColor: this.props.bgColor ? this.props.bgColor : "var(--bg)",
+      bgColor: this.props.bgColor ? this.props.bgColor : "var(--bg-faded)",
       titleColor: this.props.titleColor ? this.props.titleColor : "var(--window-title)",
       borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)",
+      secondaryColor: this.props.secondaryColor ? this.props.secondaryColor : "var(--secondary)",
       coverVideoURL: this.props.coverVideo ? this.props.coverVideo : "",
       favIconURL: this.props.favIcon ? this.props.favIcon : ""
     }
@@ -44,12 +45,12 @@ class Window extends React.Component {
     // setTimeout(function(){
       document.documentElement.style.setProperty('--bg', '#151515');
       document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
-      document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
+      document.documentElement.style.setProperty('--primary', '#ff0');
       document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-      document.documentElement.style.setProperty('--secondary', '#000');
-      document.documentElement.style.setProperty('--secondary-faded', '#222');
+      document.documentElement.style.setProperty('--secondary', '#000080');
+      document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
       document.documentElement.style.setProperty('--window-border', '190,190,190');
-      document.documentElement.style.setProperty('--window-title', '0,0,0');
+      document.documentElement.style.setProperty('--window-title', '255,255,255');
       document.documentElement.style.setProperty('--footer-bg', '#111');
       let metaThemeColor = document.querySelector("meta[name=theme-color]");
       metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
@@ -137,8 +138,8 @@ class Window extends React.Component {
             y: this.state.y
           }}
           style={{
-            // backgroundColor: this.state.bgColor,
-            borderColor: 'rgb('+this.state.borderColor+')',
+            backgroundColor: 'rgb('+this.state.bgColor+')',
+            outlineColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
           bounds='parent'
@@ -246,7 +247,7 @@ class Window extends React.Component {
           <div className="window-title"
               style={{
                   color: 'rgb('+this.state.titleColor+')',
-                  backgroundColor: 'rgb('+this.state.borderColor+')'
+                  backgroundColor: this.state.secondaryColor,
               }}
           >
             <div className="content">
@@ -273,15 +274,17 @@ class Window extends React.Component {
             <span className="icon"></span>
           </label>
           {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
-          <div className="window-content"
+          <div className="window-content" style={{ 
+                  backgroundColor: 'rgba('+this.state.bgColor+',.89)'
+              }}
           >
             {this.props.children}
-            {this.state.coverVideoURL ? <div className="window-video">
-              <video muted loop playsInline ref="coverVid">
-                <source src={this.state.coverVideoURL} type="video/mp4" />
-              </video>
-            </div> : ""}
           </div>
+          {this.state.coverVideoURL ? <div className="window-video">
+            <video muted loop playsInline ref="coverVid">
+              <source src={this.state.coverVideoURL} type="video/mp4" />
+            </video>
+          </div> : ""}
       </Rnd>
     )
   }
