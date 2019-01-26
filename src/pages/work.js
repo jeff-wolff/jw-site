@@ -51,7 +51,7 @@ class WorkIndex extends React.Component {c0c0c0
         <Window 
           title="Error"
           width={425}
-          height={279}
+          height={263}
           minWidth={224}
           minHeight={164}
           lockAspect={1.77777778}
@@ -107,7 +107,7 @@ class WorkIndex extends React.Component {c0c0c0
                     <Window 
                       title={windowTitle}
                       width={425}
-                      height={279}
+                      height={263}
                       minWidth={224}
                       minHeight={164}
                       lockAspect={1.77777778}
@@ -135,7 +135,7 @@ class WorkIndex extends React.Component {c0c0c0
                     <Window 
                       title={windowTitle}
                       width={267}
-                      height={190}
+                      height={173}
                       minWidth={180}
                       minHeight={139}
                       lockAspect={1.77777778}
