@@ -50,7 +50,7 @@ class Window extends React.Component {
       document.documentElement.style.setProperty('--secondary', '#000080');
       document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
       document.documentElement.style.setProperty('--window-border', '190,190,190');
-      document.documentElement.style.setProperty('--window-title', '255,255,255');
+      document.documentElement.style.setProperty('--window-title', '0,0,0');
       document.documentElement.style.setProperty('--footer-bg', '#111');
       let metaThemeColor = document.querySelector("meta[name=theme-color]");
       metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
@@ -138,13 +138,12 @@ class Window extends React.Component {
             y: this.state.y
           }}
           style={{
-            backgroundColor: 'rgb('+this.state.bgColor+')',
-            outlineColor: 'rgb('+this.state.borderColor+')',
+            backgroundColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
           bounds='parent'
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 44}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 25}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}
@@ -247,7 +246,7 @@ class Window extends React.Component {
           <div className="window-title"
               style={{
                   color: 'rgb('+this.state.titleColor+')',
-                  backgroundColor: this.state.secondaryColor,
+                  backgroundColor: this.state.primaryColor,
               }}
           >
             <div className="content">
@@ -275,7 +274,7 @@ class Window extends React.Component {
           </label>
           {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
           <div className="window-content" style={{ 
-                  backgroundColor: 'rgba('+this.state.bgColor+',.89)'
+                  backgroundColor: 'rgba('+this.state.bgColor+',.62)'
               }}
           >
             {this.props.children}

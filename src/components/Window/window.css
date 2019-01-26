@@ -1,8 +1,10 @@
 .react-draggable {
     transition: transform 200ms ease;
     border: 1px solid;
-    outline:  1px solid #fff;
-    background-color: #212121;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    /* outline:  1px solid #fff; */
+    background-color: var(--window-border);
 }
 
 /* .react-draggable:after {
@@ -56,16 +58,19 @@
 }
 
 .window-title .favicon {
+    display: inline-block;
     width: 12px;
     height: 12px;
+    margin-right: 5px;
 }
 
 
 
 .react-draggable > .window-content {
     position: relative;
-    width: 100%;
-    height: calc(100% - 22px);
+    margin: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 24px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,16 +87,16 @@
     transition:  all 125ms ease;
     position: absolute;
     top: 22px;
-    left: 0;
+    left: 2px;
+    width: calc(100% - 4px);
     z-index: -1;
-    width: 100%;
     opacity: 1;
     /* filter: grayscale(66%); */
     /* mix-blend-mode: screen; */
 }
 
 @media (hover: hover) {
-  /*   .react-draggable > .window-video {
+    .react-draggable > .window-video {
         opacity: .24;
     }
     .react-draggable.dragging > .window-video,
@@ -99,9 +104,6 @@
         opacity: .48;
     }
 
-    .react-draggable.collapsed > .window-content {
-        opacity: 0;
-    }
     .react-draggable > .window-content > .window-button,
     .react-draggable > .window-content > h2 {
        transition: opacity 125ms ease;
@@ -113,8 +115,9 @@
     .react-draggable.dragging > .window-content h2,
     .react-draggable:hover > .window-content h2  {
         opacity: 1;
-    } */
+    }
 }
+
 
 .react-draggable a.window-link:hover,
 .react-draggable a.window-link:active {
@@ -139,6 +142,10 @@
 .react-draggable.collapsed .window-resizer-icon {
     opacity: 0;
 }
+.react-draggable.collapsed > .window-content,
+.react-draggable.collapsed > .window-video {
+    opacity: 0;
+}
 
 .react-draggable > .window-content h1,
 .react-draggable > .window-content h2,
@@ -155,8 +162,8 @@
 .window-collapse {
     z-index: 2;
     position: absolute;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 22px;
     top: 0;
     right: 0;
     text-align: center;
@@ -172,9 +179,13 @@
     transform: translate(-50%,-50%);
 }
 .window-collapse > .icon:after {
-    font-size: 22px;
+    font-size: 21px;
+    font-weight: bold;
     line-height: .8;
-    content: '—';
+    content: '_';
+    position: relative;
+    top: -8px;
+    right: -2px;
 }
 .window-collapse > input[type=checkbox] {
     opacity: 0;
@@ -189,4 +200,5 @@
     font-size: 22px;
     line-height: .8;
     font-weight: normal;
+    top: 1px;
 }

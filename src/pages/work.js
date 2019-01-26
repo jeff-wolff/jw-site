@@ -11,12 +11,12 @@ import MediaQuery from 'react-responsive'
 class WorkIndex extends React.Component {c0c0c0
   defaultTheme() {
     document.documentElement.style.setProperty('--bg', '#151515');
-    document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
-    document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
+    document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
+    document.documentElement.style.setProperty('--primary', '#ff0');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-    document.documentElement.style.setProperty('--secondary', '#000');
-    document.documentElement.style.setProperty('--secondary-faded', '#222');
-    document.documentElement.style.setProperty('--window-border', '192,192,192');
+    document.documentElement.style.setProperty('--secondary', '#000080');
+    document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
+    document.documentElement.style.setProperty('--window-border', '190,190,190');
     document.documentElement.style.setProperty('--window-title', '0,0,0');
     document.documentElement.style.setProperty('--footer-bg', '#111');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
@@ -48,6 +48,19 @@ class WorkIndex extends React.Component {c0c0c0
         <div className="work-title centered-title preload">
           <h1 className=" ">Work</h1>
         </div>
+        <Window 
+          title="Error"
+          width={425}
+          height={279}
+          minWidth={224}
+          minHeight={164}
+          lockAspect={1.77777778}
+          lockAspectRatioExtraHeight={38}
+          className="work-window"
+          >
+           <p>This program requires Windows 95.</p>
+           <Button size="small" to="/work/">OK</Button>
+        </Window>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = title;
@@ -64,7 +77,7 @@ class WorkIndex extends React.Component {c0c0c0
                     <Window 
                       title={windowTitle}
                       width={640}
-                      height={400}
+                      height={382}
                       minWidth={359}
                       minHeight={240}
                       maxWidth={1280}

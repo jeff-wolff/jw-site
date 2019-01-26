@@ -13,7 +13,7 @@ const Footer = ({}) => (
           <div className="footer-top-right">
             <Link to="/work/"><span>💼</span> Work</Link>
             <Link to="/notes/"><span>📔</span> Notes</Link>
-            <Link to="/about/"><span>👦</span> About</Link>
+            <a href="mailto:hi@jeffwolff.net"><span>✉️</span> Contact</a>
           </div>
         </span>
         <div className="footer-middle">
