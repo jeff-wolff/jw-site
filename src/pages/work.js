@@ -46,7 +46,7 @@ class WorkIndex extends React.Component {c0c0c0
         <body className="wrapper-work"/>
         </Helmet>
         <div className="work-title centered-title preload">
-          <h1 className=" ">Work</h1>
+          <h1>Work</h1>
         </div>
 {/*        <Window 
           title="Error"
