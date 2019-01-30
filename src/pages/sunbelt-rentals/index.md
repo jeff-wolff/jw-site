@@ -16,7 +16,6 @@ twb: "255, 255, 19"
 twt: "0,0,0"
 tfbg: "hsla(147.3, 79.5%, 14.9%, 1.0)"
 ---
-
 - Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
 
 - I was responsible for the front-end development of the website templates.

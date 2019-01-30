@@ -4,7 +4,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
-import HomeInfo from '../components/HomeInfo/home-info.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
@@ -160,23 +159,6 @@ class WorkIndex extends React.Component {c0c0c0
                     </Window>
                   </MediaQuery>
               </MediaQuery>
-
-          
-  
-          
-             // <div key={post.fields.slug}>
-             //   <h3
-             //     style={{
-             //       marginBottom: rhythm(1 / 4),
-             //     }}
-             //   >
-             //     <Link style={{ boxShadow: 'none' }} to={post.fields.slug}>
-             //       {title}
-             //     </Link>
-             //   </h3>
-             //   <small>{post.frontmatter.date}</small>
-             //   <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-             // </div>
            )
          })}
       </Layout>

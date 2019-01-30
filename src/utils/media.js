@@ -4,7 +4,7 @@ const sizes = {
   xlarge: 1440,
   large: 1152,
   medium: 768,
-  small: 376
+  small: 375
 }
 
 // iterate through the sizes and create a media template
