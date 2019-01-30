@@ -81,6 +81,7 @@ class WorkPostTemplate extends React.Component {
                 <p>AGENCY<br />{post.frontmatter.team}</p>
                 <p>ROLE<br />Web Developer</p>
               </div>
+              <h2 className="h3">Key Points:</h2>
               <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
               </div>
             </div>

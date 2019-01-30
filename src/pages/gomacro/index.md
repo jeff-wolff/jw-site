@@ -17,8 +17,11 @@ twb: "255, 132, 44"
 twt: "0,0,0"
 tfbg: "#31271c"
 ---
-GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. 
+- GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. 
 
-Our team provided a better website user experience, e-commerce platform, and a comprehensive marketing campaign.
+- I was responsible for the front-end development of the new website.
 
-I was responsible for the front-end development of the new website.
+- Our team provided a better website user experience, e-commerce platform, and a comprehensive marketing campaign.
+
+- In January 2019, I reimagined and simplified the website design system, updated the homepage design, and added a new type to the website which helps create a more 'natural' look.
+

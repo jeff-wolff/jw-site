@@ -17,9 +17,10 @@ twt: "0,0,0"
 tfbg: "hsla(147.3, 79.5%, 14.9%, 1.0)"
 ---
 
-Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
+- Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
 
-Our team elevated their online experience and provided them with a better website user experience to compete with others in the industry.
+- I was responsible for the front-end development of the website templates.
 
-I was responsible for the front-end development of the website templates.
+- Our team elevated their online experience and provided them with a better website user experience to compete with others in the industry.
+
 

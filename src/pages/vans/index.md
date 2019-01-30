@@ -16,9 +16,10 @@ twb: "255, 255, 255"
 twt: "0,0,0"
 tfbg: "#1c1c1c"
 ---
-Vans is a popular skateboard shoe manufacturer and apparel company based in Santa Ana, CA. 
+- Vans is a popular skateboard shoe manufacturer and apparel company based in Santa Ana, CA. 
 
-We created a large scrollable timeline to showcase the history of Vans for their 50<sup>th</sup> anniversary.
+- I was responsible for the front-end development of Vans' new about page. 
 
-I was responsible for the front-end development of Vans' new about page. 
+- We created a large scrollable timeline to showcase the history of Vans for their 50<sup>th</sup> anniversary.
+
 

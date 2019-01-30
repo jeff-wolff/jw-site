@@ -67,7 +67,7 @@ injectGlobal`
       color: rgba(255,255,255,.96);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.8;
       background-color: #000;
       background-color: var(--footer-bg);
   }
@@ -123,7 +123,7 @@ injectGlobal`
       height: auto;
   }
   ul,ol {
-      margin: 2em 0;
+      margin: .5em 0;
       padding: 0 0 0 1em;
   }
   ol {
@@ -131,7 +131,7 @@ injectGlobal`
       padding: 0;
   }
   li {
-      margin-bottom: .5em;
+      margin-bottom: 1em;
       font-size: 1em;
   }
   li > * {
@@ -388,22 +388,6 @@ injectGlobal`
   .work-post-container {
     
   }
-
-  @media (min-width: 375px) {
-    .work-post-container h3, .work-post-container .h3 {
-      font-size: calc(1.25em + .75vw);
-    }
-  }
-  @media (min-width: 1152px) {
-    .work-post-container h3, .work-post-container .h3 {
-      font-size: calc(1.25em + 1.25vw);
-    }
-  }
-  @media (min-width: 1920px) {
-    .work-post-container h3, .work-post-container .h3 {
-      font-size: calc(1.25em + 1.5vw);
-    }
-  }
   .work-post-content {
   }
   .work-post-description-wrap {
@@ -446,23 +430,21 @@ injectGlobal`
   }
   @media (min-width: 1024px) {
     .work-post-description {
-        flex-direction: row;
+        max-width: 660px;
+        width: 50%;
     }
   }
   .work-post-description .desc-info {
     display: flex;
     flex-wrap: wrap;    
-    font-size: 78.5714%;
+    // font-size: 78.5714%;
     max-width: fit-content;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   @media (min-width: 1024px) {
     .work-post-description .desc-info {
-      align-self: center;
-      width: 66.6667%;
-      // margin-right: 6rem;
-      margin-bottom: 0;
+
     }
   }
 
@@ -470,16 +452,20 @@ injectGlobal`
   }
   @media (min-width: 1024px) {
     .work-post-description .desc-content {
-      max-width: 65ch;
+      // max-width: 65ch;
     }
   }
   .work-post-description .desc-info p {
-    margin-right: 4rem;
+    margin-right: 2rem;
     margin-bottom: 2rem;
+  }
+  .work-post-description .desc-info p:first-child {
+      width: 100%;
+      margin-right: 0;
   }
   @media (min-width: 1024px) {
     .work-post-description .desc-info p {
-        width: auto;
+        width: calc(33.33333% - 2rem);
     }
     .work-post-description .desc-content {
       text-align: justify;
@@ -488,22 +474,12 @@ injectGlobal`
   @media (min-width: 1280px) {
     .work-post-description .desc-info {
       align-self: flex-start;
-      margin-right: 2rem;
     }
     .work-post-description .desc-info p:last-child {
       margin-right: 0;
     }
   }
-  @media (min-width: 1440px) {
-    .work-post-description .desc-info {
-      margin-right: 6rem;
-    }
-  }
-  @media (min-width: 1600px) {
-    .work-post-description .desc-info {
-      margin-right: 9rem;
-    }
-  }
+
   .website-btn {
     margin: 0 auto;
     width: auto;
