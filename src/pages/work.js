@@ -14,7 +14,7 @@ class WorkIndex extends React.Component {c0c0c0
     document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
     document.documentElement.style.setProperty('--primary', '#ff0');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-    document.documentElement.style.setProperty('--secondary', '#000080');
+    document.documentElement.style.setProperty('--secondary', '#2828ef');
     document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
     document.documentElement.style.setProperty('--window-border', '190,190,190');
     document.documentElement.style.setProperty('--window-title', '0,0,0');
@@ -48,7 +48,7 @@ class WorkIndex extends React.Component {c0c0c0
         <div className="work-title centered-title preload">
           <h1 className=" ">Work</h1>
         </div>
-        <Window 
+{/*        <Window 
           title="Error"
           width={425}
           height={263}
@@ -60,7 +60,7 @@ class WorkIndex extends React.Component {c0c0c0
           >
            <p>This program requires Windows 95.</p>
            <Button size="small" to="/work/">OK</Button>
-        </Window>
+        </Window>*/}
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = title;
