@@ -389,6 +389,7 @@ injectGlobal`
     
   }
 
+
   @media (min-width: 375px) {
     .work-post-container h3, .work-post-container .h3 {
       font-size: calc(1.25em + .75vw);
@@ -452,7 +453,7 @@ injectGlobal`
   .work-post-description .desc-info {
     display: flex;
     flex-wrap: wrap;    
-    font-size: 78.5714%;
+    // font-size: 78.5714%;
     max-width: fit-content;
     width: 100%;
     margin-bottom: 1rem;
@@ -473,6 +474,19 @@ injectGlobal`
       max-width: 65ch;
     }
   }
+  @media (min-width: 1024px) {
+    .work-post-description .desc-info {
+
+    }
+  }
+
+  .work-post-description .desc-content {
+  }
+  @media (min-width: 1024px) {
+    .work-post-description .desc-content {
+      // max-width: 65ch;
+    }
+  }
   .work-post-description .desc-info p {
     margin-right: 4rem;
     margin-bottom: 2rem;
@@ -480,6 +494,14 @@ injectGlobal`
   @media (min-width: 1024px) {
     .work-post-description .desc-info p {
         width: auto;
+    }
+  .work-post-description .desc-info p:first-child {
+      width: 100%;
+      margin-right: 0;
+  }
+  @media (min-width: 1024px) {
+    .work-post-description .desc-info p {
+        width: calc(33.33333% - 2rem);
     }
     .work-post-description .desc-content {
       text-align: justify;
@@ -504,6 +526,8 @@ injectGlobal`
       margin-right: 9rem;
     }
   }
+
+>>>>>>> parent of 243cfd2... tidy up code
   .website-btn {
     margin: 0 auto;
     width: auto;
