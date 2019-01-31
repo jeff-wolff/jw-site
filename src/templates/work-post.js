@@ -26,20 +26,20 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
-    // window.addEventListener('scroll', this.throttle(this.removeTitle,50));
+    // window.addEventListener('scroll', this.throttle());
   }
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.throttle(this.removeTitle,50));
+    // window.removeEventListener('scroll', this.throttle());
   }
-  throttle(fn, wait) {
-    var time = Date.now();
-    return function() {
-      if ((time + wait - Date.now()) < 0) {
-        fn();
-        time = Date.now();
-      }
-    }
-  }
+  // throttle(fn, wait) {
+  //   var time = Date.now();
+  //   return function() {
+  //     if ((time + wait - Date.now()) < 0) {
+  //       fn();
+  //       time = Date.now();
+  //     }
+  //   }
+  // }
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
@@ -54,68 +54,60 @@ class WorkPostTemplate extends React.Component {
      coverVideo = "";
     }
 
-    
     return (
       <Layout location={this.props.location}>
         <Helmet
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        <div className="vid-wrap">{coverVideo}</div>
-       <div className="work-post-title centered-title preload container">
-         <h1 className="title">{post.frontmatter.title}</h1>
-         <div className="website-btn">
-           <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
-         </div>
-       </div>
-      <div className="work-post-scrollDown">👇🏻</div>
-       
-        
-      <div className="work-post-container Rte">
-        <div className="work-post-content">
-          <div className="work-post-description-wrap container">
-            <div className="work-post-description">
-              <div className="desc-info">
-                <p>PROJECT<br />E-Commerce Launch and Homepage Refresh</p>
-                <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
-                <p>AGENCY<br />{post.frontmatter.team}</p>
-                <p>ROLE<br />Web Developer</p>
-              </div>
-              <h2 className="h3">Key Points:</h2>
-              <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
+
+        <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
+
+        <div className="work-post-title centered-title preload container">
+          <h1 className="title">{post.frontmatter.title}</h1>
+          <div className="website-btn">
+            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+          </div>
+        </div>
+
+        <div className="work-post-scrollDown">👇🏻</div>
+
+        <div className="work-post-container Rte">
+          <div className="work-post-content">
+            <div className="work-post-description-wrap container">
+              <div className="work-post-description">
+                <div className="desc-info">
+                  <p>PROJECT<br />E-Commerce Launch and Homepage Refresh</p>
+                  <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
+                  <p>AGENCY<br />{post.frontmatter.team}</p>
+                  <p>ROLE<br />Web Developer</p>
+                </div>
+                <h2 className="h3">Key Points:</h2>
+                <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
+                </div>
               </div>
             </div>
+            <figure className="demoVideo">
+              {reelVideo}
+              <figcaption className="show-for-mobile container">&#8627; Tip: Turn your device horizontally to view video fullscreen.</figcaption>
+            </figure>
           </div>
-          <figure className="demoVideo">
-            {reelVideo}
-            <figcaption className="show-for-mobile container">&#8627; Tip: Turn your device horizontally to view video fullscreen.</figcaption>
-          </figure>
         </div>
-        
-{/*        <div className="work-post-footer-cta container">
-          <div className="work-post-title centered-title preload">
-            <h2 className="h1 title">{post.frontmatter.title}</h2>
-          </div>
-        </div>*/}
-      </div>
-      <div className="work-post-nav container">
-        {
-            previous &&
-            <Button className="prev-btn" size="small" to={previous.fields.slug} rel="prev">
-              Prev: {previous.frontmatter.title}
 
-            </Button>
-          }
+        <div className="work-post-nav container">
           {
-            next &&
-            <Button className="next-btn" size="small" to={next.fields.slug} rel="next">
-              Next: {next.frontmatter.title}
-
-            </Button>
-          }
-      </div>
-
-
+              previous &&
+              <Button className="prev-btn" size="small" to={previous.fields.slug} rel="prev">
+                Prev: {previous.frontmatter.title}
+              </Button>
+            }
+            {
+              next &&
+              <Button className="next-btn" size="small" to={next.fields.slug} rel="next">
+                Next: {next.frontmatter.title}
+              </Button>
+            }
+        </div>
       </Layout>
     )
   }
