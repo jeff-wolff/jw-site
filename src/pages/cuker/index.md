@@ -12,7 +12,7 @@ tpf: "rgba(255, 35, 35, 0.87)"
 ts: "#fff"
 tsf: "rgba(255,255,255,.78)"
 twb: "255, 55, 55"
-twt: "0,0,0"
+twt: "255,255,255"
 tfbg: "#151515"
 ---
 - Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. 
