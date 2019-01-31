@@ -18,6 +18,9 @@ tfbg: "hsla(147.3, 79.5%, 14.9%, 1.0)"
 ---
 
 - Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
+>>>>>>> parent of 243cfd2... tidy up code
+
+- Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
 
 - Our team elevated their online experience and provided them with a better website user experience to compete with others in the industry.
 
