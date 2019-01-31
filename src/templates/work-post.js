@@ -5,6 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
+import Window from '../components/Window/window.js'
 
 class WorkPostTemplate extends React.Component {
   theme(bg,bgf,p,pf,s,sf,wb,wt,fbg) {
@@ -86,6 +87,48 @@ class WorkPostTemplate extends React.Component {
                 <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
                 </div>
               </div>
+              <Window 
+                title="Error"
+                width={360}
+                height={202.5}
+                minWidth={280}
+                lockAspect={1.77777778}
+                lockAspectRatioExtraHeight={26}
+                className="work-window"
+                offset={100}
+                >
+                 <p>This program requires Windows 95.</p>
+                 <Button size="small" to="/work/">OK</Button>
+              </Window>
+
+              <Window 
+                title="Error"
+                width={360}
+                height={202.5}
+                minWidth={280}
+                lockAspect={1.77777778}
+                lockAspectRatioExtraHeight={26}
+                className="work-window"
+                offset={200}
+                >
+                 <p>This program requires Windows 95.</p>
+                 <Button size="small" to="/work/">OK</Button>
+              </Window>
+
+              <Window 
+                title="Error"
+                width={360}
+                height={202.5}
+                minWidth={280}
+                lockAspect={1.77777778}
+                lockAspectRatioExtraHeight={26}
+                className="work-window"
+                offset={300}
+                >
+                 <p>This program requires Windows 95.</p>
+                 <Button size="small" to="/work/">OK</Button>
+              </Window>
+
             </div>
             <figure className="demoVideo">
               {reelVideo}

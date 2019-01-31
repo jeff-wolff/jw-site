@@ -1,5 +1,5 @@
 import React from 'react'
-import {injectGlobal} from 'styled-components'
+import {styled, injectGlobal} from 'styled-components'
 // import { Link } from 'gatsby'
 // import classNames from 'classnames';
 
@@ -341,13 +341,21 @@ injectGlobal`
       font-size: 1.9em;
     }
   }
+  .work-post-container {
+    margin-bottom: 100vh;
+  }
   .work-post-description-wrap {
     position: relative;
-    min-height: 150vh;
+    min-height: 300vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .work-post-description-wrap {
+      min-height: 125vh;
+    }
   }
   .work-post-description-wrap:before {
     width: 100%;
@@ -421,6 +429,7 @@ injectGlobal`
     .work-post-description .desc-info p {
       width: calc(33.33333% - 2rem);
     }
+  }
   .work-post-description .desc-info p:first-child {
       width: 100%;
       margin-right: 0;
@@ -490,13 +499,15 @@ injectGlobal`
   .work-post-nav .next-btn span {
     margin-right: -1em;
   }
-  .demoVideo { 
-    z-index: 1;
+
+  .demoVideo {
     position: relative;
+    z-index: 1;
   }
   .demoVideo video {
     width: 100%;
   }
+
   .work-post-footer-cta {
     margin-bottom: 50vh;
   }
