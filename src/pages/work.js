@@ -95,7 +95,7 @@ class WorkIndex extends React.Component {c0c0c0
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      offset={320}
+                      yOffset={320}
                       >
                         <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -123,7 +123,7 @@ class WorkIndex extends React.Component {c0c0c0
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      offset={260}
+                      yOffset={260}
                       >
                         <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -151,7 +151,7 @@ class WorkIndex extends React.Component {c0c0c0
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      offset={260}
+                      yOffset={260}
                       >
                         <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>

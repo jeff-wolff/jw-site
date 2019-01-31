@@ -354,7 +354,9 @@ injectGlobal`
   }
   @media (min-width: 768px) {
     .work-post-description-wrap {
-      min-height: 125vh;
+      min-height: 0;
+      height: 125vh;
+      max-height: 1024px;
     }
   }
   .work-post-description-wrap:before {

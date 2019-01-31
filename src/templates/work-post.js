@@ -7,6 +7,8 @@ import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 
+import MediaQuery from 'react-responsive'
+
 class WorkPostTemplate extends React.Component {
   theme(bg,bgf,p,pf,s,sf,wb,wt,fbg) {
     document.documentElement.style.setProperty('--bg', bg);
@@ -87,47 +89,164 @@ class WorkPostTemplate extends React.Component {
                 <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
                 </div>
               </div>
-              <Window 
-                title="Error"
-                width={360}
-                height={202.5}
-                minWidth={280}
-                lockAspect={1.77777778}
-                lockAspectRatioExtraHeight={26}
-                className="work-window"
-                offset={100}
-                >
-                 <p>This program requires Windows 95.</p>
-                 <Button size="small" to="/work/">OK</Button>
-              </Window>
 
-              <Window 
-                title="Error"
-                width={360}
-                height={202.5}
-                minWidth={280}
-                lockAspect={1.77777778}
-                lockAspectRatioExtraHeight={26}
-                className="work-window"
-                offset={200}
-                >
-                 <p>This program requires Windows 95.</p>
-                 <Button size="small" to="/work/">OK</Button>
-              </Window>
+              <MediaQuery query="(min-width: 1px)" key={'w1'}>
+                  <MediaQuery query="(min-width: 1440px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={100}
+                      xOffset={740}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={100}
+                      xOffset={100}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(max-width: 740px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={100}
+                      xOffset={0}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+              </MediaQuery>
 
-              <Window 
-                title="Error"
-                width={360}
-                height={202.5}
-                minWidth={280}
-                lockAspect={1.77777778}
-                lockAspectRatioExtraHeight={26}
-                className="work-window"
-                offset={300}
-                >
-                 <p>This program requires Windows 95.</p>
-                 <Button size="small" to="/work/">OK</Button>
-              </Window>
+
+              <MediaQuery query="(min-width: 1px)" key={'w2'}>
+                  <MediaQuery query="(min-width: 1440px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={200}
+                      xOffset={740}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={600}
+                      xOffset={100}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(max-width: 740px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={200}
+                      xOffset={0}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+              </MediaQuery>
+
+
+
+              <MediaQuery query="(min-width: 1px)" key={'w3'}>
+                  <MediaQuery query="(min-width: 1440px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={300}
+                      xOffset={740}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={700}
+                      xOffset={100}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+                  <MediaQuery query="(max-width: 740px)">
+                    <Window 
+                      title="Error"
+                      width={360}
+                      height={202.5}
+                      minWidth={280}
+                      lockAspect={1.77777778}
+                      lockAspectRatioExtraHeight={26}
+                      className="work-window"
+                      yOffset={300}
+                      xOffset={0}
+                      >
+                       <p>This program requires Windows 95.</p>
+                       <Button size="small" to="/work/">OK</Button>
+                    </Window>
+                  </MediaQuery>
+              </MediaQuery>
+
+
 
             </div>
             <figure className="demoVideo">

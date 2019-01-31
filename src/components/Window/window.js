@@ -76,7 +76,12 @@ class Window extends React.Component {
 
   collision() {
       let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 30))),
-          y = count+(this.props.offset ? this.props.offset : 0);
+          y = count+(this.props.yOffset ? this.props.yOffset : 0);
+          if (this.props.xOffset) {
+            while(this.props.xOffset > x) {
+              x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 30)));
+            }
+          }
           // console.log(x,y);
           // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
       positions.push({
