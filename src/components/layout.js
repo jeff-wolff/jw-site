@@ -475,9 +475,13 @@ injectGlobal`
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
     display: flex;
-    justify-content: center;
-    max-width: 349px;
-    width: calc(50% - 3%);
+    width: 49%;
+  }
+  @media (max-width: 640px) {
+    .work-post-nav .next-btn:only-child,
+    .work-post-nav .prev-btn:only-child {
+      width: 100%;
+    }
   }
   .work-post-nav .next-btn {
     margin-left: auto;
@@ -495,12 +499,12 @@ injectGlobal`
         max-width: 432px;
     }
   }
-  .work-post-nav .prev-btn span {
-    margin-left: -1em;
-  }
-  .work-post-nav .next-btn span {
-    margin-right: -1em;
-  }
+  // .work-post-nav .prev-btn span {
+  //   margin-left: -1em;
+  // }
+  // .work-post-nav .next-btn span {
+  //   margin-right: -1em;
+  // }
 
   .demoVideo {
     position: relative;

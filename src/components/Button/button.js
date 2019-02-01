@@ -22,30 +22,28 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     text-transform: uppercase;
     user-select: none;
     font-size: ${ props => ( props.size == 'tiny' ? '11px' : props.size == 'small' ? '11px' : '15px' ) }; 
-    padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em' ) };
+    padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.4em 1.3em ' ) };
     // width: ${ props => (props.inlineicon ? '100%' : 'auto')};
-    text-align: ${ props => (props.inlineicon ? 'justify' : 'left')};
+    text-align: ${ props => (props.inlineicon == 'left' ? 'right' : 'left')};
     ${media.medium`
-        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
     `}
     ${media.large`
-        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em 1.5em' ) };
+        font-size: ${ props => ( props.size == 'tiny' ? '11px' : props.size == 'small' ? '11px' : '17px' ) }; 
+        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
     `}
     &:hover {
         color: #000;
         color: var(--secondary);
-        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.4em 1.3em' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '6px, -6px, 0' : '6px, -6px, 0' ) });
+            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '4px, -4px, 0' : '6px, -6px, 0' ) });
         }
         ${media.medium`
-            padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
         `}
         ${media.large`
-            @media (-moz-touch-enabled: 0), (hover: hover) {
-                transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '8px, -8px, 0' : '10px, -10px, 0' ) });
-            }
-            padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.3em 1.5em' ) };
+            padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
         `}
     }
     &:before, &:after {
@@ -80,10 +78,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
         border: 1px solid var(--primary-faded);
         // border-width: ${ props => ( props.size == 'tiny' || props.size == 'small' ? '1px' : '3px')};
         @media (-moz-touch-enabled: 0), (hover: hover) {
-            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '-6px, 6px, 0' : '-6px, 6px, 0' ) });
-            ${media.large`
-                transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '-8px, 8px, 0' : '-10px, 10px, 0' ) });
-            `}
+            transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '-4px, 4px, 0' : '-6px, 6px, 0' ) });
         }
     }
     &:active {
@@ -100,7 +95,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     }
     span {
         order: ${ props => (props.inlineicon == "left" ? '-1' : '1')};
-        padding: ${ props => ( props.size == 'tiny' ? '0 2.85em' : props.size == 'small' ? '0 3.3em' : '0 3.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '0 0.5em' : props.size == 'small' ? '0 1em' : '0 1.5em' ) };
         padding-left: ${ props => (props.inlineicon == "left" ? '0' : '')};
         padding-right: ${ props => (props.inlineicon == "right" ? '0' : '')};
     }

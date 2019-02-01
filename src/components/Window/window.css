@@ -76,7 +76,7 @@
     align-items: center;
     justify-content: flex-end;
     user-select: none;
-    padding: 24px 36px;
+    padding: 24px;
 }
 @media (min-width: 1152px) {
     .react-draggable > .window-content {

@@ -69,7 +69,7 @@ class WorkPostTemplate extends React.Component {
         <div className="work-post-title centered-title preload container">
           <h1 className="title">{post.frontmatter.title}</h1>
           <div className="website-btn">
-            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">{post.frontmatter.url} <span>&#8599;</span></Button>
+            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>
           </div>
         </div>
 
@@ -107,7 +107,7 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -123,7 +123,7 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 740px)">
+                  <MediaQuery query="(max-width: 1023px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -159,7 +159,7 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -168,14 +168,14 @@ class WorkPostTemplate extends React.Component {
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={26}
                       className="work-window"
-                      yOffset={600}
-                      xOffset={100}
+                      yOffset={300}
+                      xOffset={300}
                       >
                        <p>This program requires Windows 95.</p>
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 740px)">
+                  <MediaQuery query="(max-width: 1023px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -212,7 +212,7 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -221,14 +221,14 @@ class WorkPostTemplate extends React.Component {
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={26}
                       className="work-window"
-                      yOffset={700}
-                      xOffset={100}
+                      yOffset={200}
+                      xOffset={500}
                       >
                        <p>This program requires Windows 95.</p>
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 740px)">
+                  <MediaQuery query="(max-width: 1023px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -237,8 +237,8 @@ class WorkPostTemplate extends React.Component {
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={26}
                       className="work-window"
-                      yOffset={300}
-                      xOffset={0}
+                      yOffset={1300}
+                      xOffset={12}
                       >
                        <p>This program requires Windows 95.</p>
                        <Button size="small" to="/work/">OK</Button>
@@ -259,14 +259,14 @@ class WorkPostTemplate extends React.Component {
         <div className="work-post-nav container">
           {
               previous &&
-              <Button className="prev-btn" size="small" to={previous.fields.slug} rel="prev">
-                Prev: {previous.frontmatter.title}
+              <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
+                <span>Prev:</span> {previous.frontmatter.title}
               </Button>
             }
             {
               next &&
-              <Button className="next-btn" size="small" to={next.fields.slug} rel="next">
-                Next: {next.frontmatter.title}
+              <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
+                <span>Next:</span> {next.frontmatter.title}
               </Button>
             }
         </div>
