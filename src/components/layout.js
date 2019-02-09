@@ -538,10 +538,19 @@ injectGlobal`
     color: #000;
     padding: 30px;
   }
+  body.error-page img {
+    width: auto;
+  }
   body.error-page h1 {
     font-size: 18px;
     font-weight: normal;
     margin-bottom: 1rem;
+    margin-top: .5rem;
+  }
+  body.error-page h1 .icon {
+    vertical-align: top;
+    margin-top: -.3333rem;
+    margin-right: 0.9999rem;
   }
   body.error-page ul {
     margin-left: .333rem;
@@ -565,6 +574,8 @@ injectGlobal`
   }
   body.error-page hr {
     margin: 1.25rem 0;
+    border-color: #fff;
+    border-width: 2px 0 0 0;
   }
 `;
 
