@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 const NotFoundPage = () => (
@@ -10,13 +11,17 @@ const NotFoundPage = () => (
     </Helmet>
         <div className="bs-wrapper">
             <div className="bs-content">
-                <h1>Windows</h1>
-                <p>A fatal exception 0E has occurred at 0028:C193AFC4. The current application will be terminated.</p>
+                <h1>The page cannot be found</h1>
+                <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <hr />
+                <p>Please try the following:</p>
                 <ul>
-                    <li>Press any key to terminate the current application.</li>
-                    <li>Press CTRL+ALT+DEL again to restart your computer. You will lose any unsaved information in all applications.</li>
+                    <li>If you typed the page address in the Address bar, make sure that it is spelled correctly.</li>
+                    <li>Open the <Link to="/">jeffwolff.net</Link> home page, and then look for links to the information you want.</li>
+                    <li>Click the <a href="javascript:window.history.back()">Back</a> button to try another link.</li>
+                    <li>Click <a href="https://www.google.com/search?q=site%3Ajeffwolff.net" target="_blank">Search</a> to look for information on the Internet.</li>
                 </ul>
-                <p className="text-center">Press any key to continue <span className="bs-cursor">_</span></p>
+                <p>HTTP 404 - File not found</p>
             </div>
         </div>
     </div>
