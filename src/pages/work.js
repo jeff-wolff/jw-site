@@ -7,7 +7,7 @@ import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
-class WorkIndex extends React.Component {c0c0c0
+class WorkIndex extends React.Component {
   defaultTheme() {
     document.documentElement.style.setProperty('--bg', '#151515');
     document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
@@ -47,19 +47,6 @@ class WorkIndex extends React.Component {c0c0c0
         <div className="work-title centered-title preload">
           <h1>Work</h1>
         </div>
-{/*        <Window 
-          title="Error"
-          width={425}
-          height={263}
-          minWidth={224}
-          minHeight={164}
-          lockAspect={1.77777778}
-          lockAspectRatioExtraHeight={38}
-          className="work-window"
-          >
-           <p>This program requires Windows 95.</p>
-           <Button size="small" to="/work/">OK</Button>
-        </Window>*/}
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             const windowTitle = title;
