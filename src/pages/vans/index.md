@@ -4,7 +4,7 @@ title: "Vans History"
 team: "Cuker Agency"
 url: "vans.com/history"
 favIcon: "./vans_fav.png"
-featuredVideo: "./vans_autoplay_720.mp4"
+featuredVideo: "./vans_optimized.mp4"
 theme: true
 tbg: "#373737"
 tbgf: "55, 55, 55"

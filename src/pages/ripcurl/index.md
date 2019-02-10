@@ -4,7 +4,7 @@ title: "Rip Curl"
 team: "Cuker Agency"
 url: "ripcurl.com"
 favIcon: "./ripcurl_fav.png"
-featuredVideo: "./ripcurl_autoplay_720.mp4"
+featuredVideo: "./ripcurl_optimized.mp4"
 theme: true
 tbg: "#962313"
 tbgf: "150, 35, 19"
