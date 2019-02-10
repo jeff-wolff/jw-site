@@ -2,6 +2,7 @@ import React from 'react'
 import {styled, injectGlobal} from 'styled-components'
 // import { Link } from 'gatsby'
 // import classNames from 'classnames';
+import noisePNG from '../assets/noise.png'
 
 import * as fonts from '../fonts/fonts.js'
 
@@ -306,7 +307,7 @@ injectGlobal`
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
       text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
       filter: blur(0);
-      z-index: 0;
+      z-index: 1;
       opacity: 1;
   }
   .centered-title.work-title {
@@ -370,6 +371,7 @@ injectGlobal`
     background-image: linear-gradient(rgba(var(--bg-faded), 0),
                                       rgba(var(--bg-faded), .99) 40%,
                                       var(--bg) 100%);
+    display: none;
   }
   .work-post-description {
     z-index: 1;
@@ -465,6 +467,8 @@ injectGlobal`
     }
   }
   .work-post-nav {
+    z-index: 1;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -579,9 +583,108 @@ injectGlobal`
     border-color: #fff;
     border-width: 2px 0 0 0;
   }
+
+  @keyframes grain {
+      0%, 100% {
+          transform: translate(0, 0)
+      }
+
+      10% {
+          transform: translate(-5%, -10%)
+      }
+
+      20% {
+          transform: translate(-15%, 5%)
+      }
+
+      30% {
+          transform: translate(7%, -25%)
+      }
+
+      40% {
+          transform: translate(-5%, 25%)
+      }
+
+      50% {
+          transform: translate(-15%, 10%)
+      }
+
+      60% {
+          transform: translate(15%, 0%)
+      }
+
+      70% {
+          transform: translate(0%, 15%)
+      }
+
+      80% {
+          transform: translate(3%, 35%)
+      }
+
+      90% {
+          transform: translate(-10%, 10%)
+      }
+  }
+
+  .noise-grain {
+      display: block;
+      overflow: hidden;
+  }
+
+  .noise-grain>* {
+      z-index: -1;
+  }
+
+  .wrapper:after {
+      transition: all 250ms ease;
+      animation: grain 1s steps(10) infinite;
+      background: url('${noisePNG}');
+      content: "";
+      display: block;
+      height: 300%;
+      left: -100%;
+      position: fixed;
+      top: -100%;
+      width: 300%;
+      z-index: 0;
+      opacity: 0.6;
+  }
+  
+  // @media (min-width: 640px) {
+  //     .wrapper:after {
+  //         opacity:0.6;
+  //     }
+  // }
+  .wrapper.disable-noise:after {
+    opacity: 0;
+    z-index: -201;
+  }
 `;
 
 class Template extends React.Component {
+  isBottom(el) {
+    return el.getBoundingClientRect().bottom <= window.innerHeight;
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', this.trackScrolling);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.trackScrolling);
+  }
+
+  trackScrolling = () => {
+    const wrappedElement = document.getElementsByClassName('wrapper')[0];
+    if (this.isBottom(wrappedElement)) {
+      console.log('wrapper bottom reached');
+      wrappedElement.classList.add('disable-noise')
+    } else {
+      console.log('wrapper not bottom');
+      wrappedElement.classList.remove('disable-noise')
+    }
+  };
+
   render() {
     const { location, children } = this.props
     const workPath = `${__PATH_PREFIX__}/work/`
@@ -602,6 +705,7 @@ class Template extends React.Component {
     )
     return (
       <div>
+        <div className="noise-grain"></div>
         <div className="wrapper">
         {header}
         {children}

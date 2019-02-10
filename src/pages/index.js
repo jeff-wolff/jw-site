@@ -40,11 +40,6 @@ class Index extends React.Component {
         </Helmet>
 
         <HomeInfo />
-
-        <div className="container">
-          <h1 className="home-logo">Jeff Wolff_</h1>
-        </div>
-
       </Layout>
     )
   }
