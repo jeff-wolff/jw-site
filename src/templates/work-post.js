@@ -29,20 +29,10 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
-    // window.addEventListener('scroll', this.throttle());
   }
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.throttle());
   }
-  // throttle(fn, wait) {
-  //   var time = Date.now();
-  //   return function() {
-  //     if ((time + wait - Date.now()) < 0) {
-  //       fn();
-  //       time = Date.now();
-  //     }
-  //   }
-  // }
+
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')

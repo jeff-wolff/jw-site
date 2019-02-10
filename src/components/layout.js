@@ -288,12 +288,12 @@ injectGlobal`
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
   }
+  .centered-title {
+      filter: blur(.5em);
+      color: rgba(255,255,255,.5);
+      opacity: 0.4;
+  }
   @media (hover: hover), (-moz-touch-enabled: 0) {
-    .centered-title {
-        filter: blur(.5em);
-        color: rgba(255,255,255,.5);
-        opacity: 0.4;
-    }
     .centered-title:hover {
         text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
         text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
@@ -344,6 +344,14 @@ injectGlobal`
   }
   .work-post-container {
     margin-bottom: 100vh;
+  }
+  @media (max-width: 640px) {
+    .work-post-content {
+      // position: relative;
+      // z-index: 1;
+      // background-color: var(--bg);
+      // background-color: var(--footer-bg);
+    }
   }
   .work-post-description-wrap {
     position: relative;
@@ -474,7 +482,6 @@ injectGlobal`
     justify-content: space-between;
     width: 100%;
     padding-bottom: 20px;
-    padding-top: 80vh;
   }
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
@@ -513,9 +520,11 @@ injectGlobal`
   .demoVideo {
     position: relative;
     z-index: 1;
+    padding-bottom: 30px;
   }
   .demoVideo video {
     width: 100%;
+    margin-bottom: 6px;
   }
 
   .work-post-footer-cta {
@@ -636,7 +645,7 @@ injectGlobal`
   }
 
   .wrapper:after {
-      transition: all 250ms ease;
+      transition: opacity 500ms ease;
       animation: grain 1s steps(10) infinite;
       background: url('${noisePNG}');
       content: "";
@@ -655,36 +664,47 @@ injectGlobal`
   //         opacity:0.6;
   //     }
   // }
-  .wrapper.disable-noise:after {
+  .wrapper.fade-noise:after {
     opacity: 0;
+  }
+  .wrapper.disable-noise:after {
     z-index: -201;
   }
 `;
 
 class Template extends React.Component {
+  throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    }
+  }
   isBottom(el) {
     return el.getBoundingClientRect().bottom <= window.innerHeight;
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.trackScrolling);
+    document.addEventListener('scroll', this.throttle(this.trackScrolling, 50));
   }
 
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.trackScrolling);
+    document.removeEventListener('scroll', this.throttle(this.trackScrolling, 50));
   }
 
   trackScrolling = () => {
     const wrappedElement = document.getElementsByClassName('wrapper')[0];
     if (this.isBottom(wrappedElement)) {
-      console.log('wrapper bottom reached');
-      wrappedElement.classList.add('disable-noise')
+      wrappedElement.classList.add('fade-noise');
+      setTimeout(function(){
+        wrappedElement.classList.add('disable-noise');
+      },250);
     } else {
-      console.log('wrapper not bottom');
-      wrappedElement.classList.remove('disable-noise')
+      wrappedElement.classList.remove('disable-noise','fade-noise');
     }
   };
-
   render() {
     const { location, children } = this.props
     const workPath = `${__PATH_PREFIX__}/work/`
