@@ -534,6 +534,7 @@ injectGlobal`
   body.error-page {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     font-size: 11px;
+    line-height: 1.5;
     background: #fff;
     color: #000;
     padding: 30px;
@@ -544,7 +545,7 @@ injectGlobal`
   body.error-page h1 {
     font-size: 18px;
     font-weight: normal;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     margin-top: .5rem;
   }
   body.error-page h1 .icon {
@@ -554,6 +555,7 @@ injectGlobal`
   }
   body.error-page ul {
     margin-left: .333rem;
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
   @media (min-width: 768px) {
@@ -573,7 +575,7 @@ injectGlobal`
     box-shadow: inset 0 -.066em 0 0 #f00;
   }
   body.error-page hr {
-    margin: 1.25rem 0;
+    margin: 1.5rem 0;
     border-color: #fff;
     border-width: 2px 0 0 0;
   }

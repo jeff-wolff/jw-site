@@ -29,7 +29,7 @@ class NotFoundPage extends React.Component {
                         <li>Click the <a href="javascript:window.history.back()"><img src={ie6Back} className="icon" /> Back</a> button to try another link.</li>
                         <li>Click <a href="https://www.google.com/search?q=site%3Ajeffwolff.net" target="_blank"><img src={ie6Search} className="icon" /> Search</a> to look for information on the Internet.</li>
                     </ul>
-                    <p>HTTP 404 - File not found</p>
+                    <p>HTTP 404 - File not found<br />Internet Explorer</p>
                 </div>
             </div>
         </div>
