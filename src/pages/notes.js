@@ -44,7 +44,7 @@ class NotesIndex extends React.Component {
           >
         <body />
         </Helmet>
-        <div className="work-title centered-title preload">
+        <div className="work-title centered-title preload container">
           <h1>Notes</h1>
            {posts.map(({ node: post }) => {
               const title = get(post, 'frontmatter.title') || post.fields.slug
