@@ -162,7 +162,10 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: ASC },
+      filter: {frontmatter: { posttype: {eq: "work"} } }
+      ){
       edges {
         node {
           excerpt(pruneLength: 50)

@@ -16,6 +16,7 @@ tsf: "rgba(86, 42, 3, 0.78)"
 twb: "255, 132, 44"
 twt: "0,0,0"
 tfbg: "#31271c"
+posttype: "work"
 ---
 - GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. 
 

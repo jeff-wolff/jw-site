@@ -15,6 +15,7 @@ tsf: "rgba(177, 58, 41,.78)"
 twb: "31,222,222"
 twt: "150, 35, 19"
 tfbg: "hsla(7.3, 77.5%, 23.1%, 1.0)"
+posttype: "work"
 ---
 - Rip Curl is &lsquo;the ultimate surfing company&rsquo; specializing in wetsuits, watches, and apparel.
 

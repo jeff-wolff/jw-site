@@ -15,6 +15,7 @@ tsf: "rgba(13, 114, 59, 0.78)"
 twb: "255, 255, 19"
 twt: "0,0,0"
 tfbg: "hsla(147.3, 79.5%, 14.9%, 1.0)"
+posttype: "work"
 ---
 
 - Sunbelt Rentals is one of the largest construction equipment rental companies in North America.
