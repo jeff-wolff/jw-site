@@ -49,7 +49,7 @@ class NotesIndex extends React.Component {
            {posts.map(({ node: post }) => {
               const title = get(post, 'frontmatter.title') || post.fields.slug
              return (
-              <div style={{position:'relative',zIndex:2,width:'500px'}}>
+              <div style={{position:'relative',zIndex:2,maxWidth:'500px'}}>
                 <h2 className="h2">{post.frontmatter.title}</h2>
                 <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
               </div>
