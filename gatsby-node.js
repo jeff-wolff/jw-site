@@ -7,8 +7,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const workPost = path.resolve('./src/templates/work-post.js');
-    const notesPost = path.resolve('./src/templates/post.js');
     resolve(
       graphql(
         `
@@ -34,32 +32,46 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create work posts pages.
+        // Create work / notes posts pages.
         const posts = result.data.allMarkdownRemark.edges;
-
+        const workPost = path.resolve('./src/templates/work-post.js');
+        const notesPost = path.resolve('./src/templates/post.js');
+        const workPosts = [], notesPosts = [];
+        console.log(posts);
         _.each(posts, (post, index) => {
           if (post.node.frontmatter.posttype === 'work') {
-              const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-              const next = index === 0 ? null : posts[index - 1].node;
-              createPage({
-                  path: post.node.fields.slug,
-                  component: workPost,
-                  context: {
-                    slug: post.node.fields.slug,
-                    previous,
-                    next,
-                  }
-              });
+              workPosts.push(post);
           } else {
-              createPage({
-                  path: post.node.fields.slug,
-                  component: notesPost,
-                  context: {
-                    slug: post.node.fields.slug
-                  },
-              })
+              notesPosts.push(post);
           }
         })
+        // Create pages
+        for (var i = workPosts.length - 1; i >= 0; i--) {
+          const previous = i === workPosts.length - 1 ? null : workPosts[i + 1].node;
+          const next = i === 0 ? null : workPosts[i - 1].node;
+          createPage({
+              path: workPosts[i].node.fields.slug,
+              component: workPost,
+              context: {
+                slug: workPosts[i].node.fields.slug,
+                previous,
+                next,
+              }
+          });
+        }
+        for (var i = notesPosts.length - 1; i >= 0; i--) {
+          const previous = i === notesPosts.length - 1 ? null : notesPosts[i + 1].node;
+          const next = i === 0 ? null : notesPosts[i - 1].node;
+          createPage({
+              path: notesPosts[i].node.fields.slug,
+              component: notesPost,
+              context: {
+                slug: notesPosts[i].node.fields.slug,
+                previous,
+                next,
+              },
+          })
+        }
       })
     )
   })

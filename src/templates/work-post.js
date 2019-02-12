@@ -69,14 +69,13 @@ class WorkPostTemplate extends React.Component {
           <div className="work-post-content">
             <div className="work-post-description-wrap container">
               <div className="work-post-description">
+                <h2>{post.frontmatter.description}</h2>
+                <h2 className="h3">Key Points:</h2>
+                <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
                 <div className="desc-info">
-                  <p>PROJECT<br />E-Commerce Launch and Homepage Refresh</p>
                   <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
                   <p>AGENCY<br />{post.frontmatter.team}</p>
                   <p>ROLE<br />Web Developer</p>
-                </div>
-                <h2 className="h3">Key Points:</h2>
-                <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }}>
                 </div>
               </div>
 
@@ -283,6 +282,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         team
         url

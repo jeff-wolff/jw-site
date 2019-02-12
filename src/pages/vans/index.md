@@ -1,6 +1,7 @@
 ---
 date: "2016-02-26T00:00:00"
 title: "Vans History"
+description: "About Page for 50th Anniversary"
 team: "Cuker Agency"
 url: "vans.com/history"
 favIcon: "./vans_fav.png"

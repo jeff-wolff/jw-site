@@ -1,6 +1,7 @@
 ---
 date: "2015-11-10T00:00:00"
 title: "Rip Curl"
+description: "Responsive E-Commerce Website Update"
 team: "Cuker Agency"
 url: "ripcurl.com"
 favIcon: "./ripcurl_fav.png"

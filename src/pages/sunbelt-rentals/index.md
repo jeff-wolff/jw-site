@@ -1,6 +1,7 @@
 ---
 date: "2018-01-20T00:00:00"
 title: "Sunbelt Rentals"
+description: "Website Redesign and Re-engineer Checkout Flow"
 team: "Cuker Agency"
 url: "sunbeltrentals.com"
 favIcon: "./sunbelt_fav.png"

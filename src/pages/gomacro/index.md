@@ -1,7 +1,7 @@
 ---
 date: "2018-02-13T00:00:00"
-updates: "Febraury 14, 2019 - New Homepage Launched 🏠"
 title: "GoMacro"
+description: "Website Redesign and Homepage Refresh"
 team: "Cuker Agency"
 url: "gomacro.com"
 favIcon: "./gomacro_fav.png"

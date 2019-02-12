@@ -1,6 +1,7 @@
 ---
 date: "2017-10-23T00:00:00"
 title: "Cuker Agency"
+description: "Website Redesign"
 team: "Cuker Agency"
 url: "cukeragency.com"
 favIcon: "./cuker_fav.png"
