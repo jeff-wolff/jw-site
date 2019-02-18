@@ -252,9 +252,14 @@ injectGlobal`
         height: 230vh;
     }
   }
+  @media (min-height: 768px) {
+    body.wrapper-work .wrapper {
+        height: 145vh;
+    }
+  }
   @media (min-height: 1024px) {
     body.wrapper-work .wrapper {
-        height: 160vh;
+        // height: 160vh;
     }
   }
   .container {
@@ -332,7 +337,7 @@ injectGlobal`
   }
   .work-post-scrollDown {
     font-size: 2.6em;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -380,7 +385,6 @@ injectGlobal`
     .work-post-description {
         margin: 0 auto;
         max-width: 660px;
-        width: 50%;
     }
   }
   .work-post-description > * {

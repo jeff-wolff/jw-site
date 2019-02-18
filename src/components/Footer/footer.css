@@ -22,9 +22,11 @@ footer .container {
     justify-content: space-between;
     height: 100%;
 }
-
-footer a:not([class^="button"]) {    
-    font-size: 12px;
+footer .menu {
+    display: flex;
+    align-items: center;
+}
+footer a:not([class^="button"]) {        
     line-height: 1;
     color: #ff0;
     color: var(--primary);
@@ -43,7 +45,7 @@ footer a:visited:not(:hover,:active) {
 }
 
 footer a:not(:first-child) {
-    margin: 0 0 0 2.5em;
+    margin-left: 24px;
 }
 
 footer .footer-top {
@@ -51,13 +53,20 @@ footer .footer-top {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 16px;
+    font-size: 11px;
 }
 footer .footer-top a {
     box-shadow: none;
 }
 footer .footer-top a:hover {
     background: none;
+}
+footer .footer-top-left {
+}
+footer .footer-top-right {
+    margin-left: 16px;
+    
 }
 footer .footer-top-right a:hover {
     color: var(--primary-faded);
@@ -115,7 +124,7 @@ footer .footer-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: 4px;
 }
 @media (min-width: 1152px) {

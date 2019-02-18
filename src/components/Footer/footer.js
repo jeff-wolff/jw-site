@@ -8,12 +8,12 @@ const Footer = ({}) => (
      <div className="container">
         <div className="footer-top">
           <div className="footer-top-left">
-            <a href="http://jeffwolff.net/time_machine.html" target="_blank" className="rewind">⏪</a>
+            <a href="http://jeffwolff.net/time_machine.html" target="_blank" className="rewind" title="Past Website Versions">⏪</a>
           </div>
           <div className="footer-top-right">
             <Link to="/work/"><span>💼</span> Work</Link>
             <Link to="/notes/"><span>📔</span> Notes</Link>
-            <a href="mailto:hi@jeffwolff.net"><span>✉️</span> Contact</a>
+            <a href="mailto:hi@jeffwolff.net"><span>💌</span> Contact</a>
           </div>
         </div>
         <div className="footer-middle">
@@ -28,7 +28,7 @@ const Footer = ({}) => (
           </form>
         </div>
         <div className="footer-bottom">
-            <p>&copy; Jeff Wolff</p>
+            <div className="legal">&copy; Jeff Wolff</div>
             <div className="menu">
                 <a href="//last.fm/user/jeffwolff" target="_blank">Last.fm</a>
                 <a href="//linkedin.com/in/jrwolff/" target="_blank">LinkedIn</a>
