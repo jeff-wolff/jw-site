@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
         const workPost = path.resolve('./src/templates/work-post.js');
         const notesPost = path.resolve('./src/templates/post.js');
         const workPosts = [], notesPosts = [];
-        console.log(posts);
+        // console.log(posts);
         _.each(posts, (post, index) => {
           if (post.node.frontmatter.posttype === 'work') {
               workPosts.push(post);

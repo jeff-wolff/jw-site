@@ -17,6 +17,16 @@ twb: "255, 255, 255"
 twt: "0,0,0"
 tfbg: "#1c1c1c"
 posttype: "work"
+workWindows:
+    - name: pixel-3
+      title: Vans
+      url: "./vans_optimized.mp4"
+    - name: iphone-6
+      title: Vans2
+      url: test2
+    - name: macbook-pro
+      title: Vans3
+      url: test3
 ---
 - Vans is a popular skateboard shoe manufacturer and apparel company based in Santa Ana, CA. 
 

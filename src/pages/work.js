@@ -65,10 +65,9 @@ class WorkIndex extends React.Component {
                       width={640}
                       height={384}
                       minWidth={359}
-                      minHeight={240}
                       maxWidth={1220}
                       lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
+                      lockAspectRatioExtraHeight={22}
                       className="work-window"
                       coverVideo={coverVideoURL}
                       favIcon={favIconURL}
@@ -94,9 +93,8 @@ class WorkIndex extends React.Component {
                       width={425}
                       height={263}
                       minWidth={224}
-                      minHeight={164}
                       lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
+                      lockAspectRatioExtraHeight={22}
                       className="work-window"
                       coverVideo={coverVideoURL}
                       favIcon={favIconURL}
@@ -122,9 +120,8 @@ class WorkIndex extends React.Component {
                       width={267}
                       height={173}
                       minWidth={180}
-                      minHeight={139}
                       lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
+                      lockAspectRatioExtraHeight={22}
                       className="work-window"
                       coverVideo={coverVideoURL}
                       favIcon={favIconURL}

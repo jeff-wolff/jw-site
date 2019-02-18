@@ -1,12 +1,13 @@
 .react-draggable {
     transition: transform 200ms ease;
+}
+
+.work-window {
     border: 1px solid;
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
-    /* outline:  1px solid #fff; */
     background-color: var(--window-border);
 }
-
 /* .react-draggable:after {
     z-index: 1;
     transition:  opacity 125ms ease;
@@ -31,24 +32,21 @@
 
 
 
-.react-draggable > .window-title {
+.window-title {
     width: calc(100% - 4px);
-    height: 18px;
-    line-height: 18px;
-    font-size: 10px;
+    height: var(--window-title-height);
+    line-height: var(--window-title-height);
     padding-left: .25rem;
     padding-right: 18px;
-    margin: 2px;
-    /* position: relative; */
-    /* z-index: -1; */
     user-select: none;
 }
 @media (min-width: 1152px) {
-    .react-draggable > .window-title {
+    .window-title {
         
     }
 }
-.react-draggable > .window-title > .content {
+.window-title > .content {
+    font-size: 10px;
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
@@ -56,21 +54,28 @@
     display: flex;
     align-items: center;
 }
+.work-window > .window-title {
+    margin-top: -1px;
+}
 
-.window-title .favicon {
+.work-window > .window-title .favicon {
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 5px;
+    position: relative;
+    top: -.032rem;
 }
 
 
-
-.react-draggable > .window-content {
+.window-content {
+    height: calc(100% - var(--window-title-height));
+}
+.work-window > .window-content {
     position: relative;
-    margin: 3px;
-    width: calc(100% - 6px);
-    height: calc(100% - 27px);
+    margin: 0 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 26px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,14 +84,14 @@
     padding: 24px;
 }
 @media (min-width: 1152px) {
-    .react-draggable > .window-content {
+    .work-window > .window-content {
         padding: 36px;
     }
 }
-.react-draggable > .window-video {
+.work-window > .window-video {
     transition:  all 125ms ease;
     position: absolute;
-    top: 23px;
+    top: var(--window-title-height);
     left: 4px;
     width: calc(100% - 8px);
     z-index: -1;
@@ -94,31 +99,31 @@
 }
 
 @media (hover: hover), (-moz-touch-enabled: 0) {
-    .react-draggable > .window-video {
+    .work-window > .window-video {
         opacity: .4;
     }
-    .react-draggable.dragging > .window-video,
-    .react-draggable:hover > .window-video {
+    .work-window.dragging > .window-video,
+    .work-window:hover > .window-video {
         opacity: 1;
     }
 
-    .react-draggable > .window-content > .window-button,
-    .react-draggable > .window-content > h2 {
+    .work-window > .window-content > .window-button,
+    .work-window > .window-content > h2 {
        transition: opacity 250ms ease;
        opacity: 0;
     }
 
-    .react-draggable.dragging > .window-content .window-button,
-    .react-draggable:hover > .window-content .window-button,
-    .react-draggable.dragging > .window-content h2,
-    .react-draggable:hover > .window-content h2 {
+    .work-window.dragging > .window-content .window-button,
+    .work-window:hover > .window-content .window-button,
+    .work-window.dragging > .window-content h2,
+    .work-window:hover > .window-content h2 {
         opacity: 1;
     }
 }
 
 
-.react-draggable a.window-link:hover,
-.react-draggable a.window-link:active {
+.work-window a.window-link:hover,
+.work-window a.window-link:active {
     background: none;
 }
 
@@ -145,12 +150,12 @@
     opacity: 0;
 }
 
-.react-draggable > .window-content h1,
-.react-draggable > .window-content h2,
-.react-draggable > .window-content h3,
-.react-draggable > .window-content h4,
-.react-draggable > .window-content h5,
-.react-draggable > .window-content h6 {
+.work-window > .window-content h1,
+.work-window > .window-content h2,
+.work-window > .window-content h3,
+.work-window > .window-content h4,
+.work-window > .window-content h5,
+.work-window > .window-content h6 {
     color: #fff;
     line-height:  1;
     margin: 0 0 .6em;
@@ -161,7 +166,7 @@
     z-index: 3;
     position: absolute;
     width: 32px;
-    height: 22px;
+    height: var(--window-title-height);
     top: 0;
     right: 0;
     text-align: center;
@@ -177,12 +182,11 @@
     transform: translate(-50%,-50%);
 }
 .window-collapse > .icon:after {
-    font-size: 21px;
-    font-weight: bold;
-    line-height: .8;
+    font-size: 16px;
+    line-height: 1;
     content: '_';
     position: relative;
-    top: -8px;
+    top: -7px;
     right: -2px;
 }
 .window-collapse > input[type=checkbox] {
@@ -195,8 +199,8 @@
 
 .window-collapse > input[type=checkbox]:checked + .icon:after {
     content: '+';
-    font-size: 22px;
-    line-height: .8;
+    font-size: 16px;
+    line-height: 1;
     font-weight: normal;
-    top: 1px;
+    top: 0;
 }

@@ -48,6 +48,7 @@ injectGlobal`
     --secondary-faded: #1414ab;
     --window-border: 190,190,190;
     --window-title: 255,255,255;
+    --window-title-height: 22px;
     --footer-bg: #111;
   }
   ::-moz-selection {
@@ -368,40 +369,46 @@ injectGlobal`
       max-height: 1024px;
     }
   }
-  .work-post-description-wrap:before {
-    width: 100%;
-    height: 100%;
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-image: linear-gradient(rgba(var(--bg-faded), 0),
-                                      rgba(var(--bg-faded), .99) 40%,
-                                      var(--bg) 100%);
-    display: none;
-  }
   .work-post-description {
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .work-post-description p:last-child {
-    margin-bottom: 0;
-  }
   @media (min-width: 1024px) {
     .work-post-description {
+        margin: 0 auto;
         max-width: 660px;
         width: 50%;
     }
   }
+  .work-post-description > * {
+    z-index: 1;
+  }
+  .work-post-description-wrap:before {
+    width: 100%;
+    height: calc(100% + 25vh);
+    content: " ";
+    position: absolute;
+    top: -25vh;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(rgba(var(--bg-faded), 0),
+                                      rgba(var(--bg-faded), 1) 30%,
+                                      var(--bg) 100%);
+  }
+  .work-post-description p:last-child {
+    margin-bottom: 0;
+  }
+  .work-post-description .title {
+    margin-bottom: 2rem;
+  }
   .work-post-description .desc-info {
     display: flex;
     flex-wrap: wrap;
-    max-width: fit-content;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   @media (min-width: 1024px) {
     .work-post-description .desc-info {
@@ -433,19 +440,13 @@ injectGlobal`
     margin-right: 2rem;
     margin-bottom: 2rem;
   }
-  .work-post-description .desc-info p:first-child {
-    width: 100%;
-    margin-right: 0;
-  }
+
   @media (min-width: 1024px) {
     .work-post-description .desc-info p {
       width: calc(33.33333% - 2rem);
     }
   }
-  .work-post-description .desc-info p:first-child {
-      width: 100%;
-      margin-right: 0;
-  }
+
   @media (min-width: 1024px) {
     .work-post-description .desc-info p {
         width: calc(33.33333% - 2rem);
@@ -518,9 +519,16 @@ injectGlobal`
   // }
 
   .demoVideo {
+    background: var(--bg);
     position: relative;
     z-index: 1;
     padding-bottom: 30px;
+  }
+  @media (min-width: 641px) {
+    .demoVideo {
+      z-index: 0;
+      background: none;
+    }
   }
   .demoVideo video {
     width: 100%;

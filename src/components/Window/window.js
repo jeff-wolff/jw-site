@@ -75,8 +75,8 @@ class Window extends React.Component {
   }
 
   collision() {
-      let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 30))),
-          y = count+(this.props.yOffset ? this.props.yOffset : 0);
+      let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 32))),
+          y = count+(this.props.yOffset ? this.props.yOffset :  Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 32))));
           if (this.props.xOffset) {
             while(this.props.xOffset > x) {
               x = this.props.xOffset;
@@ -146,9 +146,9 @@ class Window extends React.Component {
             backgroundColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
-          bounds='parent'
+          bounds={this.props.bounds ? this.props.bounds : "parent"}
           minWidth={this.props.minWidth ? this.props.minWidth : 200}
-          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 25}
+          minHeight={!this.state.isCollapsed ? (this.props.minHeight ? this.props.minHeight : 86) : 22}
           maxWidth={this.props.maxWidth}
           lockAspectRatioExtraHeight={this.state.lockAspectRatioExtraHeight}
           lockAspectRatio={this.state.lockAspect}
@@ -161,11 +161,18 @@ class Window extends React.Component {
             y: this.state.y
           }}
           resizeHandleClasses={{
+            bottomLeft: 'window-resizer',
             bottomRight: 'window-resizer'
           }}
           resizeHandleStyles={{
             bottom: {'display':'none'},
-            bottomLeft: {'display':'none'},
+            bottomLeft: {
+              'width':'32px',
+              'height':'32px',
+              'bottom':'-4px',
+              'left':'-4px',
+              'color': this.state.borderColor
+            },
             bottomRight: {
               'width':'32px',
               'height':'32px',

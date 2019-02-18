@@ -65,11 +65,11 @@ class WorkPostTemplate extends React.Component {
 
         <div className="work-post-scrollDown">👇🏻</div>
 
-        <div className="work-post-container Rte">
+        <div className="work-post-container">
           <div className="work-post-content">
             <div className="work-post-description-wrap container">
               <div className="work-post-description">
-                <h2>{post.frontmatter.description}</h2>
+                <h2 className="title">{post.frontmatter.description}</h2>
                 <h2 className="h3">Key Points:</h2>
                 <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
                 <div className="desc-info">
@@ -78,25 +78,53 @@ class WorkPostTemplate extends React.Component {
                   <p>ROLE<br />Web Developer</p>
                 </div>
               </div>
-
+              <Window 
+                bounds='body'
+                title='test'
+                minWidth={280}
+                width={280}
+                height={178}
+                maxWidth={1280}
+                yOffset={-300}
+                xOffset={0}
+                lockAspect={1.777778}
+                lockAspectRatioExtraHeight={22}
+                >
+                 {coverVideo}
+              </Window>
+              <Window 
+                bounds='body'
+                title='test'
+                minWidth={280}
+                width={280}
+                height={178}
+                maxWidth={1280}
+                yOffset={-109}
+                xOffset={0}
+                lockAspect={1.777778}
+                lockAspectRatioExtraHeight={22}
+                >
+                 {coverVideo}
+              </Window>
+              <Window 
+                bounds='body'
+                title='test'
+                minWidth={280}
+                width={280}
+                height={178}
+                maxWidth={1280}
+                yOffset={1200}
+                xOffset={20}
+                lockAspect={1.777778}
+                lockAspectRatioExtraHeight={22}
+                >
+                 {coverVideo}
+              </Window>
               <MediaQuery query="(min-width: 1px)" key={'w1'}>
                   <MediaQuery query="(min-width: 1440px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={100}
-                      xOffset={740}
-                      >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
+                 {/* <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
                     <Window 
                       title="Error"
                       width={360}
@@ -127,11 +155,11 @@ class WorkPostTemplate extends React.Component {
                        <p>This program requires Windows 95.</p>
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
-                  </MediaQuery>
+                  </MediaQuery>*/}
               </MediaQuery>
 
 
-              <MediaQuery query="(min-width: 1px)" key={'w2'}>
+              {/*<MediaQuery query="(min-width: 1px)" key={'w2'}>
                   <MediaQuery query="(min-width: 1440px)">
                     <Window 
                       title="Error"
@@ -180,10 +208,10 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-              </MediaQuery>
+              </MediaQuery>*/}
 
 
-
+{/*
               <MediaQuery query="(min-width: 1px)" key={'w3'}>
                   <MediaQuery query="(min-width: 1440px)">
                     <Window 
@@ -233,7 +261,7 @@ class WorkPostTemplate extends React.Component {
                        <Button size="small" to="/work/">OK</Button>
                     </Window>
                   </MediaQuery>
-              </MediaQuery>
+              </MediaQuery>*/}
 
 
 
