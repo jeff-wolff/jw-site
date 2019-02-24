@@ -6,6 +6,7 @@ team: "Cuker Agency"
 url: "vans.com/history"
 favIcon: "./vans_fav.png"
 featuredVideo: "./vans_optimized.mp4"
+lifestyleShot: "./vans_lifestyle.jpg"
 theme: true
 tbg: "#373737"
 tbgf: "55, 55, 55"

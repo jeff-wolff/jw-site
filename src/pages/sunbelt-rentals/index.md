@@ -6,6 +6,7 @@ team: "Cuker Agency"
 url: "sunbeltrentals.com"
 favIcon: "./sunbelt_fav.png"
 featuredVideo: "./sunbelt_optimized.mp4"
+lifestyleShot: "./sunbelt_lifestyle.jpg"
 theme: true
 tbg: "#0d723b"
 tbgf: "13, 114, 59"

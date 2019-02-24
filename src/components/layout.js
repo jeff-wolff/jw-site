@@ -361,7 +361,7 @@ injectGlobal`
   }
   .work-post-description-wrap {
     position: relative;
-    min-height: 300vh;
+    min-height: 300vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -370,7 +370,7 @@ injectGlobal`
   @media (min-width: 768px) {
     .work-post-description-wrap {
       min-height: 0;
-      height: 125vh;
+      height: 125vw;
       max-height: 1024px;
     }
   }
@@ -479,6 +479,19 @@ injectGlobal`
       margin-top: 50px;
     }
   }
+
+  .work-post-lifestyle {
+    height: 100vh;
+  }
+  .work-post-lifestyle img{
+    object-fit: cover;
+    height: 100%;
+  }
+  @media (min-width: 1024px) {
+    .work-post-lifestyle {
+      height: auto;
+    }
+  }
   .work-post-nav {
     z-index: 1;
     position: relative;
@@ -522,23 +535,7 @@ injectGlobal`
   //   margin-right: -1em;
   // }
 
-  .demoVideo {
-    background: var(--bg);
-    position: relative;
-    z-index: 1;
-    padding-bottom: 30px;
-  }
-  @media (min-width: 641px) {
-    .demoVideo {
-      z-index: 0;
-      background: none;
-    }
-  }
-  .demoVideo video {
-    width: 100%;
-    margin-bottom: 6px;
-  }
-
+  
   .work-post-footer-cta {
     margin-bottom: 50vh;
   }

@@ -6,6 +6,7 @@ team: "Cuker Agency"
 url: "ripcurl.com"
 favIcon: "./ripcurl_fav.png"
 featuredVideo: "./ripcurl_optimized.mp4"
+lifestyleShot: "./ripcurl_lifestyle.jpg"
 theme: true
 tbg: "#962313"
 tbgf: "150, 35, 19"

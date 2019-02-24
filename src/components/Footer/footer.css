@@ -97,6 +97,7 @@ footer .footer-middle input {
     outline: none;
     width: 80%;
     max-width: 360px;
+    margin: 0;
 }
 
 footer .footer-middle button {

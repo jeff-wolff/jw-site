@@ -18,7 +18,7 @@ class Header extends React.Component {
             color: '#fff',
           }}
         >
-          <span>Je</span>ff<span> Wol</span>ff
+          J<span>eff </span>W<span>olff</span>
         </Link>
 
         <ul className="navigation">

@@ -2,8 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Rnd from 'react-rnd';
 import classNames from 'classnames';
+import Window from '../Window/window.js'
 
-import './window.css'
 
 const windowGlobal = typeof window !== 'undefined' && window;
 
@@ -12,7 +12,7 @@ let count = 0;
 let positions = [];
 let hasPoints = false;
 
-class Window extends React.Component {
+class BlankWindow extends Window {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,96 +31,7 @@ class Window extends React.Component {
       titleColor: this.props.titleColor ? this.props.titleColor : "var(--window-title)",
       borderColor: this.props.borderColor ? this.props.borderColor : "var(--window-border)",
       secondaryColor: this.props.secondaryColor ? this.props.secondaryColor : "var(--secondary)",
-      coverVideoURL: this.props.coverVideo ? this.props.coverVideo : "",
-      favIconURL: this.props.favIcon ? this.props.favIcon : ""
     }
-
-    this.theme = this.theme.bind(this);
-    this.collision = this.collision.bind(this);
-    this.toggleCollapse = this.toggleCollapse.bind(this);
-    this.handlePreventTouchmoveWhenPanning = this.handlePreventTouchmoveWhenPanning.bind(this);
-  }
-
-  defaultTheme() {
-    // setTimeout(function(){
-      document.documentElement.style.setProperty('--bg', '#151515');
-      document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
-      document.documentElement.style.setProperty('--primary', '#ff0');
-      document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-      document.documentElement.style.setProperty('--secondary', '#2828ef');
-      document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
-      document.documentElement.style.setProperty('--window-border', '190,190,190');
-      document.documentElement.style.setProperty('--window-title', '0,0,0');
-      document.documentElement.style.setProperty('--footer-bg', '#111');
-      let metaThemeColor = document.querySelector("meta[name=theme-color]");
-      metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-    // },125);
-  }
-
-  theme() {
-    // console.log('theme changed');
-    // setTimeout(function(){
-      document.documentElement.style.setProperty('--bg', this.props.tbg);
-      document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
-      document.documentElement.style.setProperty('--primary', this.props.tp);
-      document.documentElement.style.setProperty('--primary-faded', this.props.tpf);
-      document.documentElement.style.setProperty('--secondary', this.props.ts);
-      document.documentElement.style.setProperty('--secondary-faded', this.props.tsf);
-      document.documentElement.style.setProperty('--window-border', this.props.twb);
-      document.documentElement.style.setProperty('--window-title', this.props.twt);
-      document.documentElement.style.setProperty('--footer-bg', this.props.tfbg);
-      let metaThemeColor = document.querySelector("meta[name=theme-color]");
-      metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-    // }.bind(this),125);
-  }
-
-  collision() {
-      let x = Math.floor(Math.random() * Math.floor((windowGlobal.innerWidth - this.state.width - 32))),
-          y = count+(this.props.yOffset ? this.props.yOffset :  Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 32))));
-          if (this.props.xOffset) {
-            while(this.props.xOffset > x) {
-              x = this.props.xOffset;
-            }
-          }
-          // console.log(x,y);
-          // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
-      positions.push({
-        width: this.state.width,
-        height: this.state.height,
-        x: x,
-        y: y
-      })
-      setTimeout(() => {
-        this.setState({
-          x: x,
-          y: y
-        });
-      }, 10);
-  }
-
-  toggleCollapse() {
-    const currentState = this.state.isCollapsed;
-    this.setState({ isCollapsed: !currentState });
-  }
-
-  handlePreventTouchmoveWhenPanning(event) {
-   if (this.state.dragging || this.state.resizing) {
-     event.preventDefault();
-   }
-  };
-
-  componentDidMount() {
-    this.collision();
-    count = Math.floor(100 + Math.random() * Math.floor(200));
-    window.document.body.addEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
-       passive: false
-     });
-  }
-
-  componentWillUnmount () {
-   window.document.body.removeEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
-     passive: false
-   });
   }
 
   render() {
@@ -247,18 +158,6 @@ class Window extends React.Component {
             }
           }}
       >
-          <div className="window-title"
-              style={{
-                  color: 'rgb('+this.state.titleColor+')',
-                  backgroundColor: this.state.primaryColor,
-              }}
-          >
-            <div className="content">
-              {/*<small>{Math.round(this.state.width)}x{Math.round(this.state.height)}</small> - */}
-              {this.state.favIconURL ? <img src={this.state.favIconURL} className="favicon" /> : "" }
-              {this.props.title}
-            </div>
-          </div>
           <label 
             htmlFor={this.props.id}
             className="window-collapse"
@@ -277,19 +176,9 @@ class Window extends React.Component {
             <span className="icon"></span>
           </label>
           {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
-          <div className="window-content" style={{ 
-                  backgroundColor: 'rgba('+this.state.bgColor+',.62)'
-              }}
-          >
-            {this.props.children}
-          </div>
-          {this.state.coverVideoURL ? <div className="window-video">
-            <video muted loop playsInline ref="coverVid">
-              <source src={this.state.coverVideoURL} type="video/mp4" />
-            </video>
-          </div> : ""}
+          <div>{this.props.children}</div>
       </Rnd>
     )
   }
 }
-export default Window
+export default BlankWindow

@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
-import Window from '../components/Window/window.js'
+import BlankWindow from '../components/BlankWindow/blank-window.js'
 
 import MediaQuery from 'react-responsive'
 
@@ -39,12 +39,17 @@ class WorkPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
     const siteURL = post.frontmatter.url
-    let coverVideo, reelVideo;
+    let coverVideo, lifestyleShot;
     if (post.frontmatter.featuredVideo != null) {
      coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
-     reelVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline controls />;
     } else {
      coverVideo = "";
+    }
+
+    if (post.frontmatter.lifestyleShot != null) {
+      lifestyleShot = <img src={post.frontmatter.lifestyleShot.publicURL} />;
+    } else {
+      lifestyleShot= ""
     }
 
     return (
@@ -78,48 +83,44 @@ class WorkPostTemplate extends React.Component {
                   <p>ROLE<br />Web Developer</p>
                 </div>
               </div>
-              <Window 
+              <BlankWindow 
                 bounds='body'
-                title='test'
                 minWidth={280}
                 width={280}
-                height={178}
+                height={157.5}
                 maxWidth={1280}
                 yOffset={-300}
                 xOffset={0}
                 lockAspect={1.777778}
-                lockAspectRatioExtraHeight={22}
                 >
                  {coverVideo}
-              </Window>
-              <Window 
+              </BlankWindow>
+              <BlankWindow 
                 bounds='body'
                 title='test'
                 minWidth={280}
                 width={280}
-                height={178}
+                height={157.5}
                 maxWidth={1280}
                 yOffset={-109}
                 xOffset={0}
                 lockAspect={1.777778}
-                lockAspectRatioExtraHeight={22}
                 >
                  {coverVideo}
-              </Window>
-              <Window 
+              </BlankWindow>
+              <BlankWindow 
                 bounds='body'
                 title='test'
                 minWidth={280}
                 width={280}
-                height={178}
+                height={157.5}
                 maxWidth={1280}
                 yOffset={1200}
                 xOffset={20}
                 lockAspect={1.777778}
-                lockAspectRatioExtraHeight={22}
                 >
                  {coverVideo}
-              </Window>
+              </BlankWindow>
               <MediaQuery query="(min-width: 1px)" key={'w1'}>
                   <MediaQuery query="(min-width: 1440px)">
 
@@ -266,9 +267,8 @@ class WorkPostTemplate extends React.Component {
 
 
             </div>
-            <figure className="demoVideo">
-              {reelVideo}
-              <figcaption className="show-for-mobile container">&#8627; Tip: Turn your device horizontally to view video fullscreen.</figcaption>
+            <figure className="work-post-lifestyle">
+              {lifestyleShot}
             </figure>
           </div>
         </div>
@@ -315,6 +315,9 @@ export const pageQuery = graphql`
         team
         url
         featuredVideo {
+          publicURL
+        }
+        lifestyleShot {
           publicURL
         }
         theme
