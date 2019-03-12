@@ -147,6 +147,7 @@
 }
 .react-draggable.collapsed > .window-collapse + div {
     opacity: 0;
+    visibility: hidden;
 }
 
 .work-window > .window-content h1,

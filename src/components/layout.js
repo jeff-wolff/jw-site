@@ -367,6 +367,11 @@ injectGlobal`
     flex-direction: column;
     justify-content: center;
   }
+  @media (min-width: 640px) {
+    .work-post-description-wrap {
+      min-height: 250vw;
+    }
+  }
   @media (min-width: 768px) {
     .work-post-description-wrap {
       min-height: 0;

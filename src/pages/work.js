@@ -87,7 +87,7 @@ class WorkIndex extends React.Component {
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 741px) and (max-width: 1339px)">
+                  <MediaQuery query="(min-width: 741px) and (max-width: 1439px)">
                     <Window 
                       title={windowTitle}
                       width={425}

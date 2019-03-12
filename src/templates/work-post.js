@@ -39,11 +39,26 @@ class WorkPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
     const siteURL = post.frontmatter.url
-    let coverVideo, lifestyleShot;
+    let coverVideo, lifestyleShot, demoVideoDesktop, demoVideoTablet, demoVideoPhone;
     if (post.frontmatter.featuredVideo != null) {
      coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
     } else {
      coverVideo = "";
+    }
+    if (post.frontmatter.demoVideoDesktop != null) {
+     demoVideoDesktop = <video src={post.frontmatter.demoVideoDesktop.publicURL} autoPlay muted loop playsInline />;
+    } else {
+     demoVideoDesktop = "";
+    }
+    if (post.frontmatter.demoVideoTablet != null) {
+     demoVideoTablet = <video src={post.frontmatter.demoVideoTablet.publicURL} autoPlay muted loop playsInline />;
+    } else {
+     demoVideoTablet = "";
+    }
+    if (post.frontmatter.demoVideoPhone != null) {
+     demoVideoPhone = <video src={post.frontmatter.demoVideoPhone.publicURL} autoPlay muted loop playsInline />;
+    } else {
+     demoVideoPhone = "";
     }
 
     if (post.frontmatter.lifestyleShot != null) {
@@ -83,188 +98,125 @@ class WorkPostTemplate extends React.Component {
                   <p>ROLE<br />Web Developer</p>
                 </div>
               </div>
-              <BlankWindow 
-                bounds='body'
-                minWidth={280}
-                width={280}
-                height={157.5}
-                maxWidth={1280}
-                yOffset={-300}
-                xOffset={0}
-                lockAspect={1.777778}
-                >
-                 {coverVideo}
-              </BlankWindow>
-              <BlankWindow 
-                bounds='body'
-                title='test'
-                minWidth={280}
-                width={280}
-                height={157.5}
-                maxWidth={1280}
-                yOffset={-109}
-                xOffset={0}
-                lockAspect={1.777778}
-                >
-                 {coverVideo}
-              </BlankWindow>
-              <BlankWindow 
-                bounds='body'
-                title='test'
-                minWidth={280}
-                width={280}
-                height={157.5}
-                maxWidth={1280}
-                yOffset={1200}
-                xOffset={20}
-                lockAspect={1.777778}
-                >
-                 {coverVideo}
-              </BlankWindow>
-              <MediaQuery query="(min-width: 1px)" key={'w1'}>
+              <MediaQuery query="(min-width: 1px)" key="desktop">
                   <MediaQuery query="(min-width: 1440px)">
-
+                    <BlankWindow 
+                      bounds='body'
+                      width={480}
+                      height={270}
+                      minWidth={359}
+                      maxWidth={1280}
+                      lockAspect={1.77777778}
+                      yOffset={-300}
+                      >
+                        {demoVideoDesktop}
+                    </BlankWindow>
                   </MediaQuery>
-                 {/* <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
-                    <Window 
-                      title="Error"
+                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                    <BlankWindow 
+                      bounds='body'
                       width={360}
                       height={202.5}
-                      minWidth={280}
+                      minWidth={224}
                       lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={100}
-                      xOffset={100}
+                      yOffset={-150}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoDesktop}
+                    </BlankWindow>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 1023px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
+                  <MediaQuery query="(max-width: 767px)">
+                    <BlankWindow 
+                      bounds='body'
+                      width={280}
+                      height={157.5}
                       minWidth={280}
                       lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={100}
-                      xOffset={0}
+                      yOffset={-100}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
-                  </MediaQuery>*/}
+                        {demoVideoDesktop}
+                    </BlankWindow>
+                  </MediaQuery>
               </MediaQuery>
 
-
-              {/*<MediaQuery query="(min-width: 1px)" key={'w2'}>
+              <MediaQuery query="(min-width: 1px)" key="tablet">
                   <MediaQuery query="(min-width: 1440px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={200}
-                      xOffset={740}
+                    <BlankWindow 
+                      bounds='body'
+                      width={384}
+                      height={512}
+                      minWidth={320}
+                      maxWidth={1280}
+                      lockAspect={0.75}
+                      yOffset={600}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoTablet}
+                    </BlankWindow>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={300}
-                      xOffset={300}
+                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                    <BlankWindow 
+                      bounds='body'
+                      width={288}
+                      height={384}
+                      minWidth={240}
+                      lockAspect={0.75}
+                      yOffset={600}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoTablet}
+                    </BlankWindow>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 1023px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={200}
-                      xOffset={0}
+                  <MediaQuery query="(max-width: 767px)">
+                    <BlankWindow 
+                      bounds='body'
+                      width={192}
+                      height={256}
+                      minWidth={160}
+                      lockAspect={0.75}
+                      yOffset={800}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoTablet}
+                    </BlankWindow>
                   </MediaQuery>
-              </MediaQuery>*/}
+              </MediaQuery>
 
-
-{/*
-              <MediaQuery query="(min-width: 1px)" key={'w3'}>
+              <MediaQuery query="(min-width: 1px)" key="phone">
                   <MediaQuery query="(min-width: 1440px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={300}
-                      xOffset={740}
+                    <BlankWindow 
+                      bounds='body'
+                      width={202.1622}
+                      height={360}
+                      minWidth={160}
+                      maxWidth={366}
+                      lockAspect={0.56156156}
+                      yOffset={1500}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoPhone}
+                    </BlankWindow>
                   </MediaQuery>
-                  <MediaQuery query="(min-width: 1024px) and (max-width: 1339px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={200}
-                      xOffset={500}
+                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                    <BlankWindow 
+                      bounds='body'
+                      width={202.1622}
+                      height={360}
+                      minWidth={160}
+                      lockAspect={0.56156156}
+                      yOffset={1600}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoPhone}
+                    </BlankWindow>
                   </MediaQuery>
-                  <MediaQuery query="(max-width: 1023px)">
-                    <Window 
-                      title="Error"
-                      width={360}
-                      height={202.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      lockAspectRatioExtraHeight={26}
-                      className="work-window"
-                      yOffset={1300}
-                      xOffset={12}
+                  <MediaQuery query="(max-width: 767px)">
+                    <BlankWindow 
+                      bounds='body'
+                      width={112.312312}
+                      height={200}
+                      minWidth={100}
+                      lockAspect={0.56156156}
+                      yOffset={1200}
                       >
-                       <p>This program requires Windows 95.</p>
-                       <Button size="small" to="/work/">OK</Button>
-                    </Window>
+                        {demoVideoPhone}
+                    </BlankWindow>
                   </MediaQuery>
-              </MediaQuery>*/}
-
-
+              </MediaQuery>
 
             </div>
             <figure className="work-post-lifestyle">
@@ -318,6 +270,15 @@ export const pageQuery = graphql`
           publicURL
         }
         lifestyleShot {
+          publicURL
+        }
+        demoVideoDesktop {
+          publicURL
+        }
+        demoVideoTablet {
+          publicURL
+        }
+        demoVideoPhone {
           publicURL
         }
         theme
