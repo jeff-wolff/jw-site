@@ -23,9 +23,17 @@ class WorkPostTemplate extends React.Component {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
+
+  centerWorkTitle() {
+    let workTitle = document.getElementById('workTitle');
+    let clientHeight = workTitle.clientHeight;
+    workTitle.style.top = "calc(50% - "+clientHeight/2+"px)";
+  }
+
   componentDidMount() {
     const post = this.props.data.markdownRemark
     console.log(post.frontmatter);
+    this.centerWorkTitle();
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
@@ -76,7 +84,7 @@ class WorkPostTemplate extends React.Component {
 
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
-        <div className="work-post-title centered-title preload container">
+        <div id="workTitle" className="work-post-title centered-title preload container">
           <h1 className="title">{post.frontmatter.title}</h1>
           <div className="website-btn">
             <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>

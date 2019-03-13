@@ -285,11 +285,11 @@ injectGlobal`
   }
   .centered-title {
     transition: filter 500ms ease, color 275ms ease, opacity 500ms ease, text-shadow 275ms ease;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // width: 100%;
+    // height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     text-align: center;
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
@@ -313,7 +313,7 @@ injectGlobal`
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
       text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
       filter: blur(0);
-      z-index: 1;
+      z-index: 2;
       opacity: 1;
   }
   .centered-title.work-title {
@@ -328,12 +328,20 @@ injectGlobal`
     }
   }
   .work-post-title {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // width: 100%;
+    // height: 100vh;
     position: sticky;
     top: 0;
+    top: calc(50% - 115px);
+    width: fit-content;
+    margin: 0 auto 60px;
+  }
+  @media (min-width: 768px) {
+    .work-post-title.container {
+      padding: 0;
+    }
   }
   .work-post-title .title {
     margin-bottom: 0;
@@ -352,7 +360,7 @@ injectGlobal`
     }
   }
   .work-post-container {
-    // margin-bottom: 100vh;
+    margin-top: 125vh;
   }
   @media (max-width: 640px) {
     .work-post-content {
@@ -384,7 +392,7 @@ injectGlobal`
   }
   .work-post-description {
     position: relative;
-    z-index: 1;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -405,7 +413,7 @@ injectGlobal`
     position: absolute;
     top: -25vh;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     background-image: linear-gradient(rgba(var(--bg-faded), 0),
                                       rgba(var(--bg-faded), 1) 30%,
                                       var(--bg) 100%);
@@ -467,7 +475,7 @@ injectGlobal`
       text-align: justify;
     }
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1152px) {
     .work-post-description .desc-info {
       align-self: flex-start;
     }
@@ -478,13 +486,14 @@ injectGlobal`
   .website-btn {
     margin: 0 auto;
     width: auto;
+    width: fit-content;
     max-width: 429px;
-    margin-top: 30px;
+    margin-top: 20px;
     word-break: break-all;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1152px) {
     .website-btn {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 
@@ -706,6 +715,15 @@ class Template extends React.Component {
 
   componentDidMount() {
     document.addEventListener('scroll', this.throttle(this.trackScrolling, 50));
+    const wrappedElement = document.getElementsByClassName('wrapper')[0];
+    if (this.isBottom(wrappedElement)) {
+      wrappedElement.classList.add('fade-noise');
+      setTimeout(function(){
+        wrappedElement.classList.add('disable-noise');
+      },250);
+    } else {
+      wrappedElement.classList.remove('disable-noise','fade-noise');
+    }
   }
 
   componentWillUnmount() {

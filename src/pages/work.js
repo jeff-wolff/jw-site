@@ -62,9 +62,9 @@ class WorkIndex extends React.Component {
                   <MediaQuery query="(min-width: 1440px)">
                     <Window 
                       title={windowTitle}
-                      width={640}
-                      height={382}
-                      minWidth={359}
+                      width={359}
+                      height={224}
+                      minWidth={260}
                       maxWidth={1279}
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={22}
@@ -90,8 +90,8 @@ class WorkIndex extends React.Component {
                   <MediaQuery query="(min-width: 741px) and (max-width: 1439px)">
                     <Window 
                       title={windowTitle}
-                      width={425}
-                      height={263}
+                      width={359}
+                      height={224}
                       minWidth={224}
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={22}
