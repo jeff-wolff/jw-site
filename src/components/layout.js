@@ -221,7 +221,7 @@ injectGlobal`
   }
   .wrapper {
       transition: 100ms ease background-color;
-      min-height: 124vh;
+      min-height: 100vh;
       margin-bottom: 82vh;
       margin-top: 114px;
       margin-left: auto;
@@ -697,6 +697,74 @@ injectGlobal`
   .wrapper.disable-noise:after {
     z-index: -201;
   }
+
+  .about-me {
+    position: relative;
+    z-index: 2;
+    margin-top: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .about-me .profile {
+    max-width: 50%;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 1024px) {
+    .about-me {
+      flex-direction: row;
+    }
+    .about-me .profile {
+      width: 30%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 0;
+    }
+    .about-me .info {
+      width: 40%;
+      margin-right: 10%;
+    }
+  }
+
+  .about-me form {
+      margin: 2rem auto;
+  }
+  .about-me label {
+    color:  #ff0;
+    color: var(--primary);
+  }
+  .about-me input,
+  .about-me button {
+      background: none;
+      border: solid #ff0;
+      border: solid var(--primary-faded);
+      border-width: 0 0 2px;
+      color:  #ff0;
+      color: var(--primary);
+      padding: 1em 0;
+      outline: none;
+      width: 80%;
+      max-width: 360px;
+      margin: 0;
+  }
+  .about-me button {
+      cursor: pointer;
+      border: none;
+      border-bottom: 2px solid #ff0;
+      border-bottom: 2px solid var(--primary-faded);
+      padding: 0 1em;
+      width:  48px;
+      height:  48px;
+  }
+
 `;
 
 class Template extends React.Component {

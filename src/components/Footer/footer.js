@@ -7,17 +7,7 @@ import './footer.css'
 const Footer = ({}) => (
   <footer>
      <div className="container">
-        <div className="footer-top">
-          <form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-            <div>
-              <label htmlFor="mce-EMAIL" className="h2">Let me keep you updated.</label>
-            </div>
-            <div>
-              <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail" />
-              <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
-            </div>
-          </form>
-        </div>
+        <div className="footer-top">        </div>
         <div className="footer-middle">
           <Button to="/work/" inlineicon="left"><span>💼</span> Work</Button>
           <Button to="/notes/" inlineicon="left"><span>📔</span> Notes</Button>
