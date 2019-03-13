@@ -98,125 +98,7 @@ class WorkPostTemplate extends React.Component {
                   <p>ROLE<br />Web Developer</p>
                 </div>
               </div>
-              <MediaQuery query="(min-width: 1px)" key="desktop">
-                  <MediaQuery query="(min-width: 1440px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={480}
-                      height={270}
-                      minWidth={359}
-                      maxWidth={1280}
-                      lockAspect={1.77777778}
-                      yOffset={-300}
-                      >
-                        {demoVideoDesktop}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={360}
-                      height={202.5}
-                      minWidth={224}
-                      lockAspect={1.77777778}
-                      yOffset={-150}
-                      >
-                        {demoVideoDesktop}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(max-width: 767px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={280}
-                      height={157.5}
-                      minWidth={280}
-                      lockAspect={1.77777778}
-                      yOffset={-100}
-                      >
-                        {demoVideoDesktop}
-                    </BlankWindow>
-                  </MediaQuery>
-              </MediaQuery>
 
-              <MediaQuery query="(min-width: 1px)" key="tablet">
-                  <MediaQuery query="(min-width: 1440px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={384}
-                      height={512}
-                      minWidth={320}
-                      maxWidth={1280}
-                      lockAspect={0.75}
-                      yOffset={600}
-                      >
-                        {demoVideoTablet}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={288}
-                      height={384}
-                      minWidth={240}
-                      lockAspect={0.75}
-                      yOffset={600}
-                      >
-                        {demoVideoTablet}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(max-width: 767px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={192}
-                      height={256}
-                      minWidth={160}
-                      lockAspect={0.75}
-                      yOffset={800}
-                      >
-                        {demoVideoTablet}
-                    </BlankWindow>
-                  </MediaQuery>
-              </MediaQuery>
-
-              <MediaQuery query="(min-width: 1px)" key="phone">
-                  <MediaQuery query="(min-width: 1440px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={202.1622}
-                      height={360}
-                      minWidth={160}
-                      maxWidth={366}
-                      lockAspect={0.56156156}
-                      yOffset={1500}
-                      >
-                        {demoVideoPhone}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={202.1622}
-                      height={360}
-                      minWidth={160}
-                      lockAspect={0.56156156}
-                      yOffset={1600}
-                      >
-                        {demoVideoPhone}
-                    </BlankWindow>
-                  </MediaQuery>
-                  <MediaQuery query="(max-width: 767px)">
-                    <BlankWindow 
-                      bounds='body'
-                      width={112.312312}
-                      height={200}
-                      minWidth={100}
-                      lockAspect={0.56156156}
-                      yOffset={1200}
-                      >
-                        {demoVideoPhone}
-                    </BlankWindow>
-                  </MediaQuery>
-              </MediaQuery>
 
             </div>
             <figure className="work-post-lifestyle">
@@ -226,6 +108,125 @@ class WorkPostTemplate extends React.Component {
         </div>
 
         <div className="work-post-nav container">
+        <MediaQuery query="(min-width: 1px)" key="desktop">
+            <MediaQuery query="(min-width: 1440px)">
+              <BlankWindow 
+                bounds='body'
+                width={480}
+                height={270}
+                minWidth={359}
+                maxWidth={1280}
+                lockAspect={1.77777778}
+                yOffset={0}
+                >
+                  {demoVideoDesktop}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+              <BlankWindow 
+                bounds='body'
+                width={360}
+                height={202.5}
+                minWidth={224}
+                lockAspect={1.77777778}
+                yOffset={0}
+                >
+                  {demoVideoDesktop}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 767px)">
+              <BlankWindow 
+                bounds='body'
+                width={280}
+                height={157.5}
+                minWidth={280}
+                lockAspect={1.77777778}
+                yOffset={0}
+                >
+                  {demoVideoDesktop}
+              </BlankWindow>
+            </MediaQuery>
+        </MediaQuery>
+
+        <MediaQuery query="(min-width: 1px)" key="tablet">
+            <MediaQuery query="(min-width: 1440px)">
+              <BlankWindow 
+                bounds='body'
+                width={384}
+                height={512}
+                minWidth={320}
+                maxWidth={1280}
+                lockAspect={0.75}
+                yOffset={0}
+                >
+                  {demoVideoTablet}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+              <BlankWindow 
+                bounds='body'
+                width={288}
+                height={384}
+                minWidth={240}
+                lockAspect={0.75}
+                yOffset={0}
+                >
+                  {demoVideoTablet}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 767px)">
+              <BlankWindow 
+                bounds='body'
+                width={192}
+                height={256}
+                minWidth={160}
+                lockAspect={0.75}
+                yOffset={0}
+                >
+                  {demoVideoTablet}
+              </BlankWindow>
+            </MediaQuery>
+        </MediaQuery>
+
+        <MediaQuery query="(min-width: 1px)" key="phone">
+            <MediaQuery query="(min-width: 1440px)">
+              <BlankWindow 
+                bounds='body'
+                width={202.1622}
+                height={360}
+                minWidth={160}
+                maxWidth={366}
+                lockAspect={0.56156156}
+                yOffset={0}
+                >
+                  {demoVideoPhone}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+              <BlankWindow 
+                bounds='body'
+                width={202.1622}
+                height={360}
+                minWidth={160}
+                lockAspect={0.56156156}
+                yOffset={0}
+                >
+                  {demoVideoPhone}
+              </BlankWindow>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 767px)">
+              <BlankWindow 
+                bounds='body'
+                width={112.312312}
+                height={200}
+                minWidth={100}
+                lockAspect={0.56156156}
+                yOffset={0}
+                >
+                  {demoVideoPhone}
+              </BlankWindow>
+            </MediaQuery>
+        </MediaQuery>
           {
               previous &&
               <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">

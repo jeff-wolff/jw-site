@@ -153,7 +153,7 @@ injectGlobal`
       font-size: 1em;
       line-height: 1.6;
       font-weight: normal;
-      margin: 0;
+      margin: 0 0 1em;
       letter-spacing: 0;
   }
   .Rte h1,.Rte .h1,.Rte h2,.Rte .h2,.Rte h3,.Rte .h3 {
@@ -335,6 +335,9 @@ injectGlobal`
     position: sticky;
     top: 0;
   }
+  .work-post-title .title {
+    margin-bottom: 0;
+  }
   .work-post-scrollDown {
     font-size: 2.6em;
     z-index: 2;
@@ -349,7 +352,7 @@ injectGlobal`
     }
   }
   .work-post-container {
-    margin-bottom: 100vh;
+    // margin-bottom: 100vh;
   }
   @media (max-width: 640px) {
     .work-post-content {
@@ -501,10 +504,11 @@ injectGlobal`
     z-index: 1;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     padding-bottom: 20px;
+    height: 100vh;
+    
   }
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
