@@ -702,7 +702,7 @@ injectGlobal`
     position: relative;
     z-index: 2;
     margin-top: 100vh;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -712,11 +712,13 @@ injectGlobal`
   .about-me .content {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
   }
   .about-me .profile {
-    max-width: 50%;
-    margin-bottom: 2rem;
+    
+    margin-bottom: 3rem;
   }
   @media (min-width: 1024px) {
     .about-me {
@@ -735,7 +737,25 @@ injectGlobal`
   }
 
   .about-me form {
-      margin: 2rem auto;
+    margin: 12rem auto;
+    max-width: none;
+    width: 100%;
+    padding: 50px 60px 60px;
+    border: 1px solid #ff0;
+    border: 1px solid var(--primary-faded);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .about-me form {
+      width: 75%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .about-me form {
+      width: 50%;
+    }
   }
   .about-me label {
     color:  #ff0;
@@ -746,21 +766,18 @@ injectGlobal`
       background: none;
       border: solid #ff0;
       border: solid var(--primary-faded);
-      border-width: 0 0 2px;
+      border-width: 0 0 1px;
       color:  #ff0;
       color: var(--primary);
       padding: 1em 0;
       outline: none;
-      width: 80%;
+      width: calc(100% - 48px);
       height: 48px;
       max-width: 360px;
       margin: 0;
   }
   .about-me button {
       cursor: pointer;
-      border: none;
-      border-bottom: 2px solid #ff0;
-      border-bottom: 2px solid var(--primary-faded);
       padding: 0 1em;
       width:  48px;
   }
