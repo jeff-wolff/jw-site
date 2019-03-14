@@ -221,7 +221,7 @@ injectGlobal`
   }
   .wrapper {
       transition: 100ms ease background-color;
-      min-height: 100vh;
+      min-height: 260vh;
       margin-bottom: 82vh;
       margin-top: 114px;
       margin-left: auto;

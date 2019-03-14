@@ -90,6 +90,7 @@ footer a.rewind {
     box-shadow: none;
 }
 footer a.rewind:hover {
+    background: none;
     opacity: .8;
 }
 
