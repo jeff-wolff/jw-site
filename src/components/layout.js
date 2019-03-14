@@ -752,6 +752,7 @@ injectGlobal`
       padding: 1em 0;
       outline: none;
       width: 80%;
+      height: 48px;
       max-width: 360px;
       margin: 0;
   }
@@ -762,7 +763,6 @@ injectGlobal`
       border-bottom: 2px solid var(--primary-faded);
       padding: 0 1em;
       width:  48px;
-      height:  48px;
   }
 
 `;
