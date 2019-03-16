@@ -33,6 +33,39 @@ class BlankWindow extends Window {
       secondaryColor: this.props.secondaryColor ? this.props.secondaryColor : "var(--secondary)",
     }
   }
+  collision() {
+      let x = (this.props.xOffset ? this.props.xOffset : Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width))),
+          y = (this.props.yOffset ? this.props.yOffset :  Math.floor(Math.random() * Math.floor(windowGlobal.innerHeight - this.state.height)));
+      positions.push({
+        width: this.state.width,
+        height: this.state.height,
+        x: x,
+        y: y
+      })
+      setTimeout(() => {
+        this.setState({
+          x: x,
+          y: y
+        });
+      }, 10);
+  }
+  handlePreventTouchmoveWhenPanning(event) {
+   if (this.state.dragging || this.state.resizing) {
+     event.preventDefault();
+   }
+  };
+  componentDidMount() {
+    this.collision();
+    window.document.body.addEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+       passive: false
+     });
+  }
+
+  componentWillUnmount () {
+   window.document.body.removeEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+     passive: false
+   });
+  }
 
   render() {
     return(

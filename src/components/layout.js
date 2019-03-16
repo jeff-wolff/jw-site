@@ -312,6 +312,7 @@ injectGlobal`
       color: #fff;
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
       text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
+      text-shadow: 0 2px 24px rgba(50,50,93,.25), 0 11px 29px rgba(0,0,0,.25);
       filter: blur(0);
       z-index: 2;
       opacity: 1;
@@ -336,7 +337,7 @@ injectGlobal`
     top: 0;
     top: calc(50% - 115px);
     width: fit-content;
-    margin: 0 auto 60px;
+    margin: 0 auto 75px;
   }
   @media (min-width: 768px) {
     .work-post-title.container {
@@ -516,8 +517,15 @@ injectGlobal`
     align-items: flex-end;
     width: 100%;
     padding-bottom: 20px;
-    height: 100vh;
-    
+    height: 200vh;
+  }
+  @media (min-width: 1152px) {
+    .work-post-nav {
+      height: 100vh;
+    }
+  }
+  .work-post-nav .react-draggable {
+    box-shadow: 0 2px 24px rgba(50,50,93,.25), 0 11px 29px rgba(0,0,0,.25);
   }
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
@@ -736,51 +744,51 @@ injectGlobal`
     }
   }
 
-  .about-me form {
-    margin: 12rem auto;
-    max-width: none;
-    width: 100%;
-    padding: 50px 60px 60px;
-    border: 1px solid #ff0;
-    border: 1px solid var(--primary-faded);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  @media (min-width: 768px) {
-    .about-me form {
-      width: 75%;
-    }
-  }
-  @media (min-width: 1024px) {
-    .about-me form {
-      width: 50%;
-    }
-  }
-  .about-me label {
-    color:  #ff0;
-    color: var(--primary);
-  }
-  .about-me input,
-  .about-me button {
-      background: none;
-      border: solid #ff0;
-      border: solid var(--primary-faded);
-      border-width: 0 0 1px;
-      color:  #ff0;
-      color: var(--primary);
-      padding: 1em 0;
-      outline: none;
-      width: calc(100% - 48px);
-      height: 48px;
-      max-width: 360px;
-      margin: 0;
-  }
-  .about-me button {
-      cursor: pointer;
-      padding: 0 1em;
-      width:  48px;
-  }
+  // .about-me form {
+  //   margin: 12rem auto;
+  //   max-width: none;
+  //   width: 100%;
+  //   padding: 50px 60px 60px;
+  //   border: 1px solid #ff0;
+  //   border: 1px solid var(--primary-faded);
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+  // @media (min-width: 768px) {
+  //   .about-me form {
+  //     width: 75%;
+  //   }
+  // }
+  // @media (min-width: 1024px) {
+  //   .about-me form {
+  //     width: 50%;
+  //   }
+  // }
+  // .about-me label {
+  //   color:  #ff0;
+  //   color: var(--primary);
+  // }
+  // .about-me input,
+  // .about-me button {
+  //     background: none;
+  //     border: solid #ff0;
+  //     border: solid var(--primary-faded);
+  //     border-width: 0 0 1px;
+  //     color:  #ff0;
+  //     color: var(--primary);
+  //     padding: 1em 0;
+  //     outline: none;
+  //     width: calc(100% - 48px);
+  //     height: 48px;
+  //     max-width: 360px;
+  //     margin: 0;
+  // }
+  // .about-me button {
+  //     cursor: pointer;
+  //     padding: 0 1em;
+  //     width:  48px;
+  // }
 
 `;
 
