@@ -150,7 +150,7 @@ class WorkPostTemplate extends React.Component {
                 height={157.5}
                 minWidth={280}
                 lockAspect={1.77777778}
-                yOffset={20}
+                yOffset={150}
                 xOffset={20}
                 >
                   {demoVideoDesktop}
@@ -192,8 +192,8 @@ class WorkPostTemplate extends React.Component {
                 height={256}
                 minWidth={160}
                 lockAspect={0.75}
-                yOffset={300}
-                xOffset={160}
+                yOffset={550}
+                xOffset={10}
                 >
                   {demoVideoTablet}
               </BlankWindow>
@@ -234,7 +234,7 @@ class WorkPostTemplate extends React.Component {
                 height={200}
                 minWidth={100}
                 lockAspect={0.56156156}
-                yOffset={650}
+                yOffset={950}
                 xOffset={100}
                 >
                   {demoVideoPhone}

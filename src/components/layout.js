@@ -337,7 +337,7 @@ injectGlobal`
     top: 0;
     top: calc(50% - 115px);
     width: fit-content;
-    margin: 0 auto 75px;
+    margin: 0 auto 125px;
   }
   @media (min-width: 768px) {
     .work-post-title.container {
@@ -518,6 +518,7 @@ injectGlobal`
     width: 100%;
     padding-bottom: 20px;
     height: 200vh;
+    min-height: 1500px;
   }
   @media (min-width: 1152px) {
     .work-post-nav {

@@ -34,8 +34,13 @@ class BlankWindow extends Window {
     }
   }
   collision() {
-      let x = (this.props.xOffset ? this.props.xOffset : Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width))),
+      let x =  Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width)),
           y = (this.props.yOffset ? this.props.yOffset :  Math.floor(Math.random() * Math.floor(windowGlobal.innerHeight - this.state.height)));
+      if (this.props.xOffset) {
+        while(this.props.xOffset > x) {
+          x = this.props.xOffset;
+        }
+      }
       positions.push({
         width: this.state.width,
         height: this.state.height,
