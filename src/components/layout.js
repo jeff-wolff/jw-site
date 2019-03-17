@@ -293,6 +293,7 @@ injectGlobal`
     text-align: center;
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
+    user-select: none;
   }
   .centered-title {
       filter: blur(.5em);
