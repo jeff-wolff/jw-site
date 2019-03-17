@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import HomeInfo from '../components/HomeInfo/home-info.js';
 import Window from '../components/Window/window.js';
-import AboutPortraitWebM from '../assets/jeffwolff-moshedyellow.webm';
-import AboutPortraitMp4 from '../assets/jeffwolff-moshedyellow.mp4';
+import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
+import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 
 class Index extends React.Component {
   defaultTheme() {
