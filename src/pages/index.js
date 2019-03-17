@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import HomeInfo from '../components/HomeInfo/home-info.js';
 import Window from '../components/Window/window.js';
-// import AboutPortrait from '../assets/jeffwolff-moshed.webm';
-import AboutPortrait from '../assets/jeffwolff-moshedyellow.webm';
+import AboutPortraitWebM from '../assets/jeffwolff-moshedyellow.webm';
+import AboutPortraitMp4 from '../assets/jeffwolff-moshedyellow.mp4';
 
 class Index extends React.Component {
   defaultTheme() {
@@ -44,7 +44,10 @@ class Index extends React.Component {
         <HomeInfo />
         <div className="about-me container">
             <div className="content">
-              <video src={ AboutPortrait } loop muted autoPlay playsInline className="profile" />
+              <video loop muted autoPlay playsInline className="profile">
+                <source src={ AboutPortraitWebM } type="video/webm" />
+                <source src={ AboutPortraitMp4 } type="video/mp4" />
+              </video>
               <div className="info">
                 <h2>About Jeff Wolff</h2>
                 <p>I've been designing and developing digital experiences for over 5 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
