@@ -209,7 +209,8 @@ class WorkPostTemplate extends React.Component {
                 minWidth={160}
                 maxWidth={366}
                 lockAspect={0.56156156}
-                xOffset={1400}
+                yOffset={100}
+                xOffset={800}
                 >
                   {demoVideoPhone}
               </BlankWindow>

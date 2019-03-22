@@ -6,7 +6,7 @@ team: "Cuker Agency"
 url: "gomacro.com"
 favIcon: "./gomacro_fav.png"
 featuredVideo: "./gomacro_optimized.mp4"
-lifestyleShot: "./gomacro_farm.jpg"
+lifestyleShot: "./gomacro_lifestyle.jpg"
 theme: true
 tbg: "#42362a"
 tbgf: "66, 54, 42"

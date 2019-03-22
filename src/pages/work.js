@@ -35,7 +35,8 @@ class WorkIndex extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -62,9 +63,9 @@ class WorkIndex extends React.Component {
                   <MediaQuery query="(min-width: 1440px)">
                     <Window 
                       title={windowTitle}
-                      width={359}
-                      height={224}
-                      minWidth={260}
+                      width={450}
+                      height={275}
+                      minWidth={300}
                       maxWidth={1279}
                       lockAspect={1.77777778}
                       lockAspectRatioExtraHeight={22}
@@ -81,7 +82,8 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={320}
+                      yOffset={200 + Math.floor(Math.random() * 300)}
+                      xOffset={200 + Math.floor(Math.random() * 300)}
                       >
                         <h2 className="h2">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>

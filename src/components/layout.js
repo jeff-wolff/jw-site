@@ -240,26 +240,26 @@ injectGlobal`
       }
   }
   body.wrapper-work .wrapper {
-      height: 290vh;
+      min-height: 290vh;
   }
   @media (min-height: 360px) {
     body.wrapper-work .wrapper {
-        height: 260vh;
+        min-height: 260vh;
     }
   }
   @media (min-height: 500px) {
     body.wrapper-work .wrapper {
-        height: 230vh;
+        min-height: 230vh;
     }
   }
   @media (min-height: 768px) {
     body.wrapper-work .wrapper {
-        height: 145vh;
+        min-height: 145vh;
     }
   }
   @media (min-height: 1024px) {
     body.wrapper-work .wrapper {
-        // height: 160vh;
+        // min-height: 160vh;
     }
   }
   .container {
@@ -313,27 +313,23 @@ injectGlobal`
       color: #fff;
       text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
       text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
-      text-shadow: 0 2px 24px rgba(50,50,93,.25), 0 11px 29px rgba(0,0,0,.25);
+      text-shadow: 0 2px 24px rgba(var(--bg-faded),.25), 0 11px 29px rgba(0,0,0,.25);
       filter: blur(0);
       z-index: 2;
       opacity: 1;
   }
   .centered-title.work-title {
     position: sticky;
-    top: 0;
+    top: 160px;
     justify-content: flex-start;
-    padding-top: 160px;
+    margin-bottom: 125px;
   }
   @media (min-width: 1152px) {
     .centered-title.work-title {
-      padding-top: 220px;
+      top: 220px;
     }
   }
   .work-post-title {
-    // display: flex;
-    // align-items: center;
-    // width: 100%;
-    // height: 100vh;
     position: sticky;
     top: 0;
     top: calc(50% - 115px);
@@ -440,6 +436,10 @@ injectGlobal`
 
   .work-post-description .desc-content {
   }
+  .work-post-description .desc-content ul, 
+  .work-post-description  .desc-content ol {
+      margin-top: 0;
+  }
   @media (min-width: 1024px) {
     .work-post-description .desc-content {
       // max-width: 65ch;
@@ -528,6 +528,7 @@ injectGlobal`
   }
   .work-post-nav .react-draggable {
     box-shadow: 0 2px 24px rgba(50,50,93,.25), 0 11px 29px rgba(0,0,0,.25);
+    box-shadow: 0 2px 24px rgba(var(--bg-faded),.25), 0 11px 29px rgba(0,0,0,.25);
   }
   .work-post-nav .next-btn,
   .work-post-nav .prev-btn {
@@ -725,9 +726,10 @@ injectGlobal`
     justify-content: center;
     align-items: center;
     margin-top: 20vh;
+    margin-bottom: 20vh;
   }
   .about-me .profile {
-    
+    width: 100%;
     margin-bottom: 3rem;
   }
   @media (min-width: 1024px) {

@@ -9,9 +9,9 @@ const Footer = ({}) => (
      <div className="container">
         <div className="footer-top">        </div>
         <div className="footer-middle">
-          <Button to="/work/" inlineicon="left"><span>💼</span> Work</Button>
-          <Button to="/notes/" inlineicon="left"><span>📔</span> Notes</Button>
-          <Button external="true" href="mailto:hi@jeffwolff.net" inlineicon="left"><span>💌</span> Contact</Button>
+          <Button size="tiny" to="/work/" inlineicon="left"><span>💼</span> Work</Button>
+          <Button size="tiny" to="/notes/" inlineicon="left"><span>📔</span> Notes</Button>
+          <Button size="tiny" external="true" href="mailto:hi@jeffwolff.net" inlineicon="left"><span>💌</span> Contact</Button>
           
         </div>
         <div className="footer-bottom">

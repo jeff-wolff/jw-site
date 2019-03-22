@@ -22,30 +22,28 @@
     }
 }
 .header > .logo {    
-    font-size: 1.5em;
+    font-weight: bold;
+    font-size: 1.25em;
     line-height: 1.5;
     text-transform:  uppercase;
-    /* padding: 1rem 1rem 1rem;
-    text-indent: -.7rem; */
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     transform: translate3d(0, 0, 0);
     outline: 0;
     box-shadow: none;
     text-decoration: none;
     user-select: none;
-    font-variant: small-caps;
-}
-.header > .logo span {
-    font-size:  .8em;
 }
 .header > .logo:hover {
     background: none;
 }
+.header > .logo > span {
+
+}
 @media (hover: hover) {
     .header > .logo {
-        letter-spacing: 0.025em;
         transition: all 125ms cubic-bezier(0.4, 0.0, 0.2, 1);
         padding: 0;
+        width: 175px;
     }
     .header > .logo > span {
         transition: all 125ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 600ms ease;
@@ -53,20 +51,16 @@
         opacity: 0;
     }
     .header > .logo:hover {
-        
+        letter-spacing: 0.072em;
     }
     .header > .logo:hover > span {
         opacity: 1;
-        font-size: inherit;
+        font-size: 1em;
     }
 }
 @media (min-width: 1152px) {
-    .header > .logo,
-    .header > .logo:hover > span {
+    .header > .logo {
         font-size: 24px;
-    }
-    .header > .logo:hover > span {
-        font-size:  .8em;
     }
 }
 

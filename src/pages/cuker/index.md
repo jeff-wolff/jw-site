@@ -5,6 +5,8 @@ description: "Website Redesign"
 team: "Cuker Agency"
 url: "cukeragency.com"
 favIcon: "./cuker_fav.png"
+featuredVideo: "./cuker_optimized.mp4"
+lifestyleShot: "./cuker_lifestyle.jpg"
 theme: true
 tbg: "#222"
 tbgf: "34, 34, 34"

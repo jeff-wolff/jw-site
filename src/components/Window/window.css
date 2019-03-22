@@ -145,7 +145,8 @@
 .react-draggable.collapsed .window-resizer-icon {
     opacity: 0;
 }
-.react-draggable.collapsed > .window-collapse + div {
+.react-draggable.collapsed > .window-collapse + div,
+.react-draggable.collapsed > .window-video {
     opacity: 0;
     visibility: hidden;
 }
