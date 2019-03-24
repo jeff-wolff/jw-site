@@ -18,6 +18,9 @@ twb: "255, 55, 55"
 twt: "255,255,255"
 tfbg: "#151515"
 posttype: "work"
+demoVideoDesktop: "./cuker_demo1.mp4"
+demoVideoTablet: "./cuker_demo2.mp4"
+demoVideoPhone: "./cuker_demo3.mp4"
 ---
 - Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. 
 

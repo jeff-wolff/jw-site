@@ -116,7 +116,8 @@ class WorkPostTemplate extends React.Component {
         </div>
 
         <div className="work-post-nav container">
-        <MediaQuery query="(min-width: 1px)" key="desktop">
+
+        {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
                 bounds='body'
@@ -156,9 +157,9 @@ class WorkPostTemplate extends React.Component {
                   {demoVideoDesktop}
               </BlankWindow>
             </MediaQuery>
-        </MediaQuery>
-
-        <MediaQuery query="(min-width: 1px)" key="tablet">
+        </MediaQuery>: ''}
+        
+        {demoVideoTablet ? <MediaQuery query="(min-width: 1px)" key="tablet">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
                 bounds='body'
@@ -198,9 +199,9 @@ class WorkPostTemplate extends React.Component {
                   {demoVideoTablet}
               </BlankWindow>
             </MediaQuery>
-        </MediaQuery>
-
-        <MediaQuery query="(min-width: 1px)" key="phone">
+        </MediaQuery>: '' }
+        
+        {demoVideoPhone ? <MediaQuery query="(min-width: 1px)" key="phone">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
                 bounds='body'
@@ -208,7 +209,7 @@ class WorkPostTemplate extends React.Component {
                 height={360}
                 minWidth={160}
                 maxWidth={366}
-                lockAspect={0.56156156}
+                lockAspect={0.56325301204819277108433734939759}
                 yOffset={100}
                 xOffset={800}
                 >
@@ -221,7 +222,7 @@ class WorkPostTemplate extends React.Component {
                 width={161.72972928}
                 height={288}
                 minWidth={140}
-                lockAspect={0.56156156}
+                lockAspect={0.56325301204819277108433734939759}
                 xOffset={370}
                 yOffset={555}
                 >
@@ -234,14 +235,15 @@ class WorkPostTemplate extends React.Component {
                 width={112.312312}
                 height={200}
                 minWidth={100}
-                lockAspect={0.56156156}
+                lockAspect={0.56325301204819277108433734939759}
                 yOffset={950}
                 xOffset={100}
                 >
                   {demoVideoPhone}
               </BlankWindow>
             </MediaQuery>
-        </MediaQuery>
+        </MediaQuery> : ''}
+        
           {
               previous &&
               <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">

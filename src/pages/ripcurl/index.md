@@ -18,6 +18,8 @@ twb: "31,222,222"
 twt: "150, 35, 19"
 tfbg: "hsla(7.3, 77.5%, 23.1%, 1.0)"
 posttype: "work"
+demoVideoDesktop: "./ripcurl_demo1.mp4"
+demoVideoPhone: "./ripcurl_demo3.mp4"
 ---
 - Rip Curl is &lsquo;the ultimate surfing company&rsquo; specializing in wetsuits, watches, and apparel.
 
