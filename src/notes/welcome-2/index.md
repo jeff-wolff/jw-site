@@ -1,6 +1,6 @@
 ---
-date: "2017-10-23T00:00:00"
-title: "New Site Launched"
+date: "2017-11-23T00:00:00"
+title: "New Site Launched 2"
 ---
 
 Welcome to Version 4 of my portfolio website! The design inspiration was a modern Windows 98 / DOS-like interface. 

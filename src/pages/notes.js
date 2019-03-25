@@ -8,25 +8,24 @@ import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
 class NotesIndex extends React.Component {
-  // defaultTheme() {
-  //   document.documentElement.style.setProperty('--bg', '#151515');
-  //   document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
-  //   document.documentElement.style.setProperty('--primary', '#ff0');
-  //   document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
-  //   document.documentElement.style.setProperty('--secondary', '#2828ef');
-  //   document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
-  //   document.documentElement.style.setProperty('--window-border', '190,190,190');
-  //   document.documentElement.style.setProperty('--window-title', '0,0,0');
-  //   document.documentElement.style.setProperty('--footer-bg', '#111');
-  //   let metaThemeColor = document.querySelector("meta[name=theme-color]");
-  //   metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-  // }
+  defaultTheme() {
+    document.documentElement.style.setProperty('--bg', '#151515');
+    document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
+    document.documentElement.style.setProperty('--primary', '#ff0');
+    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+    document.documentElement.style.setProperty('--secondary', '#2828ef');
+    document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
+    document.documentElement.style.setProperty('--window-border', '190,190,190');
+    document.documentElement.style.setProperty('--window-title', '0,0,0');
+    document.documentElement.style.setProperty('--footer-bg', '#111');
+    let metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
+  }
   componentDidMount() {
-    // this.defaultTheme();
-    // window.addEventListener('scroll', this.removeTitle);
+    this.defaultTheme();
   }
   componentWillUnmount() {
-    // window.removeEventListener('scroll', this.removeTitle);
+    
   }
 
   render() {

@@ -72,16 +72,16 @@ injectGlobal`
       background-color: #000;
       background-color: var(--footer-bg);
   }
-  // @media (min-width: 320px) {
-  //     body {
-  //       font-size: calc(14px + 5 * ((100vw - 320px) / 1120));
-  //     }
-  // }
-  // @media (min-width: 1440px) {
-  //     body {
-  //         font-size: 19px;
-  //     }
-  // }
+  @media (min-width: 320px) {
+      body {
+        font-size: calc(14px + 5 * ((100vw - 320px) / 1120));
+      }
+  }
+  @media (min-width: 1440px) {
+      body {
+          font-size: 19px;
+      }
+  }
   strong {
       color: var(--text-color);
   }
@@ -257,11 +257,6 @@ injectGlobal`
         min-height: 145vh;
     }
   }
-  @media (min-height: 1024px) {
-    body.wrapper-work .wrapper {
-        // min-height: 160vh;
-    }
-  }
   .container {
       padding-left: 6%;
       padding-right: 6%;
@@ -285,11 +280,6 @@ injectGlobal`
   }
   .centered-title {
     transition: filter 500ms ease, color 275ms ease, opacity 500ms ease, text-shadow 275ms ease;
-    // width: 100%;
-    // height: 100vh;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     text-align: center;
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
@@ -384,8 +374,8 @@ injectGlobal`
   @media (min-width: 768px) {
     .work-post-description-wrap {
       min-height: 0;
-      height: 125vw;
-      max-height: 1024px;
+      height: 150vw;
+      max-height: 1500px;
     }
   }
   .work-post-description {
@@ -398,7 +388,7 @@ injectGlobal`
   @media (min-width: 1024px) {
     .work-post-description {
         margin: 0 auto;
-        max-width: 660px;
+        max-width: 1024px;
     }
   }
   .work-post-description > * {
@@ -453,11 +443,6 @@ injectGlobal`
 
   .work-post-description .desc-content {
   }
-  @media (min-width: 1024px) {
-    .work-post-description .desc-content {
-      // max-width: 65ch;
-    }
-  }
   .work-post-description .desc-info p {
     margin-right: 2rem;
     margin-bottom: 2rem;
@@ -489,7 +474,7 @@ injectGlobal`
     margin: 0 auto;
     width: auto;
     width: fit-content;
-    max-width: 429px;
+    // max-width: 429px;
     margin-top: 20px;
     word-break: break-all;
   }
@@ -520,6 +505,11 @@ injectGlobal`
     padding-bottom: 20px;
     height: 200vh;
     min-height: 1500px;
+  }
+  @media (min-width: 768px) {
+    .work-post-nav {
+      height: 150vh;
+    }
   }
   @media (min-width: 1152px) {
     .work-post-nav {
@@ -557,13 +547,6 @@ injectGlobal`
         max-width: 432px;
     }
   }
-  // .work-post-nav .prev-btn span {
-  //   margin-left: -1em;
-  // }
-  // .work-post-nav .next-btn span {
-  //   margin-right: -1em;
-  // }
-
   
   .work-post-footer-cta {
     margin-bottom: 50vh;
@@ -673,15 +656,6 @@ injectGlobal`
       }
   }
 
-  .noise-grain {
-      display: block;
-      overflow: hidden;
-  }
-
-  .noise-grain>* {
-      z-index: -1;
-  }
-
   .wrapper:after {
       transition: opacity 500ms ease;
       animation: grain 1s steps(10) infinite;
@@ -696,12 +670,7 @@ injectGlobal`
       z-index: 0;
       opacity: 0.6;
   }
-  
-  // @media (min-width: 640px) {
-  //     .wrapper:after {
-  //         opacity:0.6;
-  //     }
-  // }
+
   .wrapper.fade-noise:after {
     opacity: 0;
   }
@@ -747,53 +716,6 @@ injectGlobal`
       margin-right: 10%;
     }
   }
-
-  // .about-me form {
-  //   margin: 12rem auto;
-  //   max-width: none;
-  //   width: 100%;
-  //   padding: 50px 60px 60px;
-  //   border: 1px solid #ff0;
-  //   border: 1px solid var(--primary-faded);
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-  // @media (min-width: 768px) {
-  //   .about-me form {
-  //     width: 75%;
-  //   }
-  // }
-  // @media (min-width: 1024px) {
-  //   .about-me form {
-  //     width: 50%;
-  //   }
-  // }
-  // .about-me label {
-  //   color:  #ff0;
-  //   color: var(--primary);
-  // }
-  // .about-me input,
-  // .about-me button {
-  //     background: none;
-  //     border: solid #ff0;
-  //     border: solid var(--primary-faded);
-  //     border-width: 0 0 1px;
-  //     color:  #ff0;
-  //     color: var(--primary);
-  //     padding: 1em 0;
-  //     outline: none;
-  //     width: calc(100% - 48px);
-  //     height: 48px;
-  //     max-width: 360px;
-  //     margin: 0;
-  // }
-  // .about-me button {
-  //     cursor: pointer;
-  //     padding: 0 1em;
-  //     width:  48px;
-  // }
-
 `;
 
 class Template extends React.Component {
@@ -858,7 +780,6 @@ class Template extends React.Component {
     )
     return (
       <div>
-        <div className="noise-grain"></div>
         <div className="wrapper">
         {header}
         {children}
