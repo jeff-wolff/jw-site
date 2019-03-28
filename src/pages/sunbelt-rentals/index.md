@@ -18,6 +18,8 @@ twb: "255, 255, 19"
 twt: "0,0,0"
 tfbg: "hsla(147.3, 79.5%, 14.9%, 1.0)"
 posttype: "work"
+demoVideoDesktop: "./sunbelt_demo1.mp4"
+demoVideoTablet: "./sunbelt_demo2.mp4"
 demoVideoPhone: "./sunbelt_demo3.mp4"
 ---
 
