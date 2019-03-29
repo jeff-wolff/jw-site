@@ -128,7 +128,7 @@ injectGlobal`
       padding: 0 0 0 1em;
   }
   ol {
-      list-style-position: inside;
+      list-style-position: outside;
       padding: 0;
   }
   li {
@@ -145,6 +145,19 @@ injectGlobal`
     margin-top: 0;
     margin-bottom: 1.25rem;
   }
+  hr {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      margin-bottom: 1.8rem;
+      background: var(--primary);
+      border: none;
+      height: 1px;
+  }
   video {
     max-width: 100%;
   }
@@ -153,17 +166,8 @@ injectGlobal`
       font-size: 1em;
       line-height: 1.6;
       font-weight: normal;
-      margin: 0 0 1em;
+      margin: 3.5rem 0 1.75rem;
       letter-spacing: 0;
-  }
-  .Rte h1,.Rte .h1,.Rte h2,.Rte .h2,.Rte h3,.Rte .h3 {
-      margin-top: 2.666667rem;
-      margin-bottom: .666667rem;
-  }
-  .Rte h4,.Rte .h4,.Rte h5,.Rte .h5,.Rte h6,.Rte .h6 {
-      color: inherit;
-      margin-top: 2rem;
-      margin-bottom: .5rem;
   }
   h1,.h1 {
       font-weight: bold;
@@ -181,37 +185,25 @@ injectGlobal`
       }
   }
   .Rte h1, .Rte .h1 {
-    font-size: 1.4em;
-  }
-  h2,.h2,h3,.h3,.h4,h4 {
-      font-family: 'IBM Plex Mono';
-      font-size: 1.14285714em;
+    font-size: 2.5rem;
   }
   h2,.h2 {
-      font-size: 1.28571429em;
+      font-size: 1.7rem;
   }
-  @media (min-width: 375px) {
-      h2,.h2 {
-          font-size: 1.5em;
-      }
-  }
-  @media (min-width: 375px) {
-      h3,.h3 {
-          font-size: 1.25em;
-      }
+  h3,.h3 {
+    font-size: 1.4427rem;
   }
   h4,.h4 {
+    font-size: 1rem;
     color: var(--text-color);
-  }
-  @media (min-width: 375px) {
-      h4,.h4 {
-          font-size: 1.125em;
-      }
   }
   h5,.h5,figcaption {
     text-transform: uppercase;
-    font-size: .875em;
+    font-size: 0.83255rem;
     letter-spacing: .25em;
+  }
+  h6,.h6 {
+    font-size: 0.75966rem;
   }
   figure {
       margin: 0;
