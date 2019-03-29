@@ -56,16 +56,23 @@ footer a:not([class^="button"]) {
 
 footer .footer-middle {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+}
+@media (min-width: 1024px) {
+    footer .footer-middle {
+     
+    }
 }
 
 footer .footer-middle a[class^="button"] {
     width:  12%;
     min-width: 226px;
-    margin:  0 .5em 1em;
+    margin:  0 .5em 2em;
 }
-@media (min-width: 1152px) {
+@media (min-width: 1024px) {
     footer .footer-middle a[class^="button"] {
         margin:  0 1em 2em;
     }
@@ -90,6 +97,7 @@ footer a.rewind {
     box-shadow: none;
 }
 footer a.rewind:hover {
+    background: none;
     opacity: .8;
 }
 

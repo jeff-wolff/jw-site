@@ -33,6 +33,44 @@ class BlankWindow extends Window {
       secondaryColor: this.props.secondaryColor ? this.props.secondaryColor : "var(--secondary)",
     }
   }
+  collision() {
+      let x =  Math.floor(Math.random() * Math.floor(windowGlobal.innerWidth - this.state.width)),
+          y = (this.props.yOffset ? this.props.yOffset :  Math.floor(Math.random() * Math.floor(windowGlobal.innerHeight - this.state.height)));
+      if (this.props.xOffset) {
+        while(this.props.xOffset > x) {
+          x = this.props.xOffset;
+        }
+      }
+      positions.push({
+        width: this.state.width,
+        height: this.state.height,
+        x: x,
+        y: y
+      })
+      setTimeout(() => {
+        this.setState({
+          x: x,
+          y: y
+        });
+      }, 10);
+  }
+  handlePreventTouchmoveWhenPanning(event) {
+   if (this.state.dragging || this.state.resizing) {
+     event.preventDefault();
+   }
+  };
+  componentDidMount() {
+    this.collision();
+    window.document.body.addEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+       passive: false
+     });
+  }
+
+  componentWillUnmount () {
+   window.document.body.removeEventListener('touchmove', this.handlePreventTouchmoveWhenPanning, {
+     passive: false
+   });
+  }
 
   render() {
     return(
@@ -54,7 +92,7 @@ class BlankWindow extends Window {
             y: this.state.y
           }}
           style={{
-            backgroundColor: 'rgb('+this.state.borderColor+')',
+            // backgroundColor: 'rgb('+this.state.borderColor+')',
             zIndex: globalZIndex
           }}
           bounds={this.props.bounds ? this.props.bounds : "parent"}
@@ -70,10 +108,6 @@ class BlankWindow extends Window {
           position={{
             x: this.state.x,
             y: this.state.y
-          }}
-          resizeHandleClasses={{
-            bottomLeft: 'window-resizer-2',
-            bottomRight: 'window-resizer'
           }}
           resizeHandleStyles={{
             bottomLeft: {
@@ -158,7 +192,7 @@ class BlankWindow extends Window {
             }
           }}
       >
-          <label 
+         {/* <label 
             htmlFor={this.props.id}
             className="window-collapse"
             style={{
@@ -174,7 +208,7 @@ class BlankWindow extends Window {
               checked={this.state.isCollapsed ? "checked" : ""}
              />
             <span className="icon"></span>
-          </label>
+          </label>*/}
           {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
           <div>{this.props.children}</div>
       </Rnd>

@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import HomeInfo from '../components/HomeInfo/home-info.js';
 import Window from '../components/Window/window.js';
+import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
+import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 
 class Index extends React.Component {
   defaultTheme() {
@@ -42,21 +44,25 @@ class Index extends React.Component {
         <HomeInfo />
         <div className="about-me container">
             <div className="content">
-              <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/53057941_10216535660177933_844706701461422080_n.jpg?_nc_cat=102&_nc_ht=scontent-dfw5-1.xx&oh=9fc06b20849dedb935784994f59f9abf&oe=5D066250" alt="" className="profile" />
+              <video loop muted autoPlay playsInline className="profile">
+                <source src={ AboutPortraitWebM } type="video/webm" />
+                <source src={ AboutPortraitMp4 } type="video/mp4" />
+              </video>
               <div className="info">
                 <h2>About Jeff Wolff</h2>
                 <p>I've been designing and developing digital experiences for over 5 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
                 <p>Some of the clients I've worked with include Rip Curl, Vans, GoMacro, Sunbelt Rentals, and Little Giraffe.</p>
-                <form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                  <div>
-                    <label htmlFor="mce-EMAIL" className="h4">Let me keep you updated:</label>
-                  </div>
-                  <div>
-                    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail" />
-                    <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
-                  </div>
-                </form>
+                <p>Check out <Link to="/work/">my work</Link> or <Link to="/notes/">my notes</Link>.</p>
               </div>
+          {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                <div>
+                  <label htmlFor="mce-EMAIL" className="h4">Let me keep you updated:</label>
+                </div>
+                <div>
+                  <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail" />
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
+                </div>
+              </form>*/}
             </div>
         </div>
       </Layout>

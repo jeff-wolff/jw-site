@@ -26,11 +26,11 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     // width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon == 'left' ? 'right' : 'left')};
     ${media.medium`
-        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em' ) };
     `}
     ${media.large`
-        font-size: ${ props => ( props.size == 'tiny' ? '11px' : props.size == 'small' ? '11px' : '17px' ) }; 
-        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em 1.5em' ) };
+        font-size: ${ props => ( props.size == 'tiny' ? '14px' : props.size == 'small' ? '15px' : '21px' ) }; 
+        padding: ${ props => ( props.size == 'tiny' ? '.75em .85em' : props.size == 'small' ? '1em 1.3em' : '1.6em' ) };
     `}
     &:hover {
         color: #000;
