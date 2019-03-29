@@ -45,7 +45,7 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        <div className="container"  style={{position:'relative',zIndex:1,paddingTop:'200px'}}>
+        <div className="Rte notes-container">
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           {
