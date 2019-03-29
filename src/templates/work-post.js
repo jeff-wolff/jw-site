@@ -115,7 +115,7 @@ class WorkPostTemplate extends React.Component {
           </div>
         </div>
 
-        <div className="work-post-nav container">
+        <div className="post-nav container">
 
         {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
             <MediaQuery query="(min-width: 1440px)">

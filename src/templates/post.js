@@ -45,21 +45,23 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
+        <h1 class="work-post-title centered-title preload">{post.frontmatter.title}</h1>
         <div className="Rte notes-container">
-          <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        </div>
+        <div className="notes-nav post-nav container">
+        {
+            previous &&
+            <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
+              <span>Prev:</span> {previous.frontmatter.title}
+            </Button>
+          }
           {
-              previous &&
-              <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
-                <span>Prev:</span> {previous.frontmatter.title}
-              </Button>
-            }
-            {
-              next &&
-              <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
-                <span>Next:</span> {next.frontmatter.title}
-              </Button>
-            }
+            next &&
+            <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
+              <span>Next:</span> {next.frontmatter.title}
+            </Button>
+          }
         </div>
       </Layout>
     )
