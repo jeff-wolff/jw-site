@@ -670,9 +670,9 @@ injectGlobal`
       }
   }
 
-  .wrapper:after {
+  body:not(.wrapper-work-post) .wrapper:after {
       transition: opacity 500ms ease;
-      // animation: grain 1s steps(10) infinite;
+      animation: grain 1s steps(10) infinite;
       background: url('${noisePNG}');
       content: "";
       display: block;

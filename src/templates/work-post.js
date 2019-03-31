@@ -81,9 +81,9 @@ class WorkPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <Helmet
           meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} Website - ${siteTitle}`}
-        />
-
+          title={`${post.frontmatter.title} Website - ${siteTitle}`}>
+          <body className="wrapper-work-post"/>
+        </Helmet>
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
         <div id="workTitle" className="post-title centered-title preload work-post-title">
