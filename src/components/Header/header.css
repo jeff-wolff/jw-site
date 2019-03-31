@@ -23,10 +23,10 @@
 }
 .header > .logo {    
     font-weight: bold;
-    font-size: 1.25em;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.1;
     text-transform:  uppercase;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.06em;
     transform: translate3d(0, 0, 0);
     outline: 0;
     box-shadow: none;
@@ -43,6 +43,7 @@
     .header > .logo {
         transition: all 125ms cubic-bezier(0.4, 0.0, 0.2, 1);
         padding: 0;
+        letter-spacing:  0.025em;
         width: 175px;
     }
     .header > .logo > span {
@@ -51,14 +52,14 @@
         opacity: 0;
     }
     .header > .logo:hover {
-        letter-spacing: 0.072em;
+        letter-spacing: 0.06em;
     }
     .header > .logo:hover > span {
         opacity: 1;
         font-size: 1em;
     }
 }
-@media (min-width: 1152px) {
+@media (min-width: 768px) {
     .header > .logo {
         font-size: 24px;
     }

@@ -71,8 +71,6 @@ injectGlobal`
       line-height: 1.9;
       background-color: #000;
       background-color: var(--footer-bg);
-      -webkit-overflow-scrolling: auto;
-      overscroll-behavior: none;
   }
   @media (min-width: 320px) {
       body {
@@ -250,16 +248,18 @@ injectGlobal`
   .wrapper {
       transition: 100ms ease background-color;
       min-height: 100vh;
-      margin-bottom: 82vh;
+      // margin-bottom: 82vh;
       margin-top: 114px;
       margin-left: auto;
       margin-right: auto;
       background-color: #212121;
       background-color: var(--bg);
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: auto;
   }
   @media (min-width: 1152px) {
       .wrapper {
-        margin-bottom: 360px;
+        // margin-bottom: 360px;
       }
   }
   @supports (position: sticky) {
