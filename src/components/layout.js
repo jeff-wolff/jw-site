@@ -312,7 +312,7 @@ injectGlobal`
   }
   .centered-title.preload {
       color: #fff;
-      text-shadow: 0 2px 24px rgba(21,21,21,0.05), 2px 4px 29px rgba(0,0,0,.15);
+      text-shadow: 0 2px 24px rgba(21,21,21,0.15), 2px 4px 29px rgba(0,0,0,.15);
       z-index: 2;
   }
   .centered-title.index-title {
