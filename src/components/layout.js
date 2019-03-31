@@ -343,6 +343,7 @@ injectGlobal`
     top: calc(50% - 115px);
     width: fit-content;
     margin: 0 auto 125px;
+    z-index: 1;
   }
   .post-title .title {
     margin-bottom: 0;
