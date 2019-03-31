@@ -389,7 +389,7 @@ injectGlobal`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
   }
   @media (min-width: 640px) {
     .work-post-description-wrap {
@@ -404,6 +404,7 @@ injectGlobal`
     }
   }
   .work-post-description {
+    transform: translate3d(0, 0, 0);
     position: relative;
     z-index: 4;
     display: flex;
@@ -421,6 +422,7 @@ injectGlobal`
     z-index: 1;
   }
   .work-post-description-wrap:before {
+    transform: translate3d(0, 0, 0);
     width: 100%;
     height: calc(100% + 25vh);
     content: " ";
