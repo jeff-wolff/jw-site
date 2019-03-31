@@ -146,7 +146,7 @@ injectGlobal`
   }
   @media (max-width: 767px) {
     ul, ol {
-        margin-left: 1.75rem;
+        margin-left: 1rem;
     }
   }
   li {
@@ -218,10 +218,10 @@ injectGlobal`
     font-size: 2.5rem;
   }
   h2,.h2 {
-      font-size: 1.7rem;
+    font-size: 1.7rem;
   }
   h3,.h3 {
-    font-size: 1.4427rem;
+    font-size: 1.3rem;
   }
   h4,.h4 {
     font-size: 1rem;
