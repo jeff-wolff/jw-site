@@ -72,6 +72,7 @@ injectGlobal`
       background-color: #000;
       background-color: var(--footer-bg);
       -webkit-overflow-scrolling: auto;
+      overscroll-behavior: none;
   }
   @media (min-width: 320px) {
       body {
