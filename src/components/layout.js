@@ -490,7 +490,8 @@ injectGlobal`
   .work-post-lifestyle {
     height: 100vh;
   }
-  .work-post-lifestyle img{
+  .work-post-lifestyle img, 
+  .work-post-lifestyle .gatsby-image-wrapper {
     object-fit: cover;
     height: 100%;
   }
