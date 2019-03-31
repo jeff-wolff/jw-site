@@ -145,11 +145,11 @@ injectGlobal`
   ol {
   }
   @media (max-width: 1151px) {
-    ul, ol {
-      margin-left: 0.875rem;
+    ul {
+      margin-left: 1rem;
     }
     ol {
-      margin-left: 1.75rem;
+      margin-left: 1.667rem;
     }
   }
   li {
