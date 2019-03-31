@@ -43,18 +43,21 @@ class NotesIndex extends React.Component {
           >
         <body />
         </Helmet>
-        <div className="work-title centered-title preload container">
+        <div className="index-title centered-title preload container">
           <h1>Notes</h1>
-           {posts.map(({ node: post }) => {
-              const title = get(post, 'frontmatter.title') || post.fields.slug
-             return (
-              <div style={{position:'relative',zIndex:2,maxWidth:'500px'}}>
-                <h2 className="h2">{post.frontmatter.title}</h2>
-                <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
-              </div>
-             )
-           })}
         </div>
+           <div className="note-index-container">
+           {posts.map(({ node: post }) => {
+                const title = get(post, 'frontmatter.title') || post.fields.slug
+               return (
+                <div className="note-card">
+                  <h2 className="title h2">{post.frontmatter.title}</h2>
+                  <p>{post.frontmatter.date}</p>
+                  <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
+                </div>
+               )
+             })}
+           </div>
       </Layout>
     )
   }
@@ -71,7 +74,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: ASC },
+      sort: { fields: [frontmatter___date], order: DESC },
       filter: {fileAbsolutePath: {regex: "\/notes/"}}
       ){
       edges {
@@ -82,7 +85,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             title
           }
         }

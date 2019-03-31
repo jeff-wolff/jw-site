@@ -45,7 +45,7 @@ class WorkIndex extends React.Component {
           >
         <body className="wrapper-work"/>
         </Helmet>
-        <div className="work-title centered-title preload">
+        <div className="index-title centered-title preload">
           <h1>Work</h1>
         </div>
          {posts.map(({ node: post }) => {

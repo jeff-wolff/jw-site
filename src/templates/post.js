@@ -10,6 +10,26 @@ import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
 class PostTemplate extends React.Component {
+  throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    }
+  }
+  trackScrolling() {
+    const containerTop = document.querySelector('.notes-container').getBoundingClientRect().top;
+    const containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom;
+    const title = document.getElementById('title').getBoundingClientRect().bottom;
+
+    if (title > containerTop && title < containerBottom) {
+       document.getElementById('title').classList.remove('preload');
+    } else {
+       document.getElementById('title').classList.add('preload');
+    }
+  }
   theme(bg,bgf,p,pf,s,sf,wb,wt,fbg) {
     document.documentElement.style.setProperty('--bg', bg);
     document.documentElement.style.setProperty('--bg-faded', bgf);
@@ -23,14 +43,23 @@ class PostTemplate extends React.Component {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
+  centerAndBlurTitle() {
+    let title = document.getElementById('title');
+    let clientHeight = title.clientHeight;
+    title.style.top = "calc(50% - "+clientHeight/2+"px)";
+    console.log(clientHeight)
+  }
   componentDidMount() {
+    document.addEventListener('scroll', this.throttle(this.trackScrolling, 50));
     const post = this.props.data.markdownRemark
     console.log(post.frontmatter);
+    this.centerAndBlurTitle();
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
   }
   componentWillUnmount() {
+    document.removeEventListener('scroll', this.throttle(this.trackScrolling, 50));
   }
 
   render() {
@@ -45,9 +74,11 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        <h1 class="work-post-title centered-title preload">{post.frontmatter.title}</h1>
-        <div className="Rte notes-container">
-          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <h1 id="title" className="post-title notes-post-title centered-title preload container"><span class="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
+        <div className="notes-container-wrap">
+          <div className="Rte notes-container">
+            <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+          </div>
         </div>
         <div className="notes-nav post-nav container">
         {

@@ -114,6 +114,13 @@ injectGlobal`
   a:visited:not(:hover,:active) {
       color: var(--primary-faded);
   }
+  a.no-style {
+    box-shadow: none;
+  }
+  a.no-style:hover {
+    padding: 0;
+    background: none;
+  }
   a > strong {
       color:  inherit;
   }
@@ -151,6 +158,23 @@ injectGlobal`
   pre {
     overflow: auto;
   }
+  blockquote {
+    margin-left: -1.75rem;
+    margin-right: 1.75rem;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.42188rem;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.75rem;
+    font-size: 1.20112rem;
+    line-height: 1.75rem;
+    color: inherit;
+    font-style: italic;
+    border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
+    border-left-color: inherit;
+    opacity: 0.8;
+  }
   hr {
       margin-left: 0;
       margin-right: 0;
@@ -170,8 +194,8 @@ injectGlobal`
   .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
-      line-height: 1.6;
-      font-weight: normal;
+      line-height: 1.25;
+      font-weight: bold;
       margin: 3.5rem 0 1.75rem;
       letter-spacing: 0;
   }
@@ -219,6 +243,7 @@ injectGlobal`
   }
   .wrapper {
       transition: 100ms ease background-color;
+      min-height: 100vh;
       margin-bottom: 82vh;
       margin-top: 114px;
       margin-left: auto;
@@ -280,57 +305,44 @@ injectGlobal`
     text-align: center;
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
-    user-select: none;
-  }
-  .centered-title {
-      filter: blur(.5em);
-      color: rgba(255,255,255,.5);
-      opacity: 0.4;
-  }
-  @media (hover: hover), (-moz-touch-enabled: 0) {
-    .centered-title:hover {
-        text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
-        text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
-        color: rgba(255,255, 255, .92);
-        filter: blur(0);
-        opacity: .92;
-    }
+    // user-select: none;
+    color: rgba(255,255,255,.02);
+    text-shadow: none;
+    will-change: transform;
   }
   .centered-title.preload {
       color: #fff;
-      text-shadow: 0 30px 60px rgba(50,50,93,.25), 0 18px 36px rgba(0,0,0,.3);
-      text-shadow: 0 30px 60px rgba(50,50,93,.1), 0 18px 36px rgba(0,0,0,.05);
-      text-shadow: 0 2px 24px rgba(21, 21, 21, 0.25), 0 11px 29px rgba(0,0,0,.25);
       text-shadow: 0 2px 24px rgba(21,21,21,0.05), 2px 4px 29px rgba(0,0,0,.15);
-      filter: blur(0);
       z-index: 2;
-      opacity: 1;
   }
-  .centered-title.work-title {
+  .centered-title.index-title {
     position: sticky;
     top: 160px;
     justify-content: flex-start;
     margin-bottom: 125px;
   }
   @media (min-width: 1152px) {
-    .centered-title.work-title {
+    .centered-title.index-title {
       top: 220px;
     }
   }
-  .work-post-title {
+  .post-title {
     position: sticky;
     top: 0;
     top: calc(50% - 115px);
     width: fit-content;
     margin: 0 auto 125px;
   }
-  @media (min-width: 768px) {
-    .work-post-title.container {
-      padding: 0;
-    }
-  }
-  .work-post-title .title {
+  .post-title .title {
     margin-bottom: 0;
+  }
+  .post-title .date {
+    display: block;
+    font-size: 25%;
+    margin-bottom: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-align: left;
   }
   .work-post-scrollDown {
     font-size: 2.6em;
@@ -355,6 +367,9 @@ injectGlobal`
       // background-color: var(--bg);
       // background-color: var(--footer-bg);
     }
+  }
+  .work-post-title {
+    padding: 0 20px;
   }
   .work-post-description-wrap {
     position: relative;
@@ -703,9 +718,9 @@ injectGlobal`
   .notes-container {
     position: relative;
     z-index: 1;
-    padding: 200px 30px 0;
+    padding: 0 30px;
     max-width:56rem;
-    margin: 50vh auto 0;
+    margin: 75vh auto 0;
   }
   @media (min-width: 768px) {
     .notes-container {
@@ -713,8 +728,39 @@ injectGlobal`
       padding-right: 60px;
     }
   }
+  .notes-post-title {
+    text-align: left;
+    margin-left: 0;
+  }
   .notes-nav {
     // margin-top: 50vh;
+  }
+  .note-index-container {
+    margin: 180px 0 0 0;
+    padding-bottom: 180px;
+  }
+  .note-card {
+    background: rgba(var(--bg-faded),.98);
+    border: 1px dashed rgba(255,255,255,.5);
+    padding: 2rem;
+    margin: 0 auto 3.5rem;
+    position: relative;
+    text-align: center;
+    z-index: 2; 
+    width: 90%;
+    max-width: 768px;
+  }
+  @media (min-width: 768px) {
+    .note-card {
+      padding: 4rem;
+    }
+  }
+  .note-card .title {
+    margin: 0 0 0.875rem;
+  }
+  .note-card a[class^="button"] {
+    width: fit-content;
+    margin: 0 auto;
   }
 `;
 

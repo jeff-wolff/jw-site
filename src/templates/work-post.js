@@ -3,10 +3,11 @@ import Helmet from 'react-helmet'
 import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
+import Img from 'gatsby-image'
+
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 import BlankWindow from '../components/BlankWindow/blank-window.js'
-
 import MediaQuery from 'react-responsive'
 
 class WorkPostTemplate extends React.Component {
@@ -70,7 +71,7 @@ class WorkPostTemplate extends React.Component {
     }
 
     if (post.frontmatter.lifestyleShot != null) {
-      lifestyleShot = <img src={post.frontmatter.lifestyleShot.publicURL} />;
+      lifestyleShot = <Img sizes={post.frontmatter.lifestyleShot.childImageSharp.sizes} />;
     } else {
       lifestyleShot= ""
     }
@@ -84,7 +85,7 @@ class WorkPostTemplate extends React.Component {
 
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
-        <div id="workTitle" className="work-post-title centered-title preload container">
+        <div id="workTitle" className="post-title centered-title preload work-post-title">
           <h1 className="title">{post.frontmatter.title}</h1>
           <div className="website-btn">
             <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>
@@ -288,7 +289,11 @@ export const pageQuery = graphql`
           publicURL
         }
         lifestyleShot {
-          publicURL
+          childImageSharp {
+            sizes(maxWidth: 1920, quality: 100) {
+              ...GatsbyImageSharpSizes
+            }
+          }
         }
         demoVideoDesktop {
           publicURL
