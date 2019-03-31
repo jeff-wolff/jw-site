@@ -68,18 +68,18 @@ injectGlobal`
       color: var(--text-color);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
-      line-height: 1.8;
+      line-height: 1.9;
       background-color: #000;
       background-color: var(--footer-bg);
   }
   @media (min-width: 320px) {
       body {
-        font-size: calc(14px + 3 * ((100vw - 320px) / 1120));
+        font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
       }
   }
   @media (min-width: 1440px) {
       body {
-          font-size: 17px;
+          font-size: 16px;
       }
   }
   strong {
@@ -144,9 +144,12 @@ injectGlobal`
   }
   ol {
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1151px) {
     ul, ol {
-        margin-left: 1rem;
+      margin-left: 0.875rem;
+    }
+    ol {
+      margin-left: 1.75rem;
     }
   }
   li {
@@ -162,13 +165,14 @@ injectGlobal`
     margin-left: -1.75rem;
     margin-right: 1.75rem;
     margin-top: 0;
+    margin: 0;
     padding-bottom: 0;
     padding-left: 1.42188rem;
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.75rem;
-    font-size: 1.20112rem;
-    line-height: 1.75rem;
+    font-size: 1.1rem;
+    line-height: 1.9;
     color: inherit;
     font-style: italic;
     border-left: 0.32813rem solid hsla(0,0%,0%,0.9);
@@ -194,7 +198,7 @@ injectGlobal`
   .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
-      line-height: 1.25;
+      line-height: 1.4;
       font-weight: bold;
       margin: 3.5rem 0 1.75rem;
       letter-spacing: 0;
@@ -236,7 +240,7 @@ injectGlobal`
     font-size: 0.75966rem;
   }
   figure {
-      margin: 0;
+      margin: 0 0 1.75rem;
   }
   small {
       font-size:  11px;
@@ -301,19 +305,24 @@ injectGlobal`
     mix-blend-mode: exclusion;
   }
   .centered-title {
-    transition: filter 500ms ease, color 275ms ease, opacity 500ms ease, text-shadow 275ms ease;
     text-align: center;
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
+    will-change: transform;
     // user-select: none;
     color: rgba(255,255,255,.02);
+  }
+  .centered-title .title {
+    transition: color 275ms ease, opacity 500ms ease, text-shadow 275ms ease;
     text-shadow: none;
-    will-change: transform;
+    margin: 0;
   }
   .centered-title.preload {
-      color: #fff;
-      text-shadow: 0 2px 24px rgba(21,21,21,0.15), 2px 4px 29px rgba(0,0,0,.15);
       z-index: 2;
+  }
+  .centered-title.preload .title {
+    color: #fff;
+    text-shadow: 0 2px 24px rgba(21,21,21,0.15), 2px 20px 29px rgba(0,0,0,.15);
   }
   .centered-title.index-title {
     position: sticky;
@@ -358,7 +367,7 @@ injectGlobal`
     }
   }
   .work-post-container {
-    margin-top: 125vh;
+    margin-top: 100vh;
   }
   @media (max-width: 640px) {
     .work-post-content {
@@ -377,7 +386,7 @@ injectGlobal`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
   }
   @media (min-width: 640px) {
     .work-post-description-wrap {
@@ -397,6 +406,7 @@ injectGlobal`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 20px;
   }
   @media (min-width: 1024px) {
     .work-post-description {
@@ -423,6 +433,7 @@ injectGlobal`
     margin-bottom: 0;
   }
   .work-post-description .title {
+    font-weight: normal;
     margin-bottom: 2rem;
   }
   .work-post-description .desc-info {
@@ -537,7 +548,6 @@ injectGlobal`
   @media (min-width: 640px) {
     .post-nav .next-btn,
     .post-nav .prev-btn {
-      display: inline-block;
       width: auto;
     }
   }
@@ -548,6 +558,10 @@ injectGlobal`
     }
   }
   
+  .work-post-nav {
+    display: flex;
+    width: 100%;
+  }
   .work-post-footer-cta {
     margin-bottom: 50vh;
   }
@@ -719,7 +733,7 @@ injectGlobal`
   .notes-container {
     position: relative;
     z-index: 1;
-    padding: 0 30px;
+    padding: 200px 30px;
     max-width:56rem;
     margin: 75vh auto 0;
   }
@@ -737,8 +751,8 @@ injectGlobal`
     // margin-top: 50vh;
   }
   .note-index-container {
-    margin: 180px 0 0 0;
-    padding-bottom: 180px;
+    margin: 260px 0 0 0;
+    padding-bottom: 240px;
   }
   .note-card {
     background: rgba(var(--bg-faded),.98);
@@ -777,18 +791,33 @@ injectGlobal`
    * If you only want to use line numbering
    */
 
+  // .gatsby-highlight {
+  //   background-color: #2d2d2d;
+  //   border-radius: 0.3em;
+  //   margin: 0.5em 0;
+  //   padding: 1em;
+  //   overflow: auto;
+  // }
   .gatsby-highlight {
-    background-color: #2d2d2d;
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    padding: 1em;
-    overflow: auto;
+      margin-bottom: 1.75rem;
+      border-radius: 6px;
+      background: #2d2d2d;
+      -webkit-overflow-scrolling: touch;
+      overflow: auto;
   }
 
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
+  }
+
+  :not(pre)>code[class*=language-] {
+      border-radius: .3em;
+      // background: var(--inlineCode-bg);
+      // color: var(--inlineCode-text);
+      padding: .15em .25em;
+      white-space: normal;
   }
 
 `;

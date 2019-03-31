@@ -249,8 +249,7 @@ class Window extends React.Component {
       >
           <div className="window-title"
               style={{
-                  color: 'rgb('+this.state.titleColor+')',
-                  backgroundColor: this.state.primaryColor,
+                  color: 'rgb('+this.state.titleColor+')'
               }}
           >
             <div className="content">

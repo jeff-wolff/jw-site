@@ -19,10 +19,21 @@ class PostTemplate extends React.Component {
       }
     }
   }
-  trackScrolling() {
-    const containerTop = document.querySelector('.notes-container').getBoundingClientRect().top;
-    const containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom;
-    const title = document.getElementById('title').getBoundingClientRect().bottom;
+  checkTitlePosition() {
+    let containerTop = document.querySelector('.notes-container').getBoundingClientRect().top;
+    let containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom;
+    let title = document.getElementById('title').getBoundingClientRect().bottom;
+
+    if (title > containerTop && title < containerBottom) {
+       document.getElementById('title').classList.add('preload');
+    } else {
+       document.getElementById('title').classList.remove('preload');
+    }
+  }
+  fadeTitle() {
+    let containerTop = document.querySelector('.notes-container').getBoundingClientRect().top;
+    let containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom;
+    let title = document.getElementById('title').getBoundingClientRect().bottom;
 
     if (title > containerTop && title < containerBottom) {
        document.getElementById('title').classList.remove('preload');
@@ -43,23 +54,24 @@ class PostTemplate extends React.Component {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
-  centerAndBlurTitle() {
+  centerTitle() {
     let title = document.getElementById('title');
     let clientHeight = title.clientHeight;
     title.style.top = "calc(50% - "+clientHeight/2+"px)";
     console.log(clientHeight)
   }
   componentDidMount() {
-    document.addEventListener('scroll', this.throttle(this.trackScrolling, 50));
-    const post = this.props.data.markdownRemark
+    document.addEventListener('scroll', this.throttle(this.fadeTitle, 50));
+    const post = this.props.data.markdownRemark;
     console.log(post.frontmatter);
-    this.centerAndBlurTitle();
+    this.centerTitle();
+    this.fadeTitle();
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
   }
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.throttle(this.trackScrolling, 50));
+    document.removeEventListener('scroll', this.throttle(this.fadeTitle, 50));
   }
 
   render() {
@@ -74,7 +86,9 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        <h1 id="title" className="post-title notes-post-title centered-title preload container"><span class="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
+        <div id="title" className="notes-post-title post-title centered-title container">
+          <h1 className="title"><span className="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
+        </div>
         <div className="notes-container-wrap">
           <div className="Rte notes-container">
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>

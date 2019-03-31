@@ -36,7 +36,7 @@ class WorkIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
-
+    let yCount = 0, xCount = 0;
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -46,7 +46,7 @@ class WorkIndex extends React.Component {
         <body className="wrapper-work"/>
         </Helmet>
         <div className="index-title centered-title preload">
-          <h1>Work</h1>
+          <h1 className="title">Work</h1>
         </div>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
@@ -82,10 +82,10 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={200 + Math.floor(Math.random() * 300)}
-                      xOffset={200 + Math.floor(Math.random() * 300)}
+                      yOffset={yCount+=25 + Math.floor(Math.random() * 300)}
+                      xOffset={xCount+=1 + Math.floor(Math.random() * 300)}
                       >
-                        <h2 className="h2">{post.frontmatter.title}</h2>
+                        <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>
@@ -112,7 +112,7 @@ class WorkIndex extends React.Component {
                       tfbg={post.frontmatter.tfbg}
                       yOffset={260}
                       >
-                        <h2 className="h2">{post.frontmatter.title}</h2>
+                        <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>
@@ -139,7 +139,7 @@ class WorkIndex extends React.Component {
                       tfbg={post.frontmatter.tfbg}
                       yOffset={260}
                       >
-                        <h2 className="h2">{post.frontmatter.title}</h2>
+                        <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                     </Window>
                   </MediaQuery>

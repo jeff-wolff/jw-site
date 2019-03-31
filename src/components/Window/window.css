@@ -1,9 +1,14 @@
 .react-draggable {
     transition: transform 200ms ease;
-    box-shadow: 0 2px 24px rgba(21, 21, 21,.05), 0 11px 29px rgba(0,0,0,.25);
+    box-shadow: 6px 7px 12px rgba(21, 21, 21,.15), 6px 8px 14.5px rgba(0,0,0,.25);
+}
+@media (min-width: 768px) {
+    .react-draggable {
+        box-shadow: 0 2px 24px rgba(21, 21, 21,.15), 0 14px 29px rgba(0,0,0,.25);
+    }
 }
 
-.work-window {
+.work-window, .window {
     border: 1px solid;
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
@@ -37,7 +42,7 @@
     width: calc(100% - 4px);
     height: var(--window-title-height);
     line-height: var(--window-title-height);
-    padding-left: .25rem;
+    padding-left:  9px;
     padding-right: 18px;
     user-select: none;
 }
@@ -46,6 +51,12 @@
         
     }
 }
+
+.work-window > .window-title {
+    margin-top: -1px;
+    padding-left: .25rem;
+}
+
 .window-title > .content {
     font-size: 10px;
     text-overflow: ellipsis;
@@ -55,9 +66,7 @@
     display: flex;
     align-items: center;
 }
-.work-window > .window-title {
-    margin-top: -1px;
-}
+
 
 .work-window > .window-title .favicon {
     display: inline-block;
@@ -69,25 +78,30 @@
 }
 
 
-.window-content {
-
+.window > .window-content,
+.work-window > .window-content {
+    font-size: 14px;
+    padding: 24px;
+    width: calc(100% - 8px);
+    height: calc(100% - 24px);
+    margin: 0 4px;
+}
+.window > .window-content {
+    padding: 16px 24px 0;
 }
 .work-window > .window-content {
     position: relative;
-    margin: 0 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 24px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    user-select: none;
-    padding: 24px;
+    user-select: none;  
 }
 @media (min-width: 1152px) {
+    /* .window > .window-content,
     .work-window > .window-content {
-        padding: 36px;
-    }
+        padding: 28px;
+    } */
 }
 .work-window > .window-video {
     transition:  all 125ms ease;

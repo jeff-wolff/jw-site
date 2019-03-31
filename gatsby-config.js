@@ -71,6 +71,7 @@ module.exports = {
         icon: `src/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-catch-links`
   ],
 }

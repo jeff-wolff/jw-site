@@ -7,12 +7,27 @@ Welcome to Version 4 of my portfolio website! The design inspiration is a modern
 
 The website is built with GatsbyJS, a free and open source framework based on React that helps developers build extremely performant static sites. I am utilizing Markdown to write my posts, which acts as a data source for the static site. To render the data on the page I am querying the content through GraphQL.
 
-The latest websites I have made are showcased in the Work section in draggable, collapsable, and resizable windows. Each portfolio detail page has a custom theme with unique colors by utilizing CSS Variables and JavaScript. The bottom of the work page has a “video demo” section which showcases the responsiveness of the websites in draggable windows. 
+<figure class="window">
+  <div class="window-title">
+    <div class="content">Work section</div>
+  </div>
+  <div class="window-content">
+  <p>The latest websites I have made are showcased in the Work section in draggable, collapsable, and resizable windows. Each portfolio detail page has a custom theme with unique colors by utilizing CSS Variables and JavaScript. The bottom of the work page has a “video demo” section which showcases the responsiveness of the websites in draggable windows.  <a href="/work/">Work &rarr;</a></p>
+</div>
+</figure>
 
-The Notes section is a place where I can jot down my ideas on whatever topic interests me.
+<figure class="window">
+  <div class="window-title">
+    <div class="content">Notes section</div>
+  </div>
+  <div class="window-content">
+  <p>The Notes section is a place where I can jot down my ideas on whatever topic interests me. <a href="/notes/">Notes &rarr;</a></p>
+</div>
+</figure>
+
+
 
 Hope you enjoy and please contact me if something looks awry! 
-
 
 Testing code blocks 
 

@@ -44,7 +44,7 @@ class NotesIndex extends React.Component {
         <body />
         </Helmet>
         <div className="index-title centered-title preload container">
-          <h1>Notes</h1>
+          <h1 className="title">Notes</h1>
         </div>
            <div className="note-index-container">
            {posts.map(({ node: post }) => {
