@@ -71,6 +71,7 @@ injectGlobal`
       line-height: 1.9;
       background-color: #000;
       background-color: var(--footer-bg);
+      -webkit-overflow-scrolling: auto;
   }
   @media (min-width: 320px) {
       body {
