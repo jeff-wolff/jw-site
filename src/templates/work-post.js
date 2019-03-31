@@ -119,7 +119,7 @@ class WorkPostTemplate extends React.Component {
 
         <div className="post-nav container">
       
-   {/*     {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
+        {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
                 bounds='body'
@@ -244,7 +244,7 @@ class WorkPostTemplate extends React.Component {
                   {demoVideoPhone}
               </BlankWindow>
             </MediaQuery>
-        </MediaQuery> : ''}*/}
+        </MediaQuery> : ''}
         
           <div className="work-post-nav">{
                 previous &&
