@@ -14,4 +14,74 @@ The Notes section was born so I can jot down my ideas on whatever topic interest
 Hope you enjoy and please contact me if something looks awry! 
 
 
+Testing code blocks 
 
+```javascript
+class SearchResults extends React.Component {
+  state = {
+    data: null
+  };
+  componentDidMount() {
+    this.fetchResults();
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.query !== this.props.query) { // ✅ Refetch on change
+      this.fetchResults();
+    }
+  }
+  fetchResults() {
+    const url = this.getFetchUrl();
+    // Do the fetching...
+  }
+  getFetchUrl() {
+    return 'http://myapi/results?query' + this.props.query; // ✅ Updates are handled
+  }
+  render() {
+    // ...
+  }
+}
+```
+
+
+```css
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+ * If you only want to use line numbering
+ */
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+```
+
+```html
+<h1 class="logo">Jeff Wolff</h1>
+<h2>Jeff's new porfolio is coming&hellip; soon</h2>
+<p>In the meantime please check out a selection of sites I have coded: 
+// highlight-next-line
+<a href="https://www.cukeragency.com/" target="_blank">Cuker Agency</a>, 
+
+<a href="https://www.ripcurl.com/" target="_blank">Rip Curl</a>,
+<a href="https://www.vans.com/history.html" target="_blank">Vans History</a>, 
+<a href="https://www.amariactive.com/" target="_blank">Amari Active</a>, 
+<a href="https://www.gomacro.com/" target="_blank">GoMacro</a> & 
+<a href="https://www.littlegiraffe.com/" target="_blank">Little Giraffe</a>.</p>
+```

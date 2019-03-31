@@ -762,6 +762,34 @@ injectGlobal`
     width: fit-content;
     margin: 0 auto;
   }
+
+  /**
+   * If you already use line highlighting
+   */
+
+  /* Adjust the position of the line numbers */
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding-left: 2.8em;
+  }
+
+  /**
+   * If you only want to use line numbering
+   */
+
+  .gatsby-highlight {
+    background-color: #2d2d2d;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  .gatsby-highlight pre[class*="language-"].line-numbers {
+    padding: 0;
+    padding-left: 2.8em;
+    overflow: initial;
+  }
+
 `;
 
 class Template extends React.Component {
