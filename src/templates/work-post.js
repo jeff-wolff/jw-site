@@ -122,7 +122,7 @@ class WorkPostTemplate extends React.Component {
         {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={750}
                 height={421.875}
                 minWidth={359}
@@ -135,7 +135,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={540}
                 height={303.75}
                 minWidth={224}
@@ -148,7 +148,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(max-width: 767px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={280}
                 height={157.5}
                 minWidth={280}
@@ -164,7 +164,7 @@ class WorkPostTemplate extends React.Component {
         {demoVideoTablet ? <MediaQuery query="(min-width: 1px)" key="tablet">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={384}
                 height={512}
                 minWidth={320}
@@ -177,7 +177,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={288}
                 height={384}
                 minWidth={240}
@@ -190,7 +190,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(max-width: 767px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={192}
                 height={256}
                 minWidth={160}
@@ -206,7 +206,7 @@ class WorkPostTemplate extends React.Component {
         {demoVideoPhone ? <MediaQuery query="(min-width: 1px)" key="phone">
             <MediaQuery query="(min-width: 1440px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={202.1622}
                 height={360}
                 minWidth={160}
@@ -220,7 +220,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={161.72972928}
                 height={288}
                 minWidth={140}
@@ -233,7 +233,7 @@ class WorkPostTemplate extends React.Component {
             </MediaQuery>
             <MediaQuery query="(max-width: 767px)">
               <BlankWindow 
-                bounds='parent'
+                bounds='body'
                 width={112.312312}
                 height={200}
                 minWidth={100}
