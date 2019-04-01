@@ -36,7 +36,7 @@ class WorkIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
-    let yCount = 0, xCount = 0;
+    let yCount = 200, xCount = 0;
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -58,6 +58,7 @@ class WorkIndex extends React.Component {
             if (post.frontmatter.favIcon != null) {
               favIconURL = post.frontmatter.favIcon.publicURL;
             }
+            console.log(yCount)
            return (
               <MediaQuery query="(min-width: 1px)" key={post.id}>
                   <MediaQuery query="(min-width: 1440px)">
@@ -82,8 +83,7 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={yCount+=25 + Math.floor(Math.random() * 300)}
-                      xOffset={xCount+=1 + Math.floor(Math.random() * 300)}
+                      yOffset={yCount+=4 + Math.floor(Math.random() * 100)}
                       >
                         <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -110,7 +110,7 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={260}
+                      yOffset={yCount+=Math.floor(Math.random() * 50)}
                       >
                         <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
@@ -137,7 +137,7 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={260}
+                      yOffset={yCount+=100}
                       >
                         <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>

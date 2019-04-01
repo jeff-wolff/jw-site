@@ -93,7 +93,7 @@ class WorkPostTemplate extends React.Component {
           </div>
         </div>
 
-        <div className="work-post-scrollDown">👇🏻</div>
+        {/*<div className="work-post-scrollDown">👇🏻</div>*/}
 
         <div className="work-post-container">
           <div className="work-post-content">

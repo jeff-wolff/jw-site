@@ -9,6 +9,9 @@ footer {
     color: var(--primary);
     height: 82vh;
     opacity: .8;
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
 }
 
 @media (min-width: 1152px) {

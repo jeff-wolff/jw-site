@@ -256,6 +256,8 @@ injectGlobal`
       background-color: var(--bg);
       overscroll-behavior: none;
       -webkit-overflow-scrolling: auto;
+      position: relative;
+      z-index: 2;
   }
   @media (min-width: 1152px) {
       .wrapper {
@@ -282,6 +284,11 @@ injectGlobal`
   }
   @media (min-height: 768px) {
     body.wrapper-work .wrapper {
+        min-height: 200vh;
+    }
+  }
+  @media (min-height: 1440px) {
+    body.wrapper-work .wrapper {
         min-height: 145vh;
     }
   }
@@ -295,6 +302,7 @@ injectGlobal`
     left: 0;
     width: 100%;
     height: 100%;
+    height: 100vh;
     overflow: hidden;
   }
   .vid-wrap video {
@@ -687,14 +695,14 @@ injectGlobal`
       top: -100%;
       width: 300%;
       z-index: 0;
-      opacity: 0.6;
+      opacity: 0.4;
   }
 
   .wrapper.fade-noise:after {
     opacity: 0;
   }
   .wrapper.disable-noise:after {
-    z-index: -201;
+    display: none !important;
   }
 
   .about-me {
