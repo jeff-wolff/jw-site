@@ -10,10 +10,11 @@ import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 
 class Index extends React.Component {
   defaultTheme() {
+    document.documentElement.style.setProperty('--text-color', '#ffffff');
     document.documentElement.style.setProperty('--bg', '#151515');
     document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
     document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
-    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.78)');
     document.documentElement.style.setProperty('--secondary', '#000');
     document.documentElement.style.setProperty('--secondary-faded', '#222');
     document.documentElement.style.setProperty('--window-border', '190,190,190');

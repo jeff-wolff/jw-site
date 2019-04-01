@@ -42,11 +42,11 @@ class Window extends React.Component {
   }
 
   defaultTheme() {
-    // setTimeout(function(){
+      document.documentElement.style.setProperty('--text-color', '#ffffff');
       document.documentElement.style.setProperty('--bg', '#151515');
       document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
       document.documentElement.style.setProperty('--primary', '#ff0');
-      document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+      document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.78)');
       document.documentElement.style.setProperty('--secondary', '#2828ef');
       document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
       document.documentElement.style.setProperty('--window-border', '190,190,190');
@@ -54,12 +54,9 @@ class Window extends React.Component {
       document.documentElement.style.setProperty('--footer-bg', '#000');
       let metaThemeColor = document.querySelector("meta[name=theme-color]");
       metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-    // },125);
   }
 
   theme() {
-    // console.log('theme changed');
-    // setTimeout(function(){
       document.documentElement.style.setProperty('--bg', this.props.tbg);
       document.documentElement.style.setProperty('--bg-faded', this.props.tbgf);
       document.documentElement.style.setProperty('--primary', this.props.tp);
@@ -71,7 +68,6 @@ class Window extends React.Component {
       document.documentElement.style.setProperty('--footer-bg', this.props.tfbg);
       let metaThemeColor = document.querySelector("meta[name=theme-color]");
       metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-    // }.bind(this),125);
   }
 
   collision() {
@@ -82,8 +78,6 @@ class Window extends React.Component {
               x = this.props.xOffset;
             }
           }
-          // console.log(x,y);
-          // y = Math.floor(Math.random() * Math.floor((windowGlobal.innerHeight - this.state.height - 103)));
       positions.push({
         width: this.state.width,
         height: this.state.height,

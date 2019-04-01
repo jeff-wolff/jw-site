@@ -43,7 +43,7 @@ injectGlobal`
     --bg: #151515;
     --bg-faded: 21, 21, 21;
     --primary: #ff0;
-    --primary-faded: rgba(255,255,0,.87);
+    --primary-faded: rgba(255,255,0,.78);
     --secondary: #000080;
     --secondary-faded: #1414ab;
     --window-border: 190,190,190;
@@ -146,7 +146,7 @@ injectGlobal`
   }
   @media (max-width: 1151px) {
     ul {
-      margin-left: 1rem;
+      margin-left: 1.25rem;
     }
     ol {
       margin-left: 1.667rem;
@@ -319,20 +319,24 @@ injectGlobal`
     transform-style: preserve-3d;
     transform : translate3d(0, 0, 0);
     will-change: transform;
-    // user-select: none;
-    color: rgba(255,255,255,.02);
   }
   .centered-title .title {
-    transition: color 275ms ease, opacity 500ms ease, text-shadow 275ms ease;
+    transition: filter 200ms ease, opacity 260ms ease, color 200ms ease, text-shadow 200ms ease;
+    color: #fff;
+    color: var(--text-color);
     text-shadow: none;
     margin: 0;
+    opacity: 0.024;
+    filter: hue-rotate(41deg) blur(5px);
   }
   .centered-title.preload {
       z-index: 2;
   }
   .centered-title.preload .title {
-    color: #fff;
-    text-shadow: 0 2px 24px rgba(21,21,21,0.15), 2px 20px 29px rgba(0,0,0,.15);
+    // color: #fff;
+    // color: var(--text-color);
+    opacity: 1;
+    filter: none;
   }
   .centered-title.index-title {
     position: sticky;
@@ -390,6 +394,13 @@ injectGlobal`
   }
   .work-post-title {
     padding: 0 20px;
+    user-select: none;
+  }
+  .work-post-title .title {
+    text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
+  }
+  .work-post-title .website-btn {
+    box-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
   }
   .work-post-description-wrap {
     position: relative;
@@ -746,7 +757,7 @@ injectGlobal`
   .notes-container {
     position: relative;
     z-index: 1;
-    padding: 200px 30px;
+    padding: 60px 30px 100px;
     max-width:56rem;
     margin: 75vh auto 0;
   }
@@ -759,6 +770,12 @@ injectGlobal`
   .notes-post-title {
     text-align: left;
     margin-left: 0;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1440px) {
+    .notes-post-title {
+      max-width: 80%;
+    }
   }
   .notes-nav {
     // margin-top: 50vh;

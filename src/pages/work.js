@@ -9,10 +9,11 @@ import MediaQuery from 'react-responsive'
 
 class WorkIndex extends React.Component {
   defaultTheme() {
+    document.documentElement.style.setProperty('--text-color', '#ffffff');
     document.documentElement.style.setProperty('--bg', '#151515');
     document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
     document.documentElement.style.setProperty('--primary', '#ff0');
-    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.87)');
+    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.78)');
     document.documentElement.style.setProperty('--secondary', '#2828ef');
     document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
     document.documentElement.style.setProperty('--window-border', '190,190,190');
@@ -58,7 +59,6 @@ class WorkIndex extends React.Component {
             if (post.frontmatter.favIcon != null) {
               favIconURL = post.frontmatter.favIcon.publicURL;
             }
-            console.log(yCount)
            return (
               <MediaQuery query="(min-width: 1px)" key={post.id}>
                   <MediaQuery query="(min-width: 1440px)">

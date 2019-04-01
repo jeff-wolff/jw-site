@@ -1,12 +1,8 @@
 .react-draggable {
     transition: transform 200ms ease;
-    box-shadow: 6px 7px 12px rgba(21, 21, 21,.15), 6px 8px 14.5px rgba(0,0,0,.25);
+    box-shadow: 2px 2px 12px rgba(21, 21, 21,.11), 0 8px 14.5px rgba(0,0,0,.15);
 }
-@media (min-width: 768px) {
-    .react-draggable {
-        box-shadow: 0 2px 24px rgba(21, 21, 21,.15), 0 14px 29px rgba(0,0,0,.25);
-    }
-}
+
 
 .work-window, .window {
     border: 1px solid;

@@ -14,9 +14,6 @@ class Header extends React.Component {
         <Link
           to="/"
           className="logo"
-          style={{
-            color: '#fff',
-          }}
         >
           J<span>eff </span>W<span>olff</span>
         </Link>
