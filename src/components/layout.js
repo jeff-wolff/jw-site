@@ -336,7 +336,7 @@ injectGlobal`
   }
   .centered-title.index-title {
     position: sticky;
-    top: 160px;
+    top: 180px;
     justify-content: flex-start;
     margin-bottom: 125px;
   }
