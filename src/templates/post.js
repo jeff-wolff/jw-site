@@ -107,6 +107,7 @@ class PostTemplate extends React.Component {
         <div id="title" className="notes-post-title post-title centered-title container">
           <h1 className="title"><span className="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
         </div>
+        <div className="test"></div>
         <div className="notes-container-wrap">
           <div className="Rte notes-container">
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>

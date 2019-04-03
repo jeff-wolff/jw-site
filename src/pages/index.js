@@ -43,7 +43,7 @@ class Index extends React.Component {
         </Helmet>
 
         <HomeInfo />
-        <div className="about-me container">
+        <div id="about" className="about-me container">
             <div className="content">
               <video loop muted autoPlay playsInline className="profile">
                 <source src={ AboutPortraitWebM } type="video/webm" />

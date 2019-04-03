@@ -64,7 +64,7 @@ footer .footer-middle {
 }
 @media (min-width: 1024px) {
     footer .footer-middle {
-     
+        flex-direction: row;
     }
 }
 
