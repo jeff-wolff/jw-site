@@ -156,7 +156,13 @@ class Window extends React.Component {
           }}
           resizeHandleClasses={{
             bottomLeft: 'window-resizer-2',
-            bottomRight: 'window-resizer'
+            topRight: 'window-resizer-2',
+            bottomRight: 'window-resizer',
+            topLeft: 'window-resizer',
+            bottom: 'window-resizer-3',
+            top: 'window-resizer-3',
+            left: 'window-resizer-4',
+            right: 'window-resizer-4',
           }}
           resizeHandleStyles={{
             bottomLeft: {

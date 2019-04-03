@@ -3,6 +3,8 @@ import {styled, injectGlobal} from 'styled-components'
 // import { Link } from 'gatsby'
 // import classNames from 'classnames';
 import noisePNG from '../assets/noise.png'
+import curDefault from '../assets/cur.png'
+import curMove from '../assets/cur-move.png'
 
 import * as fonts from '../fonts/fonts.js'
 
@@ -72,6 +74,10 @@ injectGlobal`
       line-height: 1.9;
       background-color: #000;
       background-color: var(--footer-bg);
+      cursor: url('${curDefault}'), pointer;
+  }
+  .work-window, .window {
+    cursor: url('${curMove}') 31 31, move !important;
   }
   @media (min-width: 320px) {
       body {
