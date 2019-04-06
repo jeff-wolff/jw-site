@@ -111,17 +111,39 @@ class BlankWindow extends Window {
           }}
           resizeHandleStyles={{
             bottomLeft: {
-              'width':'32px',
-              'height':'32px',
-              'bottom':'0',
-              'left':'0'
+              'bottom':'-6px',
+              'left':'-6px',
+              'width': '32px',
+              'height': '32px'
             },
             bottomRight: {
-              'width':'32px',
-              'height':'32px',
-              'bottom':'0',
-              'right':'0'
+              'bottom':'-6px',
+              'right':'-6px',
+              'width': '32px',
+              'height': '32px'
             },
+            topLeft: {
+              'top':'-6px',
+              'left':'-6px',
+              'width': '32px',
+              'height': '32px'
+            },
+            topRight: {
+              'top':'-6px',
+              'right':'-6px',
+              'width': '32px',
+              'height': '32px'
+            }
+          }}
+          resizeHandleClasses={{
+            bottomLeft: 'window-resizer-2',
+            topRight: 'window-resizer-2',
+            bottomRight: 'window-resizer',
+            topLeft: 'window-resizer',
+            bottom: 'window-resizer-3',
+            top: 'window-resizer-3',
+            left: 'window-resizer-4',
+            right: 'window-resizer-4',
           }}
           enableResizing={{bottom: this.state.enableResize, bottomLeft: this.state.enableResize, bottomRight: this.state.enableResize, left: this.state.enableResize, right: this.state.enableResize, top: this.state.enableResize, topLeft: this.state.enableResize, topRight: this.state.enableResize }}
           onDrag={(e, d) => { 

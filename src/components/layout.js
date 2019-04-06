@@ -4,7 +4,13 @@ import {styled, injectGlobal} from 'styled-components'
 // import classNames from 'classnames';
 import noisePNG from '../assets/noise.png'
 import curDefault from '../assets/cur.png'
+import curPointer from '../assets/cur-pointer.png'
 import curMove from '../assets/cur-move.png'
+import curNotAllowed from '../assets/cur-not-allowed.png'
+import curResizeNWSE from '../assets/cur-nwse-resize.png'
+import curResizeNESW from '../assets/cur-nesw-resize.png'
+import curResizeNS from '../assets/cur-ns-resize.png'
+import curResizeEW from '../assets/cur-ew-resize.png'
 
 import * as fonts from '../fonts/fonts.js'
 
@@ -61,7 +67,6 @@ injectGlobal`
   }
   html {
       box-sizing: border-box;
-      scroll-behavior: smooth;
   }
   *, *:after, *:before {
       box-sizing: inherit;
@@ -74,10 +79,27 @@ injectGlobal`
       line-height: 1.9;
       background-color: #000;
       background-color: var(--footer-bg);
-      cursor: url('${curDefault}'), pointer;
+      cursor: url('${curDefault}'), default;
   }
-  .work-window, .window {
-    cursor: url('${curMove}') 31 31, move !important;
+  .work-window, .react-draggable {
+    cursor: url('${curMove}') 21 21, move !important;
+  }
+  .window-resizer {
+    cursor: url('${curResizeNWSE}') 16 16, nwse-resize !important;
+    z-index: 2;
+  }
+  .window-resizer-2 {
+    cursor: url('${curResizeNESW}') 16 16, nesw-resize !important;
+    z-index: 2;
+  }
+  .window-resizer-3 {
+    cursor: url('${curResizeNS}') 9 22, ns-resize !important;
+  }
+  .window-resizer-4 {
+    cursor: url('${curResizeEW}') 22 9, ew-resize !important;
+  }
+  *:disabled {
+    cursor: url('${curNotAllowed}') 21 21, not-allowed;
   }
   @media (min-width: 320px) {
       body {
@@ -102,6 +124,7 @@ injectGlobal`
       outline: 0 solid rgba(0,0,0,0);
   }
   a:hover {
+      cursor: url('${curPointer}'), pointer;
       padding: .12em 0 0;
       background: #ff0;
       background: var(--primary);
@@ -350,7 +373,9 @@ injectGlobal`
     position: sticky;
     top: 180px;
     justify-content: flex-start;
-    margin-bottom: 125px;
+    width: auto;
+    width: fit-content;
+    margin: 0 auto 125px;
   }
   @media (min-width: 1152px) {
     .centered-title.index-title {

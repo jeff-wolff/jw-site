@@ -164,20 +164,6 @@ class Window extends React.Component {
             left: 'window-resizer-4',
             right: 'window-resizer-4',
           }}
-          resizeHandleStyles={{
-            bottomLeft: {
-              'width':'32px',
-              'height':'32px',
-              'bottom':'0',
-              'left':'0'
-            },
-            bottomRight: {
-              'width':'32px',
-              'height':'32px',
-              'bottom':'0',
-              'right':'0'
-            },
-          }}
           enableResizing={{bottom: this.state.enableResize, bottomLeft: this.state.enableResize, bottomRight: this.state.enableResize, left: this.state.enableResize, right: this.state.enableResize, top: this.state.enableResize, topLeft: this.state.enableResize, topRight: this.state.enableResize }}
           onDrag={(e, d) => { 
             this.setState({ x: d.x, y: d.y })

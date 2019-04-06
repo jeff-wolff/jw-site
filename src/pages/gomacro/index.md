@@ -22,6 +22,7 @@ demoVideoDesktop: "./gomacro_demo1.mp4"
 demoVideoTablet: "./gomacro_demo2.mp4"
 demoVideoPhone: "./gomacro_demo3.mp4"
 ---
+
 - GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. 
 
 - I was responsible for the front-end development of the new website.

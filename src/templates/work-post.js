@@ -125,7 +125,7 @@ class WorkPostTemplate extends React.Component {
                 height={421.875}
                 minWidth={359}
                 maxWidth={1280}
-                lockAspect={1.77777778}
+                lockAspect={1.7902097902097902097902097902098}
                 xOffset={45}
                 >
                   {demoVideoDesktop}
@@ -136,7 +136,8 @@ class WorkPostTemplate extends React.Component {
                 bounds='body'
                 width={540}
                 height={303.75}
-                minWidth={224}
+                minWidth={300}
+                maxWidth={1000}
                 lockAspect={1.77777778}
                 yOffset={100}
                 xOffset={10}
@@ -166,7 +167,7 @@ class WorkPostTemplate extends React.Component {
                 width={384}
                 height={512}
                 minWidth={320}
-                maxWidth={1280}
+                maxWidth={768}
                 lockAspect={0.75}
                 xOffset={921}
                 >
@@ -178,7 +179,8 @@ class WorkPostTemplate extends React.Component {
                 bounds='body'
                 width={288}
                 height={384}
-                minWidth={240}
+                minWidth={200}
+                maxWidth={540}
                 lockAspect={0.75}
                 xOffset={20}
                 yOffset={240}
@@ -192,6 +194,7 @@ class WorkPostTemplate extends React.Component {
                 width={192}
                 height={256}
                 minWidth={160}
+                maxWidth={440}
                 lockAspect={0.75}
                 yOffset={550}
                 xOffset={10}
@@ -221,7 +224,8 @@ class WorkPostTemplate extends React.Component {
                 bounds='body'
                 width={161.72972928}
                 height={288}
-                minWidth={140}
+                minWidth={100}
+                maxWidth={366}
                 lockAspect={0.56325301204819277108433734939759}
                 xOffset={76}
                 yOffset={555}
@@ -235,6 +239,7 @@ class WorkPostTemplate extends React.Component {
                 width={112.312312}
                 height={200}
                 minWidth={100}
+                maxWidth={366}
                 lockAspect={0.56325301204819277108433734939759}
                 yOffset={950}
                 xOffset={100}
