@@ -10,39 +10,20 @@ import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
 class PostTemplate extends React.Component {
-  throttle(fn, wait) {
-    var time = Date.now();
-    return function() {
-      if ((time + wait - Date.now()) < 0) {
-        fn();
-        time = Date.now();
-      }
-    }
-  }
-  checkTitlePosition() {
-    let containerTop = document.querySelector('.notes-container').getBoundingClientRect().top;
-    let containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom;
-    let title = document.getElementById('title').getBoundingClientRect().bottom;
+  // fadeTitle() {
+  //   if (document.querySelector('.notes-container')) {
+  //     let containerTop = document.querySelector('.notes-container').getBoundingClientRect().top,
+  //         containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom,
+  //         titleBottom = document.getElementById('title').getBoundingClientRect().bottom,
+  //         titleTop = document.getElementById('title').getBoundingClientRect().top;
 
-    if (title > containerTop && title < containerBottom) {
-       document.getElementById('title').classList.add('preload');
-    } else {
-       document.getElementById('title').classList.remove('preload');
-    }
-  }
-  fadeTitle() {
-    if (document.querySelector('.notes-container')) {
-      let containerTop = document.querySelector('.notes-container').getBoundingClientRect().top,
-          containerBottom = document.querySelector('.notes-container').getBoundingClientRect().bottom,
-          titleBottom = document.getElementById('title').getBoundingClientRect().bottom,
-          titleTop = document.getElementById('title').getBoundingClientRect().top;
-      if (titleBottom < containerTop || titleTop > containerBottom) {
-         document.getElementById('title').classList.add('preload');
-      } else {
-         document.getElementById('title').classList.remove('preload');
-      }
-    }
-  }
+  //     if (titleBottom < containerTop || titleTop > containerBottom) {
+  //        document.getElementById('title').classList.add('preload');
+  //     } else {
+  //        document.getElementById('title').classList.remove('preload');
+  //     }
+  //   }
+  // }
   defaultTheme() {
       document.documentElement.style.setProperty('--text-color', '#ffffff');
       document.documentElement.style.setProperty('--bg', '#151515');
@@ -77,11 +58,10 @@ class PostTemplate extends React.Component {
     title.style.top = "calc(50% - "+clientHeight/2+"px)";
   }
   componentDidMount() {
-    document.addEventListener('scroll', this.throttle(this.fadeTitle, 30));
     const post = this.props.data.markdownRemark;
     console.log(post.frontmatter);
     this.centerTitle();
-    this.fadeTitle();
+    // this.fadeTitle();
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.ttc,post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     } else {
@@ -89,7 +69,7 @@ class PostTemplate extends React.Component {
     }
   }
   componentWillUnmount() {
-    document.removeEventListener('scroll', this.fadeTitle);
+
   }
 
   render() {
@@ -104,7 +84,7 @@ class PostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}
         />
-        <div id="title" className="notes-post-title post-title centered-title container">
+        <div id="title" className="notes-post-title post-title centered-title container preload">
           <h1 className="title"><span className="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
         </div>
         <div className="test"></div>
