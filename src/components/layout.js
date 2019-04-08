@@ -753,8 +753,6 @@ injectGlobal`
   .about-me {
     position: relative;
     z-index: 2;
-    margin-top: 100vh;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -766,26 +764,27 @@ injectGlobal`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
+    padding-top: 56px;
     margin-bottom: 20vh;
   }
   .about-me .profile {
     width: 100%;
-    margin-bottom: 3rem;
   }
   @media (min-width: 1024px) {
     .about-me {
       flex-direction: row;
+      min-height: 100vh;
     }
     .about-me .profile {
-      width: 30%;
-      margin-left: 10%;
-      margin-right: 10%;
+      max-width: 760px;
+      width: 60%;
+      // margin-left: 10%;
+      // margin-right: 10%;
       margin-bottom: 0;
     }
     .about-me .info {
-      width: 40%;
-      margin-right: 10%;
+      width: 35%;
+      margin-left: 5%;
     }
   }
   .notes-container-wrap {
