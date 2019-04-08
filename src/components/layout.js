@@ -1378,7 +1378,18 @@ injectGlobal`
                 transform: translate(4px, -12px) scale(1.017);
       }
     }
-
+    .Typist .Cursor {
+        display: inline-block;
+    }
+    .Typist .Cursor--blinking {
+        opacity: 1;
+        animation: blink 1s linear infinite;
+    }
+    @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
 `;
 
 class Template extends React.Component {
@@ -1445,18 +1456,19 @@ class Template extends React.Component {
       <div>
       <PageTransition
         defaultStyle={{
-             animation: 'none',
+             transition: 'opacity 200ms ease',
+             opacity: '0'
            }}
            transitionStyles={{
              entering: { 
-              animation: 'spazz 5s steps(1) infinite',
+              animation: 'spazz 4s steps(1) infinite',
               textTransform: 'uppercase',
-              overflowX: 'hidden'
+              opacity: '.8'
                },
-             entered: { animation: 'none' },
-             exiting: { animation: 'spazz 5s steps(1) infinite' },
+             entered: { animation: 'none', opacity: '1' },
+             exiting: { animation: 'spazz 4s steps(1) infinite' },
            }}
-           transitionTime={450}>
+           transitionTime={400}>
         <div className="wrapper">
         {header}
         {children}
