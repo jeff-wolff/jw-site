@@ -78,6 +78,7 @@ injectGlobal`
   }
   body {
       margin: 0;
+      color: #fff;
       color: var(--text-color);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
@@ -85,6 +86,11 @@ injectGlobal`
       background-color: #000;
       background-color: var(--footer-bg);
       cursor: url('${curDefault}'), default;
+  }
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+     body {
+      background: red;
+     }
   }
   .work-window, .react-draggable {
     cursor: url('${curMove}') 21 21, move !important;
