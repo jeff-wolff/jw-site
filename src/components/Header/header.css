@@ -32,8 +32,8 @@
     box-shadow: none;
     text-decoration: none;
     user-select: none;
-    color: #fff;
-    color: var(--text-color);
+    color: #fff !important;
+    color: var(--text-color) !important;
 }
 .header > .logo:hover {
     background: none;

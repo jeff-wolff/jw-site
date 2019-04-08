@@ -15,6 +15,7 @@ import curResizeEW from '../assets/cur-ew-resize.png'
 
 import * as fonts from '../fonts/fonts.js'
 
+import 'babel-polyfill'
 import '../utils/ie11-polyfill.js'
 
 import Header from './Header/header.js'
