@@ -37,7 +37,7 @@ class WorkIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
-    let yCount = 200, xCount = 0;
+    let yCount = 175, xCount = 0;
     return (
       <Layout location={this.props.location}>
         <Helmet
@@ -137,7 +137,7 @@ class WorkIndex extends React.Component {
                       twb={post.frontmatter.twb}
                       twt={post.frontmatter.twt}
                       tfbg={post.frontmatter.tfbg}
-                      yOffset={yCount+=100}
+                      yOffset={yCount+=25}
                       >
                         <h2 className="h3">{post.frontmatter.title}</h2>
                         <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
