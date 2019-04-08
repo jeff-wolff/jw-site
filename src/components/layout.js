@@ -87,11 +87,6 @@ injectGlobal`
       background-color: var(--footer-bg);
       cursor: url('${curDefault}'), default;
   }
-  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-     body {
-      background: red;
-     }
-  }
   .work-window, .react-draggable {
     cursor: url('${curMove}') 21 21, move !important;
   }
@@ -1385,6 +1380,19 @@ injectGlobal`
                 transform: translate(4px, -12px) scale(1.017);
       }
     }
+
+    .ie-warning {
+      display: none;
+    }
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+       .ie-warning {
+            display: block;
+            background: red;
+            padding: 60px;
+            text-align: center;
+       }
+    }
+    
     .Typist .Cursor {
         display: inline-block;
     }
@@ -1477,6 +1485,7 @@ class Template extends React.Component {
            }}
            transitionTime={400}>
         <div className="wrapper">
+        <div className="ie-warning">You are using an outdated browser. Some features may be missing. Update to the latest version of Chrome, Firefox, or Safari for the full experience.</div>
         {header}
         {children}
         </div>
