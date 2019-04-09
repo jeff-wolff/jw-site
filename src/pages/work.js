@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
@@ -47,7 +48,17 @@ class WorkIndex extends React.Component {
         <body className="wrapper-work"/>
         </Helmet>
         <div className="index-title centered-title preload">
-          <h1 className="title">Work</h1>
+          <h1 className="title">
+            <Typist 
+            startDelay={750}
+            avgTypingDelay={150}
+            cursor={{
+                blink: false,
+                element: '_',
+                hideWhenDone: true,
+                hideWhenDoneDelay: 150
+            }}>Work</Typist>
+          </h1>
         </div>
          {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug

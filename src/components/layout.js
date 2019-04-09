@@ -382,6 +382,10 @@ injectGlobal`
     width: auto;
     width: fit-content;
     margin: 0 auto 125px;
+    text-transform: uppercase;
+  }
+  .centered-title.index-title .title {
+    letter-spacing: 0.06em;
   }
   @media (min-width: 1152px) {
     .centered-title.index-title {
@@ -554,13 +558,17 @@ injectGlobal`
     // max-width: 429px;
     margin-top: 20px;
     word-break: break-all;
+    transition: opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 1;
   }
   @media (min-width: 1152px) {
     .website-btn {
       margin-top: 30px;
     }
   }
-  
+  .website-btn.faded {
+    opacity: 0;
+  }
   .work-post-lifestyle {
     height: 100vh;
     margin-bottom: 0;

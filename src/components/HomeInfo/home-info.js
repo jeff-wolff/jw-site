@@ -16,8 +16,7 @@ class HomeInfo extends React.Component {
                 <h2 className="latest-info h3">
                     <Typist 
                     startDelay={3000}
-                    avgTypingDelay={70}
-                    stdTypingDelay={12}
+                    avgTypingDelay={60}
                     cursor={{
                         
                     }}

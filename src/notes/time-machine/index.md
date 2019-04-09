@@ -6,7 +6,7 @@ title: "Website Time Machine"
 
 Here are the past versions of my website:
 * <p>
-    <a href="http://jeff-wolff.github.io/" target="_blank">Version 3.5 (2015-2019)</a>
+    <a href="http://jeff-wolff.github.io/" target="_blank">Hiatus (2015-2019)</a>
   </p>
   <figure>
       <a href="http://jeff-wolff.github.io/" target="_blank" class="no-style"><img src="./jw-version-3-5.gif" alt=""></a>

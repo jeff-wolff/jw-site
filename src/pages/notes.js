@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
@@ -45,7 +46,17 @@ class NotesIndex extends React.Component {
         <body />
         </Helmet>
         <div className="index-title centered-title preload container">
-          <h1 className="title">Notes</h1>
+          <h1 className="title">
+            <Typist 
+            startDelay={750}
+            avgTypingDelay={150}
+            cursor={{
+                blink: false,
+                element: '_',
+                hideWhenDone: true,
+                hideWhenDoneDelay: 150
+            }}>Notes</Typist>
+          </h1>
         </div>
            <div className="note-index-container">
            {posts.map(({ node: post }) => {

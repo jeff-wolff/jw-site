@@ -4,6 +4,7 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+import Typist from 'react-typist';
 import Img from 'gatsby-image'
 import Button from '../components/Button/button.js'
 import BlankWindow from '../components/BlankWindow/blank-window.js'
@@ -37,6 +38,14 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
+  }
+
+  onHeaderTyped() {
+    let btn = document.getElementsByClassName('website-btn')[0];
+    setTimeout(function() {
+      btn.style.visibility = "initial"
+      document.getElementsByClassName('website-btn')[0].classList.remove('faded');
+    },500);
   }
 
   render() {
@@ -88,8 +97,18 @@ class WorkPostTemplate extends React.Component {
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
         <div id="workTitle" className="post-title centered-title preload work-post-title">
-          <h1 className="title">{post.frontmatter.title}</h1>
-          <div className="website-btn">
+          <h1 className="title">
+            <Typist 
+            startDelay={750}
+            avgTypingDelay={150}
+            cursor={{
+                blink: false,
+                element: '_',
+                hideWhenDone: true,
+                hideWhenDoneDelay: 150
+            }} onTypingDone={this.onHeaderTyped}>{post.frontmatter.title}</Typist>
+          </h1>
+          <div className="website-btn faded" style={{ visibility: 'hidden' }}>
             <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>
           </div>
         </div>
