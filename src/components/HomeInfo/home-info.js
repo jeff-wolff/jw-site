@@ -13,8 +13,7 @@ class HomeInfo extends React.Component {
     render() {
         return (
             <div className="home-container container">
-                
-                <h2 className="h3">
+                <h2 className="latest-info h3">
                     <Typist 
                     startDelay={3000}
                     avgTypingDelay={70}
@@ -36,21 +35,18 @@ class HomeInfo extends React.Component {
                         Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;
                     </Typist>
                 </h2>
-                
                 <div className="home-logo">
-                  
-                      <h1 className="title">
-                        <Typist 
-                        startDelay={1000}
-                        avgTypingDelay={150}
-                        cursor={{
-                            blink: false,
-                            element: '_'
-                        }}>
-                            JEFF WOLFF
-                        </Typist>
-                      </h1>
-                  
+                  <h1 className="title">
+                    <Typist 
+                    startDelay={1000}
+                    avgTypingDelay={150}
+                    cursor={{
+                        blink: false,
+                        element: '_'
+                    }}>
+                        JEFF WOLFF
+                    </Typist>
+                  </h1>
                 </div>
             </div>
         );

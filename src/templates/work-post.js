@@ -66,7 +66,6 @@ class WorkPostTemplate extends React.Component {
     } else {
      demoVideoPhone = "";
     }
-
     if (post.frontmatter.lifestyleShot != null) {
       lifestyleShot = <Img sizes={post.frontmatter.lifestyleShot.childImageSharp.sizes} />;
     } else {
@@ -115,137 +114,137 @@ class WorkPostTemplate extends React.Component {
           </div>
         </div>
         <div className="work-demo-section">
-        {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
-            <MediaQuery query="(min-width: 1440px)">
-              <BlankWindow 
-                bounds='body'
-                width={750}
-                height={421.875}
-                minWidth={359}
-                maxWidth={1280}
-                lockAspect={1.7902097902097902097902097902098}
-                xOffset={45}
-                >
-                  {demoVideoDesktop}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-              <BlankWindow 
-                bounds='body'
-                width={540}
-                height={303.75}
-                minWidth={300}
-                maxWidth={1000}
-                lockAspect={1.77777778}
-                yOffset={100}
-                xOffset={10}
-                >
-                  {demoVideoDesktop}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(max-width: 767px)">
-              <BlankWindow 
-                bounds='body'
-                width={280}
-                height={157.5}
-                minWidth={280}
-                lockAspect={1.77777778}
-                yOffset={150}
-                xOffset={20}
-                >
-                  {demoVideoDesktop}
-              </BlankWindow>
-            </MediaQuery>
-        </MediaQuery>: ''}
-        
-        {demoVideoTablet ? <MediaQuery query="(min-width: 1px)" key="tablet">
-            <MediaQuery query="(min-width: 1440px)">
-              <BlankWindow 
-                bounds='body'
-                width={384}
-                height={512}
-                minWidth={320}
-                maxWidth={768}
-                lockAspect={0.75}
-                xOffset={921}
-                >
-                  {demoVideoTablet}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-              <BlankWindow 
-                bounds='body'
-                width={288}
-                height={384}
-                minWidth={200}
-                maxWidth={540}
-                lockAspect={0.75}
-                xOffset={20}
-                yOffset={240}
-                >
-                  {demoVideoTablet}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(max-width: 767px)">
-              <BlankWindow 
-                bounds='body'
-                width={192}
-                height={256}
-                minWidth={160}
-                maxWidth={440}
-                lockAspect={0.75}
-                yOffset={550}
-                xOffset={10}
-                >
-                  {demoVideoTablet}
-              </BlankWindow>
-            </MediaQuery>
-        </MediaQuery>: '' }
-        
-        {demoVideoPhone ? <MediaQuery query="(min-width: 1px)" key="phone">
-            <MediaQuery query="(min-width: 1440px)">
-              <BlankWindow 
-                bounds='body'
-                width={202.1622}
-                height={360}
-                minWidth={160}
-                maxWidth={366}
-                lockAspect={0.56325301204819277108433734939759}
-                yOffset={0}
-                xOffset={0}
-                >
-                  {demoVideoPhone}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
-              <BlankWindow 
-                bounds='body'
-                width={161.72972928}
-                height={288}
-                minWidth={100}
-                maxWidth={366}
-                lockAspect={0.56325301204819277108433734939759}
-                xOffset={76}
-                yOffset={555}
-                >
-                  {demoVideoPhone}
-              </BlankWindow>
-            </MediaQuery>
-            <MediaQuery query="(max-width: 767px)">
-              <BlankWindow 
-                bounds='body'
-                width={112.312312}
-                height={200}
-                minWidth={100}
-                maxWidth={366}
-                lockAspect={0.56325301204819277108433734939759}
-                yOffset={400}
-                xOffset={100}
-                >
-                  {demoVideoPhone}
-              </BlankWindow>
-            </MediaQuery>
-        </MediaQuery> : ''}
+          {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
+              <MediaQuery query="(min-width: 1440px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={750}
+                  height={421.875}
+                  minWidth={359}
+                  maxWidth={1280}
+                  lockAspect={1.7902097902097902097902097902098}
+                  xOffset={45}
+                  >
+                    {demoVideoDesktop}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={540}
+                  height={303.75}
+                  minWidth={300}
+                  maxWidth={1000}
+                  lockAspect={1.77777778}
+                  yOffset={100}
+                  xOffset={10}
+                  >
+                    {demoVideoDesktop}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(max-width: 767px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={280}
+                  height={157.5}
+                  minWidth={280}
+                  lockAspect={1.77777778}
+                  yOffset={150}
+                  xOffset={20}
+                  >
+                    {demoVideoDesktop}
+                </BlankWindow>
+              </MediaQuery>
+          </MediaQuery>: ''}
+          
+          {demoVideoTablet ? <MediaQuery query="(min-width: 1px)" key="tablet">
+              <MediaQuery query="(min-width: 1440px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={384}
+                  height={512}
+                  minWidth={320}
+                  maxWidth={768}
+                  lockAspect={0.75}
+                  xOffset={921}
+                  >
+                    {demoVideoTablet}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={288}
+                  height={384}
+                  minWidth={200}
+                  maxWidth={540}
+                  lockAspect={0.75}
+                  xOffset={20}
+                  yOffset={240}
+                  >
+                    {demoVideoTablet}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(max-width: 767px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={192}
+                  height={256}
+                  minWidth={160}
+                  maxWidth={440}
+                  lockAspect={0.75}
+                  yOffset={550}
+                  xOffset={10}
+                  >
+                    {demoVideoTablet}
+                </BlankWindow>
+              </MediaQuery>
+          </MediaQuery>: '' }
+          
+          {demoVideoPhone ? <MediaQuery query="(min-width: 1px)" key="phone">
+              <MediaQuery query="(min-width: 1440px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={202.1622}
+                  height={360}
+                  minWidth={160}
+                  maxWidth={366}
+                  lockAspect={0.56325301204819277108433734939759}
+                  yOffset={0}
+                  xOffset={0}
+                  >
+                    {demoVideoPhone}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(min-width: 768px) and (max-width: 1439px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={161.72972928}
+                  height={288}
+                  minWidth={100}
+                  maxWidth={366}
+                  lockAspect={0.56325301204819277108433734939759}
+                  xOffset={76}
+                  yOffset={555}
+                  >
+                    {demoVideoPhone}
+                </BlankWindow>
+              </MediaQuery>
+              <MediaQuery query="(max-width: 767px)">
+                <BlankWindow 
+                  bounds='body'
+                  width={112.312312}
+                  height={200}
+                  minWidth={100}
+                  maxWidth={366}
+                  lockAspect={0.56325301204819277108433734939759}
+                  yOffset={400}
+                  xOffset={100}
+                  >
+                    {demoVideoPhone}
+                </BlankWindow>
+              </MediaQuery>
+          </MediaQuery> : ''}
         </div>
         <div className="post-nav container">
           <div className="work-post-nav">

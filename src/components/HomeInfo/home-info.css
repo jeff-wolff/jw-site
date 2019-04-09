@@ -14,7 +14,7 @@
         text-align: center;
     }
 }
-.home-container h2 {
+.home-container .latest-info {
     font-weight: normal;
     margin: 0;
 }
@@ -24,7 +24,7 @@
 .home-logo {
     margin: 0;
     position: absolute;
-    bottom: 5.88%;
+    bottom: 12%;
     width: 80%;
     text-align: left;
 }
@@ -34,6 +34,6 @@
 }
 @media (min-width: 1152px) {
     .home-logo {
-        bottom: 40px;
+        bottom: 60px;
     }
 }

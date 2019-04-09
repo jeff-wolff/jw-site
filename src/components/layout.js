@@ -261,7 +261,7 @@ injectGlobal`
     font-size: 1.7rem;
   }
   h3,.h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   h4,.h4 {
     font-size: 1rem;
@@ -310,7 +310,7 @@ injectGlobal`
   }
   @media (min-height: 360px) {
     body.wrapper-work .wrapper {
-        min-height: 260vh;
+        min-height: 250vh;
     }
   }
   @media (min-height: 500px) {
