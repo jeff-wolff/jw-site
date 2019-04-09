@@ -33,7 +33,7 @@ class WorkPostTemplate extends React.Component {
 
   componentDidMount() {
     const post = this.props.data.markdownRemark
-    console.log(post.frontmatter);
+    // console.log(post.frontmatter);
     this.centerWorkTitle();
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
@@ -41,62 +41,58 @@ class WorkPostTemplate extends React.Component {
   }
 
   onHeaderTyped() {
+    // Show website-btn transition
     let btn = document.getElementsByClassName('website-btn')[0];
+
     setTimeout(function() {
       btn.style.visibility = "initial"
       document.getElementsByClassName('website-btn')[0].classList.remove('faded');
     },500);
+
   }
 
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-    const siteURL = post.frontmatter.url
-    let coverVideo, lifestyleShot, demoVideoDesktop, demoVideoTablet, demoVideoPhone;
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const post = this.props.data.markdownRemark
+    const postTitle = post.frontmatter.title
+    const postDescription = post.excerpt
+    const postWebsiteUrl = post.frontmatter.url
+    let coverVideo = "", lifestyleShot = "", demoVideoDesktop = "", demoVideoTablet = "", demoVideoPhone = "";
+    // Define media
     if (post.frontmatter.featuredVideo != null) {
      coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
-    } else {
-     coverVideo = "";
     }
     if (post.frontmatter.demoVideoDesktop != null) {
      demoVideoDesktop = <video src={post.frontmatter.demoVideoDesktop.publicURL} autoPlay muted loop playsInline />;
-    } else {
-     demoVideoDesktop = "";
     }
     if (post.frontmatter.demoVideoTablet != null) {
      demoVideoTablet = <video src={post.frontmatter.demoVideoTablet.publicURL} autoPlay muted loop playsInline />;
-    } else {
-     demoVideoTablet = "";
     }
     if (post.frontmatter.demoVideoPhone != null) {
      demoVideoPhone = <video src={post.frontmatter.demoVideoPhone.publicURL} autoPlay muted loop playsInline />;
-    } else {
-     demoVideoPhone = "";
     }
     if (post.frontmatter.lifestyleShot != null) {
       lifestyleShot = <Img sizes={post.frontmatter.lifestyleShot.childImageSharp.sizes} />;
-    } else {
-      lifestyleShot= ""
     }
 
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} Website - ${siteTitle}`}>
+          meta={[{ name: 'description', content: postDescription }]}
+          title={`${postTitle} Website - ${siteTitle}`}>
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jeffwolff" />
           <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
-          <meta property="og:title" content={`${post.frontmatter.title} Website - ${siteTitle}`} />
-          <meta property="og:description" content={siteDescription} />
+          <meta property="og:title" content={`${postTitle} Website - ${siteTitle}`} />
+          <meta property="og:description" content={postDescription} />
           <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.lifestyleShot.childImageSharp.sizes.src}`} />
           <body className="wrapper-work-post"/>
         </Helmet>
+
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
-        <div id="workTitle" className="post-title centered-title preload work-post-title">
+        <div className="work-post-title-wrap post-title centered-title preload" id="workTitle">
           <h1 className="title">
             <Typist 
             startDelay={750}
@@ -106,33 +102,31 @@ class WorkPostTemplate extends React.Component {
                 element: '_',
                 hideWhenDone: true,
                 hideWhenDoneDelay: 150
-            }} onTypingDone={this.onHeaderTyped}>{post.frontmatter.title}</Typist>
+            }} onTypingDone={this.onHeaderTyped}>{postTitle}</Typist>
           </h1>
           <div className="website-btn faded" style={{ visibility: 'hidden' }}>
-            <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>
+            <Button external="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">www.{postWebsiteUrl} <span>&#8599;</span></Button>
           </div>
         </div>
 
-        <div className="work-post-container">
-          <div className="work-post-content">
-            <div className="work-post-description-wrap container">
-              <div className="work-post-description">
-                <h2 className="title">{post.frontmatter.description}</h2>
-                <h2 className="h3">Key Points:</h2>
-                <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-                <div className="desc-info">
-                  <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
-                  <p>AGENCY<br />{post.frontmatter.team}</p>
-                  <p>ROLE<br />Web Developer</p>
-                </div>
-              </div>
+        <div className="work-post-description-wrap container">
+          <div className="work-post-description">
+            <h2 className="title">{post.frontmatter.description}</h2>
+            <h2 className="h3">Key Points:</h2>
+            <div className="desc-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="desc-info">
+              <p>DATE LAUNCHED<br />{post.frontmatter.date}</p>
+              <p>AGENCY<br />{post.frontmatter.team}</p>
+              <p>ROLE<br />Web Developer</p>
             </div>
-            <figure className="work-post-lifestyle">
-              {lifestyleShot}
-            </figure>
           </div>
         </div>
-        <div className="work-demo-section">
+
+        <figure className="work-post-lifestyle-wrap">
+          {lifestyleShot}
+        </figure>
+
+        <div className="work-post-demo-wrap">
           {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
               <MediaQuery query="(min-width: 1440px)">
                 <BlankWindow 
@@ -265,8 +259,8 @@ class WorkPostTemplate extends React.Component {
               </MediaQuery>
           </MediaQuery> : ''}
         </div>
-        <div className="post-nav container">
-          <div className="work-post-nav">
+
+        <div className="work-post-nav-wrap post-nav container">
               {
                 previous &&
                 <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
@@ -279,7 +273,6 @@ class WorkPostTemplate extends React.Component {
                   <span>Next:</span> {next.frontmatter.title}
                 </Button>
               }
-          </div>
         </div>
       </Layout>
     )

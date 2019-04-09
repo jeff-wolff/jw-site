@@ -10,7 +10,6 @@ const windowGlobal = typeof window !== 'undefined' && window;
 let globalZIndex = 1;
 let count = 0;
 let positions = [];
-let hasPoints = false;
 
 class Window extends React.Component {
   constructor(props) {
@@ -101,7 +100,7 @@ class Window extends React.Component {
    if (this.state.dragging || this.state.resizing) {
      event.preventDefault();
    }
-  };
+  }
 
   componentDidMount() {
     this.collision();

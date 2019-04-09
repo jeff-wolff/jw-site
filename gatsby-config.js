@@ -3,7 +3,7 @@ module.exports = {
     title: 'Jeff Wolff',
     author: 'Jeff Wolff',
     tagline: 'UI Designer & Web Developer',
-    description: 'San Diego based guy who makes websites.',
+    description: 'A guy from San Diego who makes websites.',
     siteUrl: 'https://jeffwolff.netlify.com',
   },
   pathPrefix: '/',
@@ -42,7 +42,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: `margin-bottom: 1.75rem`,
             },
           },
           {
@@ -75,7 +75,7 @@ module.exports = {
         background_color: `#212121`,
         theme_color: `#212121`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.png`,
+        icon: `src/assets/ie6-404.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -4,10 +4,11 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Button from '../components/Button/button.js'
-import Window from '../components/Window/window.js'
+// import Button from '../components/Button/button.js'
+// import Window from '../components/Window/window.js'
 
-import MediaQuery from 'react-responsive'
+// import MediaQuery from 'react-responsive'
+import ie6Icon from '../assets/ie6-404.png'
 
 class PostTemplate extends React.Component {
   // fadeTitle() {
@@ -59,7 +60,7 @@ class PostTemplate extends React.Component {
   }
   componentDidMount() {
     const post = this.props.data.markdownRemark;
-    console.log(post.frontmatter);
+    // console.log(post.frontmatter);
     this.centerTitle();
     // this.fadeTitle();
     if (post.frontmatter.theme) {
@@ -68,24 +69,27 @@ class PostTemplate extends React.Component {
       this.defaultTheme();
     }
   }
-  componentWillUnmount() {
-
-  }
 
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = post.excerpt
+    const postTitle = post.frontmatter.title;
+    const postDescription = post.excerpt
     // const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} Website - ${siteTitle}`}
-        />
-        <div id="title" className="notes-post-title post-title centered-title container preload">
-          <h1 className="title"><span className="date">{post.frontmatter.date}</span>{post.frontmatter.title}</h1>
+          meta={[{ name: 'description', content: postDescription }]}
+          title={`${postTitle} - ${siteTitle}`}>
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@jeffwolff" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
+          <meta property="og:title" content={`${postTitle} - ${siteTitle}`} />
+          <meta property="og:description" content={postDescription} />
+        </Helmet>
+        <div className="notes-post-title post-title centered-title container preload" id="title">
+          <h1 className="title"><span className="date">{post.frontmatter.date}</span>{postTitle}</h1>
         </div>
         <div className="test"></div>
         <div className="notes-container-wrap">
@@ -93,7 +97,7 @@ class PostTemplate extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </div>
         </div>
-{/*        <div className="notes-nav post-nav container">
+      {/*<div className="notes-nav post-nav container">
         {
             previous &&
             <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
@@ -120,6 +124,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

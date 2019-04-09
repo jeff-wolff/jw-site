@@ -28,7 +28,6 @@ class About extends React.Component {
   }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteTagline = get(this, 'props.data.site.siteMetadata.tagline')
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
@@ -38,21 +37,22 @@ class About extends React.Component {
       <Layout location={this.props.location}>
         <Helmet
           meta={[{ name: 'description', content: siteDescription } ]}
-          title={'About ' + siteTitle + ' - ' + siteTagline}>
+          title={'About ' + siteTitle}>
           <meta name="google" content="notranslate" />
         </Helmet>
-          <div className="about-me container">
-              <div className="content">
-                <video loop muted autoPlay playsInline className="profile">
-                  <source src={ AboutPortraitWebM } type="video/webm" />
-                  <source src={ AboutPortraitMp4 } type="video/mp4" />
-                </video>
-                <div className="info">
-                  <h2>About Jeff Wolff</h2>
-                  <p>I've been designing and developing digital experiences for over 10 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
-                  <p>Some of the clients I have worked with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>
-                  <p>Also, check out <Link to="/work/">my work</Link> or <Link to="/notes/">my notes</Link>.</p>
-                </div>
+
+        <div className="about-me container">
+          <div className="content">
+            <video loop muted autoPlay playsInline className="profile">
+              <source src={ AboutPortraitWebM } type="video/webm" />
+              <source src={ AboutPortraitMp4 } type="video/mp4" />
+            </video>
+            <div className="info">
+              <h2>About Jeff Wolff</h2>
+              <p>I've been designing and developing digital experiences for over 10 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
+              <p>Some of the clients I have worked with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>
+              <p>Also, check out <Link to="/work/">my work</Link> or <Link to="/notes/">my notes</Link>.</p>
+            </div>
             {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                   <div>
                     <label htmlFor="mce-EMAIL" className="h4">Let me keep you updated:</label>
@@ -62,8 +62,8 @@ class About extends React.Component {
                     <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
                   </div>
                 </form>*/}
-              </div>
           </div>
+        </div>
       </Layout>
     )
   }

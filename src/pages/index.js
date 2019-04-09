@@ -5,9 +5,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import HomeInfo from '../components/HomeInfo/home-info.js';
-import Window from '../components/Window/window.js';
-import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
-import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 
 class Index extends React.Component {
   defaultTheme() {
@@ -24,9 +21,11 @@ class Index extends React.Component {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
+
   componentDidMount() {
     this.defaultTheme();
   }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteTagline = get(this, 'props.data.site.siteMetadata.tagline')

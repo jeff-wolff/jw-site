@@ -1,8 +1,12 @@
 import React from 'react'
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 import {styled, injectGlobal} from 'styled-components'
-// import { Link } from 'gatsby'
-// import classNames from 'classnames';
+
+import 'babel-polyfill'
+import '../utils/ie11-polyfill.js'
+
+import * as fonts from '../fonts/fonts.js'
+
 import noisePNG from '../assets/noise.png'
 import curDefault from '../assets/cur.png'
 import curPointer from '../assets/cur-pointer.png'
@@ -12,11 +16,6 @@ import curResizeNWSE from '../assets/cur-nwse-resize.png'
 import curResizeNESW from '../assets/cur-nesw-resize.png'
 import curResizeNS from '../assets/cur-ns-resize.png'
 import curResizeEW from '../assets/cur-ew-resize.png'
-
-import * as fonts from '../fonts/fonts.js'
-
-import 'babel-polyfill'
-import '../utils/ie11-polyfill.js'
 
 import Header from './Header/header.js'
 import Footer from './Footer/footer.js'
@@ -424,31 +423,20 @@ injectGlobal`
       font-size: 1.9em;
     }
   }
-  .work-post-container {
-    margin-top: 100vh;
-  }
-  @media (max-width: 640px) {
-    .work-post-content {
-      // position: relative;
-      // z-index: 1;
-      // background-color: var(--bg);
-      // background-color: var(--footer-bg);
-    }
-  }
-  .work-post-title {
+  .work-post-title-wrap {
     padding: 0 20px;
     user-select: none;
   }
-  .work-post-title .title {
+  .work-post-title-wrap .title {
     text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
   }
-  .work-post-title .website-btn {
+  .work-post-title-wrap .website-btn {
     box-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
   }
   .work-post-description-wrap {
     position: relative;
     min-height: 300vw;
-    margin: 0 auto;
+    margin: 100vh auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -569,21 +557,21 @@ injectGlobal`
   .website-btn.faded {
     opacity: 0;
   }
-  .work-post-lifestyle {
+  .work-post-lifestyle-wrap {
     height: 100vh;
     margin-bottom: 0;
   }
-  .work-post-lifestyle img, 
-  .work-post-lifestyle .gatsby-image-wrapper {
+  .work-post-lifestyle-wrap img, 
+  .work-post-lifestyle-wrap .gatsby-image-wrapper {
     object-fit: cover;
     height: 100%;
   }
   @media (min-width: 1024px) {
-    .work-post-lifestyle {
+    .work-post-lifestyle-wrap {
       height: auto;
     }
   }
-  .work-demo-section {
+  .work-post-demo-wrap {
     background: var(--bg);
     z-index: 2;
     position: relative;
@@ -626,10 +614,7 @@ injectGlobal`
     }
   }
   
-  .work-post-nav {
-    display: flex;
-    width: 100%;
-  }
+
   .work-post-footer-cta {
     margin-bottom: 50vh;
   }
@@ -1356,6 +1341,7 @@ class Template extends React.Component {
       }
     }
   }
+
   isBottom(el) {
     return el.getBoundingClientRect().bottom <= window.innerHeight;
   }
@@ -1387,7 +1373,8 @@ class Template extends React.Component {
     } else {
       wrappedElement.classList.remove('disable-noise','fade-noise');
     }
-  };
+  }
+
   render() {
     const { location, children } = this.props
     const workPath = `${__PATH_PREFIX__}/work/`
@@ -1408,28 +1395,28 @@ class Template extends React.Component {
     )
     return (
       <div>
-      <PageTransition
-        defaultStyle={{
-             transition: 'opacity 200ms ease',
-             opacity: '0'
-           }}
-           transitionStyles={{
-             entering: { 
-              animation: 'spazz 2.3s steps(1) infinite',
-              textTransform: 'uppercase',
-              opacity: '.8'
-               },
-             entered: { animation: 'none', opacity: '1' },
-             exiting: { animation: 'spazz 2.5s steps(1) infinite' },
-           }}
-           transitionTime={400}>
-        <div className="wrapper">
-        <div className="ie-warning">You are using an outdated browser. Some features may be missing. Update to the latest version of Chrome, Firefox, or Safari for the full experience.</div>
-        {header}
-        {children}
-        </div>
-        {footer}
-      </PageTransition>
+        <PageTransition
+          defaultStyle={{
+               transition: 'opacity 200ms ease',
+               opacity: '0'
+             }}
+             transitionStyles={{
+               entering: { 
+                animation: 'spazz 2.3s steps(1) infinite',
+                textTransform: 'uppercase',
+                opacity: '.8'
+                 },
+               entered: { animation: 'none', opacity: '1' },
+               exiting: { animation: 'spazz 2.5s steps(1) infinite' },
+             }}
+             transitionTime={400}>
+          <div className="wrapper">
+            <div className="ie-warning">You are using an outdated browser. Some features may be missing. Update to the latest version of Chrome, Firefox, or Safari for the full experience.</div>
+            {header}
+            {children}
+          </div>
+          {footer}
+        </PageTransition>
       </div>
     )
   }

@@ -4,13 +4,10 @@ import Rnd from 'react-rnd';
 import classNames from 'classnames';
 import Window from '../Window/window.js'
 
-
 const windowGlobal = typeof window !== 'undefined' && window;
 
 let globalZIndex = 1;
-let count = 0;
 let positions = [];
-let hasPoints = false;
 
 class BlankWindow extends Window {
   constructor(props) {
@@ -214,24 +211,6 @@ class BlankWindow extends Window {
             }
           }}
       >
-         {/* <label 
-            htmlFor={this.props.id}
-            className="window-collapse"
-            style={{
-              // borderLeft: '2px solid rgba('+this.state.borderColor+',1)',
-              // backgroundColor: this.state.bgColor,
-              color: 'rgb('+this.state.titleColor+')'
-            }}
-            >
-            <input 
-              type="checkbox"
-              id={this.props.id}
-              onChange={this.toggleCollapse}
-              checked={this.state.isCollapsed ? "checked" : ""}
-             />
-            <span className="icon"></span>
-          </label>*/}
-          {/*<div className="window-resizer-icon" style={{ color: 'rgb('+this.state.titleColor+')' }}>&#9499;</div>*/}
           <div>{this.props.children}</div>
       </Rnd>
     )

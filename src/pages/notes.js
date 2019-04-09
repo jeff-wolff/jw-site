@@ -5,8 +5,8 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
-import Window from '../components/Window/window.js'
-import MediaQuery from 'react-responsive'
+// import Window from '../components/Window/window.js'
+// import MediaQuery from 'react-responsive'
 
 class NotesIndex extends React.Component {
   defaultTheme() {
@@ -23,11 +23,9 @@ class NotesIndex extends React.Component {
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
+
   componentDidMount() {
     this.defaultTheme();
-  }
-  componentWillUnmount() {
-    
   }
 
   render() {
@@ -43,8 +41,9 @@ class NotesIndex extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`Notes - ${siteTitle}`}
           >
-        <body />
+          <body />
         </Helmet>
+
         <div className="index-title centered-title preload container">
           <h1 className="title">
             <Typist 
@@ -58,18 +57,19 @@ class NotesIndex extends React.Component {
             }}>Notes</Typist>
           </h1>
         </div>
-           <div className="note-index-container">
-           {posts.map(({ node: post }) => {
-                const title = get(post, 'frontmatter.title') || post.fields.slug
-               return (
-                <div className="note-card" key={post.id}>
-                  <h2 className="title h2">{post.frontmatter.title}</h2>
-                  <p>{post.frontmatter.date}</p>
-                  <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
-                </div>
-               )
-             })}
-           </div>
+
+        <div className="note-index-container">
+          {posts.map(({ node: post }) => {
+            const title = get(post, 'frontmatter.title') || post.fields.slug
+            return (
+              <div className="note-card" key={post.id}>
+                <h2 className="title h2">{post.frontmatter.title}</h2>
+                <p>{post.frontmatter.date}</p>
+                <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
+              </div>
+            )
+          })}
+        </div>
       </Layout>
     )
   }
