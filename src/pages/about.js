@@ -5,6 +5,8 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
+import './about.css'
+
 import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
 import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 

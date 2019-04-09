@@ -3,6 +3,9 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+
+import './notes.css';
+
 import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
 // import Window from '../components/Window/window.js'

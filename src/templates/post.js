@@ -4,11 +4,13 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+
+import './post.css';
+
 // import Button from '../components/Button/button.js'
 // import Window from '../components/Window/window.js'
 
 // import MediaQuery from 'react-responsive'
-import ie6Icon from '../assets/ie6-404.png'
 
 class PostTemplate extends React.Component {
   // fadeTitle() {

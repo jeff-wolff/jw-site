@@ -4,6 +4,9 @@ import Helmet from 'react-helmet'
 import ie6Icon from '../assets/ie6-404.png'
 import ie6Back from '../assets/ie6-back.png'
 import ie6Search from '../assets/ie6-search.png'
+
+import './404.css'
+
 class NotFoundPage extends React.Component {
   componentDidMount() {
       let metaThemeColor = document.querySelector("meta[name=theme-color]");

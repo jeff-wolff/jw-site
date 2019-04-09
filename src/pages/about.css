@@ -1,0 +1,35 @@
+.about-me {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 56px;
+  margin-bottom: 20vh;
+}
+.about-me .profile {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .about-me {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  .about-me .profile {
+    max-width: 760px;
+    width: 60%;
+    margin-bottom: 0;
+  }
+  .about-me .info {
+    width: 35%;
+    margin-left: 5%;
+  }
+}

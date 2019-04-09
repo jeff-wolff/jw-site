@@ -4,6 +4,9 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+
+import './work-post.css';
+
 import Typist from 'react-typist';
 import Img from 'gatsby-image'
 import Button from '../components/Button/button.js'
