@@ -76,7 +76,7 @@ class PostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = post.excerpt
-    const { previous, next } = this.props.pageContext
+    // const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location}>
@@ -93,7 +93,7 @@ class PostTemplate extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
           </div>
         </div>
-        <div className="notes-nav post-nav container">
+{/*        <div className="notes-nav post-nav container">
         {
             previous &&
             <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
@@ -106,7 +106,7 @@ class PostTemplate extends React.Component {
               <span>Next:</span> {next.frontmatter.title}
             </Button>
           }
-        </div>
+        </div>*/}
       </Layout>
     )
   }

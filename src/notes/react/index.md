@@ -1,6 +1,7 @@
 ---
 date: "2019-03-31T00:00:00"
 title: "Meet The Scientists Who Are Training AI To Diagnose Mental Illness"
+publish: false
 theme: true
 ttc: "#00239b"
 tbg: "#ffd3e9"

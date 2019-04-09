@@ -130,7 +130,7 @@ injectGlobal`
       outline: 0 solid rgba(0,0,0,0);
   }
   a:hover {
-      cursor: url('${curPointer}'), pointer;
+      cursor: url('${curPointer}') 12 1, pointer;
       padding: .12em 0 0;
       background: #ff0;
       background: var(--primary);
@@ -1407,12 +1407,12 @@ class Template extends React.Component {
            }}
            transitionStyles={{
              entering: { 
-              animation: 'spazz 4s steps(1) infinite',
+              animation: 'spazz 2.3s steps(1) infinite',
               textTransform: 'uppercase',
               opacity: '.8'
                },
              entered: { animation: 'none', opacity: '1' },
-             exiting: { animation: 'spazz 4s steps(1) infinite' },
+             exiting: { animation: 'spazz 2.5s steps(1) infinite' },
            }}
            transitionTime={400}>
         <div className="wrapper">

@@ -3,11 +3,9 @@ import Helmet from 'react-helmet'
 import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Img from 'gatsby-image'
-
 import Layout from '../components/layout'
+import Img from 'gatsby-image'
 import Button from '../components/Button/button.js'
-import Window from '../components/Window/window.js'
 import BlankWindow from '../components/BlankWindow/blank-window.js'
 import MediaQuery from 'react-responsive'
 
@@ -39,8 +37,6 @@ class WorkPostTemplate extends React.Component {
     if (post.frontmatter.theme) {
       this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
     }
-  }
-  componentWillUnmount() {
   }
 
   render() {
@@ -82,6 +78,12 @@ class WorkPostTemplate extends React.Component {
         <Helmet
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} Website - ${siteTitle}`}>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="@jeffwolff" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
+          <meta property="og:title" content={`${post.frontmatter.title} Website - ${siteTitle}`} />
+          <meta property="og:description" content={siteDescription} />
+          <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.lifestyleShot.childImageSharp.sizes.src}`} />
           <body className="wrapper-work-post"/>
         </Helmet>
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
@@ -92,8 +94,6 @@ class WorkPostTemplate extends React.Component {
             <Button external="true" href={`https://www.${post.frontmatter.url}`} inlineicon="right">www.{post.frontmatter.url} <span>&#8599;</span></Button>
           </div>
         </div>
-
-        {/*<div className="work-post-scrollDown">👇🏻</div>*/}
 
         <div className="work-post-container">
           <div className="work-post-content">
@@ -108,8 +108,6 @@ class WorkPostTemplate extends React.Component {
                   <p>ROLE<br />Web Developer</p>
                 </div>
               </div>
-
-
             </div>
             <figure className="work-post-lifestyle">
               {lifestyleShot}
@@ -250,10 +248,8 @@ class WorkPostTemplate extends React.Component {
         </MediaQuery> : ''}
         </div>
         <div className="post-nav container">
-      
-        
-        
-          <div className="work-post-nav">{
+          <div className="work-post-nav">
+              {
                 previous &&
                 <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
                   <span>Prev:</span> {previous.frontmatter.title}
@@ -264,7 +260,8 @@ class WorkPostTemplate extends React.Component {
                 <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
                   <span>Next:</span> {next.frontmatter.title}
                 </Button>
-              }</div>
+              }
+          </div>
         </div>
       </Layout>
     )
@@ -279,6 +276,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(

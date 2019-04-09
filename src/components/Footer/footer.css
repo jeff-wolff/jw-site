@@ -92,12 +92,15 @@ footer .footer-bottom {
         margin-bottom:  20px;
     }
 }
-
-footer a.rewind {
+footer .footer-bottom .legal {
+    line-height: 28px;
+}
+footer a.icon-link {
     font-size: 1em;
+    padding: 6px;
     box-shadow: none;
 }
-footer a.rewind:hover {
+footer a.icon-link:hover {
     background: none;
     opacity: .8;
 }

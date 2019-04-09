@@ -4,10 +4,17 @@ module.exports = {
     author: 'Jeff Wolff',
     tagline: 'UI Designer & Web Developer',
     description: 'San Diego based guy who makes websites.',
-    siteUrl: 'http://jeffwolff.net',
+    siteUrl: 'https://jeffwolff.netlify.com',
   },
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: 'images',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,7 +36,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 776,
             },
           },
           {
@@ -73,6 +80,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
-    `gatsby-v2-plugin-page-transitions`
+    `gatsby-v2-plugin-page-transitions`,
+    `gatsby-plugin-favicon`
   ],
 }

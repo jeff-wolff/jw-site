@@ -49,9 +49,9 @@ class About extends React.Component {
                 </video>
                 <div className="info">
                   <h2>About Jeff Wolff</h2>
-                  <p>I've been designing and developing digital experiences for over 5 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
-                  <p>Some of the clients I've worked with include Rip Curl, Vans, GoMacro, Sunbelt Rentals, and Little Giraffe.</p>
-                  <p>Check out <Link to="/work/">my work</Link> or <Link to="/notes/">my notes</Link>.</p>
+                  <p>I've been designing and developing digital experiences for over 10 years across a variety of industries. I believe great websites come from a constant focus on the user's experience and an intuitive UI. </p>
+                  <p>Some of the clients I have worked with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>
+                  <p>Also, check out <Link to="/work/">my work</Link> or <Link to="/notes/">my notes</Link>.</p>
                 </div>
             {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                   <div>

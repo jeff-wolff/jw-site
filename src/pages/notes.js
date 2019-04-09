@@ -76,7 +76,10 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
-      filter: {fileAbsolutePath: {regex: "\/notes/"}}
+      filter: {
+        fileAbsolutePath: {regex: "\/notes/"}
+        frontmatter: { publish: { eq:true }}
+      }
       ){
       edges {
         node {
@@ -86,6 +89,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            publish
             date(formatString: "MMMM DD, YYYY")
             title
           }
