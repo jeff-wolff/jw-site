@@ -17,15 +17,15 @@ class HomeInfo extends React.Component {
           }}
           >
             Front-end website developer based in San Diego, CA.  <Link to="/about/">About &rarr;</Link>&nbsp;
-            <Typist.Backspace count={61} delay={6000} />
+            <Typist.Backspace count={61} delay={3600} />
             I just launched a new site. <Link to="/welcome/">Read &rarr;</Link>&nbsp;
-            <Typist.Backspace count={36} delay={6000} />
+            <Typist.Backspace count={36} delay={3600} />
             Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;
-            <Typist.Backspace count={37} delay={6000} />
+            <Typist.Backspace count={37} delay={3600} />
             Front-end website developer based in San Diego, CA.  <Link to="/about/">About &rarr;</Link>&nbsp;
-            <Typist.Backspace count={61} delay={6000} />
+            <Typist.Backspace count={61} delay={3600} />
             I just launched a new site. <Link to="/welcome/">Read &rarr;</Link>&nbsp;
-            <Typist.Backspace count={36} delay={6000} />
+            <Typist.Backspace count={36} delay={3600} />
             Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;
           </Typist>
         </h2>

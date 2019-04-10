@@ -77,17 +77,17 @@ footer .footer-middle a[class^="button"] {
     footer .footer-middle a[class^="button"] {
         margin:  0 .5em;
     }
+    footer .footer-middle a[class^="button"]:first-child {
+        margin-left:  0;
+    }
+    footer .footer-middle a[class^="button"]:last-child {
+        margin-right:  0;
+    }
 }
 @media (min-width: 1440px) {
     footer .footer-middle a[class^="button"] {
         margin:  0 1em;
     }
-}
-footer .footer-middle a[class^="button"]:first-child {
-    margin-left:  0;
-}
-footer .footer-middle a[class^="button"]:last-child {
-    margin-right:  0;
 }
 
 
