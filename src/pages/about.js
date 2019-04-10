@@ -46,7 +46,7 @@ class About extends React.Component {
           <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
           <meta property="og:title" content={'About ' + siteTitle} />
           <meta property="og:description" content={siteDescription} />
-          <meta property="og:image" content={AboutPortraitPoster} />
+          <meta property="og:image" content={`${AboutPortraitPoster}`} />
           <meta name="google" content="notranslate" />
         </Helmet>
 
