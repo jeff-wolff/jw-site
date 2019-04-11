@@ -1,3 +1,6 @@
+.work-window {
+    
+}
 .react-draggable {
     transition: transform 200ms ease;
     box-shadow: 2px 2px 12px rgba(21, 21, 21,.11), 0 8px 14.5px rgba(0,0,0,.15);
@@ -9,6 +12,16 @@
     border-right: 1px solid #808080;
     border-bottom: 1px solid #808080;
     background-color: var(--window-border);
+    animation: 420ms fade cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+    opacity: 0;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /* .react-draggable:after {
     z-index: 1;
