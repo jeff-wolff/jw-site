@@ -91,13 +91,6 @@ class About extends React.Component {
               <p>I have been designing and developing digital experiences for brands, agencies, and start-ups for over 10 years. A &ldquo;creative developer&rdquo; at heart, my passion is creating elegant, engaging, and easy-to-use websites through well-crafted code.</p>
               <p>Some clients I have had the pleasure to work with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={songURL} target="_blank">{songArtist} - {songTitle}</a><br /><a href="https://www.last.fm/user/jeffwolff" target="_blank"><small>powered by last.fm api</small></a></p>
-              <div className="window">
-                <div className="window-title"><div className="content">Navigation</div></div>
-                <div className="window-content">
-                  <h3>Where would you like to go next?</h3>
-                  <p><Button to="/work/" size="small">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="small">Notes</Button></p>
-                </div>
-              </div>
             </div>
             {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                   <div>
@@ -108,6 +101,21 @@ class About extends React.Component {
                     <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
                   </div>
                 </form>*/}
+          </div>
+        </div>
+        <div className="container" style={{
+          minHeight: '50vh'
+        }}>
+          <div className="window" style={{
+            maxWidth: '460px',
+            margin: '0 auto'
+          }}
+          >
+            <div className="window-title"><div className="content">Navigation</div></div>
+            <div className="window-content">
+              <h3>Where would you like to go next?</h3>
+              <p><Button to="/work/" size="small">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="small">Notes</Button></p>
+            </div>
           </div>
         </div>
       </Layout>
