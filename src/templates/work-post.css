@@ -139,3 +139,7 @@
   position: relative;
   height: 100vh;
 }
+.work-post-nav {
+  display: flex;
+  width: 100%;
+}
