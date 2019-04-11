@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import HomeInfo from '../components/HomeInfo/home-info.js';
+import socialImage from '../assets/social-wolf.jpg';
 
 class Index extends React.Component {
   defaultTheme() {
@@ -37,8 +38,14 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription } ]}
           title={siteTitle + ' - ' + siteTagline}>
+          <meta name="description" content={siteDescription} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="@jeffwolff" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
+          <meta property="og:title" content={siteTitle + ' - ' + siteTagline} />
+          <meta property="og:description" content={siteDescription} />
+          <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${socialImage}`} />
           <meta name="google" content="notranslate" />
         </Helmet>
         <HomeInfo />
@@ -55,6 +62,7 @@ export const pageQuery = graphql`
         title
         description
         tagline
+        siteUrl
       }
     }
   }

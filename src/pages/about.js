@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 
 import './about.css'
 
+import AboutPortraitPoster from '../assets/jeffwolff-poster.jpg';
 import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
 import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
 
@@ -38,14 +39,20 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription } ]}
           title={'About ' + siteTitle}>
+          <meta name="description" content={siteDescription} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="@jeffwolff" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
+          <meta property="og:title" content={'About ' + siteTitle} />
+          <meta property="og:description" content={siteDescription} />
+          <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${AboutPortraitPoster}`} />
           <meta name="google" content="notranslate" />
         </Helmet>
 
         <div className="about-me container">
           <div className="content">
-            <video loop muted autoPlay playsInline className="profile">
+            <video loop muted autoPlay playsInline className="profile" poster={AboutPortraitPoster}>
               <source src={ AboutPortraitWebM } type="video/webm" />
               <source src={ AboutPortraitMp4 } type="video/mp4" />
             </video>
@@ -79,6 +86,7 @@ export const pageQuery = graphql`
         title
         description
         tagline
+        siteUrl
       }
     }
   }

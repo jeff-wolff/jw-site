@@ -82,8 +82,8 @@ class WorkPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: postDescription }]}
           title={`${postTitle} Website - ${siteTitle}`}>
+          <meta name="description" content={postDescription} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jeffwolff" />
           <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />

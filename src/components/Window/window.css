@@ -179,7 +179,7 @@
     position: absolute;
     width: 32px;
     height: var(--window-title-height);
-    top: 0;
+    top: -1px;
     right: 0;
     text-align: center;
     cursor: pointer;
@@ -194,12 +194,11 @@
     transform: translate(-50%,-50%);
 }
 .window-collapse > .icon:after {
+    display: block;
     font-size: 16px;
     line-height: 1;
-    content: '_';
+    content: '−';
     position: relative;
-    top: -7px;
-    right: -2px;
 }
 .window-collapse > input[type=checkbox] {
     opacity: 0;
@@ -211,8 +210,9 @@
 
 .window-collapse > input[type=checkbox]:checked + .icon:after {
     content: '+';
+    display: block;
     font-size: 16px;
-    line-height: 1;
+    line-height: 22px;
     font-weight: normal;
     top: 0;
 }

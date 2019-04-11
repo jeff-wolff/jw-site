@@ -30,18 +30,20 @@ class WorkIndex extends React.Component {
 
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+    const pageDescription = "A selection of websites I've made."
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
     let yCount = 175;
     return (
       <Layout location={this.props.location}>
         <Helmet
-          meta={[{ name: 'description', content: siteDescription }]}
           title={`Work - ${siteTitle}`}
           >
+          <meta name="description" content={pageDescription} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@jeffwolff" />
+          <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
+          <meta property="og:title" content={`Work - ${siteTitle}`} />
+          <meta property="og:description" content={pageDescription} />
           <body className="wrapper-work"/>
         </Helmet>
 
@@ -169,6 +171,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
     allMarkdownRemark(
