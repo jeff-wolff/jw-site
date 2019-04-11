@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Button from '../components/Button/button.js'
 
+import '../components/Window/window.css'
 import './about.css'
 
 import AboutPortraitPoster from '../assets/jeffwolff-poster.jpg';
