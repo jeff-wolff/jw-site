@@ -40,7 +40,7 @@ class About extends React.Component {
   }
   componentDidMount() {
     this.defaultTheme();
-    fetch("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jeffwolff&api_key=205e52324c3a9f7e346a7c34dca5e8d8&format=json")
+    fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=jeffwolff&api_key=205e52324c3a9f7e346a7c34dca5e8d8&format=json")
       .then(res => res.json())
       .then(
         (result) => {
