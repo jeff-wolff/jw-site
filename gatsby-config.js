@@ -78,9 +78,11 @@ module.exports = {
         icon: `src/assets/ie6-404.png`,
       },
     },
-    `gatsby-plugin-sitemap`,
     {
-      exclude: ["/react/"],
+      resolve: `gatsby-plugin-sitemap`
+      options: {
+        exclude: ["/react/"],
+      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
