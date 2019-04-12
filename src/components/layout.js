@@ -1051,11 +1051,11 @@ class Template extends React.Component {
                opacity: '0'
              }}
              transitionStyles={{
-               entering: { 
+               entering: {
                 animation: 'spazz 2.3s steps(1) infinite',
                 textTransform: 'uppercase',
                 opacity: '.8'
-                 },
+               },
                entered: { animation: 'none', opacity: '1' },
                exiting: { animation: 'spazz 2.5s steps(1) infinite' },
              }}
