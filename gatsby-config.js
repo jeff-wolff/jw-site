@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Jeff Wolff',
     author: 'Jeff Wolff',
-    tagline: 'UI Designer & Web Developer',
+    tagline: 'Web Developer & UI Designer',
     description: 'A guy from San Diego who makes websites.',
-    siteUrl: 'https://jeffwolff.netlify.com',
+    siteUrl: 'https://www.jeffwolff.net',
   },
   pathPrefix: '/',
   plugins: [
@@ -77,6 +77,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/ie6-404.png`,
       },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      exclude: ["/react/"],
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
