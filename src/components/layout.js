@@ -384,6 +384,7 @@ injectGlobal`
   }
   .centered-title.index-title .title {
     letter-spacing: 0.06em;
+    text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
   }
   @media (min-width: 1152px) {
     .centered-title.index-title {
