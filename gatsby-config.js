@@ -81,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/react/`],
+        exclude: [`https://www.jeffwolff.net/react/`],
       }
     },
     `gatsby-plugin-react-helmet`,
