@@ -325,8 +325,10 @@ injectGlobal`
   }
 
   .container {
-      padding-left: 6%;
-      padding-right: 6%;
+    position: relative;
+    z-index: 2;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
   .vid-wrap {

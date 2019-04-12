@@ -114,7 +114,7 @@ class About extends React.Component {
             <div className="window-title"><div className="content">Navigation</div></div>
             <div className="window-content">
               <h3>Where would you like to go next?</h3>
-              <p><Button to="/work/" size="small">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="small">Notes</Button></p>
+              <p><Button to="/work/" size="tiny">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="tiny">Notes</Button></p>
             </div>
           </div>
         </div>
