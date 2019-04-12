@@ -88,7 +88,7 @@ class Window extends React.Component {
           x: x,
           y: y
         });
-      }, 10);
+      }, 600);
   }
 
   toggleCollapse() {

@@ -25,9 +25,9 @@ demoVideoPhone: "./gomacro_demo3.mp4"
 
 - GoMacro is a protein bar company that encourages a healthy plant-based lifestyle. 
 
-- I was responsible for the front-end development of the new website.
-
 - Our team provided a better website user experience, e-commerce platform, and a comprehensive marketing campaign.
+
+- I was responsible for the front-end development of the new website.
 
 - In January 2019, I reimagined and simplified the website design system, updated the homepage design, and added a new type to the website which helps create a more 'natural' look.
 

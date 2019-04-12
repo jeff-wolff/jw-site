@@ -2,6 +2,17 @@
 publish: true
 date: "2019-04-01T00:00:00"
 title: "Website Time Machine"
+theme: true
+ttc: "#ffffff"
+tbg: "#00009a"
+tbgf: "0, 0, 154"
+tp: "#FFFF14"
+tpf: "rgba(255, 255, 20, .78)"
+ts: "#404040"
+tsf: "rgba(64, 64, 64,.78)"
+twb: "190,190,190"
+twt: "0,0,0"
+tfbg: "#000050"
 ---
 
 Here are the past versions of my website:

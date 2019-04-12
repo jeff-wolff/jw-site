@@ -49,7 +49,7 @@ class BlankWindow extends Window {
           x: x,
           y: y
         });
-      }, 10);
+      }, 600);
   }
   handlePreventTouchmoveWhenPanning(event) {
    if (this.state.dragging || this.state.resizing) {

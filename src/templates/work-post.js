@@ -264,18 +264,18 @@ class WorkPostTemplate extends React.Component {
         </div>
 
         <div className="work-post-nav-wrap post-nav container">
-              {
-                previous &&
-                <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
-                  <span>Prev:</span> {previous.frontmatter.title}
-                </Button>
-              }
-              {
-                next &&
-                <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
-                  <span>Next:</span> {next.frontmatter.title}
-                </Button>
-              }
+              <div className="work-post-nav">{
+                  previous &&
+                  <Button className="prev-btn" size="small" inlineicon="left" to={previous.fields.slug} rel="prev">
+                    <span>Prev:</span> {previous.frontmatter.title}
+                  </Button>
+                }
+                {
+                  next &&
+                  <Button className="next-btn" size="small" inlineicon="left"to={next.fields.slug} rel="next">
+                    <span>Next:</span> {next.frontmatter.title}
+                  </Button>
+                }</div>
         </div>
       </Layout>
     )
