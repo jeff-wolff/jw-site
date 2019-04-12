@@ -5,9 +5,6 @@
 .work-post-title-wrap .title {
   text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
 }
-.work-post-title-wrap .website-btn {
-  box-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
-}
 .work-post-description-wrap {
   position: relative;
   min-height: 300vw;
