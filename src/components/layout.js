@@ -234,7 +234,7 @@ injectGlobal`
   .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
-      line-height: 1.4;
+      line-height: 1.6;
       font-weight: bold;
       margin: 3.5rem 0 1.75rem;
       letter-spacing: 0;
