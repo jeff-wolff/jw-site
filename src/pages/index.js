@@ -46,7 +46,6 @@ class Index extends React.Component {
           <meta property="og:title" content={siteTitle + ' - ' + siteTagline} />
           <meta property="og:description" content={siteDescription} />
           <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${socialImage}`} />
-          <meta name="google" content="notranslate" />
         </Helmet>
         <HomeInfo />
       </Layout>
