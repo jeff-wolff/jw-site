@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 import {styled, injectGlobal} from 'styled-components'
 
@@ -849,8 +850,22 @@ class Template extends React.Component {
     )
     return (
       <div>
+        <Helmet>
+          <script>
+          {`
+              (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:1283185,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+          </script>
+        </Helmet>
         <PageTransition
-          defaultStyle={{
+            defaultStyle={{
                transition: 'opacity 150ms cubic-bezier(0.4, 0.0, 0.2, 1)',
                opacity: '0'
              }}

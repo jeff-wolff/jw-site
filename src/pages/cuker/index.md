@@ -24,7 +24,7 @@ demoVideoPhone: "./cuker_demo3.mp4"
 ---
 - Cuker Agency is a digital agency that provides robust e-commerce websites and digital marketing consulting. 
 
-- I was responsible for the front-end development of Cuker's <a href="https://www.cukeragency.com/" target="_blank">new website</a>.
+- I was responsible for the front-end development of Cuker's new website.
 
 - I conceptualized a design system for creating unique, but consistent looking work case studies.
 
