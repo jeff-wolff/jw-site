@@ -1,7 +1,17 @@
+.work-down-arrow {
+  position: absolute;
+  left: 50%;
+  z-index: 83;
+  top: 90vh;
+  transform: translateX(-50%);
+}
+.work-down-arrow p {
+  margin-bottom: 0;
+}
 .work-post-title-wrap {
-    padding: 0 20px;
-    user-select: none;
-  }
+  padding: 0 20px;
+  user-select: none;
+}
 .work-post-title-wrap .title {
   text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
 }
