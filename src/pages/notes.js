@@ -52,12 +52,12 @@ class NotesIndex extends React.Component {
           <h1 className="title">
             <Typist 
             startDelay={750}
-            avgTypingDelay={150}
+            avgTypingDelay={100}
             cursor={{
                 blink: false,
                 element: '_',
                 hideWhenDone: true,
-                hideWhenDoneDelay: 150
+                hideWhenDoneDelay: 100
             }}>Notes</Typist>
           </h1>
         </div>
