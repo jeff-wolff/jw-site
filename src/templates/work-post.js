@@ -101,12 +101,12 @@ class WorkPostTemplate extends React.Component {
           <h1 className="title">
             <Typist 
             startDelay={750}
-            avgTypingDelay={125}
+            avgTypingDelay={100}
             cursor={{
                 blink: false,
                 element: '_',
                 hideWhenDone: true,
-                hideWhenDoneDelay: 200
+                hideWhenDoneDelay: 150
             }} onTypingDone={this.onHeaderTyped}>{postTitle}</Typist>
           </h1>
           <div className="website-btn faded" style={{ visibility: 'hidden' }}>

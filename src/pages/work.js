@@ -51,7 +51,7 @@ class WorkIndex extends React.Component {
           <h1 className="title">
             <Typist 
             startDelay={750}
-            avgTypingDelay={150}
+            avgTypingDelay={130}
             cursor={{
                 blink: false,
                 element: '_',
