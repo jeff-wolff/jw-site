@@ -146,6 +146,17 @@
   position: relative;
   height: 100vh;
 }
+.work-post-demo-wrap:before {
+    content: '[↓] Drag & Resize Windows';
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    color: rgba(255,255,255,.78);
+/*     position: sticky;
+    top: 50%; */
+    text-align: center;
+    padding: 24px 0;
+}
 .work-post-nav {
   display: flex;
   width: 100%;
