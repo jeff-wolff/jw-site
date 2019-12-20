@@ -59,9 +59,6 @@
     height: calc(100% - 24px);
     margin: 0 4px;
 }
-.window > .window-content {
-    padding: 16px 24px 0;
-}
 .work-window > .window-content {
     position: relative;
     display: flex;

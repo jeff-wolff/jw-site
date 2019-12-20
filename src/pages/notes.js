@@ -14,15 +14,15 @@ import Button from '../components/Button/button.js'
 class NotesIndex extends React.Component {
   defaultTheme() {
     document.documentElement.style.setProperty('--text-color', '#ffffff');
-    document.documentElement.style.setProperty('--bg', '#151515');
-    document.documentElement.style.setProperty('--bg-faded', '21, 21, 21');
+    document.documentElement.style.setProperty('--bg', '#4a0000');
+    document.documentElement.style.setProperty('--bg-faded', '74, 0, 0');
     document.documentElement.style.setProperty('--primary', '#ff0');
     document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.78)');
-    document.documentElement.style.setProperty('--secondary', '#2828ef');
+    document.documentElement.style.setProperty('--secondary', '#000');
     document.documentElement.style.setProperty('--secondary-faded', '#1414ab');
     document.documentElement.style.setProperty('--window-border', '190,190,190');
     document.documentElement.style.setProperty('--window-title', '0,0,0');
-    document.documentElement.style.setProperty('--footer-bg', '#000');
+    document.documentElement.style.setProperty('--footer-bg', '#500000');
     let metaThemeColor = document.querySelector("meta[name=theme-color]");
     metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
   }
@@ -52,7 +52,7 @@ class NotesIndex extends React.Component {
           <h1 className="title">
             <Typist 
             startDelay={750}
-            avgTypingDelay={150}
+            avgTypingDelay={130}
             cursor={{
                 blink: false,
                 element: '_',

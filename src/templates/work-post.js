@@ -92,14 +92,16 @@ class WorkPostTemplate extends React.Component {
           <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.lifestyleShot.childImageSharp.sizes.src}`} />
           <body className="wrapper-work-post"/>
         </Helmet>
-
+        <div className="work-down-arrow">
+          <p>[↓]</p>
+        </div>
         <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
 
         <div className="work-post-title-wrap post-title centered-title preload" id="workTitle">
           <h1 className="title">
             <Typist 
             startDelay={750}
-            avgTypingDelay={150}
+            avgTypingDelay={100}
             cursor={{
                 blink: false,
                 element: '_',

@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /work/
+Disallow: /cuker/
+Disallow: /gomacro/
+Disallow: /ripcurl/
+Disallow: /sunbelt-rentals/
+Disallow: /vans/

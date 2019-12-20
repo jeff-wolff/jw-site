@@ -1,7 +1,17 @@
+.work-down-arrow {
+  position: absolute;
+  left: 50%;
+  z-index: 83;
+  top: 90vh;
+  transform: translateX(-50%);
+}
+.work-down-arrow p {
+  margin-bottom: 0;
+}
 .work-post-title-wrap {
-    padding: 0 20px;
-    user-select: none;
-  }
+  padding: 0 20px;
+  user-select: none;
+}
 .work-post-title-wrap .title {
   text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
 }
@@ -135,6 +145,17 @@
   z-index: 2;
   position: relative;
   height: 100vh;
+}
+.work-post-demo-wrap:before {
+    content: '[↓] Drag & Resize Windows';
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    color: rgba(255,255,255,.78);
+/*     position: sticky;
+    top: 50%; */
+    text-align: center;
+    padding: 24px 0;
 }
 .work-post-nav {
   display: flex;

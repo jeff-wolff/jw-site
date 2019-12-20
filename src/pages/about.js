@@ -64,7 +64,8 @@ class About extends React.Component {
       'props.data.site.siteMetadata.description'
     )
 
-    const { songTitle, songArtist, songURL } = this.state;
+    const { songTitle, songArtist } = this.state;
+    const lastFmProfileUrl = "https://www.last.fm/user/jeffwolff";
 
     return (
       <Layout location={this.props.location}>
@@ -87,10 +88,10 @@ class About extends React.Component {
               <source src={ AboutPortraitMp4 } type="video/mp4" />
             </video>
             <div className="info">
-              <h2>About Jeff Wolff</h2>
-              <p>I have been designing and developing digital experiences for brands, agencies, and start-ups for over 10 years. A &ldquo;creative developer&rdquo; at heart, my passion is creating elegant, engaging, and easy-to-use websites through well-crafted code.</p>
-              {/*<p>Some clients I have had the pleasure to work with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
-              <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={songURL} target="_blank">{songArtist} - {songTitle}</a><br /><a href="https://www.last.fm/user/jeffwolff" target="_blank"><small>powered by last.fm api</small></a></p>
+              <h2>Jeff Wolff - Web UI/UX Developer </h2>
+              <p>My passion is coding elegant, engaging, and easy-to-use websites and I've been doing it for over 12 years.</p>
+{/*              <p>Selected clients <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
+              <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
             {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                   <div>
@@ -103,7 +104,7 @@ class About extends React.Component {
                 </form>*/}
           </div>
         </div>
-        <div className="container" style={{
+{/*        <div className="container" style={{
           minHeight: '50vh'
         }}>
           <div className="window" style={{
@@ -117,7 +118,7 @@ class About extends React.Component {
               <p><Button to="/work/" size="tiny">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="tiny">Notes</Button></p>
             </div>
           </div>
-        </div>
+        </div>*/}
       </Layout>
     )
   }
@@ -131,7 +132,6 @@ export const pageQuery = graphql`
         title
         description
         tagline
-        siteUrl
       }
     }
   }

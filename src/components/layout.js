@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 import {styled, injectGlobal} from 'styled-components'
 
@@ -23,23 +24,27 @@ import Footer from './Footer/footer.js'
 injectGlobal`
   @font-face {
     font-family: 'IBM Plex Mono';
+    font-display: swap;
     src: url('${fonts.IBMPlexMonoWoff2}') format('woff2'),
       url('${fonts.IBMPlexMono}') format('woff');
   }
   @font-face {
     font-family: 'IBM Plex Mono';
+    font-display: swap;
     font-style: italic;
     src: url('${fonts.IBMPlexMonoItalicWoff2}') format('woff2'),
       url('${fonts.IBMPlexMonoItalic}') format('woff');
   }
   @font-face {
     font-family: 'IBM Plex Mono';
+    font-display: swap;
     font-weight: bold;
     src: url('${fonts.IBMPlexMonoBoldWoff2}') format('woff2'),
       url('${fonts.IBMPlexMonoBold}') format('woff');
   }
   @font-face {
     font-family: 'IBM Plex Mono';
+    font-display: swap;
     font-weight: bold;
     font-style: italic;
     src: url('${fonts.IBMPlexMonoBoldItalicWoff2}') format('woff2'),
@@ -234,7 +239,7 @@ injectGlobal`
   .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
-      line-height: 1.6;
+      line-height: 1;
       font-weight: bold;
       margin: 3.5rem 0 1.75rem;
       letter-spacing: 0;
@@ -259,21 +264,26 @@ injectGlobal`
   }
   h2,.h2 {
     font-size: 1.7rem;
+    line-height: 1.3;
   }
   h3,.h3 {
     font-size: 1.25rem;
+    line-height: 1.5;
   }
   h4,.h4 {
     font-size: 1rem;
     color: var(--text-color);
+    line-height: 1.6;
   }
   h5,.h5,figcaption {
     text-transform: uppercase;
     font-size: 0.83255rem;
     letter-spacing: .25em;
+    line-height: 1.6;
   }
   h6,.h6 {
     font-size: 0.75966rem;
+    line-height: 1.6;
   }
   figure {
       margin: 0 0 1.75rem;
@@ -840,8 +850,22 @@ class Template extends React.Component {
     )
     return (
       <div>
+        <Helmet>
+          <script>
+          {`
+              (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:1283185,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+          </script>
+        </Helmet>
         <PageTransition
-          defaultStyle={{
+            defaultStyle={{
                transition: 'opacity 150ms cubic-bezier(0.4, 0.0, 0.2, 1)',
                opacity: '0'
              }}
