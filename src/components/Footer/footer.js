@@ -14,7 +14,7 @@ const Footer = ({ data }) => (
           <div className="footer-top"> </div>
           <div className="footer-middle">
             <Button size="tiny" to="/about/" inlineicon="right"><span><Img fixed={data.aboutIcon.childImageSharp.fixed} /></span> About</Button>
-            <Button size="tiny" to="/work/" inlineicon="right"><span><Img fixed={data.workIcon.childImageSharp.fixed} /></span> Work</Button>
+            {/*<Button size="tiny" to="/work/" inlineicon="right"><span><Img fixed={data.workIcon.childImageSharp.fixed} /></span> Work</Button>*/}
             <Button size="tiny" to="/notes/" inlineicon="right"><span><Img fixed={data.notesIcon.childImageSharp.fixed} /></span> Notes</Button>
             <Button size="tiny" external="true" href="mailto:hi@jeffwolff.net" inlineicon="right"><span><Img fixed={data.contactIcon.childImageSharp.fixed} /></span> Contact</Button>
           </div>
