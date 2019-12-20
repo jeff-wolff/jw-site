@@ -25,8 +25,8 @@ class HomeInfo extends React.Component {
             Front-end website developer based in San Diego, CA.  <Link to="/about/">About Me &rarr;</Link>&nbsp;
             <Typist.Backspace count={64} delay={10000} />
             I just launched a new site. <Link to="/welcome/">Read Post &rarr;</Link>&nbsp;
-            <Typist.Backspace count={40} delay={10000} />
-            {/*Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;*/}
+            {/*<Typist.Backspace count={40} delay={10000} />
+            Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;*/}
           </Typist>
         </h2>
         <div className="home-logo">
