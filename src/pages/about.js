@@ -89,7 +89,7 @@ class About extends React.Component {
             <div className="info">
               <h2>About Jeff Wolff</h2>
               <p>I have been designing and developing digital experiences for brands, agencies, and start-ups for over 10 years. A &ldquo;creative developer&rdquo; at heart, my passion is creating elegant, engaging, and easy-to-use websites through well-crafted code.</p>
-              <p>Some clients I have had the pleasure to work with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>
+              {/*<p>Some clients I have had the pleasure to work with are <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={songURL} target="_blank">{songArtist} - {songTitle}</a><br /><a href="https://www.last.fm/user/jeffwolff" target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
             {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
