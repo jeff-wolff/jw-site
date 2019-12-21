@@ -110,7 +110,7 @@ class WorkPostTemplate extends React.Component {
             }} onTypingDone={this.onHeaderTyped}>{postTitle}</Typist>
           </h1>
           <div className="website-btn faded" style={{ visibility: 'hidden' }}>
-            <Button external="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">www.{postWebsiteUrl} <span>&#8599;</span></Button>
+            <Button external="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">View Case Study <span>&#8599;</span></Button>
           </div>
         </div>
 
