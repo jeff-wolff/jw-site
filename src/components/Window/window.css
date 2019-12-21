@@ -1,0 +1,179 @@
+.react-draggable {
+    transition: transform 200ms ease;
+    box-shadow: 2px 2px 12px rgba(21, 21, 21,.11), 0 8px 14.5px rgba(0,0,0,.15);
+}
+.work-window, .window {
+    border: 1px solid;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    background-color: var(--window-border);
+/*     animation: 600ms fade cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+    opacity: 0; */
+}
+/* @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} */
+.react-draggable-dragging,
+.react-draggable-resizing {
+    transition:  none;
+}
+.window-title {
+    width: calc(100% - 4px);
+    height: var(--window-title-height);
+    line-height: var(--window-title-height);
+    padding-left:  9px;
+    padding-right: 18px;
+    user-select: none;
+}
+.work-window > .window-title {
+    margin-top: -1px;
+    padding-left: .25rem;
+}
+.window-title > .content {
+    font-size: 10px;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding-right: .25rem;
+    display: flex;
+    align-items: center;
+}
+.work-window > .window-title .favicon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    position: relative;
+    top: -.032rem;
+}
+.window > .window-content,
+.work-window > .window-content {
+    font-size: 14px;
+    padding: 24px;
+    width: calc(100% - 8px);
+    height: calc(100% - 24px);
+    margin: 0 4px;
+}
+.work-window > .window-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    user-select: none;  
+}
+.work-window > .window-video {
+    transition:  all 125ms ease;
+    position: absolute;
+    top: var(--window-title-height);
+    left: 4px;
+    width: calc(100% - 8px);
+    z-index: -1;
+    opacity: 1;
+}
+@media (hover: hover), (-moz-touch-enabled: 0) {
+    .work-window > .window-video {
+        opacity: .4;
+    }
+    .work-window.dragging > .window-video,
+    .work-window:hover > .window-video {
+        opacity: 1;
+    }
+    .work-window > .window-content > .window-button,
+    .work-window > .window-content > h2 {
+       transition: opacity 250ms ease;
+       opacity: 0;
+    }
+    .work-window.dragging > .window-content .window-button,
+    .work-window:hover > .window-content .window-button,
+    .work-window.dragging > .window-content h2,
+    .work-window:hover > .window-content h2 {
+        opacity: 1;
+    }
+}
+
+.work-window a.window-link:hover,
+.work-window a.window-link:active {
+    background: none;
+}
+
+.window-resizer-icon {
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: opacity 125ms ease;
+    position: absolute;
+    font-size: 17px;
+    line-height: 21px;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    text-align: right;
+}
+.react-draggable.collapsed .window-resizer-icon {
+    opacity: 0;
+}
+.react-draggable.collapsed > .window-collapse + div,
+.react-draggable.collapsed > .window-video {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.work-window > .window-content h1,
+.work-window > .window-content h2,
+.work-window > .window-content h3,
+.work-window > .window-content h4,
+.work-window > .window-content h5,
+.work-window > .window-content h6 {
+    color: #fff;
+    line-height:  1;
+    margin: 0 0 .5em;
+}
+
+/* Collapse */
+.window-collapse {
+    z-index: 3;
+    position: absolute;
+    width: 32px;
+    height: var(--window-title-height);
+    top: -1px;
+    right: 0;
+    text-align: center;
+    cursor: pointer;
+
+}
+.window-collapse > .icon {
+    display: block;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.window-collapse > .icon:after {
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    content: '−';
+    position: relative;
+}
+.window-collapse > input[type=checkbox] {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.window-collapse > input[type=checkbox]:checked + .icon:after {
+    content: '+';
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    top: 0;
+}
