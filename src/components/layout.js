@@ -840,6 +840,10 @@ class Template extends React.Component {
       header = (
         <Header isWorkPage={true} />
       )
+    } else if (location.pathname.includes(workPath)) {
+      header = (
+        <Header isWorkPost={true} />
+      )
     } else {
       header = (
         <Header  />

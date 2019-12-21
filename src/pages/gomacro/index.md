@@ -1,4 +1,5 @@
 ---
+path: "/work/gomacro/"
 date: "2018-02-13T00:00:00"
 title: "GoMacro"
 description: "Website Redesign and Homepage Refresh"

@@ -1,4 +1,5 @@
 ---
+path: "/work/vans/"
 date: "2016-02-26T00:00:00"
 title: "Vans History"
 description: "About Page for 50th Anniversary"

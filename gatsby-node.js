@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         for (var i = workPosts.length - 1; i >= 0; i--) {
           const previous = i === workPosts.length - 1 ? null : workPosts[i + 1].node;
           const next = i === 0 ? null : workPosts[i - 1].node;
+
           createPage({
               path: workPosts[i].node.fields.slug,
               component: workPost,
@@ -81,7 +82,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = node.frontmatter.path || createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
