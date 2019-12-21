@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^1.0.0-rc.5",
+    "@mkitio/gatsby-theme-password-protect": "^2.1.1",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-polyfill": "^6.26.0",
     "gatsby": "^2.0.19",

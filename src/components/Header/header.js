@@ -16,7 +16,7 @@ class Header extends React.Component {
 
         {this.props.isWorkPost ? 
           <ul className="navigation">
-            <li><Link to="/work/">Work</Link></li>
+            <li><Link to="/portfolio/">Work</Link></li>
             <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
           </ul>
           :

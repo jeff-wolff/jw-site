@@ -8,7 +8,7 @@ import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
-class WorkIndex extends React.Component {
+class PortfolioIndex extends React.Component {
   defaultTheme() {
     document.documentElement.style.setProperty('--text-color', '#ffffff');
     document.documentElement.style.setProperty('--bg', '#151515');
@@ -36,13 +36,13 @@ class WorkIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          title={`Work - ${siteTitle}`}
+          title={`Portfolio - ${siteTitle}`}
           >
           <meta name="description" content={pageDescription} />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@jeffwolff" />
           <meta property="og:url" content={`${this.props.data.site.siteMetadata.siteUrl}${this.props.location.pathname}`} />
-          <meta property="og:title" content={`Work - ${siteTitle}`} />
+          <meta property="og:title" content={`Portfolio - ${siteTitle}`} />
           <meta property="og:description" content={pageDescription} />
           <body className="wrapper-work"/>
         </Helmet>
@@ -163,7 +163,7 @@ class WorkIndex extends React.Component {
   }
 }
 
-export default WorkIndex
+export default PortfolioIndex
 
 export const pageQuery = graphql`
   query {
