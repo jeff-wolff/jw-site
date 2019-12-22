@@ -16,7 +16,7 @@ class Footer extends React.Component {
           <div className="footer-top"> </div>
           <div className="footer-middle">
             
-            { this.props.isWorkPost ? 
+            { this.props.isWorkPost || this.props.isPortfolioPage ? 
               <Button size="tiny" to="/portfolio/" inlineicon="right"><span><Img fixed={data.workIcon.childImageSharp.fixed} /></span> Work</Button> : '' }
             <Button size="tiny" to="/about/" inlineicon="right"><span><Img fixed={data.aboutIcon.childImageSharp.fixed} /></span> About</Button>
             <Button size="tiny" to="/notes/" inlineicon="right"><span><Img fixed={data.notesIcon.childImageSharp.fixed} /></span> Notes</Button>
