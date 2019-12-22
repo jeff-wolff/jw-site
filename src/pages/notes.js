@@ -8,8 +8,6 @@ import './notes.css';
 
 import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
-// import Window from '../components/Window/window.js'
-// import MediaQuery from 'react-responsive'
 
 class NotesIndex extends React.Component {
   defaultTheme() {

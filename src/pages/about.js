@@ -90,35 +90,10 @@ class About extends React.Component {
             <div className="info">
               <h2 className="title">Jeff Wolff is a Creative Website Developer</h2>
               <p>Jeff codes elegant, engaging, and easy-to-use websites<span style={{ display: 'inline-block' }}>&mdash;he's</span> been doing it for over 12 years.</p>
-{/*              <p>Selected clients <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
-            {/*<form action="https://jeffwolff.us14.list-manage.com/subscribe/post?u=6949907028cc1a50c6174c10d&amp;id=f07f2fd12a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-                  <div>
-                    <label htmlFor="mce-EMAIL" className="h4">Let me keep you updated:</label>
-                  </div>
-                  <div>
-                    <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail" />
-                    <button type="submit" name="subscribe" id="mc-embedded-subscribe">&rarr;</button>
-                  </div>
-                </form>*/}
           </div>
         </div>
-{/*        <div className="container" style={{
-          minHeight: '50vh'
-        }}>
-          <div className="window" style={{
-            maxWidth: '460px',
-            margin: '0 auto'
-          }}
-          >
-            <div className="window-title"><div className="content">Navigation</div></div>
-            <div className="window-content">
-              <h3>Where would you like to go next?</h3>
-              <p><Button to="/work/" size="tiny">Work</Button>&nbsp;&nbsp;OR&nbsp;&nbsp;<Button to="/notes/" size="tiny">Notes</Button></p>
-            </div>
-          </div>
-        </div>*/}
       </Layout>
     )
   }
