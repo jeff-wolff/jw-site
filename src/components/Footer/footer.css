@@ -1,21 +1,16 @@
 footer {
-   /*  position: fixed;
-    z-index: -200;
-    bottom: 0; */
-    width: 100%;
     background-color: #151515;
     background-color: var(--footer-bg);
     color: #ff0;
     color: var(--primary);
+    width: 100%;
     height: 82vh;
-    opacity: .8;
-    z-index: 1;
-    position: sticky;
-    bottom: 0;
 }
 
 @media (min-width: 1152px) {
     footer {
+        position: sticky;
+        bottom: 0;
         height: 485px;
     }
 }
@@ -24,12 +19,13 @@ footer .container {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    z-index: 1;
 }
 footer .menu {
     display: flex;
     align-items: center;
 }
-footer a:not([class^="button"]) {        
+footer a:not([class^="button"]) {
     line-height: 1;
     color: #ff0;
     color: var(--primary);
@@ -54,34 +50,33 @@ footer a:not([class^="button"]) {
     }
 }
 
-
 footer .footer-middle {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-self:  center;
 }
 @media (min-width: 1152px) {
     footer .footer-middle {
-        flex-direction: row;
     }
 }
 
 footer .footer-middle a[class^="button"] {
-    width:  12%;
-    min-width: 226px;
-    margin:  0 .5em 2em;
+    width: 60%;
+    min-width: 270px;
+    margin:  1.4rem 0;
 }
 @media (min-width: 1152px) {
+    footer .footer-middle {
+        display: flex;
+        justify-content: center;
+    }
     footer .footer-middle a[class^="button"] {
+        width: 25%;
         margin:  0 .5em;
     }
     footer .footer-middle a[class^="button"]:first-child {
-        margin-left:  0;
+        margin-left:  .1em;
     }
     footer .footer-middle a[class^="button"]:last-child {
-        margin-right:  0;
+        margin-right: .1em;
     }
 }
 @media (min-width: 1440px) {

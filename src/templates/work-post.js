@@ -49,7 +49,7 @@ class WorkPostTemplate extends React.Component {
 
     setTimeout(function() {
       btn.style.visibility = "initial"
-      document.getElementsByClassName('website-btn')[0].classList.remove('faded');
+      if (btn) btn.classList.remove('faded');
     },500);
 
   }
@@ -64,7 +64,7 @@ class WorkPostTemplate extends React.Component {
     let coverVideo = "", lifestyleShot = "", demoVideoDesktop = "", demoVideoTablet = "", demoVideoPhone = "";
     // Define media
     if (post.frontmatter.featuredVideo != null) {
-     coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline />;
+     coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline style={{opacity: 0.2}} />;
     }
     if (post.frontmatter.demoVideoDesktop != null) {
      demoVideoDesktop = <video src={post.frontmatter.demoVideoDesktop.publicURL} autoPlay muted loop playsInline />;
@@ -93,15 +93,46 @@ class WorkPostTemplate extends React.Component {
           <body className="wrapper-work-post"/>
         </Helmet>
         <div className="work-down-arrow">
-          <p>[↓]</p>
+          <p><MediaQuery query="(min-width: 1025px)">[↑] Drag & Resize Windows<br /></MediaQuery>[↓]<MediaQuery query="(min-width: 1025px)"> Read More</MediaQuery></p>
         </div>
-        <div className="vid-wrap" style={{opacity: 0.4}}>{coverVideo}</div>
+        <div className="vid-wrap">
+          {coverVideo}
+          <MediaQuery query="(min-width: 1025px)">
+          {demoVideoPhone ? <BlankWindow 
+                  width={112.312312}
+                  height={200}
+                  minWidth={100}
+                  maxWidth={366}
+                  lockAspect={0.56325301204819277108433734939759}
+                  >
+                    {demoVideoPhone}
+                </BlankWindow> : ''}
+          {demoVideoDesktop ? <BlankWindow 
+                  width={280}
+                  height={157.5}
+                  minWidth={280}
+                  lockAspect={1.77777778}
+                  >
+                    {demoVideoDesktop}
+                </BlankWindow> : ''}
+          {demoVideoTablet ? <BlankWindow 
+                  bounds='body'
+                  width={192}
+                  height={256}
+                  minWidth={160}
+                  maxWidth={440}
+                  lockAspect={0.75}
+                  >
+                    {demoVideoTablet}
+                </BlankWindow> : ''}
+            </MediaQuery>
+        </div>
 
         <div className="work-post-title-wrap post-title centered-title preload" id="workTitle">
           <h1 className="title">
             <Typist 
-            startDelay={750}
-            avgTypingDelay={100}
+            startDelay={100}
+            avgTypingDelay={125}
             cursor={{
                 blink: false,
                 element: '_',
@@ -112,6 +143,8 @@ class WorkPostTemplate extends React.Component {
           <div className="website-btn faded" style={{ visibility: 'hidden' }}>
             {postWebsiteUrl ? <Button external="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">{`www.${postWebsiteUrl}`} <span>&#8599;</span></Button> : '' }
           </div>
+
+
         </div>
 
         <div className="work-post-description-wrap container">
@@ -131,7 +164,7 @@ class WorkPostTemplate extends React.Component {
           {lifestyleShot}
         </figure>
 
-        <div className="work-post-demo-wrap">
+      {/*  <div className="work-post-demo-wrap">
           {demoVideoDesktop ? <MediaQuery query="(min-width: 1px)" key="desktop">
               <MediaQuery query="(min-width: 1440px)">
                 <BlankWindow 
@@ -263,7 +296,7 @@ class WorkPostTemplate extends React.Component {
                 </BlankWindow>
               </MediaQuery>
           </MediaQuery> : ''}
-        </div>
+        </div>*/}
 
         <div className="work-post-nav-wrap post-nav container">
               <div className="work-post-nav">{

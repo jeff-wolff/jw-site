@@ -8,6 +8,8 @@ import Button from '../components/Button/button.js'
 import Window from '../components/Window/window.js'
 import MediaQuery from 'react-responsive'
 
+import './portfolio.css';
+
 class PortfolioIndex extends React.Component {
   defaultTheme() {
     document.documentElement.style.setProperty('--text-color', '#ffffff');
@@ -61,6 +63,7 @@ class PortfolioIndex extends React.Component {
           </h1>
         </div>
 
+        <div className="work-wrap">
         {posts.map(({ node: post }) => {
           const title = get(post, 'frontmatter.title') || post.fields.slug
           const windowTitle = title;
@@ -72,9 +75,10 @@ class PortfolioIndex extends React.Component {
             favIconURL = post.frontmatter.favIcon.publicURL;
           }
           return (
-            <MediaQuery query="(min-width: 1px)" key={post.id}>
-              <MediaQuery query="(min-width: 1440px)">
+            <MediaQuery key={post.id} minDeviceWidth={1}>
+              <MediaQuery minDeviceWidth={1440}>
                 <Window 
+                  bounts={'.wrapper'}
                   title={windowTitle}
                   width={450}
                   height={275}
@@ -101,8 +105,9 @@ class PortfolioIndex extends React.Component {
                     <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                 </Window>
               </MediaQuery>
-              <MediaQuery query="(min-width: 741px) and (max-width: 1439px)">
+              <MediaQuery minDeviceWidth={1025} maxDeviceWidth={1439}>
                 <Window 
+                  bounts={'.wrapper'}
                   title={windowTitle}
                   width={359}
                   height={224}
@@ -125,39 +130,27 @@ class PortfolioIndex extends React.Component {
                   yOffset={yCount+=Math.floor(Math.random() * 50)}
                   >
                     <h2 className="h3">{post.frontmatter.title}</h2>
-                    <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work 3 <span>&rarr;</span></Button>
-                </Window>
-              </MediaQuery>
-              <MediaQuery query="(max-width: 740px)">
-                <Window 
-                  title={windowTitle}
-                  width={267}
-                  height={173}
-                  minWidth={180}
-                  lockAspect={1.77777778}
-                  lockAspectRatioExtraHeight={22}
-                  className="work-window"
-                  coverVideo={coverVideoURL}
-                  favIcon={favIconURL}
-                  theme={post.frontmatter.theme}
-                  tbg={post.frontmatter.tbg}
-                  tbgf={post.frontmatter.tbgf}
-                  tp={post.frontmatter.tp}
-                  tpf={post.frontmatter.tpf}
-                  ts={post.frontmatter.ts}
-                  tsf={post.frontmatter.tsf}
-                  twb={post.frontmatter.twb}
-                  twt={post.frontmatter.twt}
-                  tfbg={post.frontmatter.tfbg}
-                  yOffset={yCount+=25}
-                  >
-                    <h2 className="h3">{post.frontmatter.title}</h2>
                     <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
                 </Window>
+              </MediaQuery>
+              <MediaQuery maxDeviceWidth={1024}>
+                <div
+                  className="note-card"
+                  style={{
+                    backgroundColor: post.frontmatter.tbg
+                  }}
+                  >
+                    <h2 className="title h3">{post.frontmatter.title}</h2>
+                    <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right"
+                    style={{
+                      backgroundColor: post.frontmatter.tbg
+                    }}>View Work <span>&rarr;</span></Button>
+                </div>
               </MediaQuery>
             </MediaQuery>
           )
         })}
+        </div>
       </Layout>
     )
   }

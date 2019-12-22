@@ -4,7 +4,7 @@
     top: 0;
     left: 0;    
     width: 100%;
-    height: 100vh;
+    height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +12,11 @@
 @media (min-width: 768px) {
     .home-container {
         text-align: center;
+    }
+}
+@media (min-width: 1125px) {
+    .home-container.container {
+        height: 100vh;
     }
 }
 .home-container .latest-info {
@@ -24,7 +29,7 @@
 .home-logo {
     margin: 0;
     position: absolute;
-    bottom: 12%;
+    bottom: 0;
     width: 80%;
     text-align: left;
 }
@@ -34,6 +39,6 @@
 }
 @media (min-width: 1152px) {
     .home-logo {
-        bottom: 60px;
+        bottom: 40px;
     }
 }

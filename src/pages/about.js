@@ -88,8 +88,8 @@ class About extends React.Component {
               <source src={ AboutPortraitMp4 } type="video/mp4" />
             </video>
             <div className="info">
-              <h2>Jeff Wolff <wbr />-<wbr /> Website Developer </h2>
-              <p>Currently coding elegant (UI), & easy-to-use (UX) websites and I've been doing it for over 12 years.</p>
+              <h2 className="title">Jeff makes websites</h2>
+              <p>Currently coding elegant & easy-to-use websites (UI + UX). I've been doing it for over 12 years.</p>
 {/*              <p>Selected clients <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>

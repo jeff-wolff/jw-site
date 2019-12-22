@@ -22,7 +22,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     text-transform: uppercase;
     user-select: none;
     font-size: ${ props => ( props.size == 'tiny' ? '11px' : props.size == 'small' ? '11px' : '15px' ) }; 
-    padding: ${ props => ( props.size == 'tiny' ? '.75em 1.08em' : props.size == 'small' ? '1em 1.48em' : '1.667em 1.83em ' ) };
+    padding: ${ props => ( props.size == 'tiny' ? '.86em 1.08em .76em' : props.size == 'small' ? '1em 1.48em' : '1.667em 1.83em ' ) };
     // width: ${ props => (props.inlineicon ? '100%' : 'auto')};
     text-align: ${ props => (props.inlineicon == 'left' ? 'right' : 'left')};
     ${media.medium`
@@ -34,7 +34,7 @@ const Button = styled(({size = 'default', ...props}) => props.external ? <a {...
     &:hover {
         color: #000;
         color: var(--secondary);
-        padding: ${ props => ( props.size == 'tiny' ? '.75em 1.08em' : props.size == 'small' ? '1em 1.48em' : '1.667em 1.83em ' ) };
+        padding: ${ props => ( props.size == 'tiny' ? '.86em 1.08em .76em' : props.size == 'small' ? '1em 1.48em' : '1.667em 1.83em ' ) };
         @media (-moz-touch-enabled: 0), (hover: hover) {
             transform: translate3d(${ props => ( props.size == 'tiny' ? '0' : props.size == 'small' ? '4px, -4px, 0' : '6px, -6px, 0' ) });
         }

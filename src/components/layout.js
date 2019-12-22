@@ -362,7 +362,7 @@ injectGlobal`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: screen;
   }
 
   .centered-title {
@@ -433,9 +433,9 @@ injectGlobal`
     display: flex;
     align-items: flex-end;
     width: 100%;
-    padding-bottom: 20px;
-    height: 100vh;
-    min-height: 900px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
   }
   .post-nav .next-btn,
   .post-nav .prev-btn {
@@ -819,7 +819,7 @@ class Template extends React.Component {
         wrappedElement.classList.add('disable-noise');
       },250);
     } else {
-      wrappedElement.classList.remove('disable-noise','fade-noise');
+        wrappedElement.classList.remove('disable-noise','fade-noise');
     }
   }
 
@@ -835,7 +835,7 @@ class Template extends React.Component {
         wrappedElement.classList.add('disable-noise');
       },250);
     } else {
-      wrappedElement.classList.remove('disable-noise','fade-noise');
+        wrappedElement.classList.remove('disable-noise','fade-noise');
     }
   }
 
@@ -850,18 +850,25 @@ class Template extends React.Component {
       header = (
         <Header isPortfolioPage={true} />
       )
+      footer = (
+        <Footer isPortfolioPage={true} />
+      )
     } else if (location.pathname.includes(workPostPath)) {
       header = (
         <Header isWorkPost={true} />
+      )
+      footer = (
+        <Footer isWorkPost={true} />
       )
     } else {
       header = (
         <Header  />
       )
+      footer = (
+        <Footer />
+      )
     }
-    footer = (
-      <Footer />
-    )
+    
     return (
       <div>
         <Helmet>

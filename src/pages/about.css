@@ -5,9 +5,7 @@
   justify-content: center;
   align-items: center;
 }
-.about-me * {
-  /* border: 6px solid rgb(255,0,0,.5); */
-}
+
 .about-me > .content {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +21,10 @@
 
 .about-me > .content > .info {
   padding: 0 0 20px;
+}
+
+.about-me .info > .title {
+  margin-top: 0;
 }
 @media (min-width: 768px) {
   .about-me {
