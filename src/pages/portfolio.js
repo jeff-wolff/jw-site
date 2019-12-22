@@ -125,7 +125,7 @@ class PortfolioIndex extends React.Component {
                   yOffset={yCount+=Math.floor(Math.random() * 50)}
                   >
                     <h2 className="h3">{post.frontmatter.title}</h2>
-                    <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work <span>&rarr;</span></Button>
+                    <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right">View Work 3 <span>&rarr;</span></Button>
                 </Window>
               </MediaQuery>
               <MediaQuery query="(max-width: 740px)">

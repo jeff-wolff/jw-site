@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Rnd from 'react-rnd';
+import { Rnd } from 'react-rnd';
 import classNames from 'classnames';
 
 import './window.css'
