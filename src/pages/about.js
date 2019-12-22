@@ -70,7 +70,7 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet
-          title={'About ' + siteTitle}>
+          title={'Creative Website Developer | ' + siteTitle}>
           <meta name="description" content={siteDescription} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jeffwolff" />
@@ -88,8 +88,8 @@ class About extends React.Component {
               <source src={ AboutPortraitMp4 } type="video/mp4" />
             </video>
             <div className="info">
-              <h2 className="title">Jeff makes websites</h2>
-              <p>Currently coding elegant & easy-to-use websites (UI + UX). I've been doing it for over 12 years.</p>
+              <h2 className="title">Jeff Wolff is a Creative Website Developer</h2>
+              <p>Jeff codes elegant, engaging, and easy-to-use websites&mdash;he's been doing it for over 12 years.</p>
 {/*              <p>Selected clients <Link to="/ripcurl/">Rip Curl</Link>, <Link to="/vans/">Vans</Link>, <Link to="/gomacro/">GoMacro</Link>, <Link to="/sunbelt-rentals/">Sunbelt Rentals</Link>, and <Link to="/cuker/">Cuker Agency</Link>.</p>*/}
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
