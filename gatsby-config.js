@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `@mkitio/gatsby-theme-password-protect`,
       options: {
-        password: 'jeffbuildswebsites',
+        password: 'wolff1337dev',
         partialMatching: true,
         pagePaths: ['/portfolio', '/work']
       }

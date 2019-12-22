@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { media, mediamax } from '../../utils/media'
 
-const Button = styled(({size = 'default', ...props}) => props.external ? <a {...props} target="_blank" /> : <Link {...props} />
+const Button = styled(({size = 'default', ...props}) => props.external ? <a {...props} target="_blank" rel="noreferrer" /> : <Link {...props} />
     )`
     transform: translate3d(0,0,0);
     outline: 0;
