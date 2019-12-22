@@ -14,17 +14,13 @@ class Header extends React.Component {
           J<span>eff </span>W<span>olff</span>
         </Link>
 
-        {this.props.isWorkPost ? 
-          <ul className="navigation">
-            <li><Link to="/portfolio/">Work</Link></li>
-            <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
-          </ul>
-          :
         <ul className="navigation">
-          <li><Link to="/notes/">Notes</Link></li>
+        { !this.props.isPortfolioPage && !this.props.isWorkPost ? 
+          <li><Link to="/notes/">Notes</Link></li> : '' }
+        { this.props.isWorkPost ? 
+          <li><Link to="/portfolio/">Work</Link></li> : '' }
           <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
         </ul>
-        }
 
       </div>
     )

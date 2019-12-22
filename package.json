@@ -11,7 +11,7 @@
     "@mkitio/gatsby-theme-password-protect": "^2.1.1",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-polyfill": "^6.26.0",
-    "gatsby": "^2.0.19",
+    "gatsby": "^2.17.4",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-favicon": "^3.1.6",

@@ -832,15 +832,16 @@ class Template extends React.Component {
 
   render() {
     const { location, children } = this.props
-    const workPath = `${__PATH_PREFIX__}/work/`
+    const portfolioPath = `${__PATH_PREFIX__}/portfolio/`
+    const workPostPath = `${__PATH_PREFIX__}/work/`
     let header
     let footer
 
-    if (location.pathname === workPath) {
+    if (location.pathname === portfolioPath) {
       header = (
-        <Header isWorkPage={true} />
+        <Header isPortfolioPage={true} />
       )
-    } else if (location.pathname.includes(workPath)) {
+    } else if (location.pathname.includes(workPostPath)) {
       header = (
         <Header isWorkPost={true} />
       )

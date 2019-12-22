@@ -87,6 +87,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     `gatsby-v2-plugin-page-transitions`,
-    `gatsby-plugin-favicon`
+    `gatsby-plugin-favicon`,
+    {
+      resolve: `@mkitio/gatsby-theme-password-protect`,
+      options: {
+        password: 'jeffbuildswebsites',
+        partialMatching: true,
+        pagePaths: ['/portfolio', '/work']
+      }
+    }
   ],
 }
