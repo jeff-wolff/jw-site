@@ -92,8 +92,7 @@ module.exports = {
       resolve: `@mkitio/gatsby-theme-password-protect`,
       options: {
         password: 'wolff1337dev',
-        partialMatching: true,
-        pagePaths: ['/portfolio', '/work/cuker', '/work/gomacro', '/work/ripcurl', '/work/vans', '/work/sunbelt-rentals']
+        pagePaths: ['/portfolio','/portfolio/','/work/cuker','/work/gomacro','/work/ripcurl','/work/vans','/work/sunbelt-rentals','/work/cuker/','/work/gomacro/','/work/ripcurl/','/work/vans/','/work/sunbelt-rentals/']
       }
     }
   ],

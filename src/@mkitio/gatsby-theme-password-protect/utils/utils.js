@@ -17,7 +17,7 @@ export const getQueryPassword = location => {
 };
 
 export const isProtectedPage = ({ pathname }, pagePaths, partialMatching) => {
-  
+  // console.log(pathname, pagePaths);
   const isProtected = pagePaths.find(path => {
     if (partialMatching) {
       return pathname.startsWith(path);
