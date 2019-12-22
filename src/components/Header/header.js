@@ -18,7 +18,7 @@ class Header extends React.Component {
         { !this.props.isPortfolioPage && !this.props.isWorkPost ? 
           <li><Link to="/notes/">Notes</Link></li> : '' }
         { this.props.isWorkPost ? 
-          <li><Link to="/portfolio/">Work</Link></li> : '' }
+          <li><Link to="/portfolio/">Portfolio</Link></li> : '' }
           <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
         </ul>
 

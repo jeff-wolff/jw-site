@@ -41,7 +41,7 @@ const PasswordProtect = () => {
   };
 
   return (
-    <div style={styles.wrapper}>
+    <div className="password" style={styles.wrapper}>
       <h1 style={{ color: '#fff' }}>Welcome</h1>
       <h4 style={{ color: '#fff' }}>Enter Password</h4>
 

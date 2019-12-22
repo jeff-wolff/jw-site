@@ -310,6 +310,11 @@ injectGlobal`
           margin-top: 0;
       }
   }
+  body.wrapper-work .password {
+    display: block !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
   body.wrapper-work .wrapper {
       min-height: 290vh;
   }
@@ -504,7 +509,11 @@ injectGlobal`
       transform: translate(-10%, 10%)
     }
   }
-
+  body.wrapper-work-post .password {
+    display: block !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
   body:not(.wrapper-work-post) .wrapper:after {
       transition: opacity 100ms cubic-bezier(0.4, 0.0, 0.2, 1);
       animation: grain 1s steps(10) infinite;
