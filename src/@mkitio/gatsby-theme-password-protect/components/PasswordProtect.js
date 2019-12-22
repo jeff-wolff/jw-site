@@ -57,6 +57,7 @@ const PasswordProtect = () => {
         <Button
           size="small"
           type="submit"
+          to="/portfolio/"
           onMouseEnter={() => buttonHover(true)}
           onMouseLeave={() => buttonHover(false)}
         >
