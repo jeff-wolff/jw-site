@@ -93,7 +93,7 @@ module.exports = {
       options: {
         password: 'wolff1337dev',
         partialMatching: true,
-        pagePaths: ['/portfolio', '/work']
+        pagePaths: ['/portfolio', '/work/cuker', '/work/gomacro', '/work/ripcurl', '/work/vans', '/work/sunbelt-rentals']
       }
     }
   ],
