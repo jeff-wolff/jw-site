@@ -3,38 +3,20 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-
+import Theme from '../components/Theme/theme.js'
 import './notes.css';
 
 import Typist from 'react-typist';
 import Button from '../components/Button/button.js'
 
 class NotesIndex extends React.Component {
-  defaultTheme() {
-    document.documentElement.style.setProperty('--text-color', '#ffffff');
-    document.documentElement.style.setProperty('--bg', '#151515');
-    document.documentElement.style.setProperty('--bg-faded', '33, 33, 33');
-    document.documentElement.style.setProperty('--primary', 'rgb(255,255,0)');
-    document.documentElement.style.setProperty('--primary-faded', 'rgba(255,255,0,.78)');
-    document.documentElement.style.setProperty('--secondary', '#000');
-    document.documentElement.style.setProperty('--secondary-faded', '#222');
-    document.documentElement.style.setProperty('--window-border', '190,190,190');
-    document.documentElement.style.setProperty('--window-title', '0,0,0');
-    document.documentElement.style.setProperty('--footer-bg', '#000');
-    let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-  }
-
-  componentDidMount() {
-    this.defaultTheme();
-  }
-
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const pageDescription = "Some things that are on my mind."
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     return (
       <Layout location={this.props.location}>
+        <Theme />
         <Helmet
           title={`Notes - ${siteTitle}`}
           >

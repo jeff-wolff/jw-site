@@ -53,17 +53,17 @@ injectGlobal`
 
   :root {
     // Base
-    --text-color: rgba(255,255,255,.96);
-    --bg: #151515;
-    --bg-faded: 21, 21, 21;
-    --primary: #ff0;
-    --primary-faded: rgba(255,255,0,.78);
-    --secondary: #000080;
-    --secondary-faded: #1414ab;
-    --window-border: 190,190,190;
-    --window-title: 255,255,255;
+    // --text-color: #fff;
+    // --bg: #151515;
+    // --bg-faded: 255, 0, 0;
+    // --primary: #ff0;
+    // --primary-faded: rgba(255,255,0,.78);
+    // --secondary: #000;
+    // --secondary-faded: #222;
+    // --window-title: 0,0,0;
+    // --window-border: 190,190,190;
+    // --footer-bg: #000;
     --window-title-height: 22px;
-    --footer-bg: #000;
   }
   ::-moz-selection {
       background-color: var(--primary);

@@ -4,6 +4,7 @@ import { Link,graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
+import Theme from '../components/Theme/theme.js'
 
 import './work-post.css';
 
@@ -14,19 +15,6 @@ import BlankWindow from '../components/BlankWindow/blank-window.js'
 import MediaQuery from 'react-responsive'
 
 class WorkPostTemplate extends React.Component {
-  theme(bg,bgf,p,pf,s,sf,wb,wt,fbg) {
-    document.documentElement.style.setProperty('--bg', bg);
-    document.documentElement.style.setProperty('--bg-faded', bgf);
-    document.documentElement.style.setProperty('--primary', p);
-    document.documentElement.style.setProperty('--primary-faded', pf);
-    document.documentElement.style.setProperty('--secondary', s);
-    document.documentElement.style.setProperty('--secondary-faded', sf);
-    document.documentElement.style.setProperty('--window-border', wb);
-    document.documentElement.style.setProperty('--window-title', wt);
-    document.documentElement.style.setProperty('--footer-bg', fbg);
-    let metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue('--bg'));
-  }
 
   centerWorkTitle() {
     let workTitle = document.getElementById('workTitle');
@@ -35,12 +23,7 @@ class WorkPostTemplate extends React.Component {
   }
 
   componentDidMount() {
-    const post = this.props.data.markdownRemark
-    // console.log(post.frontmatter);
     this.centerWorkTitle();
-    if (post.frontmatter.theme) {
-      this.theme(post.frontmatter.tbg,post.frontmatter.tbgf,post.frontmatter.tp,post.frontmatter.tpf,post.frontmatter.ts,post.frontmatter.tsf,post.frontmatter.twb,post.frontmatter.twt,post.frontmatter.tfbg);
-    }
   }
 
   onHeaderTyped() {
@@ -54,14 +37,26 @@ class WorkPostTemplate extends React.Component {
 
   }
 
+  setTheme() {
+    const post = this.props.data.markdownRemark
+    let theme = ""
+    if (post.frontmatter.theme) {
+      theme = <Theme textColor={'rgba(255,255,255,.96)'} bg={post.frontmatter.tbg} bgFaded={post.frontmatter.tbgf} primary={post.frontmatter.tp} primaryFaded={post.frontmatter.tpf} secondary={post.frontmatter.ts} secondaryFaded={post.frontmatter.tsf} windowBorder={post.frontmatter.twb} windowTitle={post.frontmatter.twt} footerBg={post.frontmatter.tfbg} />
+    } else {
+      theme = <Theme />
+    }
+    return theme
+  }
+
   render() {
     const { previous, next } = this.props.pageContext
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const theme = this.setTheme();
     const post = this.props.data.markdownRemark
     const postTitle = post.frontmatter.title
     const postDescription = post.excerpt
     const postWebsiteUrl = post.frontmatter.url
-    let coverVideo = "", lifestyleShot = "", demoVideoDesktop = "", demoVideoTablet = "", demoVideoPhone = "";
+    let coverVideo = "", lifestyleShot = "", demoVideoDesktop = "", demoVideoTablet = "", demoVideoPhone = ""
     // Define media
     if (post.frontmatter.featuredVideo != null) {
      coverVideo = <video src={post.frontmatter.featuredVideo.publicURL} autoPlay muted loop playsInline style={{opacity: 0.2}} />;
@@ -81,6 +76,7 @@ class WorkPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+        {theme}
         <Helmet
           title={`${postTitle} Website - ${siteTitle}`}>
           <meta name="description" content={postDescription} />

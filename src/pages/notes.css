@@ -3,7 +3,7 @@
   padding-bottom: 240px;
 }
 .note-card {
-  background: rgba(var(--bg-faded),.98);
+  background: rgba(var(--bg-faded),.97);
   color: var(--primary);
   border: 1px dashed var(--primary);
   padding: 2rem;
