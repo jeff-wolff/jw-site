@@ -36,14 +36,8 @@
   .about-me > .content > .profile {
     margin-bottom: 0;
   }
-  .about-me > .content > .info {
-    
-  }
 }
 @media (min-width: 1024px) {
-  .about-me>.content { 
-    margin: 64px 0;
-  }
   .about-me > .content > .profile {
     max-width: 768px;
     width: 50%;

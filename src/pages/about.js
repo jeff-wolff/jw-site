@@ -45,10 +45,7 @@ class About extends React.Component {
   }
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+    const siteDescription = 'Jeff has been pushing pixels since 2003.'
 
     const { songTitle, songArtist } = this.state;
     const lastFmProfileUrl = "https://www.last.fm/user/jeffwolff";
@@ -57,7 +54,7 @@ class About extends React.Component {
       <Layout location={this.props.location}>
         <Theme />
         <Helmet
-          title={'Creative Website Developer | ' + siteTitle}>
+          title={`San Diego Creative Web Developer - ${siteTitle}`}>
           <meta name="description" content={siteDescription} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@jeffwolff" />
@@ -75,7 +72,7 @@ class About extends React.Component {
                 <source src={ AboutPortraitMp4 } type="video/mp4" />
               </video>
               <figcaption>
-                Jeff&rsquo;s been crafting pixels since 2003
+                Jeff has been crafting pixels since 2003
               </figcaption>
             </figure>
             <div className="Rte info">
@@ -83,7 +80,7 @@ class About extends React.Component {
                 San Diego, CA
               </h5>
               <h1 className="title h1">Creative Website Developer</h1>
-              <p>Jeff Wolff codes elegant, engaging, and easy-to-use websites with the latest HTML, CSS, and JavaScript. </p>
+              <p>Jeff codes elegant, engaging, and easy-to-use websites with the latest HTML, CSS, and JavaScript. </p>
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
           </div>
@@ -101,6 +98,7 @@ export const pageQuery = graphql`
         title
         description
         tagline
+        siteUrl
       }
     }
   }

@@ -12,7 +12,7 @@ import Button from '../components/Button/button.js'
 class NotesIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const pageDescription = "Some things that are on my mind."
+    const pageDescription = "Some things that are on my mind..."
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     return (
       <Layout location={this.props.location}>
