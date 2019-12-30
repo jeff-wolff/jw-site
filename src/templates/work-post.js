@@ -91,7 +91,7 @@ class WorkPostTemplate extends React.Component {
           <meta property="og:image" content={`${this.props.data.site.siteMetadata.siteUrl}${post.frontmatter.lifestyleShot.childImageSharp.sizes.src}`} />
           <body className="wrapper-work-post"/>
         </Helmet>
-        <div className="work-down-arrow">
+        <div className="container work-down-arrow">
           <p><MediaQuery query="(min-width: 1025px)">[↑] Drag & Resize Windows<br /></MediaQuery>[↓]<MediaQuery query="(min-width: 1025px)"> Read More</MediaQuery></p>
         </div>
         <div className="vid-wrap">
