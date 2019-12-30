@@ -15,7 +15,7 @@ twt: "0,0,0"
 tfbg: "#000050"
 ---
 
-_AKA_ a website archive where you can browse the past versions of my personal website. Try to find some recurring themes. 😉
+This is a site archive where you can browse the past versions of my personal portfolio site. Try to find some recurring themes. 😉
 
 ##### circa 2009
 ## <a href="https://jeff-wolff.github.io/v1" target="_blank">Version 1 &rarr;</a>

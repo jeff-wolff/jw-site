@@ -2,10 +2,21 @@
   position: absolute;
   width: 100%;
   left: 0;
-  top: 82vh;
+  top: 72vh;
+}
+@media (min-width: 1025px) {
+  .work-down-arrow {
+    top: 82vh;
+  }
 }
 .work-down-arrow p {
+  text-align: center;
   margin-bottom: 0;
+}
+@media (min-width: 1025px) {
+  .work-down-arrow p {
+    text-align: left;
+  }
 }
 .work-post-title-wrap {
   padding: 0 20px;
