@@ -25,6 +25,15 @@ const styles = {
     width: '100%',
     marginRight: '8px',
     padding: '.5rem .75rem'
+  },
+  button: {
+    cursor: 'pointer',
+    backgroundColor: '#212121',
+    backgroundColor: 'var(--bg)',
+    color: '#ff0',
+    color: 'var(--primary)',
+    border: '1px solid #ff0',
+    padding: '.25rem 1.25rem'
   }
 };
 
@@ -54,15 +63,16 @@ const PasswordProtect = () => {
           style={styles.input}
         />
 
-        <Button
-          size="small"
+        <button
           type="submit"
-          to="/portfolio/"
+          style={{
+            ...styles.button
+          }}
           onMouseEnter={() => buttonHover(true)}
           onMouseLeave={() => buttonHover(false)}
         >
           Enter
-        </Button>
+        </button>
       </form>
 
     </div>
