@@ -119,17 +119,19 @@ class PortfolioIndex extends React.Component {
                 </Window>
               </MediaQuery>
               <MediaQuery maxDeviceWidth={1024}>
-                <div
-                  className="note-card"
-                  style={{
-                    backgroundColor: post.frontmatter.tbg
-                  }}
-                  >
-                    <h2 className="title h3">{post.frontmatter.title}</h2>
-                    <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right"
+                <div className="container">
+                  <div
+                    className="note-card"
                     style={{
                       backgroundColor: post.frontmatter.tbg
-                    }}>View Work <span>&rarr;</span></Button>
+                    }}
+                    >
+                      <h2 className="title h3">{post.frontmatter.title}</h2>
+                      <Button size="tiny" to={post.fields.slug} className="window-button work-window-button" inlineicon="right"
+                      style={{
+                        backgroundColor: post.frontmatter.tbg
+                      }}>View Work <span>&rarr;</span></Button>
+                  </div>
                 </div>
               </MediaQuery>
             </MediaQuery>

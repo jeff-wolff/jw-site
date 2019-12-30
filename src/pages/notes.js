@@ -46,11 +46,10 @@ class NotesIndex extends React.Component {
           {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             return (
-              <div className="note-card Rte" key={post.id}>
-                <Link to={post.fields.slug}
+                <Link to={post.fields.slug} className="note-card Rte" key={post.id}
                 style={{
                   borderColor: (post.frontmatter.pf ? post.frontmatter.pf : 'var(--primary-faded)'),
-                  backgroundColor: (post.frontmatter.tbgf ? `rgba(${post.frontmatter.tbgf},.27)` : 'rgba(var(--bg-faded),.27)')
+                  backgroundColor: (post.frontmatter.tbgf ? `rgba(${post.frontmatter.tbgf},.9)` : 'rgba(var(--bg-faded),.9)')
                 }}>
                   <h2 className="title h2"
                   style={{
@@ -66,7 +65,7 @@ class NotesIndex extends React.Component {
                     {post.excerpt}
                   </p>
                 </Link>
-              </div>
+              
             )
           })}
         </div>
