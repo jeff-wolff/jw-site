@@ -230,12 +230,12 @@ injectGlobal`
   video {
     max-width: 100%;
   }
-  .h1,h1,.h2,h2,.h3,h3,.h4,h4,.h5,h5,.h6,h6 {
+  h1,h2,h3,h4,h5,h6 {
       transform: translate3d(0, 0, 0);
       font-size: 1em;
       line-height: 1;
       font-weight: bold;
-      margin: 3.5rem 0 1.75rem;
+      margin: 0 0 1rem;
       letter-spacing: 0;
   }
   h1,.h1 {
@@ -256,26 +256,27 @@ injectGlobal`
   .Rte h1, .Rte .h1 {
     font-size: 2.5rem;
   }
-  h2,.h2 {
+  h2,.h2,.Rte .h2 {
     font-size: 1.7rem;
     line-height: 1.3;
   }
-  h3,.h3 {
+  h3,.h3,.Rte .h3 {
     font-size: 1.25rem;
     line-height: 1.5;
   }
-  h4,.h4 {
+  h4,.h4,.Rte .h4 {
     font-size: 1rem;
-    color: var(--text-color);
+    // color: var(--text-color);
     line-height: 1.6;
   }
-  h5,.h5,figcaption {
+  h5,.h5,.Rte .h5,figcaption {
     text-transform: uppercase;
     font-size: 0.83255rem;
     letter-spacing: .25em;
     line-height: 1.6;
+    margin-bottom: .75rem;
   }
-  h6,.h6 {
+  h6,.h6,.Rte .h6 {
     font-size: 0.75966rem;
     line-height: 1.6;
   }

@@ -11,7 +11,7 @@ class HomeInfo extends React.Component {
         <h2 className="latest-info h3">
           <Typist 
           startDelay={2500}
-          avgTypingDelay={45}
+          avgTypingDelay={64}
           cursor={{
               
           }}
@@ -22,7 +22,7 @@ class HomeInfo extends React.Component {
             <Typist.Backspace count={40} delay={10000} />
             {/*Check out my latest websites. <Link to="/work/">Work &rarr;</Link>&nbsp;
             <Typist.Backspace count={37} delay={10000} />*/}
-            Front-end website developer based in San Diego, CA.  <Link to="/about/">About Me &rarr;</Link>&nbsp;
+            Creative website developer based in San Diego, CA.  <Link to="/about/">About Me &rarr;</Link>&nbsp;
             <Typist.Backspace count={64} delay={10000} />
             I just launched a new site. <Link to="/welcome/">Read Post &rarr;</Link>&nbsp;
             {/*<Typist.Backspace count={40} delay={10000} />

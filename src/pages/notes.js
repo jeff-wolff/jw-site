@@ -42,14 +42,30 @@ class NotesIndex extends React.Component {
           </h1>
         </div>
 
-        <div className="note-index-container">
+        <div className="note-index-container container">
           {posts.map(({ node: post }) => {
             const title = get(post, 'frontmatter.title') || post.fields.slug
             return (
-              <div className="note-card" key={post.id}>
-                <h2 className="title h2"><Link to={post.fields.slug}>{post.frontmatter.title}</Link></h2>
-                <p>{post.frontmatter.date}</p>
-                <Button size="tiny" to={post.fields.slug} inlineicon="right">View Note <span>&rarr;</span></Button>
+              <div className="note-card Rte" key={post.id}>
+                <Link to={post.fields.slug}
+                style={{
+                  borderColor: (post.frontmatter.pf ? post.frontmatter.pf : 'var(--primary-faded)'),
+                  backgroundColor: (post.frontmatter.tbgf ? `rgba(${post.frontmatter.tbgf},.27)` : 'rgba(var(--bg-faded),.27)')
+                }}>
+                  <h2 className="title h3"
+                  style={{
+                    color: (post.frontmatter.tp ? post.frontmatter.tp : 'var(--primary)')
+                  }}
+                  >
+                    {post.frontmatter.title}
+                  </h2>
+                  <p className="h4"
+                  style={{
+                    color: (post.frontmatter.ttc ? post.frontmatter.ttc : 'var(--text-color)')
+                  }}>
+                    {post.excerpt}
+                  </p>
+                </Link>
               </div>
             )
           })}
@@ -79,7 +95,7 @@ export const pageQuery = graphql`
       ){
       edges {
         node {
-          excerpt(pruneLength: 50)
+          excerpt(pruneLength: 100)
           id
           fields {
             slug
@@ -88,6 +104,17 @@ export const pageQuery = graphql`
             publish
             date(formatString: "MMMM DD, YYYY")
             title
+            theme
+            ttc
+            tbg
+            tbgf
+            tp
+            tpf
+            ts
+            tsf
+            twb
+            twt
+            tfbg
           }
         }
       }

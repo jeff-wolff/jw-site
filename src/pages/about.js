@@ -9,9 +9,9 @@ import Theme from '../components/Theme/theme.js'
 import '../components/Window/window.css'
 import './about.css'
 
-import AboutPortraitPoster from '../assets/jeffwolff-poster.jpg';
-import AboutPortraitWebM from '../assets/jeffwolff-moshed.webm';
-import AboutPortraitMp4 from '../assets/jeffwolff-moshed.mp4';
+import AboutPortraitPoster from '../assets/jeffwolff-poster-2020.jpg';
+import AboutPortraitWebM from '../assets/jeffwolff-moshed-2020.webm';
+import AboutPortraitMp4 from '../assets/jeffwolff-moshed-2020.mp4';
 import EqualizerGif from '../assets/eq.gif';
 
 class About extends React.Component {
@@ -69,13 +69,21 @@ class About extends React.Component {
         </Helmet>
         <div className="about-me container">
           <div className="content">
-            <video loop muted autoPlay playsInline className="profile" poster={AboutPortraitPoster}>
-              <source src={ AboutPortraitWebM } type="video/webm" />
-              <source src={ AboutPortraitMp4 } type="video/mp4" />
-            </video>
-            <div className="info">
-              <h2 className="title">Jeff Wolff is a Creative Website Developer</h2>
-              <p>Jeff codes elegant, engaging, and easy-to-use websites<span style={{ display: 'inline-block' }}>&mdash;he's</span> been doing it for over 12 years.</p>
+            <figure className="profile">
+              <video loop muted autoPlay playsInline poster={AboutPortraitPoster}>
+                <source src={ AboutPortraitWebM } type="video/webm" />
+                <source src={ AboutPortraitMp4 } type="video/mp4" />
+              </video>
+              <figcaption>
+                Jeff&rsquo;s been crafting pixels since 2003
+              </figcaption>
+            </figure>
+            <div className="Rte info">
+              <h5>
+                San Diego, CA
+              </h5>
+              <h1 className="title h1">Creative Website Developer</h1>
+              <p>Jeff Wolff codes elegant, engaging, and easy-to-use websites with the latest HTML, CSS, and JavaScript. </p>
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
           </div>

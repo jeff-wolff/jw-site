@@ -9,10 +9,12 @@
 .about-me > .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20vh;
-  padding-top:  56px;
+  margin-top:  56px;
+  width: 100%;
+  max-width: 1420px;
 }
 .about-me > .content > .profile {
   width: 100%;
@@ -20,7 +22,7 @@
 }
 
 .about-me > .content > .info {
-  padding: 0 0 20px;
+  margin: 0 0 20px;
 }
 
 .about-me .info > .title {
@@ -35,16 +37,20 @@
     margin-bottom: 0;
   }
   .about-me > .content > .info {
-    /* padding: 20px; */
+    
   }
 }
 @media (min-width: 1024px) {
+  .about-me>.content { 
+    margin: 64px 0;
+  }
   .about-me > .content > .profile {
     max-width: 768px;
-    width: 60%;
+    width: 50%;
+    padding-left: 48px;
   }
   .about-me > .content > .info {
-    width: 35%;
-    margin-right: 5%;
+    width: 50%;
+    padding-right: 48px;
   }
 }
