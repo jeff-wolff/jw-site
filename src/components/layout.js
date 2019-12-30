@@ -53,16 +53,16 @@ injectGlobal`
 
   :root {
     // Base
-    // --text-color: #fff;
-    // --bg: #151515;
-    // --bg-faded: 255, 0, 0;
-    // --primary: #ff0;
-    // --primary-faded: rgba(255,255,0,.78);
-    // --secondary: #000;
-    // --secondary-faded: #222;
-    // --window-title: 0,0,0;
-    // --window-border: 190,190,190;
-    // --footer-bg: #000;
+    --text-color: #fff;
+    --bg: #151515;
+    --bg-faded: 255, 0, 0;
+    --primary: #ff0;
+    --primary-faded: rgba(255,255,0,.78);
+    --secondary: #000;
+    --secondary-faded: #222;
+    --window-title: 0,0,0;
+    --window-border: 190,190,190;
+    --footer-bg: #000;
     --window-title-height: 22px;
   }
   ::-moz-selection {
@@ -103,24 +103,28 @@ injectGlobal`
   }
   /* Cursors */
   .work-window, .react-draggable {
-    cursor: url('${curMove}') 21 21, move !important;
+    cursor: url('${curMove}') 11 11, move !important;
   }
-  .window-resizer {
-    cursor: url('${curResizeNWSE}') 16 16, nwse-resize !important;
+  .window-resizer-br,
+  .window-resizer-tl {
+    cursor: url('${curResizeNWSE}') 8 8, nwse-resize !important;
     z-index: 2;
   }
-  .window-resizer-2 {
-    cursor: url('${curResizeNESW}') 16 16, nesw-resize !important;
+  .window-resizer-bl,
+  .window-resizer-tr {
+    cursor: url('${curResizeNESW}') 8 8, nesw-resize !important;
     z-index: 2;
   }
-  .window-resizer-3 {
-    cursor: url('${curResizeNS}') 9 22, ns-resize !important;
+  .window-resizer-b,
+  .window-resizer-t {
+    cursor: url('${curResizeNS}') 5 11, ns-resize !important;
   }
-  .window-resizer-4 {
-    cursor: url('${curResizeEW}') 22 9, ew-resize !important;
+  .window-resizer-l,
+  .window-resizer-r {
+    cursor: url('${curResizeEW}') 11 5, ew-resize !important;    
   }
   *:disabled {
-    cursor: url('${curNotAllowed}') 21 21, not-allowed;
+    cursor: url('${curNotAllowed}') 10 10, not-allowed;
   }
   strong {
       color: var(--text-color);
@@ -135,7 +139,7 @@ injectGlobal`
       outline: 0 solid rgba(0,0,0,0);
   }
   a:hover {
-      cursor: url('${curPointer}') 12 1, pointer;
+      cursor: url('${curPointer}') 6 1, pointer;
       padding: .12em 0 0;
       background: #ff0;
       background: var(--primary);
@@ -182,16 +186,6 @@ injectGlobal`
       margin: 0 0 1.75rem 0;
       padding: 0;
       list-style-position: outside;
-  }
-  ol {
-  }
-  @media (max-width: 1151px) {
-    // ul {
-    //   margin-left: 1.25rem;
-    // }
-    // ol {
-    //   margin-left: 1.667rem;
-    // }
   }
   li {
       margin-bottom: 0.875rem;
@@ -310,35 +304,16 @@ injectGlobal`
           margin-top: 0;
       }
   }
+  @media (min-width: 768px) {
+    body.wrapper-work .wrapper {
+        min-height: 150vh;
+    }
+  }
   body.wrapper-work .password {
     display: block !important;
     padding: 0 !important;
     height: auto !important;
   }
-  body.wrapper-work .wrapper {
-      min-height: 290vh;
-  }
-  @media (min-height: 360px) {
-    body.wrapper-work .wrapper {
-        min-height: 250vh;
-    }
-  }
-  @media (min-height: 500px) {
-    body.wrapper-work .wrapper {
-        min-height: 230vh;
-    }
-  }
-  @media (min-height: 768px) {
-    body.wrapper-work .wrapper {
-        min-height: 200vh;
-    }
-  }
-  @media (min-height: 1440px) {
-    body.wrapper-work .wrapper {
-        min-height: 145vh;
-    }
-  }
-
   .container {
     position: relative;
     z-index: 2;
@@ -379,14 +354,10 @@ injectGlobal`
     color: var(--text-color);
     text-shadow: none;
     margin: 0;
-    opacity: 0;
+    text-shadow: 0 4px 6px rgba(21,21,21,0.22), 0 1px 3px rgba(0,0,0,0.16);
   }
   .centered-title.preload {
       z-index: 2;
-  }
-  .centered-title.preload .title {
-    opacity: 1;
-    filter: none;
   }
   .centered-title.index-title {
     position: sticky;
@@ -397,14 +368,13 @@ injectGlobal`
     margin: 0 auto 125px;
     text-transform: uppercase;
   }
-  .centered-title.index-title .title {
-    letter-spacing: 0.06em;
-    text-shadow: 0 4px 6px rgba(21,21,21,0.11), 0 1px 3px rgba(0,0,0,.08);
-  }
   @media (min-width: 1152px) {
     .centered-title.index-title {
       top: 220px;
     }
+  }
+  .centered-title.index-title .title {
+    letter-spacing: 0.06em;
   }
 
   .post-title {

@@ -154,14 +154,14 @@ class Window extends React.Component {
             y: this.state.y
           }}
           resizeHandleClasses={{
-            bottomLeft: 'window-resizer-2',
-            topRight: 'window-resizer-2',
-            bottomRight: 'window-resizer',
-            topLeft: 'window-resizer',
-            bottom: 'window-resizer-3',
-            top: 'window-resizer-3',
-            left: 'window-resizer-4',
-            right: 'window-resizer-4',
+            bottomLeft: 'window-resizer-bl',
+            topRight: 'window-resizer-tr',
+            bottomRight: 'window-resizer-br',
+            topLeft: 'window-resizer-tl',
+            bottom: 'window-resizer-b',
+            top: 'window-resizer-t',
+            left: 'window-resizer-l',
+            right: 'window-resizer-r',
           }}
           enableResizing={{bottom: this.state.enableResize, bottomLeft: this.state.enableResize, bottomRight: this.state.enableResize, left: this.state.enableResize, right: this.state.enableResize, top: this.state.enableResize, topLeft: this.state.enableResize, topRight: this.state.enableResize }}
           onDrag={(e, d) => { 

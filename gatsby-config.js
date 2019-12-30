@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `@mkitio/gatsby-theme-password-protect`,
       options: {
-        password: 'jeffmakeswebsites',
+        password: 'creativedev2020',
         pagePaths: ['/portfolio','/portfolio/','/work/cuker','/work/gomacro','/work/ripcurl','/work/vans','/work/sunbelt-rentals','/work/cuker/','/work/gomacro/','/work/ripcurl/','/work/vans/','/work/sunbelt-rentals/']
       }
     }

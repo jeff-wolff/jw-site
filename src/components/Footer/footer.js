@@ -14,14 +14,20 @@ class Footer extends React.Component {
       render={data => (
         <div className="container">
           <div className="footer-top"> </div>
-          <div className="footer-middle">
             
             { this.props.isWorkPost || this.props.isPortfolioPage ? 
-              <Button size="tiny" to="/portfolio/" inlineicon="right"><span><Img fixed={data.workIcon.childImageSharp.fixed} /></span> Work</Button> : '' }
-            <Button size="tiny" to="/about/" inlineicon="right"><span><Img fixed={data.aboutIcon.childImageSharp.fixed} /></span> About</Button>
-            <Button size="tiny" to="/notes/" inlineicon="right"><span><Img fixed={data.notesIcon.childImageSharp.fixed} /></span> Notes</Button>
-            <Button size="tiny" external="true" href="mailto:hi@jeffwolff.net" inlineicon="right"><span><Img fixed={data.contactIcon.childImageSharp.fixed} /></span> Contact</Button>
-          </div>
+              <div className="footer-middle">
+                <Button size="tiny" external="true" href="/" inlineicon="right"><span><Img fixed={data.aboutIcon.childImageSharp.fixed} /></span> Home</Button>
+                <Button size="tiny" to="/portfolio/" inlineicon="right"><span><Img fixed={data.workIcon.childImageSharp.fixed} /></span> Work</Button>
+                <Button size="tiny" external="true" href="mailto:hi@jeffwolff.net" inlineicon="right"><span><Img fixed={data.contactIcon.childImageSharp.fixed} /></span> Contact</Button>
+              </div>
+            :
+              <div className="footer-middle">
+                <Button size="tiny" to="/about/" inlineicon="right"><span><Img fixed={data.aboutIcon.childImageSharp.fixed} /></span> About</Button>
+                <Button size="tiny" to="/notes/" inlineicon="right"><span><Img fixed={data.notesIcon.childImageSharp.fixed} /></span> Notes</Button>
+                <Button size="tiny" external="true" href="mailto:hi@jeffwolff.net" inlineicon="right"><span><Img fixed={data.contactIcon.childImageSharp.fixed} /></span> Contact</Button>
+              </div>
+            }
           <div className="footer-bottom">
             <div className="legal">&copy; Jeff Wolff</div>
             <div className="menu">

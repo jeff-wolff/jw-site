@@ -11,7 +11,7 @@ class HomeInfo extends React.Component {
         <h2 className="latest-info h3">
           <Typist 
           startDelay={2500}
-          avgTypingDelay={65}
+          avgTypingDelay={45}
           cursor={{
               
           }}
@@ -33,7 +33,7 @@ class HomeInfo extends React.Component {
           <h1 className="title">
             <Typist 
             startDelay={1000}
-            avgTypingDelay={130}
+            avgTypingDelay={112}
             cursor={{
                 blink: false,
                 element: '_'

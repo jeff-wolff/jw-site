@@ -27,10 +27,13 @@ class WorkPostTemplate extends React.Component {
   }
 
   onHeaderTyped() {
-    // Show website-btn transition
+    let titleWrap = document.getElementsByClassName('work-post-title-wrap')[0];
     let btn = document.getElementsByClassName('website-btn')[0];
-
+    
     setTimeout(function() {
+      // Change zindex
+      titleWrap.classList.remove('preload');
+      // Show website-btn transition
       btn.style.visibility = "initial"
       if (btn) btn.classList.remove('faded');
     },500);
@@ -127,8 +130,8 @@ class WorkPostTemplate extends React.Component {
         <div className="work-post-title-wrap post-title centered-title preload" id="workTitle">
           <h1 className="title">
             <Typist 
-            startDelay={100}
-            avgTypingDelay={125}
+            startDelay={1200}
+            avgTypingDelay={150}
             cursor={{
                 blink: false,
                 element: '_',
@@ -137,7 +140,7 @@ class WorkPostTemplate extends React.Component {
             }} onTypingDone={this.onHeaderTyped}>{postTitle}</Typist>
           </h1>
           <div className="website-btn faded" style={{ visibility: 'hidden' }}>
-            {postWebsiteUrl ? <Button external="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">{`www.${postWebsiteUrl}`} <span>&#8599;</span></Button> : '' }
+            {postWebsiteUrl ? <Button noref="true" href={`https://www.${postWebsiteUrl}`} inlineicon="right">{`www.${postWebsiteUrl}`} <span>&#8599;</span></Button> : '' }
           </div>
 
 

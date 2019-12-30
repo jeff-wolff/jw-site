@@ -105,9 +105,15 @@ footer a.icon-link {
     font-size: 1em;
     padding: 6px;
     box-shadow: none;
+    opacity: .4;
+}
+@media (pointer:none), (pointer:coarse) {
+    footer a.icon-link {
+        opacity: 1;
+    }
 }
 footer a.icon-link:hover {
     background: none;
-    opacity: .8;
+    opacity: 1;
 }
 
