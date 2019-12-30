@@ -381,7 +381,7 @@ injectGlobal`
     position: sticky;
     top: 0;
     top: calc(50% - 115px);
-    width: fit-content;
+    width: 100%;
     margin: 0 auto 125px;
     z-index: 1;
   }

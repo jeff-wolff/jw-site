@@ -15,12 +15,10 @@
     padding-right: 60px;
   }
 }
-.notes-post-title {
+.notes-post-title.post-title {
   text-align: left;
   margin-left: 0;
 }
 @media (min-width: 1440px) {
-  .notes-post-title {
-    max-width: 80%;
-  }
+
 }
