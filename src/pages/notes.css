@@ -20,11 +20,16 @@
   width: 100%;
   height: 100%;
   padding: 3rem;
-  opacity: 0.8;
 }
-.note-card > a:hover {
-  background: none;
-  opacity: 1;
+@media (hover: hover) {
+  .note-card > a {
+    opacity: 0.96;
+  }
+  .note-card > a:hover {
+    background: none;
+    opacity: 1;
+    padding: 3rem;
+  }
 }
 .note-card p:last-child {
   margin-bottom: 0;

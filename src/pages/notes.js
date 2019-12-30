@@ -52,7 +52,7 @@ class NotesIndex extends React.Component {
                   borderColor: (post.frontmatter.pf ? post.frontmatter.pf : 'var(--primary-faded)'),
                   backgroundColor: (post.frontmatter.tbgf ? `rgba(${post.frontmatter.tbgf},.27)` : 'rgba(var(--bg-faded),.27)')
                 }}>
-                  <h2 className="title h3"
+                  <h2 className="title h2"
                   style={{
                     color: (post.frontmatter.tp ? post.frontmatter.tp : 'var(--primary)')
                   }}
