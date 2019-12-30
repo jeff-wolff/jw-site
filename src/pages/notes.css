@@ -21,7 +21,9 @@ a.note-card {
   height: 100%;
   padding: 3rem;
 }
-/* .note-card > a:not(.window-button) */
+a.note-card:hover {
+  padding: 3rem;
+}
 @media (hover: hover) {
   a.note-card {
     opacity: 0.96;
