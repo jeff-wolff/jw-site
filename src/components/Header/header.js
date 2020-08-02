@@ -25,17 +25,20 @@ class Header extends React.Component {
           
         { !this.props.isPortfolioPage && !this.props.isWorkPost ? 
         <ul className="navigation">
+          <li><Link to="/about/">About</Link></li>
           <li><Link to="/notes/">Notes</Link></li>
           <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
         </ul> : '' }
         { this.props.isPortfolioPage ? 
         <ul className="navigation">
           <li><a href="/" target="_blank">Home</a></li>
+          <li><Link to="/about/">About</Link></li>
           <li><Link to="/portfolio/">Portfolio</Link></li> 
           <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
         </ul> : '' }
         { this.props.isWorkPost ? 
         <ul className="navigation">
+          <li><Link to="/about/">About</Link></li>
           <li><Link to="/portfolio/">Portfolio</Link></li> 
           <li><a href="mailto:hi@jeffwolff.net">Contact</a></li>
         </ul> : '' }
