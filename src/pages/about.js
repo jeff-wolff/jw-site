@@ -80,7 +80,8 @@ class About extends React.Component {
                 San Diego, CA
               </h5>
               <h1 className="title h1">Creative Website Developer</h1>
-              <p>Jeff codes elegant, engaging, and easy-to-use websites with the latest HTML, CSS, and JavaScript. </p>
+              <p>Jeff codes elegant, engaging, and easy-to-use websites with the latest HTML, CSS, and JavaScript.</p>
+              <p>He also knows SEO and user experience best practices.</p>
               <p>Currently listening to:<br /><img src={EqualizerGif} style={{ width: '10px' }} /> <a href={lastFmProfileUrl} target="_blank">{songArtist} - {songTitle}</a><br /><a href={lastFmProfileUrl} target="_blank"><small>powered by last.fm api</small></a></p>
             </div>
           </div>
